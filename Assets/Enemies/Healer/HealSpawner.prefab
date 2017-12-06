@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1673341786889752}
+  m_IsPrefabParent: 1
+--- !u!1 &1673341786889752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4300844910443110}
+  - component: {fileID: 114620007351733764}
+  m_Layer: 0
+  m_Name: HealSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4300844910443110
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673341786889752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114620007351733764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673341786889752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c59dd36803496143b81a7bb20555165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionRadius: 6
+  spawnEffect: {fileID: 1267722965183100, guid: 827c874afae437941afc17b4691b86a2,
+    type: 2}
+  debuffEffect: {fileID: 1465175319799968, guid: 5f45fa9b7776f104d914a1a4850893c5,
+    type: 2}
+  amount: 40
+  countdown: 0.5
+  debuffDuration: 1.5
+  targetEnemy: 1
+  freeze: 0
+  slow: 0
+  poison: 0
+  heal: 1
+  amplifyDmg: 0
+  atkSpeed: 0
