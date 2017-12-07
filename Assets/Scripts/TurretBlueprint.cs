@@ -9,7 +9,12 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
     public GameObject upgradedPrefab;
     public int upgradeCost;
 
+    public int resourceCost;
+    public ResourceTypes resourceType;
+
+    [HideInInspector]
     public float turretRange = -1;
+    [HideInInspector]
     public float turretUpgradedRange = -1;
 
     public float GetRange(bool upgraded)

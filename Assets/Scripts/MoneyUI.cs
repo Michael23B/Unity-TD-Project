@@ -6,7 +6,12 @@ public class MoneyUI : MonoBehaviour {
     public Text moneyText;
     public int moneyAmount = 20;
 
-    void Update()
+    private void Start()
+    {
+        InvokeRepeating("GetMoneyAmount", 0f, 0.1f);
+    }
+
+    void GetMoneyAmount()
     {
         moneyAmount = PlayerStats.Instance.money;
         moneyText.text = "$" + moneyAmount;

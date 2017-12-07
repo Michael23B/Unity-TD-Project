@@ -259,7 +259,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088453242561702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 1, z: 60}
+  m_LocalPosition: {x: 30, y: 0, z: 60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4650340046654656}
@@ -594,9 +594,9 @@ MonoBehaviour:
   doMovement: 0
   panSpeed: 30
   panBorderThickness: 10
-  scrollSpeed: 5
-  minY: 10
-  maxY: 80
+  scrollSpeed: 1
+  minY: 15
+  maxY: 25
 --- !u!114 &114279658294729366
 MonoBehaviour:
   m_ObjectHideFlags: 1

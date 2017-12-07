@@ -40,7 +40,9 @@ public class WaveSpawner : MonoBehaviour {
             return;
         }
         Instance = this;
+
         shop = FindObjectOfType<Shop>();
+
         Random.InitState(1);
     }
 
@@ -73,6 +75,7 @@ public class WaveSpawner : MonoBehaviour {
 
     IEnumerator SpawnWave()
     {
+        ResourceSpawner.Instance.SpawnResources(25);
         PlayerStats.Instance.rounds++;
 
         EnemyWave currentWave = waves[waveIndex % waves.Length];

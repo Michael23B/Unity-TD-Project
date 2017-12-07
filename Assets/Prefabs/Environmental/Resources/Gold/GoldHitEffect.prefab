@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198356193116433600}
   - component: {fileID: 199542766404753352}
   m_Layer: 0
-  m_Name: StoneHitEffect
+  m_Name: GoldHitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
+      scalar: 7
       minScalar: 3
       maxCurve:
         serializedVersion: 2
@@ -253,7 +253,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
+      scalar: 0.4
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -747,7 +747,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 25
+        scalar: 15
         minScalar: 0
         maxCurve:
           serializedVersion: 2
@@ -3468,7 +3468,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34bc9e9f35962ec4fbcfc891d9fe960e, type: 2}
+  - {fileID: 2100000, guid: 12916b9a1f445a14c88573c15f23f74a, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3498,7 +3498,7 @@ ParticleSystemRenderer:
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
-  m_RenderAlignment: 0
+  m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304

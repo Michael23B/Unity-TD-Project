@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Turret
   - PlayerCamera
+  - Node
   layers:
   - Default
   - TransparentFX
