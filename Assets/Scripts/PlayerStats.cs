@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour {
     public int rounds;
 
     //resources
-    public int stone = 0;
+    public int stone, green, diamond;
 
     private void Awake()
     {

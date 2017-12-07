@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023124105668382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: -40}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4834677475158720}
@@ -140,5 +140,8 @@ MonoBehaviour:
   hitEffect: {fileID: 1473482693974122, guid: 0dbc3f76a235ed54bb986f65068a6bc0, type: 2}
   onCooldownHitEffect: {fileID: 1473482693974122, guid: 5e4eb5fc46d6e2b4ba1103315623f905,
     type: 2}
-  money: 5
+  money: 0
   stone: 1
+  green: 0
+  diamond: 0
+  resourceAmount: 10

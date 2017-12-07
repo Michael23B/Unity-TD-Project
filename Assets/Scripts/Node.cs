@@ -64,17 +64,33 @@ public class Node : MonoBehaviour
         {
             if (!buildManager.HasMoneyUpgrade)
             {
-                Debug.Log("Not Enough Money To Upgrade!");
+                buildManager.message.PlayMessage("Not Enough Money!", transform);
                 return;
             }
-            playerStats.money -= turretBlueprint.upgradeCost; 
         }
         else
         {
             if (!buildManager.HasMoney)
             {
-                Debug.Log("Not Enough Money!");
+                buildManager.message.PlayMessage("Not Enough Money!", transform);
                 return;
+            }
+            if (!buildManager.HasResources())
+            {
+                buildManager.message.PlayMessage("Not Enough Resources!", transform);
+                return;
+            }
+            switch (buildManager.GetTurretToBuild().resourceType)
+            {
+                case ResourceTypes.stone:
+                    PlayerStats.Instance.stone -= buildManager.GetTurretToBuild().resourceCost;
+                    break;
+                case ResourceTypes.diamond:
+                    PlayerStats.Instance.diamond -= buildManager.GetTurretToBuild().resourceCost;
+                    break;
+                case ResourceTypes.green:
+                    PlayerStats.Instance.green -= buildManager.GetTurretToBuild().resourceCost;
+                    break;
             }
             playerStats.money -= buildManager.GetTurretToBuild().cost;
         }

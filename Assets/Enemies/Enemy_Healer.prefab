@@ -224,7 +224,7 @@ MonoBehaviour:
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
-  bounty: 25
+  bounty: 5
   speed: 10
   moveable: 1
   deathEffect: {fileID: 1491607627031414, guid: 09bec836f6dfee749885f249c5e5b05f,

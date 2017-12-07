@@ -22,10 +22,27 @@ public class BuildManager : MonoBehaviour {
     private Node selectedNode;
 
     public NodeUI nodeUI;
+    public Message message;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Instance.money >= turretToBuild.cost; } }
     public bool HasMoneyUpgrade { get { return PlayerStats.Instance.money >= selectedNode.turretBlueprint.upgradeCost; } }
+
+    public bool HasResources() {
+        if (turretToBuild.resourceCost == 0) return true;
+            switch (turretToBuild.resourceType)
+            {
+                case ResourceTypes.stone:
+                    return PlayerStats.Instance.stone >= turretToBuild.resourceCost;
+
+                case ResourceTypes.diamond:
+                    return PlayerStats.Instance.diamond >= turretToBuild.resourceCost;
+
+                case ResourceTypes.green:
+                    return PlayerStats.Instance.green >= turretToBuild.resourceCost;
+            }
+        return false;
+    }
 
     public void SelectTurretToBuild(TurretBlueprint turret, int index)
     {
