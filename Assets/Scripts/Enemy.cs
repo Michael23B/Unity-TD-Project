@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour
 
     public int bounty = 25;
 
-
     [HideInInspector]
     public float speed; //current speed
 
@@ -45,14 +44,19 @@ public class Enemy : MonoBehaviour
     public Image shieldBar;
     public Image shieldBarBG; //TODO: One canvas with all health bars instead of serperate canvasii
 
+    public EnemyMovement enemyMovement;
+
     void Start()
     {
+        //stats set up
         baseDamageMulti /= (1 + WaveSpawner.Instance.waveMulti);  //waveMulti starts at 0
         speed = startSpeed;
         minSpeed = startSpeed * 0.2f;
         health = startHealth;
         if (useShield) shield = startShield;
         damageMulti = baseDamageMulti;
+
+        //enemyMovement = GetComponent<EnemyMovement>();
     }
 
     public void TakeDamage(float amount)

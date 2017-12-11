@@ -14,6 +14,7 @@ public class EnemyAttack : MonoBehaviour {
     public bool useSpawner = true;
     public GameObject spawnPrefab;
     public bool setParent = true;   //if the spawn should be removed when the parent is, or if you want the spawn to follow the parent
+    public bool isEnemy = false;    //is the spawn an enemy?
 
     [Header("Gun?")]
     public bool useBullets = false;
@@ -52,13 +53,20 @@ public class EnemyAttack : MonoBehaviour {
     {
         GameObject spawnins = Instantiate(spawnPrefab, transform.position, transform.rotation);
         if (setParent) spawnins.transform.SetParent(transform);
+        if (isEnemy)
+        {
+            WaveSpawner.Instance.AddEnemy(spawnins);
+
+            int parentWaypoint = GetComponent<EnemyMovement>().GetWaypoint;
+            spawnins.GetComponent<EnemyMovement>().SetWaypoint(parentWaypoint);
+        }
     }
     //
     //TODO: Add update target and shoot and stuff to a seperate class instead of re defining them here and in bullet and turret
     //
     void Shoot()
     {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
+        GameObject bulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)

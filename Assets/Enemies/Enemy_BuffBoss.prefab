@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58d4741ca6ad954a866d1e8f75086a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fear: 0
 --- !u!114 &114468908536672316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -301,6 +302,7 @@ MonoBehaviour:
   useSpawner: 0
   spawnPrefab: {fileID: 0}
   setParent: 1
+  isEnemy: 0
   useBullets: 1
   bulletPrefab: {fileID: 1507132569338688, guid: 563c68078e878874892e3dc99ff02ddb,
     type: 2}
@@ -338,6 +340,7 @@ MonoBehaviour:
   useShield: 1
   shieldBar: {fileID: 114585292175636046}
   shieldBarBG: {fileID: 114600479087140086}
+  enemyMovement: {fileID: 114090846819910932}
 --- !u!114 &114585292175636046
 MonoBehaviour:
   m_ObjectHideFlags: 1

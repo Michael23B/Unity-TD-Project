@@ -4,25 +4,39 @@
 public class EnemyMovement : MonoBehaviour {
 
     private Transform target;
-    private int waypointIndex = 0;
+
+    private int waypointIndex = 1;  //skip the first waypoint at the spawn point
 
     private Enemy enemy;
+
+    public int GetWaypoint { get { return waypointIndex; } }
+    public void SetWaypoint(int i)
+    {
+        waypointIndex = i - 1;
+        GetNextWaypoint();
+    }
+
+    [HideInInspector]
+    public bool fear = false;
 
     private void Start()
     {
         enemy = GetComponent<Enemy>();
 
-        target = Waypoints.points[0];
+        target = Waypoints.points[waypointIndex];
     }
 
     private void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
-
-        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+        if (!fear || waypointIndex >= 0)  //if you stuck at the spawn don't try to update movement target
         {
-            GetNextWaypoint();
+            Vector3 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+
+            if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+            {
+                GetNextWaypoint();
+            }
         }
 
         BuffHelper.ResetDebuffs(enemy);
@@ -33,9 +47,18 @@ public class EnemyMovement : MonoBehaviour {
 
     void GetNextWaypoint()
     {
+        if (waypointIndex < 0) waypointIndex = 0;
         if (waypointIndex >= Waypoints.points.Length - 1)
         {
             EndPath();
+            return;
+        }
+
+        if(fear)
+        {
+            --waypointIndex;
+            if (waypointIndex < 0) target = Waypoints.points[0];
+            else target = Waypoints.points[waypointIndex];
             return;
         }
 
@@ -49,5 +72,11 @@ public class EnemyMovement : MonoBehaviour {
         WaveSpawner.Instance.enemiesAlive--;
         WaveSpawner.Instance.enemyList.Remove(gameObject);
         Destroy(gameObject);
+    }
+
+    public void SetFear(bool active)
+    {
+        fear = active;
+        GetNextWaypoint();
     }
 }
