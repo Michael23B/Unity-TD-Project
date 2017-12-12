@@ -48,7 +48,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
-        if (playersReady < 1) return;
+        if (playersReady < 2) return;
         if (waveActive) return;
         if (enemiesAlive > 0) return;
         if(countdown <= 0f)
