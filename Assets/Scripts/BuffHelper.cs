@@ -198,7 +198,7 @@ public static class BuffHelper {
     {
         if (e.debuffList[i].time <= 0)
         {
-            e.enemyMovement.SetFear(false);
+            if (e.enemyMovement.fear) e.enemyMovement.SetFear(false);
             GameObject.Destroy(e.debuffList[i].effect);
             e.debuffList.RemoveAt(i);
         }

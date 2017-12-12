@@ -238,7 +238,7 @@ MonoBehaviour:
   useShield: 0
   shieldBar: {fileID: 0}
   shieldBarBG: {fileID: 0}
-  enemyMovement: {fileID: 0}
+  enemyMovement: {fileID: 114090846819910932}
 --- !u!114 &114585292175636046
 MonoBehaviour:
   m_ObjectHideFlags: 1
