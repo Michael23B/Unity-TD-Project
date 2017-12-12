@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour {
     public float freeze = 0f;
     public float heal = 0f;
     public float amplifyDmg = 0f;
+    public float fear = 0f;
     public float duration = 1f;
     public GameObject debuffEffect;
 
@@ -125,6 +126,11 @@ public class Bullet : MonoBehaviour {
             if (amplifyDmg != 0)
             {
                 BuffHelper.AddDebuff(e, DebuffType.AmplifyDmg, duration, amplifyDmg, debuffTemp);
+                debuffTemp = null;
+            }
+            if (fear != 0)
+            {
+                BuffHelper.AddDebuff(e, DebuffType.Fear, duration, fear, debuffTemp);
                 debuffTemp = null;
             }
             e.TakeDamage(damage);

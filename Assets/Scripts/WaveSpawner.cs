@@ -115,6 +115,13 @@ public class WaveSpawner : MonoBehaviour {
         enemyList.Add(e);
         enemiesAlive++;
     }
+
+    public void AddEnemy(GameObject enemy)  //for enemy-spawning enemies
+    {
+        enemyList.Add(enemy);
+        enemiesAlive++;
+    }
+
     //TODO: add general class for helper function like this and update target (bullets,turrets,enemies) and some other stuff
     public void ShuffleArr<T>(T[] arr)
     {

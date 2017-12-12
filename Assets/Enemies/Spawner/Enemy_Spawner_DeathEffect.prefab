@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198178586580664254}
   - component: {fileID: 199445738000693432}
   m_Layer: 0
-  m_Name: gold particles that go up
+  m_Name: particles that go up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 198839195638761650}
   - component: {fileID: 199103870252276430}
   m_Layer: 0
-  m_Name: Enemy_BuffBoss_DeathEffect
+  m_Name: Enemy_Spawner_DeathEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491607627031414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 26.005524, y: 2.63, z: 67.25394}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4067160929257060}
@@ -79,7 +79,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1490201567509046}
   serializedVersion: 5
-  lengthInSec: 1.5
+  lengthInSec: 0.5
   simulationSpeed: 1
   stopAction: 0
   looping: 0
@@ -120,14 +120,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 926194881
+  randomSeed: -776802022
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -168,7 +168,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -210,7 +210,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 0.34509805, a: 1}
+      maxColor: {r: 0.5386412, g: 0, b: 0.6911765, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -485,9 +485,9 @@ ParticleSystem:
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: -2
+      minScalar: -0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -644,8 +644,8 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 12
-      minScalar: 7
+      scalar: 25
+      minScalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3425,7 +3425,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491607627031414}
   serializedVersion: 5
-  lengthInSec: 3
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   looping: 0
@@ -3466,15 +3466,15 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1059092211
+  randomSeed: 98818959
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 2
+      scalar: 2
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3502,7 +3502,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 8
+      scalar: 6
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6773,7 +6773,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ae586033cb1d0347b87a3df0aea4ca4, type: 2}
+  - {fileID: 2100000, guid: af27113e00a0e624a8a94daf840c4d4d, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

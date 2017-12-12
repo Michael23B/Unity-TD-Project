@@ -13,22 +13,23 @@
 //scale enemy buffs with waveMulti
 //spawning enemies makes them go to the first waypoint need to add a waypoint reference to the enemy and pass it on
 
-public enum DebuffType { LaserSlow, Freeze, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }  //fear (waypoint target = prev waypoint),
+public enum DebuffType { LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }  //fear (waypoint target = prev waypoint),
                                                                                         //nostun (if stunned for too long become immune)
 public class Debuff
 {
-    public Debuff(DebuffType _type, float _time, float _amount, GameObject _effect)
+    public Debuff(DebuffType _type, float _time, float _amount, GameObject _effect, bool _buff = false) //add bool for buffs or debuffs
     {
         type = _type;
         time = _time;
         amount = _amount;
         effect = _effect;
-
+        buff = _buff;
     }
     public DebuffType type;
     public float time;
     public float amount;
     public GameObject effect;
+    public bool buff;
 }
 
 //TODO: debuff size scale could work but it's way off right now because enemy scales arent uniform
@@ -38,7 +39,7 @@ public static class BuffHelper {
     //
     //Enemy functions
     //
-    public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null)
+    public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null, bool _buff = false)
     {
         if (e.shield > 0 && _type != DebuffType.Heal)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through
         {
@@ -61,14 +62,14 @@ public static class BuffHelper {
         {
             GameObject effectIns = GameObject.Instantiate(_effect, e.transform.position, Quaternion.Euler(0, 0, 0)); //Don't want the effect rotating with the enemy i believe
             effectIns.transform.SetParent(e.transform);
-            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns));
+            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns, _buff));
 
         }
         else
         {
             GameObject effectIns = GameObject.Instantiate(e.emptyPlaceHolder, e.transform.position, Quaternion.Euler(0, 0, 0));
 
-            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns));
+            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns, _buff));
         }
     }
 
@@ -90,6 +91,9 @@ public static class BuffHelper {
                     break;
                 case DebuffType.Freeze:
                     BuffHelper.Freeze(e, i);
+                    break;
+                case DebuffType.Fear:
+                    BuffHelper.Fear(e, i);
                     break;
                 case DebuffType.Poison:
                     BuffHelper.Poison(e, i);
@@ -190,6 +194,21 @@ public static class BuffHelper {
         }
     }
 
+    public static void Fear(Enemy e, int i)
+    {
+        if (e.debuffList[i].time <= 0)
+        {
+            if (e.enemyMovement.fear) e.enemyMovement.SetFear(false);
+            GameObject.Destroy(e.debuffList[i].effect);
+            e.debuffList.RemoveAt(i);
+        }
+        else
+        {
+            if(!e.enemyMovement.fear) e.enemyMovement.SetFear(true);
+            e.debuffList[i].time -= Time.deltaTime;
+        }
+    }
+
     public static void Poison(Enemy e, int i)
     {
         if (e.debuffList[i].time <= 0)
@@ -218,7 +237,7 @@ public static class BuffHelper {
         }
     }
 
-    public static void Slow(Enemy e, int i) //why have two buffs that do the same thing except one resets amount VERY bad code
+    public static void Slow(Enemy e, int i)
     {
         if (e.debuffList[i].time <= 0)
         {

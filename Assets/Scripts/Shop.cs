@@ -36,6 +36,9 @@ public class Shop : MonoBehaviour {
             case 5:
                 Debug.Log("Speed Turret Selected.");
                 break;
+            case 6:
+                Debug.Log("Fear Turret Selected.");
+                break;
         }
     }
 }
