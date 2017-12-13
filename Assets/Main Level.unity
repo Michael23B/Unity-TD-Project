@@ -26701,7 +26701,7 @@ MonoBehaviour:
     turretUpgradedRange: -1
   - prefab: {fileID: 1433889198367424, guid: 5a4c7200f024ad44192958a47e867f40, type: 2}
     cost: 350
-    upgradedPrefab: {fileID: 1433889198367424, guid: a2d3cfa37f9435d46b44b20612ab7862,
+    upgradedPrefab: {fileID: 1905667894733756, guid: 982a60d8e38ff0d4e880de5a9c908af1,
       type: 2}
     upgradeCost: 250
     resourceCost: 15

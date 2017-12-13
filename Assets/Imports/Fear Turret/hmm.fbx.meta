@@ -1,23 +1,18 @@
 fileFormatVersion: 2
-guid: 6169a99dcbc02ce44849217666646107
-timeCreated: 1513137724
+guid: a1100791f65b56b468244d4b12cdbb53
+timeCreated: 1513141177
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: CINEMA_4D_Editor
-    100002: Cylinder
-    100004: //RootNode
-    100006: Platonic
-    100008: Sky
-    100010: Torus
-    400000: CINEMA_4D_Editor
-    400002: Cylinder
-    400004: //RootNode
-    400006: Platonic
-    400008: Sky
-    400010: Torus
-    2000000: CINEMA_4D_Editor
+    100000: Cylinder
+    100002: //RootNode
+    100004: Platonic
+    100006: Torus
+    400000: Cylinder
+    400002: //RootNode
+    400004: Platonic
+    400006: Torus
     2100000: 2 Sides Blue & Green
     2100002: Mat
     2300000: Cylinder
