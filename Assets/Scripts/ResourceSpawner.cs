@@ -8,6 +8,8 @@ public class ResourceSpawner : MonoBehaviour {
     [SerializeField]
     List<GameObject> resourceList;
 
+    private float ySpawnOffset = 1f;
+
     private void Awake()
     {
         if (Instance != null)
@@ -28,7 +30,7 @@ public class ResourceSpawner : MonoBehaviour {
             r = Random.Range(0, resourceList.Count);
             rX = Random.Range(-400, 400);
             rZ = Random.Range(-400, 400);
-            Vector3 randomPos = new Vector3(rX,0,rZ);
+            Vector3 randomPos = new Vector3(rX, ySpawnOffset, rZ);
 
             Collider[] colliders = Physics.OverlapSphere(randomPos, 75);    //find any nodes within 75 units of the new resource
             foreach (Collider collider in colliders)
