@@ -32,6 +32,8 @@ public class WaveSpawner : MonoBehaviour {
     public bool buildTime = true;
     Shop shop;
 
+    public int numberOfPlayersToWaitForBeforeReadyUpWorksSkadoosh = 1;
+
     private void Awake()
     {
         if (Instance != null)
@@ -48,7 +50,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
-        if (playersReady < 1) return;
+        if (playersReady < numberOfPlayersToWaitForBeforeReadyUpWorksSkadoosh) return;
         if (waveActive) return;
         if (enemiesAlive > 0) return;
         if(countdown <= 0f)
