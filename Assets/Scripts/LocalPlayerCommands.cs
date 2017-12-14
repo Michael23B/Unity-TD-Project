@@ -28,6 +28,12 @@ public class LocalPlayerCommands : NetworkBehaviour
         RpcReady();
     }
 
+    [Command]
+    public void CmdUnleashThis(NetworkIdentity netID)
+    {
+        RpcUnleashThis(netID);
+    }
+
     //RPCs
     [ClientRpc]
     void RpcBuildTurret(int nodeID, int turretID, bool upgrading)
@@ -54,6 +60,17 @@ public class LocalPlayerCommands : NetworkBehaviour
     void RpcReady()
     {
         WaveSpawner.Instance.playersReady++;
+    }
+
+    [ClientRpc]
+    void RpcUnleashThis(NetworkIdentity netID)
+    {
+        PlayerController[] players = FindObjectsOfType<PlayerController>();
+
+        foreach (PlayerController player in players)
+        {
+            if(player.GetComponent<NetworkIdentity>() == netID) player.UnleashThis();
+        }
     }
     #endregion
 }

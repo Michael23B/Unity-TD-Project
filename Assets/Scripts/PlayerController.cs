@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
@@ -18,6 +19,14 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     Camera fpCamera;
 
+    private bool evenFurtherBeyondAHHHHHHHHHHHHHHH = false;
+    public AudioSource bzeoop;
+    [SerializeField]
+    public GameObject bankai;
+
+    [SerializeField]
+    LocalPlayerCommands commands;
+
     private void Start()
     {
         sceneCamera = Camera.main;
@@ -28,6 +37,26 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        if (evenFurtherBeyondAHHHHHHHHHHHHHHH)
+        {
+            startSpeed = 50;
+            verySpeed = 500;
+
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                bzeoop.PlayOneShot(bzeoop.clip);
+            }
+        }
+
+        if (Input.GetKey(KeyCode.B))
+        {
+            if (toggleCoolDown <= 0)
+            {
+                commands.CmdUnleashThis(GetComponent<NetworkIdentity>());
+                toggleCoolDown = 1f;
+            }
+        }
+
         if (Input.GetKey(KeyCode.E))
         {
             if (toggleCoolDown <= 0)
@@ -100,5 +129,13 @@ public class PlayerController : MonoBehaviour {
         Cursor.visible = (!fpCamera.isActiveAndEnabled);
         if(fpCamera.isActiveAndEnabled) Cursor.lockState = CursorLockMode.Locked;
         else Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void UnleashThis()
+    {
+        GameObject effectIns = Instantiate(bankai, transform);
+        effectIns.transform.position = transform.position;
+        Destroy(effectIns, 30f);
+        evenFurtherBeyondAHHHHHHHHHHHHHHH = true;
     }
 }
