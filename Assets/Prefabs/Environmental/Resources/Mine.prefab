@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0664be5829cf1fb4981811085172c64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2.5
+  cooldown: 1
   hitEffect: {fileID: 1473482693974122, guid: 0dbc3f76a235ed54bb986f65068a6bc0, type: 2}
   onCooldownHitEffect: {fileID: 1473482693974122, guid: 5e4eb5fc46d6e2b4ba1103315623f905,
     type: 2}

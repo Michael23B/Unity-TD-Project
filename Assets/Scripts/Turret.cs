@@ -24,9 +24,19 @@ public class Turret : MonoBehaviour
 
     [Header("Use Laser")]
     public bool useLaser = false;
-
     public float damageOverTime = 20f;
-    public float slowAmount = 1.5f; //Change to debuff amount, add debuff type dropdown list (based on debuff class)
+    [Header("Laser debuffs")]
+    public float debuffAmount = 0.15f;
+    public DebuffType type = DebuffType.LaserSlow;
+
+    [Space(10)]
+
+    public float buildUpTime = 0f;  //should it take time before applying debuff
+    private float currentBuildUp = 0f;
+    public float debuffDuration = 0f;
+    public GameObject debuffEffect;
+
+    [Space(10)]
 
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
@@ -69,7 +79,7 @@ public class Turret : MonoBehaviour
                 return;
             }
         }
-
+        currentBuildUp = 0f;    //if target is lost, laser build up is reset (target nearest doesn't work with build up laser turrets unless i change this)
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
@@ -155,7 +165,20 @@ public class Turret : MonoBehaviour
     void Laser()
     {
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime * fireRate);
-        BuffHelper.AddDebuff(targetEnemy, DebuffType.LaserSlow, 0.01f, slowAmount);
+
+        if (buildUpTime != 0)
+        {
+            if (currentBuildUp >= buildUpTime)
+            {
+                BuffHelper.AddDebuff(targetEnemy, type, debuffDuration, debuffAmount, debuffEffect);
+                currentBuildUp = 0f;
+            }
+            else currentBuildUp += Time.deltaTime;
+        }
+        else
+        {
+            BuffHelper.AddDebuff(targetEnemy, type, 0.01f, debuffAmount, null);   //if buildUpTime is 0 just apply it for the minimum time
+        }
 
         if (!lineRenderer.enabled)
         {

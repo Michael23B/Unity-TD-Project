@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour {
             //Calculate roation as vector3
             float yRot = Input.GetAxisRaw("Mouse X");
 
-            Vector3 rotation = new Vector3(0f, yRot, 0f) * turnSpeed;
+            Vector3 rotation = new Vector3(0, yRot, 0) * turnSpeed;
 
             //Apply rotation
             motor.transform.Rotate(rotation);
@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour {
         if (fpCamera == null) return;
 
         fpCamera.gameObject.SetActive(false);
+
         sceneCamera.gameObject.SetActive(active);
         playerCamera.gameObject.SetActive(!active);
     }

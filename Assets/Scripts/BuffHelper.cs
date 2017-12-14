@@ -13,23 +13,22 @@
 //scale enemy buffs with waveMulti
 //spawning enemies makes them go to the first waypoint need to add a waypoint reference to the enemy and pass it on
 
-public enum DebuffType { LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }  //fear (waypoint target = prev waypoint),
-                                                                                        //nostun (if stunned for too long become immune)
+public enum DebuffType { LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }    //nostun (if stunned for too long become immune)
+
 public class Debuff
 {
-    public Debuff(DebuffType _type, float _time, float _amount, GameObject _effect, bool _buff = false) //add bool for buffs or debuffs
+    public Debuff(DebuffType _type, float _time, float _amount, GameObject _effect) //add bool for buffs or debuffs
     {
         type = _type;
         time = _time;
         amount = _amount;
         effect = _effect;
-        buff = _buff;
+
     }
     public DebuffType type;
     public float time;
     public float amount;
     public GameObject effect;
-    public bool buff;
 }
 
 //TODO: debuff size scale could work but it's way off right now because enemy scales arent uniform
@@ -39,13 +38,13 @@ public static class BuffHelper {
     //
     //Enemy functions
     //
-    public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null, bool _buff = false)
+    public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null)
     {
         if (e.shield > 0 && _type != DebuffType.Heal)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through
         {
             if (_amount >= 0f) return;
         }
-        if (_type == DebuffType.LaserSlow || _type == DebuffType.Freeze) //If the type can be stacked
+        if (isStackingDebuff(_type)) //If the type can be stacked
         {
             for (int i = e.debuffList.Count - 1; i >= 0; --i)
             {
@@ -62,18 +61,24 @@ public static class BuffHelper {
         {
             GameObject effectIns = GameObject.Instantiate(_effect, e.transform.position, Quaternion.Euler(0, 0, 0)); //Don't want the effect rotating with the enemy i believe
             effectIns.transform.SetParent(e.transform);
-            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns, _buff));
+            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns));
 
         }
         else
         {
             GameObject effectIns = GameObject.Instantiate(e.emptyPlaceHolder, e.transform.position, Quaternion.Euler(0, 0, 0));
 
-            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns, _buff));
+            e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns));
         }
     }
 
-    static void CalcDebuffSimple(ref float currentTime, float newTime, ref float currentAmount, float newAmount) //Used for resetting stun or stacking laser slow
+    static bool isStackingDebuff(DebuffType _type)
+    {
+        if (_type == DebuffType.LaserSlow || _type == DebuffType.Freeze || _type == DebuffType.Fear) return true;
+        else return false;
+    }
+
+    static void CalcDebuffSimple(ref float currentTime, float newTime, ref float currentAmount, float newAmount) //Used for stacking types
     {
         if (currentTime < newTime) currentTime = newTime;
         currentAmount += newAmount;

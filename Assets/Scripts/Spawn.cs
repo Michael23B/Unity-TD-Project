@@ -20,10 +20,11 @@ public class Spawn : MonoBehaviour {
     public bool poison = false; 
     public bool heal = false;
     public bool amplifyDmg = false;
+    public bool fear = false;
 
     [Header("Buffs to apply (turret target)")]
     public bool atkSpeed = false;
-    //make spawner use spawn effect every run if its a repeating spawn? or just add a spawner to the healing enemy seems better
+
     private void Start()
     {
         GameObject effectins = Instantiate(spawnEffect, transform.position, transform.rotation);
@@ -102,6 +103,11 @@ public class Spawn : MonoBehaviour {
                 if (amplifyDmg)
                 {
                     BuffHelper.AddDebuff(e, DebuffType.AmplifyDmg, debuffDuration, amount, debuffTemp);
+                    debuffTemp = null;
+                }
+                if (fear)
+                {
+                    BuffHelper.AddDebuff(e, DebuffType.Fear, debuffDuration, amount, debuffTemp);
                     debuffTemp = null;
                 }
             }
