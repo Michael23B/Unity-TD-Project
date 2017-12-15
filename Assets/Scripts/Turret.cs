@@ -14,7 +14,7 @@ public class Turret : MonoBehaviour
     public float damage;
     [HideInInspector]
     public float fireRate;
-    public float fireCountDown = 0f;
+    private float fireCountDown = 0f;
 
     public bool targetNearest = false;
     //TODO: add prioritze closest to end

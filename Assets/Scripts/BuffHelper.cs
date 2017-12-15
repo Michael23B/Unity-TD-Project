@@ -2,17 +2,6 @@
 
 //Definitions for buffs and methods for adding and stacking etc.
 
-//TODO: damage resist or invincibility for buff boss's buff, 
-//less explosion effects, 
-//max attack speed for some turrets(ice) or stun resist after a certain time stunned,
-//max move speed for enemies, 
-//make enemy not do stuff when frozen
-//add spawn effect to spawn portal and end cube
-//enemy like wisp that tethers with laser and lowers damage taken, speeds up etc.
-//and enemy that splits into two
-//scale enemy buffs with waveMulti
-//spawning enemies makes them go to the first waypoint need to add a waypoint reference to the enemy and pass it on
-
 public enum DebuffType { LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }    //nostun (if stunned for too long become immune)
 
 public class Debuff
