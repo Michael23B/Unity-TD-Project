@@ -61,7 +61,8 @@ GameObject:
   - component: {fileID: 114945708968910892}
   - component: {fileID: 114077793454172726}
   - component: {fileID: 114912970234416564}
-  - component: {fileID: 82162396572242894}
+  - component: {fileID: 82830262357739794}
+  - component: {fileID: 114845243929250618}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -596,7 +597,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1503572703781626}
   m_Enabled: 1
---- !u!82 &82162396572242894
+--- !u!82 &82830262357739794
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -605,8 +606,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c51e0dea28f17c04c938b21e0eb8c5cb, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -733,7 +734,7 @@ MonoBehaviour:
   m_SyncSpin: 0
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
+  m_SnapThreshold: 500
   m_InterpolateRotation: 5
   m_InterpolateMovement: 1
 --- !u!114 &114187429434525958
@@ -768,9 +769,10 @@ MonoBehaviour:
   verySpeed: 30
   turnSpeed: 3
   fpCamera: {fileID: 20473088320893328}
-  bzeoop: {fileID: 82162396572242894}
-  bankai: {fileID: 1379739830484992, guid: e8f1d05b4a3674c42af44c4ff5206655, type: 2}
+  bankaiEffect: {fileID: 1379739830484992, guid: e8f1d05b4a3674c42af44c4ff5206655,
+    type: 2}
   commands: {fileID: 114912970234416564}
+  networkAudio: {fileID: 114845243929250618}
 --- !u!114 &114415384887872832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,6 +784,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053b032390c500f44a5ccb3e1cd7ddcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114845243929250618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088453242561702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7780c30974d234783f1577d8047904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 82830262357739794}
+  soundClips:
+  - {fileID: 8300000, guid: c51e0dea28f17c04c938b21e0eb8c5cb, type: 3}
 --- !u!114 &114912970234416564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -794,6 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 0}
+  networkAudio: {fileID: 114845243929250618}
 --- !u!114 &114945708968910892
 MonoBehaviour:
   m_ObjectHideFlags: 1

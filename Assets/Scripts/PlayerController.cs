@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float turnSpeed = 3f;
 
-    float toggleCoolDown;   //otherwise camera toggle gets spammed every update
+    float toggleCoolDown, toggleCoolDown2;   //otherwise camera toggle gets spammed every update
 
     private PlayerMotor motor;
     Camera sceneCamera, playerCamera;
@@ -20,12 +20,13 @@ public class PlayerController : MonoBehaviour {
     Camera fpCamera;
 
     private bool evenFurtherBeyondAHHHHHHHHHHHHHHH = false;
-    public AudioSource bzeoop;
     [SerializeField]
-    public GameObject bankai;
+    public GameObject bankaiEffect;
 
     [SerializeField]
     LocalPlayerCommands commands;
+
+    public NetworkAudio networkAudio;
 
     private void Start()
     {
@@ -40,20 +41,20 @@ public class PlayerController : MonoBehaviour {
         if (evenFurtherBeyondAHHHHHHHHHHHHHHH)
         {
             startSpeed = 50;
-            verySpeed = 500;
-
-            if (Input.GetKeyUp(KeyCode.LeftShift))
+            verySpeed = 150;
+            toggleCoolDown2 -= Time.deltaTime;
+            if (Input.GetKey(KeyCode.LeftShift) && toggleCoolDown2 <= 0f)
             {
-                bzeoop.PlayOneShot(bzeoop.clip);
+                commands.CmdPlaySound(0);
+                toggleCoolDown2 = Random.Range(0.01f, 0.5f);
             }
         }
 
         if (Input.GetKey(KeyCode.B))
         {
-            if (toggleCoolDown <= 0)
+            if (!evenFurtherBeyondAHHHHHHHHHHHHHHH)
             {
                 commands.CmdUnleashThis(GetComponent<NetworkIdentity>());
-                toggleCoolDown = 1f;
             }
         }
 
@@ -133,9 +134,20 @@ public class PlayerController : MonoBehaviour {
 
     public void UnleashThis()
     {
-        GameObject effectIns = Instantiate(bankai, transform);
+        GameObject effectIns = Instantiate(bankaiEffect, transform);
         effectIns.transform.position = transform.position;
-        Destroy(effectIns, 30f);
+        GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+        Destroy(effectIns, 22f);
         evenFurtherBeyondAHHHHHHHHHHHHHHH = true;
+
+        Invoke("LeashThis", 22f);
+    }
+
+    void LeashThis()
+    {
+        GetComponentInChildren<MeshRenderer>().material.color = Color.white;
+        evenFurtherBeyondAHHHHHHHHHHHHHHH = false;
+        startSpeed = 10;
+        verySpeed = 30;
     }
 }
