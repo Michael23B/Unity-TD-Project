@@ -33,6 +33,7 @@ public class WaveSpawner : MonoBehaviour {
     Shop shop;
 
     public int numberOfPlayersToWaitForBeforeReadyUpWorksSkadoosh = 1;
+    private bool finishedWaveAndReady = false;
 
     private void Awake()
     {
@@ -50,10 +51,16 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
-        if (playersReady < numberOfPlayersToWaitForBeforeReadyUpWorksSkadoosh) return;
         if (waveActive) return;
         if (enemiesAlive > 0) return;
-        if(countdown <= 0f)
+        if (finishedWaveAndReady == true)
+        {
+            if (player == null) player = FindObjectOfType<LocalPlayerCommands>();
+            player.CmdReady();
+            finishedWaveAndReady = false;
+        }
+        if (playersReady < numberOfPlayersToWaitForBeforeReadyUpWorksSkadoosh) return;
+        if (countdown <= 0f)
         {
             buildTimeToggle();
             StartCoroutine(SpawnWave());
@@ -77,6 +84,7 @@ public class WaveSpawner : MonoBehaviour {
 
     IEnumerator SpawnWave()
     {
+        playersReady = 0;
         ResourceSpawner.Instance.SpawnResources(25);
         PlayerStats.Instance.rounds++;
 
@@ -98,6 +106,7 @@ public class WaveSpawner : MonoBehaviour {
         }
         waveIndex++;
         waveActive = false;
+        finishedWaveAndReady = true;
 
         if ((waveIndex) % waves.Length == 0) waveMulti++;
 

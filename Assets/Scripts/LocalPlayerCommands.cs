@@ -3,6 +3,7 @@
 public class LocalPlayerCommands : NetworkBehaviour
 {
     public Shop shop;
+    public NetworkAudio networkAudio;
 
     void Start()
     {
@@ -26,6 +27,18 @@ public class LocalPlayerCommands : NetworkBehaviour
     public void CmdReady()
     {
         RpcReady();
+    }
+
+    [Command]
+    public void CmdUnleashThis(NetworkIdentity netID)
+    {
+        RpcUnleashThis(netID);
+    }
+
+    [Command]
+    public void CmdPlaySound(int index)
+    {
+        RpcPlaySound(index);
     }
 
     //RPCs
@@ -54,6 +67,23 @@ public class LocalPlayerCommands : NetworkBehaviour
     void RpcReady()
     {
         WaveSpawner.Instance.playersReady++;
+    }
+
+    [ClientRpc]
+    void RpcUnleashThis(NetworkIdentity netID)
+    {
+        PlayerController[] players = FindObjectsOfType<PlayerController>();
+
+        foreach (PlayerController player in players)
+        {
+            if(player.GetComponent<NetworkIdentity>() == netID) player.UnleashThis();
+        }
+    }
+
+    [ClientRpc]
+    void RpcPlaySound(int index)
+    {
+        networkAudio.source.PlayOneShot(networkAudio.soundClips[index]);
     }
     #endregion
 }
