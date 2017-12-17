@@ -29,6 +29,11 @@ public class Turret : MonoBehaviour
     public float debuffAmount = 0.15f;
     public DebuffType type = DebuffType.LaserSlow;
 
+    public int extraTargetNumber = 0;
+    public float extraTargetFindRange = 5f;
+    private Enemy[] targetEnemies;
+    private Transform[] targets;//set number of targets for multi
+
     [Space(10)]
 
     public float buildUpTime = 0f;  //should it take time before applying debuff
@@ -67,6 +72,9 @@ public class Turret : MonoBehaviour
         fireRate = baseFireRate;
         damage = baseDamage;
         InvokeRepeating("UpdateTarget", 0f, 0.1f);  //Don't really need to update target every frame
+
+        targetEnemies = new Enemy[extraTargetNumber+1];
+        targets = new Transform[extraTargetNumber+1];
     }
 
     void UpdateTarget()
@@ -149,6 +157,47 @@ public class Turret : MonoBehaviour
 
     }
 
+    Transform newTarget(Transform origin, float _range, Transform[] ignoreTargets)
+    {
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+        bool ignoredTarget = false;
+
+        if (WaveSpawner.Instance.enemyList.Count == 0) return null;
+        foreach (GameObject enemy in WaveSpawner.Instance.enemyList)
+        {
+            if (enemy != null)
+            {
+                foreach (Transform ignore in ignoreTargets)
+                {
+                    if (enemy.transform == ignore)
+                    {
+                        ignoredTarget = true;
+                        break;
+                    }
+                }
+                if (ignoredTarget)  //skip checking this enemy if the target should be ignored
+                {
+                    ignoredTarget = false;
+                    continue;
+                }
+
+                float distanceToEnemy = Vector3.Distance(origin.position, enemy.transform.position);
+                if (distanceToEnemy < shortestDistance)
+                {
+                    shortestDistance = distanceToEnemy;
+                    nearestEnemy = enemy;
+                }
+            }
+        }
+
+        if (nearestEnemy != null && shortestDistance <= _range)
+        {
+            return nearestEnemy.transform;
+        }
+        else return null;
+    }
+
     void Animate()
     {
         PartToRotate.transform.Rotate(1f, -1f, 1f); //TODO: actually animate it
@@ -166,12 +215,15 @@ public class Turret : MonoBehaviour
     {
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime * fireRate);
 
+        bool debuffApplied = false; //if a debuff is applied, apply it to any other targets needed
+
         if (buildUpTime != 0)
         {
             if (currentBuildUp >= buildUpTime)
             {
                 BuffHelper.AddDebuff(targetEnemy, type, debuffDuration, debuffAmount, debuffEffect);
-                currentBuildUp = 0f;
+                currentBuildUp = 0.001f;
+                debuffApplied = true;
             }
             else currentBuildUp += Time.deltaTime;
         }
@@ -188,6 +240,51 @@ public class Turret : MonoBehaviour
         }
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
+        lineRenderer.positionCount = 2;
+
+        if (extraTargetNumber != 0) //TODO:add check if any of the targets[] are out of range before resetting the array again
+                                    //TODO: visual effect on all enemies as well
+        {
+            if (target == null) return;
+
+            for (int i = 0; i < targets.Length; ++i) targets[i] = null; //reset targets so that the current targets aren't ignored
+            for (int i = 0; i < targetEnemies.Length; ++i) targetEnemies[i] = null;
+
+            int currentTargets = 0;
+            targets[0] = target.transform;
+
+            //excluding 0 (initial target) find extra targets in range
+            for (int i = 1; i < targets.Length; ++i)
+            {
+                targets[i] = newTarget(targets[i - 1], extraTargetFindRange, targets);    //find a new target within range, excluding things already targeted
+                if (targets[i] == null) break;
+                currentTargets++;
+            }
+
+            //make enemies take damage (not initial target (already took damage))
+            for (int i = 1; i < targets.Length; ++i)
+            {
+                if (targets[i] == null) break;
+                targetEnemies[i] = targets[i].GetComponent<Enemy>();
+                targetEnemies[i].TakeDamage(damageOverTime * Time.deltaTime * fireRate);
+
+                if (debuffApplied)  //don't keep track of build up on all enemies just apply it to all when one is affected
+                {
+                    BuffHelper.AddDebuff(targetEnemies[i], type, debuffDuration, debuffAmount, debuffEffect);
+                }
+                else BuffHelper.AddDebuff(targetEnemies[i], type, 0.01f, debuffAmount, null);
+            }
+
+            //linerender update
+            lineRenderer.positionCount = currentTargets + 2;    //position 0 and 1 are already used on the starting position and the initial enemy
+            for (int i = 1; i < currentTargets + 1; ++i)
+            {
+                if (targets[i] == null) break;
+                lineRenderer.SetPosition(i + 1, targets[i].position);
+            }
+        }
+
+        //lineRenderer.positionCount = //number of targets
 
         Vector3 dir = firePoint.position - target.position;
 

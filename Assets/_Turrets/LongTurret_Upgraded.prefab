@@ -434,8 +434,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416395722897164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.6402, y: 0.5, z: 59.741364}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 20.488815, y: 0.5, z: 69.13574}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 4594792526053102}
   - {fileID: 4329757880126840}
@@ -826,7 +826,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a95644e8c940c704e9da5f633b1cb688, type: 2}
+  - {fileID: 2100000, guid: 3fa69c896014718439047ae8dae7a371, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -860,7 +860,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a95644e8c940c704e9da5f633b1cb688, type: 2}
+  - {fileID: 2100000, guid: 3fa69c896014718439047ae8dae7a371, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -894,7 +894,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a95644e8c940c704e9da5f633b1cb688, type: 2}
+  - {fileID: 2100000, guid: 3fa69c896014718439047ae8dae7a371, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -928,7 +928,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 503c4a5e4d71ed74a9eb2e8749fff828, type: 2}
+  - {fileID: 2100000, guid: c3cd59ae9846cf64782f02b89e546dc4, type: 2}
   - {fileID: 2100000, guid: 8a13485588788bd4b956d1a3a2cd557b, type: 2}
   - {fileID: 2100000, guid: 4bc194320041f624c919065269a193cc, type: 2}
   m_StaticBatchInfo:
@@ -965,7 +965,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: a0bb8a87c6ed3724c9c0c56c0e13cb40, type: 2}
-  - {fileID: 2100000, guid: a95644e8c940c704e9da5f633b1cb688, type: 2}
+  - {fileID: 2100000, guid: 3fa69c896014718439047ae8dae7a371, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1266,14 +1266,13 @@ MonoBehaviour:
   baseDamage: 0
   damage: 0
   fireRate: 1
-  fireCountDown: 0
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
   damageOverTime: 20
-  debuffAmount: 1
+  debuffAmount: 0.75
   type: 7
-  buildUpTime: 1
+  buildUpTime: 0.75
   debuffDuration: 3
   debuffEffect: {fileID: 1636151516639316, guid: 5e7a5ee3ccc525347b3ffbaa0db84d65,
     type: 2}
@@ -1306,7 +1305,6 @@ MonoBehaviour:
   baseDamage: 0
   damage: 0
   fireRate: 1
-  fireCountDown: 0
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
@@ -1314,7 +1312,7 @@ MonoBehaviour:
   debuffAmount: 1
   type: 1
   buildUpTime: 2
-  debuffDuration: 1
+  debuffDuration: 1.25
   debuffEffect: {fileID: 1465175319799968, guid: 28818293a475a0f47b0ee2e41b5cbd21,
     type: 2}
   lineRenderer: {fileID: 120238898553669488}
@@ -1346,7 +1344,6 @@ MonoBehaviour:
   baseDamage: 0
   damage: 0
   fireRate: 1
-  fireCountDown: 0
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
@@ -1496,7 +1493,7 @@ LineRenderer:
   - {x: -5, y: 3, z: 0}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.3
+    widthMultiplier: 0.4
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1584,7 +1581,7 @@ LineRenderer:
   - {x: -5, y: 3, z: 0}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.3
+    widthMultiplier: 0.7
     widthCurve:
       serializedVersion: 2
       m_Curve:
