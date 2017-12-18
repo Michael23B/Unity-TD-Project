@@ -87,7 +87,7 @@ public class Turret : MonoBehaviour
                 return;
             }
         }
-        currentBuildUp = 0f;    //if target is lost, laser build up is reset (target nearest doesn't work with build up laser turrets unless i change this)
+        //currentBuildUp = 0f;    //resets build up if target is CHANGED or LOST
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
@@ -110,7 +110,11 @@ public class Turret : MonoBehaviour
             target = nearestEnemy.transform;
             targetEnemy = target.GetComponent<Enemy>();
         }
-        else target = null;
+        else
+        {
+            target = null;
+            currentBuildUp = 0f;    //resets build up only if target is LOST
+        }
     }
 
     void Update()
@@ -157,7 +161,7 @@ public class Turret : MonoBehaviour
 
     }
 
-    Transform newTarget(Transform origin, float _range, Transform[] ignoreTargets)
+    Transform newTarget(Transform origin, float _range, Transform[] ignoreTargets)  //returns a new target (closest) within range from an origin, ignoring any requested targets
     {
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -214,8 +218,9 @@ public class Turret : MonoBehaviour
     void Laser()
     {
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime * fireRate);
-
+        //for multitarget
         bool debuffApplied = false; //if a debuff is applied, apply it to any other targets needed
+        bool resetTargets = false;  //if the mulitargets are still valid dont update the array (targets[])
 
         if (buildUpTime != 0)
         {
@@ -225,7 +230,7 @@ public class Turret : MonoBehaviour
                 currentBuildUp = 0.001f;
                 debuffApplied = true;
             }
-            else currentBuildUp += Time.deltaTime;
+            else currentBuildUp += Time.deltaTime * fireRate;
         }
         else
         {
@@ -238,28 +243,64 @@ public class Turret : MonoBehaviour
             impactEffect.Play();
             impactLight.enabled = true;
         }
+
+        //https://docs.unity3d.com/ScriptReference/Mathf.PerlinNoise.html
+        //lineRenderer.startWidth = Random.Range(1, 2);
+        //lineRenderer.endWidth = Random.Range(1, 2);
+
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
-        lineRenderer.positionCount = 2;
-
+        #region multi-target
         if (extraTargetNumber != 0) //TODO:add check if any of the targets[] are out of range before resetting the array again
                                     //TODO: visual effect on all enemies as well
         {
             if (target == null) return;
-
-            for (int i = 0; i < targets.Length; ++i) targets[i] = null; //reset targets so that the current targets aren't ignored
-            for (int i = 0; i < targetEnemies.Length; ++i) targetEnemies[i] = null;
-
-            int currentTargets = 0;
-            targets[0] = target.transform;
-
-            //excluding 0 (initial target) find extra targets in range
-            for (int i = 1; i < targets.Length; ++i)
+            if (targets[0] == null)
             {
-                targets[i] = newTarget(targets[i - 1], extraTargetFindRange, targets);    //find a new target within range, excluding things already targeted
-                if (targets[i] == null) break;
-                currentTargets++;
+                resetTargets = true;
             }
+            else
+            {
+                for (int i = 1; i < targets.Length; ++i)
+                {
+                    if (targets[i] == null)
+                    {
+                        resetTargets = true;
+                        break;
+                    }
+                    if (Vector3.Distance(targets[i].position, targets[i - 1].position) > extraTargetFindRange)
+                    {
+                        resetTargets = true;
+                        break;
+                    }
+                }
+            }
+
+            if (resetTargets)
+            {
+                for (int i = 0; i < targets.Length; ++i) targets[i] = null; //reset targets so that the current targets aren't ignored
+                for (int i = 0; i < targetEnemies.Length; ++i) targetEnemies[i] = null;
+
+                int currentTargets = 0;
+                targets[0] = target.transform;
+
+                //excluding 0 (initial target) find extra targets in range
+                for (int i = 1; i < targets.Length; ++i)
+                {
+                    targets[i] = newTarget(targets[i - 1], extraTargetFindRange, targets);    //find a new target within range, excluding things already targeted
+                    if (targets[i] == null) break;
+                    currentTargets++;
+                }
+                //linerender update
+                lineRenderer.positionCount = currentTargets + 2;    //position 0 and 1 are already used on the starting position and the initial enemy
+            }
+
+            for (int i = 1; i < lineRenderer.positionCount - 1; ++i)    //position count is no. of extra targets + initial two points (at turret and first enemy
+            {                                                           //position count  - 1 means points from first enemy to the last enemy
+                if (targets[i] == null) break;
+                lineRenderer.SetPosition(i + 1, targets[i].position);
+            }
+            //lineRenderer.positionCount = //number of targets
 
             //make enemies take damage (not initial target (already took damage))
             for (int i = 1; i < targets.Length; ++i)
@@ -268,24 +309,15 @@ public class Turret : MonoBehaviour
                 targetEnemies[i] = targets[i].GetComponent<Enemy>();
                 targetEnemies[i].TakeDamage(damageOverTime * Time.deltaTime * fireRate);
 
-                if (debuffApplied)  //don't keep track of build up on all enemies just apply it to all when one is affected
+                if (debuffApplied && debuffDuration != 0)  //don't keep track of build up on all enemies just apply it to all when one is affected
                 {
                     BuffHelper.AddDebuff(targetEnemies[i], type, debuffDuration, debuffAmount, debuffEffect);
                 }
-                else BuffHelper.AddDebuff(targetEnemies[i], type, 0.01f, debuffAmount, null);
-            }
-
-            //linerender update
-            lineRenderer.positionCount = currentTargets + 2;    //position 0 and 1 are already used on the starting position and the initial enemy
-            for (int i = 1; i < currentTargets + 1; ++i)
-            {
-                if (targets[i] == null) break;
-                lineRenderer.SetPosition(i + 1, targets[i].position);
+                else if (debuffDuration == 0) BuffHelper.AddDebuff(targetEnemies[i], type, 0.01f, debuffAmount, null);
             }
         }
-
-        //lineRenderer.positionCount = //number of targets
-
+        else lineRenderer.positionCount = 2;
+        #endregion
         Vector3 dir = firePoint.position - target.position;
 
         impactEffect.transform.position = target.position + dir.normalized;

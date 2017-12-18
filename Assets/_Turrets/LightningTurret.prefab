@@ -473,9 +473,10 @@ MonoBehaviour:
   type: 1
   extraTargetNumber: 2
   extraTargetFindRange: 10
-  buildUpTime: 0.75
-  debuffDuration: 0.25
-  debuffEffect: {fileID: 0}
+  buildUpTime: 2
+  debuffDuration: 0.7
+  debuffEffect: {fileID: 1466274310218158, guid: cd808d78319423e49865ddd9c8018a93,
+    type: 2}
   lineRenderer: {fileID: 120105248259532438}
   impactEffect: {fileID: 198690273012718670}
   impactLight: {fileID: 108240106120600268}
@@ -529,7 +530,7 @@ LineRenderer:
   - {x: -5, y: 3, z: 0}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.3
+    widthMultiplier: 0.15
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -541,7 +542,7 @@ LineRenderer:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
+      m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 0.9724138, b: 0, a: 0.7254902}

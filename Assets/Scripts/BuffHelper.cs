@@ -36,10 +36,11 @@ public static class BuffHelper {
         if (isStackingDebuff(_type)) //If the type can be stacked
         {
             for (int i = e.debuffList.Count - 1; i >= 0; --i)
-            {
+            {   //TODO: make different effects for same debuff play both effects (or not stack)
                 if (e.debuffList[i].type == _type)                  //And its already in the list
                 {
                     //set existing debuffs time remaining to the new time and add the amounts together
+                    if (e.debuffList[i].effect.gameObject.GetHashCode() == _effect.gameObject.GetHashCode()) Debug.Log("Same effect");
                     CalcDebuffSimple(ref e.debuffList[i].time, _time, ref e.debuffList[i].amount, _amount);
                     return;
                 }

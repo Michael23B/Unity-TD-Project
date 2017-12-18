@@ -24,7 +24,7 @@ public class WaveSpawner : MonoBehaviour {
     public Text waveCountdownText;
 
     private int waveIndex = 0;
-    public int waveMulti = 0;  //multiplier for repeating created waves
+    public float waveMulti = 0;  //multiplier for repeating created waves
 
     LocalPlayerCommands player;
     public int playersReady = 0;
@@ -108,7 +108,7 @@ public class WaveSpawner : MonoBehaviour {
         waveActive = false;
         finishedWaveAndReady = true;
 
-        if ((waveIndex) % waves.Length == 0) waveMulti++;
+        waveMulti = waveIndex * 0.1f;
 
         if (waveIndex == waves.Length * 5)
         {

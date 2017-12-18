@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224622914115543714}
   - component: {fileID: 222748502731261586}
   - component: {fileID: 114585292175636046}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBarImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 23128173147409626}
   - component: {fileID: 114572692136303100}
   - component: {fileID: 114090846819910932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 224452580302773284}
   - component: {fileID: 222806562806532254}
   - component: {fileID: 114600479087140086}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ShieldBarBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 223153034443220362}
   - component: {fileID: 114688227235873238}
   - component: {fileID: 114863641919682162}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 224140146795597474}
   - component: {fileID: 222652547366297396}
   - component: {fileID: 114999746491357994}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBarImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 224385232180850812}
   - component: {fileID: 222578413174317448}
   - component: {fileID: 114826320356898812}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBarBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
