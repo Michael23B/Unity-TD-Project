@@ -16,13 +16,13 @@ public class ReadyPlayer : MonoBehaviour {
 
     public void SelectPlayerOne()
     {
-        shop.DisableTurrets(shop.player2Turrets);
+        shop.EnableTurrets(shop.player1Turrets);
         gameObject.SetActive(false);
     }
 
     public void SelectPlayerTwo()
     {
-        shop.DisableTurrets(shop.player1Turrets);
+        shop.EnableTurrets(shop.player2Turrets);
         gameObject.SetActive(false);
     }
 }
