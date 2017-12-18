@@ -8,6 +8,7 @@ TagManager:
   - Turret
   - PlayerCamera
   - Node
+  - Freeze(Alternate)
   layers:
   - Default
   - TransparentFX

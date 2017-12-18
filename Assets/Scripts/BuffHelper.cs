@@ -14,6 +14,7 @@ public class Debuff
         effect = _effect;
 
     }
+
     public DebuffType type;
     public float time;
     public float amount;
@@ -33,16 +34,26 @@ public static class BuffHelper {
         {
             if (_amount >= 0f) return;
         }
-        if (isStackingDebuff(_type)) //If the type can be stacked
+        if (isStackingDebuff(_type))                                //If the type can be stacked
         {
-            for (int i = e.debuffList.Count - 1; i >= 0; --i)
-            {   //TODO: make different effects for same debuff play both effects (or not stack)
-                if (e.debuffList[i].type == _type)                  //And its already in the list
+            for (int i = e.debuffList.Count - 1; i >= 0; --i)       //Check each current debuff
+            {
+                if (e.debuffList[i].type == _type)                  //And if it's already in the list
                 {
-                    //set existing debuffs time remaining to the new time and add the amounts together
-                    if (e.debuffList[i].effect.gameObject.GetHashCode() == _effect.gameObject.GetHashCode()) Debug.Log("Same effect");
-                    CalcDebuffSimple(ref e.debuffList[i].time, _time, ref e.debuffList[i].amount, _amount);
-                    return;
+                    if (_effect != null)                            //If it has an effect..
+                    {
+                        if (e.debuffList[i].effect.CompareTag(_effect.tag)) //check if they are the same, if so just update the values for the debuff
+                        {
+                            CalcDebuffSimple(ref e.debuffList[i].time, _time, ref e.debuffList[i].amount, _amount);
+                            return;
+                        }
+                                                                    //If the effects are different, make a seperate debuff with the new effect
+                    }
+                    else
+                    {                                               //If there is no effect to be added, just update the debuff values
+                        CalcDebuffSimple(ref e.debuffList[i].time, _time, ref e.debuffList[i].amount, _amount);
+                        return;
+                    }
                 }
             }
         }
@@ -73,10 +84,11 @@ public static class BuffHelper {
         if (currentTime < newTime) currentTime = newTime;
         currentAmount += newAmount;
     }
-
+    
     public static void CheckDebuffs(Enemy e) //Calls BuffHelper on every debuff in this enemies list
     {
         if (e.debuffList.Count == 0) return;
+        //e.debuffList.Sort(delegate(Debuff d1, Debuff d2) { return d1.time.CompareTo(d2.time); }); //sorts debuff list by time remaining (low->high) so that for example if one stun makes moveable true (by ending) the remaining stun can set it back to false
         for (int i = e.debuffList.Count - 1; i >= 0; --i)
         {
             switch (e.debuffList[i].type)

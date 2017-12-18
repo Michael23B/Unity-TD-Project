@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4513842080949832}
   m_Layer: 0
   m_Name: ShockDebuffEffect
-  m_TagString: Untagged
+  m_TagString: Freeze(Alternate)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,10 +108,10 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852218953639262}
   serializedVersion: 5
-  lengthInSec: 0.25
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0

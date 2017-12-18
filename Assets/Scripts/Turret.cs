@@ -243,11 +243,10 @@ public class Turret : MonoBehaviour
             impactEffect.Play();
             impactLight.enabled = true;
         }
-
-        //https://docs.unity3d.com/ScriptReference/Mathf.PerlinNoise.html
-        //lineRenderer.startWidth = Random.Range(1, 2);
-        //lineRenderer.endWidth = Random.Range(1, 2);
-
+        //TODO: animate the laser with perlin noise or some animation
+        //lineRenderer.startWidth = Random.Range(0, 2);
+        //lineRenderer.endWidth = Random.Range(0, 2);
+        //doesnt update the random?
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
         #region multi-target
@@ -319,7 +318,7 @@ public class Turret : MonoBehaviour
         else lineRenderer.positionCount = 2;
         #endregion
         Vector3 dir = firePoint.position - target.position;
-
+        //TODO: add effect to all extra tagets
         impactEffect.transform.position = target.position + dir.normalized;
         //TODO: only works because enemy radius is 1 (normalized = 1)
 

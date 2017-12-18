@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-
-//TODO: change this to debuff spawn or something and make a different script for spawning units
+//TODO: clean up this and bullet debuff lists
+//      add different gameobject for each debuff. for effects
 public class Spawn : MonoBehaviour {
 
     public float explosionRadius = 10f;
@@ -80,6 +80,16 @@ public class Spawn : MonoBehaviour {
             GameObject debuffTemp = debuffEffect;
             if (e != null)
             {
+                if (fear)
+                {
+                    BuffHelper.AddDebuff(e, DebuffType.Fear, debuffDuration, amount, debuffTemp);
+                    debuffTemp = null;
+                }
+                if (freeze)
+                {
+                    BuffHelper.AddDebuff(e, DebuffType.Freeze, debuffDuration, amount, debuffTemp);
+                    debuffTemp = null;
+                }
                 if (slow)
                 {
                     BuffHelper.AddDebuff(e, DebuffType.Slow, debuffDuration, amount, debuffTemp);
@@ -90,11 +100,6 @@ public class Spawn : MonoBehaviour {
                     BuffHelper.AddDebuff(e, DebuffType.Poison, debuffDuration, amount, debuffTemp);
                     debuffTemp = null;
                 }
-                if (freeze)
-                {
-                    BuffHelper.AddDebuff(e, DebuffType.Freeze, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;
-                }
                 if (heal)
                 {
                     BuffHelper.AddDebuff(e, DebuffType.Heal, debuffDuration, amount, debuffTemp);
@@ -103,11 +108,6 @@ public class Spawn : MonoBehaviour {
                 if (amplifyDmg)
                 {
                     BuffHelper.AddDebuff(e, DebuffType.AmplifyDmg, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;
-                }
-                if (fear)
-                {
-                    BuffHelper.AddDebuff(e, DebuffType.Fear, debuffDuration, amount, debuffTemp);
                     debuffTemp = null;
                 }
             }

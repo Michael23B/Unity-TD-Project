@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+    //TODO: different gameobject for each debuff. for different effects
 public class Bullet : MonoBehaviour {
 
     private Transform target;
@@ -103,6 +103,16 @@ public class Bullet : MonoBehaviour {
         GameObject debuffTemp = debuffEffect;
         if (e != null)
         {
+            if (fear != 0)
+            {
+                BuffHelper.AddDebuff(e, DebuffType.Fear, duration, fear, debuffTemp);
+                debuffTemp = null;
+            }
+            if (freeze != 0)
+            {
+                BuffHelper.AddDebuff(e, DebuffType.Freeze, duration, freeze, debuffTemp);
+                debuffTemp = null;
+            }
             if (slow != 0)
             {
                 BuffHelper.AddDebuff(e, DebuffType.Slow, duration, slow, debuffTemp);
@@ -113,11 +123,6 @@ public class Bullet : MonoBehaviour {
                 BuffHelper.AddDebuff(e, DebuffType.Poison, duration, poison, debuffTemp);
                 debuffTemp = null;
             }
-            if (freeze != 0)
-            {
-                BuffHelper.AddDebuff(e, DebuffType.Freeze, duration, freeze, debuffTemp);
-                debuffTemp = null;
-            }
             if (heal != 0)
             {
                 BuffHelper.AddDebuff(e, DebuffType.Heal, duration, heal, debuffTemp);
@@ -126,11 +131,6 @@ public class Bullet : MonoBehaviour {
             if (amplifyDmg != 0)
             {
                 BuffHelper.AddDebuff(e, DebuffType.AmplifyDmg, duration, amplifyDmg, debuffTemp);
-                debuffTemp = null;
-            }
-            if (fear != 0)
-            {
-                BuffHelper.AddDebuff(e, DebuffType.Fear, duration, fear, debuffTemp);
                 debuffTemp = null;
             }
             e.TakeDamage(damage);
