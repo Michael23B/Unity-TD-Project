@@ -156,9 +156,7 @@ public class Turret : MonoBehaviour
                 else Shoot();
                 fireCountDown = 1f / fireRate;
             }
-
         }
-
     }
 
     Transform newTarget(Transform origin, float _range, Transform[] ignoreTargets)  //returns a new target (closest) within range from an origin, ignoring any requested targets

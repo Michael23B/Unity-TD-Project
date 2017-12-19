@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class TurretSelect : MonoBehaviour {
 
@@ -19,6 +20,9 @@ public class TurretSelect : MonoBehaviour {
     Button[] buttons;
 
     List<int> selectedTurrets = new List<int>();
+    [Space(10)]
+    public Text turretInfoName;
+    public Text turretInfoDesc;
 
     private void Start()
     {
@@ -37,12 +41,20 @@ public class TurretSelect : MonoBehaviour {
         {
             Button b = Instantiate(buttonPrefab, content.transform);
 
-            int trapCard = i;
+            int trapCard = i;   //delegate needs stored variable
             b.onClick.AddListener(delegate { ToggleTurretFromListItem(trapCard); });
 
             buttons[i] = b;
 
             buttons[i].image.overrideSprite = shop.buttons[i].image.sprite;
+            //add trigger through script. can't reference non-prefabs (info text) in the inspector
+            EventTrigger trigger = buttons[i].GetComponent<EventTrigger>(); //fetch the eventtrigger component on this button
+            EventTrigger.Entry entry = new EventTrigger.Entry();            //make a new entry
+            entry.eventID = EventTriggerType.PointerEnter;                  //of type pointer enter
+            entry.callback.AddListener((eventData) => { DisplayTurretInfo(shop.buttons[trapCard].name, "desc"); }); //run this funciton when it happens
+            trigger.triggers.Add(entry);                                    //done, add it
+            //TODO: add when mouse leaves clear it
+            //TODO: add a display name and description to each button in shops to pass in displayturretinfo()
         }
     }
 
@@ -110,4 +122,10 @@ public class TurretSelect : MonoBehaviour {
         }
     }
     #endregion
+
+    void DisplayTurretInfo(string name, string desc)
+    {
+        turretInfoName.text = name;
+        turretInfoDesc.text = desc;
+    }
 }
