@@ -11,6 +11,9 @@ public class TurretSelect : MonoBehaviour {
     [SerializeField]
     Shop shop;
 
+    [SerializeField]
+    CanvasGroup canvasGroup;
+
     public Button buttonPrefab;
     public GameObject content;
     Button[] buttons;
@@ -21,6 +24,7 @@ public class TurretSelect : MonoBehaviour {
     {
         Title.text = "LOADING TURRET LIST"; //wait until shops start has been called
         Invoke("InitializeButtons", 2f);
+        Hide();
     }
 
     void InitializeButtons()
@@ -33,13 +37,33 @@ public class TurretSelect : MonoBehaviour {
         {
             Button b = Instantiate(buttonPrefab, content.transform);
 
-            b.onClick.RemoveAllListeners();
-            b.onClick.AddListener(delegate { ToggleTurretFromListItem(i); });   //this doesn't work
-            Debug.Log("Adding listener: " + i);
+            int trapCard = i;
+            b.onClick.AddListener(delegate { ToggleTurretFromListItem(trapCard); });
+
             buttons[i] = b;
+
+            buttons[i].image.overrideSprite = shop.buttons[i].image.sprite;
         }
     }
 
+    public void Hide()
+    {
+        canvasGroup.alpha = 0f;
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    public void Show()
+    {
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    public void UpdateShop()
+    {
+        shop.EnableTurrets(selectedTurrets.ToArray());
+    }
+
+    #region Turret List Handling
     void AddToTurretList(int index)
     {
         if (selectedTurrets.Count >= maxTurrets)
@@ -51,6 +75,7 @@ public class TurretSelect : MonoBehaviour {
         {
             selectedTurrets.Add(index);
             Title.text = "Select Turrets (" + selectedTurrets.Count + "/" + maxTurrets + ")";
+            buttons[index].image.color = Color.grey;
         }
 
     }
@@ -66,11 +91,14 @@ public class TurretSelect : MonoBehaviour {
         {
             selectedTurrets.Remove(index);
             Title.text = "Select Turrets (" + selectedTurrets.Count + "/" + maxTurrets + ")";
+            buttons[index].image.color = Color.white;
         }
     }
 
     void ToggleTurretFromListItem(int index)
     {
+        Debug.Log("Toggling index: " + index);
+
         if (selectedTurrets.Contains(index))
         {
             RemoveFromTurretList(index);
@@ -81,4 +109,5 @@ public class TurretSelect : MonoBehaviour {
             AddToTurretList(index);
         }
     }
+    #endregion
 }

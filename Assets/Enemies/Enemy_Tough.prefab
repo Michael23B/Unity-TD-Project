@@ -199,7 +199,7 @@ MonoBehaviour:
   minSpeed: 1
   startHealth: 500
   health: 0
-  startShield: 450
+  startShield: 600
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0

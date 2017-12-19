@@ -7,6 +7,9 @@ public class ReadyPlayer : MonoBehaviour {
     [SerializeField]
     Shop shop;
 
+    [SerializeField]
+    TurretSelect turretSelect;
+
     public void PlayerReady()
     {
         if (player == null) player = FindObjectOfType<LocalPlayerCommands>();
@@ -14,15 +17,8 @@ public class ReadyPlayer : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    public void SelectPlayerOne()
+    public void TurretSelectMenu()
     {
-        shop.EnableTurrets(shop.player1Turrets);
-        gameObject.SetActive(false);
-    }
-
-    public void SelectPlayerTwo()
-    {
-        shop.EnableTurrets(shop.player2Turrets);
-        gameObject.SetActive(false);
+        turretSelect.Show();
     }
 }

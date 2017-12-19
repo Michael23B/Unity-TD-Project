@@ -232,10 +232,8 @@ public class Turret : MonoBehaviour
             }
             else currentBuildUp += Time.deltaTime * fireRate;
         }
-        else
-        {
-            BuffHelper.AddDebuff(targetEnemy, type, 0.01f, debuffAmount, null);   //if buildUpTime is 0 just apply it for the minimum time
-        }
+        else if (debuffAmount != 0) BuffHelper.AddDebuff(targetEnemy, type, 0.01f, debuffAmount, null);   //if buildUpTime is 0 just apply it for the minimum time
+
 
         if (!lineRenderer.enabled)
         {
@@ -312,7 +310,10 @@ public class Turret : MonoBehaviour
                 {
                     BuffHelper.AddDebuff(targetEnemies[i], type, debuffDuration, debuffAmount, debuffEffect);
                 }
-                else if (debuffDuration == 0) BuffHelper.AddDebuff(targetEnemies[i], type, 0.01f, debuffAmount, null);
+                else if (debuffDuration == 0)
+                {
+                    if (debuffAmount != 0) BuffHelper.AddDebuff(targetEnemy, type, 0.01f, debuffAmount, null);
+                }
             }
         }
         else lineRenderer.positionCount = 2;

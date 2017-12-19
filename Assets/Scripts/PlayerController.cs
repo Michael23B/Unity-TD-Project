@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float turnSpeed = 3f;
 
-    float toggleCoolDown, toggleCoolDown2;   //otherwise camera toggle gets spammed every update
+    float coolDownCamera, coolDownSS3;   //otherwise camera toggle gets spammed every update
 
     private PlayerMotor motor;
     Camera sceneCamera, playerCamera;
@@ -42,11 +42,11 @@ public class PlayerController : MonoBehaviour {
         {
             startSpeed = 50;
             verySpeed = 150;
-            toggleCoolDown2 -= Time.deltaTime;
-            if (Input.GetKey(KeyCode.LeftShift) && toggleCoolDown2 <= 0f)
+            coolDownSS3 -= Time.deltaTime;
+            if (Input.GetKey(KeyCode.LeftShift) && coolDownSS3 <= 0f)
             {
                 commands.CmdPlaySound(0);
-                toggleCoolDown2 = Random.Range(0.01f, 0.5f);
+                coolDownSS3 = Random.Range(0.01f, 0.5f);
             }
         }
 
@@ -60,13 +60,13 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.E))
         {
-            if (toggleCoolDown <= 0)
+            if (coolDownCamera <= 0)
             {
                 FirstPersonCamera();
-                toggleCoolDown = 1f;
+                coolDownCamera = 1f;
             }
         }
-        toggleCoolDown -= Time.deltaTime;
+        coolDownCamera -= Time.deltaTime;
 
         if (!fpCamera.isActiveAndEnabled)   //if fpcamera is enabled don't switch with tab
         {
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
             motor.transform.rotation = Quaternion.identity; //reset camera rotation
         }
     }
-
+    #region Camera controls
     void ToggleCamera(bool active)  //turns off fpcamera then activates either scene cam or player cam
     {
         if (sceneCamera == null) return;
@@ -131,7 +131,8 @@ public class PlayerController : MonoBehaviour {
         if(fpCamera.isActiveAndEnabled) Cursor.lockState = CursorLockMode.Locked;
         else Cursor.lockState = CursorLockMode.None;
     }
-
+    #endregion
+    #region Particle test (ss3)
     public void UnleashThis()
     {
         GameObject effectIns = Instantiate(bankaiEffect, transform);
@@ -150,4 +151,5 @@ public class PlayerController : MonoBehaviour {
         startSpeed = 10;
         verySpeed = 30;
     }
+    #endregion
 }

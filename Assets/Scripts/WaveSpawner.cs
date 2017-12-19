@@ -32,7 +32,7 @@ public class WaveSpawner : MonoBehaviour {
     public bool buildTime = true;
     Shop shop;
 
-    public int numberOfPlayersToWaitForBeforeReadyUpWorksSkadoosh = 1;
+    public int waitForPlayersCount = 1;
     private bool finishedWaveAndReady = false;
 
     private void Awake()
@@ -59,7 +59,7 @@ public class WaveSpawner : MonoBehaviour {
             player.CmdReady();
             finishedWaveAndReady = false;
         }
-        if (playersReady < numberOfPlayersToWaitForBeforeReadyUpWorksSkadoosh) return;
+        if (playersReady < waitForPlayersCount) return;
         if (countdown <= 0f)
         {
             buildTimeToggle();

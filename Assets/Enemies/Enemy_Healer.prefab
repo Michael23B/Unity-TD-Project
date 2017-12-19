@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 5
   minSpeed: 1
-  startHealth: 300
+  startHealth: 500
   health: 0
   startShield: 0
   shield: 0

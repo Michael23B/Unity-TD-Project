@@ -407,8 +407,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   useLaser: 1
   damageOverTime: 55
-  debuffAmount: 0.3
+  debuffAmount: 0.25
   type: 0
+  extraTargetNumber: 0
+  extraTargetFindRange: 5
   buildUpTime: 0
   debuffDuration: 0
   debuffEffect: {fileID: 0}

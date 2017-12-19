@@ -10,9 +10,6 @@ public class Shop : MonoBehaviour {
 
     [HideInInspector]
     public Button[] buttons;
-    [Space(20)]
-    public int[] player1Turrets;
-    public int[] player2Turrets;
 
     private void Start()
     {
@@ -28,7 +25,7 @@ public class Shop : MonoBehaviour {
         Debug.Log(Blueprints[index].prefab.name + " selected.");
     }
 
-    public void EnableButtons(int index)
+    public void EnableButton(int index)
     {
         buttons[index].gameObject.SetActive(true);
     }
@@ -43,7 +40,7 @@ public class Shop : MonoBehaviour {
         DisableAllButtons();
         foreach (int i in arr)
         {
-            EnableButtons(i);
+            EnableButton(i);
         }
     }
 }

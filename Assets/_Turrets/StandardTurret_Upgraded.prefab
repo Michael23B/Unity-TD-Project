@@ -271,16 +271,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   baseFireRate: 2.25
-  baseDamage: 40
+  baseDamage: 35
   damage: 0
   fireRate: 1.5
-  fireCountDown: 0
   targetNearest: 0
   bulletPrefab: {fileID: 1507132569338688, guid: c7783f21fbde4294fa515b7551d3d530,
     type: 2}
   useLaser: 0
   damageOverTime: 30
-  slowAmount: 2
+  debuffAmount: 0.15
+  type: 0
+  extraTargetNumber: 0
+  extraTargetFindRange: 5
+  buildUpTime: 0
+  debuffDuration: 0
+  debuffEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   impactLight: {fileID: 0}
