@@ -411,7 +411,7 @@ MonoBehaviour:
   useLaser: 0
   damageOverTime: 30
   debuffAmount: 0.15
-  type: 0
+  type: 2
   extraTargetNumber: 0
   extraTargetFindRange: 5
   buildUpTime: 0

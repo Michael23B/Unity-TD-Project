@@ -25672,6 +25672,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1108
@@ -25699,6 +25701,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1109
@@ -25726,6 +25730,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1110
@@ -25753,6 +25759,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1111
@@ -25802,6 +25810,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1113
@@ -25829,6 +25839,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1114
@@ -25856,6 +25868,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1115
@@ -25883,6 +25897,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1116
@@ -26011,6 +26027,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1120
@@ -26038,6 +26056,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1121
@@ -26065,6 +26085,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1122
@@ -26092,6 +26114,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1123
@@ -26119,6 +26143,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1124
@@ -26396,7 +26422,7 @@ MonoBehaviour:
   waveMulti: 0
   playersReady: 0
   buildTime: 1
-  waitForPlayersCount: 1
+  waitForPlayersCount: 2
 --- !u!114 &1131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26422,6 +26448,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1132
@@ -26528,6 +26556,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1135
@@ -26555,6 +26585,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1136
@@ -26582,6 +26614,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1137
@@ -26688,6 +26722,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1141
@@ -26760,6 +26796,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Turret
+    displayDesc: Fires fast with average damage.
   - prefab: {fileID: 1273892611175448, guid: 8a9704c47ae98344dad3c3facb190670, type: 2}
     cost: 250
     upgradedPrefab: {fileID: 1273892611175448, guid: 108821c09d7cf0f4b82265ce077e1755,
@@ -26769,6 +26807,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Missle Launcher
+    displayDesc: High AOE damage.
   - prefab: {fileID: 1507746948647926, guid: c3ffd00eb8eb0ff4da111bc99bfe510b, type: 2}
     cost: 200
     upgradedPrefab: {fileID: 1507746948647926, guid: 3319b3d74a71da848b5cfb235323304d,
@@ -26778,6 +26818,8 @@ MonoBehaviour:
     resourceType: 1
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Laser Turret
+    displayDesc: Slows and damages over time.
   - prefab: {fileID: 1687727007058188, guid: af7966a341c63ba46a18f32fbd4c8839, type: 2}
     cost: 225
     upgradedPrefab: {fileID: 1687727007058188, guid: e553c1ff5e0fdb84b9105ae18fbfd7b8,
@@ -26787,6 +26829,8 @@ MonoBehaviour:
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Freeze Turret
+    displayDesc: No damage, but can freeze enemies in an AOE.
   - prefab: {fileID: 1433889198367424, guid: 6aefc678f931d7144980d89c9b30616d, type: 2}
     cost: 160
     upgradedPrefab: {fileID: 1433889198367424, guid: b655bd6503960604c9a9eb84f855ec20,
@@ -26796,6 +26840,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Poison Turret
+    displayDesc: High damage over time. No effect against shielded enemies.
   - prefab: {fileID: 1687727007058188, guid: aa1904a32ea65b7419a845ba453f5e0c, type: 2}
     cost: 300
     upgradedPrefab: {fileID: 1687727007058188, guid: a0a27ce4ad13a4a4d8f359e0639023cf,
@@ -26805,6 +26851,8 @@ MonoBehaviour:
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Speed Turret
+    displayDesc: Buffs the attack speed of turrets around it.
   - prefab: {fileID: 1433889198367424, guid: 5a4c7200f024ad44192958a47e867f40, type: 2}
     cost: 350
     upgradedPrefab: {fileID: 1905667894733756, guid: 982a60d8e38ff0d4e880de5a9c908af1,
@@ -26814,6 +26862,8 @@ MonoBehaviour:
     resourceType: 1
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Fear Turret
+    displayDesc: Forces an enemy to run away.
   - prefab: {fileID: 1416395722897164, guid: 43b593ed8a28174448a4a52f6328d5d3, type: 2}
     cost: 1000
     upgradedPrefab: {fileID: 1416395722897164, guid: 074ae3ab5a001ef469bb67f6a2b545d5,
@@ -26823,6 +26873,8 @@ MonoBehaviour:
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Long Turret
+    displayDesc: Well now that's a might looooong turret.
   - prefab: {fileID: 1507746948647926, guid: 3e8b9b7c2df0b374f99d36a4735a1975, type: 2}
     cost: 375
     upgradedPrefab: {fileID: 1507746948647926, guid: f1365f00d05d43b45bd6e1fff08941f9,
@@ -26832,6 +26884,8 @@ MonoBehaviour:
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: Lightning Turret
+    displayDesc: Can chain to multiple enemies and shock them briefly.
   buttons: []
 --- !u!114 &1144
 MonoBehaviour:
@@ -26858,6 +26912,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1145
@@ -26885,6 +26941,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1146
@@ -26912,6 +26970,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1147
@@ -26939,6 +26999,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1148
@@ -27026,6 +27088,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1155
@@ -27053,6 +27117,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1156
@@ -27113,6 +27179,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1158
@@ -27140,6 +27208,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1159
@@ -27167,6 +27237,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1160
@@ -27194,6 +27266,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1163
@@ -27221,6 +27295,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1164
@@ -27282,6 +27358,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1166
@@ -27309,6 +27387,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1167
@@ -27336,6 +27416,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1168
@@ -27410,6 +27492,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1171
@@ -27437,6 +27521,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1172
@@ -27464,6 +27550,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1173
@@ -27525,6 +27613,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1175
@@ -27659,6 +27749,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1179
@@ -27713,6 +27805,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1181
@@ -27740,6 +27834,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1182
@@ -27947,6 +28043,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1188
@@ -27974,6 +28072,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1189
@@ -28018,6 +28118,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1191
@@ -28045,6 +28147,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1192
@@ -28290,6 +28394,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1203
@@ -28345,6 +28451,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1205
@@ -28372,6 +28480,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1206
@@ -28399,6 +28509,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1207
@@ -28426,6 +28538,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1208
@@ -28453,6 +28567,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1209
@@ -28480,6 +28596,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1210
@@ -28507,6 +28625,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1211
@@ -28534,6 +28654,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1212
@@ -28561,6 +28683,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1213
@@ -28616,6 +28740,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1215
@@ -28671,6 +28797,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1217
@@ -28698,6 +28826,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1218
@@ -28725,6 +28855,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1219
@@ -28789,6 +28921,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1222
@@ -28816,6 +28950,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1223
@@ -28843,6 +28979,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1224
@@ -28870,6 +29008,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1225
@@ -28897,6 +29037,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1226
@@ -28924,6 +29066,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1227
@@ -28951,6 +29095,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1228
@@ -28978,6 +29124,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1229
@@ -29005,6 +29153,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1230
@@ -29032,6 +29182,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1231
@@ -29059,6 +29211,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1232
@@ -29086,6 +29240,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1233
@@ -29113,6 +29269,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1234
@@ -29140,6 +29298,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1235
@@ -29167,6 +29327,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1236
@@ -29194,6 +29356,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1237
@@ -29221,6 +29385,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1238
@@ -29248,6 +29414,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1239
@@ -29275,6 +29443,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1240
@@ -29302,6 +29472,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1241
@@ -29329,6 +29501,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1242
@@ -29356,6 +29530,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1243
@@ -29397,6 +29573,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1245
@@ -29424,6 +29602,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1246
@@ -29451,6 +29631,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1247
@@ -29579,6 +29761,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1251
@@ -29606,6 +29790,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1252
@@ -29633,6 +29819,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1253
@@ -29660,6 +29848,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1254
@@ -29687,6 +29877,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1255
@@ -29749,6 +29941,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1257
@@ -29776,6 +29970,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1258
@@ -29837,6 +30033,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1260
@@ -29864,6 +30062,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1261
@@ -29891,6 +30091,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1263
@@ -29918,6 +30120,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1266
@@ -30046,6 +30250,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1270
@@ -30073,6 +30279,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1271
@@ -30100,6 +30308,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1272
@@ -30127,6 +30337,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1273
@@ -30154,6 +30366,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1274
@@ -30192,6 +30406,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1276
@@ -30219,6 +30435,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1277
@@ -30246,6 +30464,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1278
@@ -30273,6 +30493,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1279
@@ -30328,6 +30550,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1281
@@ -30415,6 +30639,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1285
@@ -30442,6 +30668,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1286
@@ -30469,6 +30697,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1287
@@ -30496,6 +30726,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1288
@@ -30592,6 +30824,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1292
@@ -30619,6 +30853,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1293
@@ -30677,6 +30913,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1295
@@ -30704,6 +30942,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1296
@@ -30731,6 +30971,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1297
@@ -30758,6 +31000,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1298
@@ -30819,6 +31063,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1300
@@ -30846,6 +31092,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1301
@@ -30873,6 +31121,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1302
@@ -30900,6 +31150,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1303
@@ -30927,6 +31179,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1304
@@ -30954,6 +31208,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1305
@@ -30981,6 +31237,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1308
@@ -31008,6 +31266,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1309
@@ -31069,6 +31329,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1311
@@ -31096,6 +31358,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1312
@@ -31123,6 +31387,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1313
@@ -31177,6 +31443,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1316
@@ -31204,6 +31472,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1317
@@ -31265,6 +31535,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1319
@@ -31292,6 +31564,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1320
@@ -31347,6 +31621,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1322
@@ -31591,6 +31867,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1331
@@ -31618,6 +31896,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1332
@@ -31645,6 +31925,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1333
@@ -31690,6 +31972,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1335
@@ -31717,6 +32001,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1336
@@ -31744,6 +32030,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1337
@@ -31771,6 +32059,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1338
@@ -31826,6 +32116,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1340
@@ -31853,6 +32145,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1341
@@ -31880,6 +32174,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1343
@@ -31907,6 +32203,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1344
@@ -31934,6 +32232,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1346
@@ -31961,6 +32261,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1347
@@ -31988,6 +32290,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1348
@@ -32015,6 +32319,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1350
@@ -32042,6 +32348,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1351
@@ -32102,6 +32410,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1353
@@ -32129,6 +32439,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1354
@@ -32189,6 +32501,8 @@ MonoBehaviour:
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
+    displayName: 
+    displayDesc: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1356
@@ -32258,8 +32572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -336.2, y: 48}
-  m_SizeDelta: {x: 236.5, y: 234.1}
+  m_AnchoredPosition: {x: -336.2, y: 24.7}
+  m_SizeDelta: {x: 236.5, y: 280.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86217123
 MonoBehaviour:
@@ -33823,7 +34137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000034831795}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000011009305}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -33972,7 +34286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000014305, y: 80}
+  m_AnchoredPosition: {x: -0.000000088738, y: 103.4}
   m_SizeDelta: {x: 236.5, y: 73.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866612674
@@ -34007,7 +34321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Turret
+  m_Text: 
 --- !u!222 &866612675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34259,8 +34573,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8, y: -22.1}
-  m_SizeDelta: {x: 220.9, y: 113.4}
+  m_AnchoredPosition: {x: -0.0000063181, y: -26.7}
+  m_SizeDelta: {x: 220.9, y: 186.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963622031
 MonoBehaviour:
@@ -34294,7 +34608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is where the information for the turret should go ok............
+  m_Text: '
 
 '
 --- !u!222 &963622032
@@ -34899,8 +35213,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000066757, y: -0.0000033379}
-  m_SizeDelta: {x: -250.3, y: -112.4}
+  m_AnchoredPosition: {x: 37, y: 0.000049356895}
+  m_SizeDelta: {x: -0.000061035, y: -112.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250084048
 MonoBehaviour:
@@ -34917,6 +35231,7 @@ MonoBehaviour:
   Title: {fileID: 2081281350}
   shop: {fileID: 1143}
   canvasGroup: {fileID: 1250084049}
+  buttonOpenWindow: {fileID: 761646153}
   buttonPrefab: {fileID: 114233018019690064, guid: a3e6e5f2edd97d54d96a9641fd98a427,
     type: 2}
   content: {fileID: 813750076}
@@ -35098,7 +35413,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2041626116}
   m_HandleRect: {fileID: 2041626114}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -35122,7 +35437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 295.7047, y: -5.456968e-12}
+  m_AnchoredPosition: {x: 289, y: -5.456968e-12}
   m_SizeDelta: {x: 21.2, y: 330.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328426885
@@ -36149,8 +36464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -40}
+  m_AnchoredPosition: {x: 2.4, y: 0}
+  m_SizeDelta: {x: -44.7, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739689579
 MonoBehaviour:
@@ -36493,6 +36808,7 @@ GameObject:
   - component: {fileID: 2081281349}
   - component: {fileID: 2081281351}
   - component: {fileID: 2081281350}
+  - component: {fileID: 2081281352}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -36515,7 +36831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -48.1}
+  m_AnchoredPosition: {x: 6, y: -48.1}
   m_SizeDelta: {x: 577.1, y: 96.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081281350
@@ -36557,6 +36873,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2081281348}
+--- !u!114 &2081281352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081281348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2115241762
 GameObject:
   m_ObjectHideFlags: 0

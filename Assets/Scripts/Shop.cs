@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour {
 
     [Header("Blueprints Array")]
-    public TurretBlueprint[] Blueprints;
+    public TurretBlueprint[] Blueprints;    //TurretSelect currently relies on blueprints index matching buttons index (button 0 accesses blueprint 0)
 
     BuildManager buildManager;
 

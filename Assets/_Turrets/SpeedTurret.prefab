@@ -201,12 +201,17 @@ MonoBehaviour:
   baseDamage: 0
   damage: 0
   fireRate: 0.2
-  fireCountDown: 0
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 0
   damageOverTime: 30
-  slowAmount: 2
+  debuffAmount: 0.15
+  type: 4
+  extraTargetNumber: 0
+  extraTargetFindRange: 5
+  buildUpTime: 0
+  debuffDuration: 0
+  debuffEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   impactLight: {fileID: 0}
