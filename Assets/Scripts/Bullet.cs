@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-    //TODO: different gameobject for each debuff. for different effects
+
+//TODO: different gameobject for each debuff. for different effects
 public class Bullet : MonoBehaviour {
 
     private Transform target;
@@ -11,15 +12,8 @@ public class Bullet : MonoBehaviour {
     private ParticleSystem travelEffectPS;
     private float damage = 50f;
 
-    [Header("Debuffs (0 = inactive)")]
-    public float slow = 0f;
-    public float poison = 0f;
-    public float freeze = 0f;
-    public float heal = 0f;
-    public float amplifyDmg = 0f;
-    public float fear = 0f;
-    public float duration = 1f;
-    public GameObject debuffEffect;
+    [Header("Debuffs")]
+    public Debuff[] debuffs;
 
     //Turret setup fields
     private float range = 15f;
@@ -97,41 +91,14 @@ public class Bullet : MonoBehaviour {
         }
     }
 
-    void Damage(Transform enemy)    //why did i make 2 functions with slightly different implementations that do the same shit
+    void Damage(Transform enemy)
     {
         Enemy e = enemy.GetComponent<Enemy>();
-        GameObject debuffTemp = debuffEffect;
         if (e != null)
         {
-            if (fear != 0)
+            foreach (Debuff debuff in debuffs)
             {
-                BuffHelper.AddDebuff(e, DebuffType.Fear, duration, fear, debuffTemp);
-                debuffTemp = null;
-            }
-            if (freeze != 0)
-            {
-                BuffHelper.AddDebuff(e, DebuffType.Freeze, duration, freeze, debuffTemp);
-                debuffTemp = null;
-            }
-            if (slow != 0)
-            {
-                BuffHelper.AddDebuff(e, DebuffType.Slow, duration, slow, debuffTemp);
-                debuffTemp = null;   //if you instantiate an effect, don't stack it
-            }
-            if (poison != 0)
-            {
-                BuffHelper.AddDebuff(e, DebuffType.Poison, duration, poison, debuffTemp);
-                debuffTemp = null;
-            }
-            if (heal != 0)
-            {
-                BuffHelper.AddDebuff(e, DebuffType.Heal, duration, heal, debuffTemp);
-                debuffTemp = null;
-            }
-            if (amplifyDmg != 0)
-            {
-                BuffHelper.AddDebuff(e, DebuffType.AmplifyDmg, duration, amplifyDmg, debuffTemp);
-                debuffTemp = null;
+                BuffHelper.AddDebuff(e, debuff);
             }
             e.TakeDamage(damage);
         }

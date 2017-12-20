@@ -20,13 +20,16 @@ public class PlayerController : MonoBehaviour {
     Camera fpCamera;
 
     private bool evenFurtherBeyondAHHHHHHHHHHHHHHH = false;
-    [SerializeField]
+
     public GameObject bankaiEffect;
 
     [SerializeField]
     LocalPlayerCommands commands;
 
     public NetworkAudio networkAudio;
+
+    public Canvas bottomCanvas;
+    public CanvasGroup bottomCanvasGroup;
 
     private void Start()
     {

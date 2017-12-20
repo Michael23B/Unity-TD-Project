@@ -1424,7 +1424,6 @@ GameObject:
   - component: {fileID: 970}
   - component: {fileID: 979}
   - component: {fileID: 969}
-  - component: {fileID: 1189}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4155,13 +4154,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  startMoney: 10000
+  startMoney: 650
   lives: 0
   startLives: 20
   rounds: 0
-  stone: 150
-  green: 150
-  diamond: 150
+  stone: 30
+  green: 30
+  diamond: 30
 --- !u!1 &222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,6 +4208,7 @@ GameObject:
   - component: {fileID: 1036}
   - component: {fileID: 1329}
   - component: {fileID: 1328}
+  - component: {fileID: 338}
   m_Layer: 5
   m_Name: Bottom Canvas
   m_TagString: Untagged
@@ -5891,7 +5891,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 78}
   m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
-  m_LocalPosition: {x: 37.5, y: 83.61, z: -18.73}
+  m_LocalPosition: {x: 37.5, y: 75, z: -6.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5939,6 +5939,17 @@ Transform:
   m_Father: {fileID: 439}
   m_RootOrder: 99
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &338
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 224}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &339
 Transform:
   m_ObjectHideFlags: 0
@@ -25409,6 +25420,7 @@ RectTransform:
   - {fileID: 1076}
   - {fileID: 1077}
   - {fileID: 1173397120}
+  - {fileID: 996986295}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -26224,64 +26236,60 @@ MonoBehaviour:
   - wave:
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 10
-      spawnRate: 2.5
+      spawnRate: 2
       waitTime: 0
-    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
       count: 3
       spawnRate: 0.5
-      waitTime: 2
+      waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 20
-      spawnRate: 3
-      waitTime: 4
+      spawnRate: 2.5
+      waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
       count: 3
       spawnRate: 0.4
       waitTime: 4
-    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
-      count: 10
-      spawnRate: 4
-      waitTime: 2
     randomOrder: 0
   - wave:
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
-      count: 7
-      spawnRate: 4
+      count: 15
+      spawnRate: 3
       waitTime: 0
-    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
-      count: 1
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
       spawnRate: 1
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
       count: 2
       spawnRate: 1.75
-      waitTime: 3
+      waitTime: 4
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
       count: 25
-      spawnRate: 6
-      waitTime: 5
+      spawnRate: 4
+      waitTime: 2
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 15
-      spawnRate: 6
+      spawnRate: 4
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
       count: 3
-      spawnRate: 2
+      spawnRate: 1
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 5
+      count: 3
       spawnRate: 1
       waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
-      count: 50
+      count: 30
       spawnRate: 10
-      waitTime: 4
+      waitTime: 3
     randomOrder: 0
   - wave:
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
       count: 5
       spawnRate: 2
-      waitTime: 2
+      waitTime: 1
     - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
       count: 4
       spawnRate: 3
@@ -26289,23 +26297,23 @@ MonoBehaviour:
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
       count: 35
       spawnRate: 6
-      waitTime: 1
+      waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
-      count: 50
+      count: 40
       spawnRate: 7
       waitTime: 1.5
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 8
+      count: 5
       spawnRate: 0.75
       waitTime: 2
-    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
       count: 4
       spawnRate: 2
-      waitTime: 0
-    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 6
-      spawnRate: 2
       waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 3
+      waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
       count: 40
       spawnRate: 10
@@ -26315,31 +26323,31 @@ MonoBehaviour:
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 20
       spawnRate: 5
-      waitTime: 0
+      waitTime: 2
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
       count: 8
       spawnRate: 2
-      waitTime: 1
-    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
-      count: 5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
       spawnRate: 2
-      waitTime: 1
+      waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 18
       spawnRate: 4
-      waitTime: 0
+      waitTime: 1
     - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
       count: 1
       spawnRate: 1
-      waitTime: 1
+      waitTime: 8
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
       count: 20
       spawnRate: 3
-      waitTime: 2
+      waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
       count: 20
       spawnRate: 6
-      waitTime: 1
+      waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
       count: 6
       spawnRate: 1.25
@@ -26351,31 +26359,35 @@ MonoBehaviour:
       spawnRate: 0.3
       waitTime: 15
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 15
-      spawnRate: 2
-      waitTime: 10
+      count: 12
+      spawnRate: 0.8
+      waitTime: 6
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
       count: 50
       spawnRate: 8
       waitTime: 6
-    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
       count: 8
-      spawnRate: 4
+      spawnRate: 2
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
-      count: 1
-      spawnRate: 1
+      count: 2
+      spawnRate: 0.25
       waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 1.25
+      waitTime: 2
     randomOrder: 0
   - wave:
     - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
       count: 4
-      spawnRate: 0.2
-      waitTime: 3
+      spawnRate: 0.3
+      waitTime: 4
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
-      count: 15
-      spawnRate: 10
-      waitTime: 1
+      count: 20
+      spawnRate: 20
+      waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
       count: 1
       spawnRate: 1
@@ -26383,7 +26395,7 @@ MonoBehaviour:
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
       count: 8
       spawnRate: 1
-      waitTime: 0
+      waitTime: 4
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 20
       spawnRate: 5
@@ -26400,20 +26412,20 @@ MonoBehaviour:
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
       count: 3
-      spawnRate: 1
+      spawnRate: 0.75
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
-      count: 5
+      count: 10
       spawnRate: 1.25
       waitTime: 2
-    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
-      count: 4
-      spawnRate: 4
-      waitTime: 0
-    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 12
-      spawnRate: 4
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 15
+      spawnRate: 2.5
       waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 25
+      spawnRate: 2.25
+      waitTime: 4
     randomOrder: 0
   spawnPoint: {fileID: 444}
   enemyList: []
@@ -26841,7 +26853,7 @@ MonoBehaviour:
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Poison Turret
-    displayDesc: High damage over time. No effect against shielded enemies.
+    displayDesc: High damage over time.
   - prefab: {fileID: 1687727007058188, guid: aa1904a32ea65b7419a845ba453f5e0c, type: 2}
     cost: 300
     upgradedPrefab: {fileID: 1687727007058188, guid: a0a27ce4ad13a4a4d8f359e0639023cf,
@@ -26874,7 +26886,7 @@ MonoBehaviour:
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Long Turret
-    displayDesc: Well now that's a might looooong turret.
+    displayDesc: Well now that's a mighty looooong turret.
   - prefab: {fileID: 1507746948647926, guid: 3e8b9b7c2df0b374f99d36a4735a1975, type: 2}
     cost: 375
     upgradedPrefab: {fileID: 1507746948647926, guid: f1365f00d05d43b45bd6e1fff08941f9,
@@ -28076,23 +28088,6 @@ MonoBehaviour:
     displayDesc: 
   isUpgraded: 0
   nodeID: 0
---- !u!114 &1189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a01efe7b7133ac4bbea0471286254dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doMovement: 1
-  panSpeed: 30
-  panBorderThickness: 10
-  scrollSpeed: 5
-  minY: 10
-  maxY: 80
 --- !u!114 &1190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34137,7 +34132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000011009305}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000015347085}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -34573,8 +34568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000063181, y: -26.7}
-  m_SizeDelta: {x: 220.9, y: 186.3}
+  m_AnchoredPosition: {x: -0.0000063181, y: -34.5}
+  m_SizeDelta: {x: 220.9, y: 201.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963622031
 MonoBehaviour:
@@ -34600,8 +34595,8 @@ MonoBehaviour:
     m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 13
-    m_MaxSize: 15
+    m_MinSize: 11
+    m_MaxSize: 14
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -34617,6 +34612,95 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 963622029}
+--- !u!1 &996986294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 996986295}
+  - component: {fileID: 996986298}
+  - component: {fileID: 996986297}
+  - component: {fileID: 996986296}
+  m_Layer: 5
+  m_Name: WaveText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &996986295
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996986294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1.0000005, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 1087}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &996986296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996986294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.272}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &996986297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996986294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: f7cfd6fc292e430419d80c372e30cd91, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 150
+    m_Alignment: 8
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Seconds until wave
+--- !u!222 &996986298
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996986294}
 --- !u!1 &1137486248
 GameObject:
   m_ObjectHideFlags: 0

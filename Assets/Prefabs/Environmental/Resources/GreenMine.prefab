@@ -2039,13 +2039,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0664be5829cf1fb4981811085172c64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 0.25
   hitEffect: {fileID: 1473482693974122, guid: b90ad5a33228435498457045c0cff176, type: 2}
   onCooldownHitEffect: {fileID: 1473482693974122, guid: 5e4eb5fc46d6e2b4ba1103315623f905,
     type: 2}
   money: 0
   stone: 0
-  green: 1
+  green: 2
   diamond: 0
   resourceAmount: 10
 --- !u!198 &198431153006293638

@@ -408,7 +408,9 @@ MonoBehaviour:
   useLaser: 1
   damageOverTime: 40
   debuffAmount: 0.15
-  type: 0
+  type: 1
+  extraTargetNumber: 0
+  extraTargetFindRange: 5
   buildUpTime: 0
   debuffDuration: 0
   debuffEffect: {fileID: 0}
@@ -423,6 +425,7 @@ MonoBehaviour:
   PartToRotate: {fileID: 4047525615116446}
   firePoint: {fileID: 4726620063414790}
   turnSpeed: 10
+  debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}
 --- !u!120 &120105248259532438

@@ -2,8 +2,9 @@
 
 //Definitions for buffs and methods for adding and stacking etc.
 
-public enum DebuffType { LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }    //nostun (if stunned for too long become immune)
+public enum DebuffType { None, LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }    //nostun (if stunned for too long become immune)
 
+[System.Serializable]
 public class Debuff
 {
     public Debuff(DebuffType _type, float _time, float _amount, GameObject _effect) //add bool for buffs or debuffs
@@ -12,7 +13,6 @@ public class Debuff
         time = _time;
         amount = _amount;
         effect = _effect;
-
     }
 
     public DebuffType type;
@@ -30,6 +30,7 @@ public static class BuffHelper {
     //
     public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null)
     {
+        if (_type == DebuffType.None) Debug.Log("Empty debuff called");
         if (e.shield > 0 && _type != DebuffType.Heal)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through
         {
             if (_amount >= 0f) return;
@@ -71,6 +72,11 @@ public static class BuffHelper {
 
             e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns));
         }
+    }
+
+    public static void AddDebuff(Enemy e, Debuff d)
+    {
+        AddDebuff(e, d.type, d.time, d.amount, d.effect);
     }
 
     static bool isStackingDebuff(DebuffType _type)
@@ -143,6 +149,11 @@ public static class BuffHelper {
             GameObject effectIns = GameObject.Instantiate(t.emptyPlaceHolder, t.transform.position, Quaternion.Euler(0, 0, 0));
             t.debuffList.Add(new Debuff(_type, _time, _amount, effectIns));
         }
+    }
+
+    public static void AddDebuff(Turret t, Debuff d)
+    {
+        AddDebuff(t, d.type, d.time, d.amount, d.effect);
     }
 
     public static void CheckDebuffs(Turret t) //Calls BuffHelper on every debuff in this enemies list

@@ -1288,6 +1288,7 @@ MonoBehaviour:
   PartToRotate: {fileID: 4781815461141856}
   firePoint: {fileID: 4597064231160948}
   turnSpeed: 10
+  debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}
 --- !u!114 &114314132908284460
@@ -1311,7 +1312,7 @@ MonoBehaviour:
   useLaser: 1
   damageOverTime: 25
   debuffAmount: 1
-  type: 1
+  type: 2
   extraTargetNumber: 0
   extraTargetFindRange: 5
   buildUpTime: 2
@@ -1329,6 +1330,7 @@ MonoBehaviour:
   PartToRotate: {fileID: 4849936620832010}
   firePoint: {fileID: 4300494571378658}
   turnSpeed: 10
+  debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}
 --- !u!114 &114501342126864484
@@ -1352,7 +1354,7 @@ MonoBehaviour:
   useLaser: 1
   damageOverTime: 10
   debuffAmount: 0.25
-  type: 0
+  type: 1
   extraTargetNumber: 0
   extraTargetFindRange: 5
   buildUpTime: 0
@@ -1369,6 +1371,7 @@ MonoBehaviour:
   PartToRotate: {fileID: 4747705883650998}
   firePoint: {fileID: 4806279577796380}
   turnSpeed: 10
+  debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}
 --- !u!120 &120037814224519616

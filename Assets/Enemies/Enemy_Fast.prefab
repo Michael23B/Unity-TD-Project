@@ -203,9 +203,10 @@ MonoBehaviour:
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
-  bounty: 1
+  bounty: 0
   speed: 10
   moveable: 1
+  debuffList: []
   deathEffect: {fileID: 1491607627031414, guid: 5464a35e8cf253d46a58fe4a017f04c5,
     type: 2}
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,

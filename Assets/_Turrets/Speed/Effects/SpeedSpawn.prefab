@@ -58,11 +58,10 @@ MonoBehaviour:
     type: 2}
   amount: 0.2
   countdown: 0
-  debuffDuration: 5
   targetEnemy: 0
-  freeze: 0
-  slow: 0
-  poison: 0
-  heal: 0
-  amplifyDmg: 0
-  atkSpeed: 1
+  debuffs: []
+  buffs:
+  - type: 5
+    time: 5
+    amount: 0.2
+    effect: {fileID: 1465175319799968, guid: acdb2e803823d7e47a134027a4dfe317, type: 2}

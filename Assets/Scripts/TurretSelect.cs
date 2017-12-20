@@ -119,8 +119,6 @@ public class TurretSelect : MonoBehaviour {
 
     void ToggleTurretFromListItem(int index)
     {
-        Debug.Log("Toggling index: " + index);
-
         if (selectedTurrets.Contains(index))
         {
             RemoveFromTurretList(index);
@@ -136,21 +134,27 @@ public class TurretSelect : MonoBehaviour {
     void DisplayTurretInfo(TurretBlueprint turret)
     {
         turretInfoName.text = turret.displayName;
-        turretInfoDesc.text = turret.displayDesc;
-
+        turretInfoDesc.text = turret.displayDesc + "\n";
         //parse stat values (beta)
-        if (turret.GetStat(FetchStat.Damage) != "" && turret.GetStat(FetchStat.Damage) != "0") turretInfoDesc.text += "\n\n-Damage: " + turret.GetStat(FetchStat.Damage);   //TODO: dont check based on damge (laser turret)
-        //else turretInfoDesc.text += "\n\nDebuff: " + turret.GetStat(FetchStat.DebuffType); TODO: fix debuff type check
-        else
+        if (turret.GetStat(FetchStat.ExtraTargets) != "0" && turret.GetStat(FetchStat.ExtraTargets) != "") turretInfoDesc.text += "\n<color=green>Can hit multiple enemies</color>";
+        else if (turret.GetStat(FetchStat.AOE) != "0" && turret.GetStat(FetchStat.AOE) != "") turretInfoDesc.text += "\n<color=green>Can hit multiple enemies</color>";
+        if (turret.GetStat(FetchStat.DebuffType) != "")
         {
-            turretInfoDesc.text += "\n\n<color=green>Can Buff/Debuff</color>";
-            if (turret.GetStat(FetchStat.DebuffType) != "AtkSpeed") turretInfoDesc.text += "\n<color=red>No effect vs shield</color>\n";    //TODO: dont check only atkspeed
-            
+            if (turret.GetStat(FetchStat.DebuffType) != "AtkSpeed")
+            {
+                turretInfoDesc.text += "\n<color=green>Debuff Type: " + turret.GetStat(FetchStat.DebuffType) + "</color>";
+                turretInfoDesc.text += "\n<color=red>Ineffective vs shield</color>\n";
+            }
+            else
+            {
+                turretInfoDesc.text += "\n<color=green>Buff Type: " + turret.GetStat(FetchStat.DebuffType) + "</color>\n";
+            }
         }
-        turretInfoDesc.text += "\n-Fire Rate: " + turret.GetStat(FetchStat.FireRate);
-        turretInfoDesc.text += "\n-Range: " + turret.GetRange(false);
-        turretInfoDesc.text += "\n-Cost: " + turret.GetStat(FetchStat.Cost);
-        if (turret.GetStat(FetchStat.ResourceCost) != "0") turretInfoDesc.text += "\n-Resources: " + turret.GetStat(FetchStat.ResourceCost) + " " + turret.GetStat(FetchStat.ResourceType);
+        turretInfoDesc.text += "\nDamage: " + turret.GetStat(FetchStat.Damage);
+        turretInfoDesc.text += "\nFire Rate: " + turret.GetStat(FetchStat.FireRate);
+        turretInfoDesc.text += "\nRange: " + turret.GetRange(false);
+        turretInfoDesc.text += "\n\n<color=yellow>Cost: " + turret.GetStat(FetchStat.Cost) + "</color>";
+        if (turret.GetStat(FetchStat.ResourceCost) != "0") turretInfoDesc.text += "\n<color=yellow>Resource Cost: " + turret.GetStat(FetchStat.ResourceCost) + " " + turret.GetStat(FetchStat.ResourceType) + "</color>";
     }
 
     void HideTurretInfo()

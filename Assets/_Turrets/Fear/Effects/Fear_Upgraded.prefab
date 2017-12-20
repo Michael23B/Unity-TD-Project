@@ -131,15 +131,15 @@ MonoBehaviour:
   impactEffect: {fileID: 1895260083416092, guid: c6814d1ec4008f5439511c91dee451dd,
     type: 2}
   travelEffect: {fileID: 0}
-  slow: 0
-  poison: 0
-  freeze: 0
-  heal: 0
-  amplifyDmg: 0.5
-  fear: 1
-  duration: 4
-  debuffEffect: {fileID: 1636151516639316, guid: 710e51e1768852744acfb5cd260583f9,
-    type: 2}
+  debuffs:
+  - type: 3
+    time: 3
+    amount: 0
+    effect: {fileID: 1636151516639316, guid: 710e51e1768852744acfb5cd260583f9, type: 2}
+  - type: 8
+    time: 3
+    amount: 0.5
+    effect: {fileID: 0}
 --- !u!135 &135186040349639490
 SphereCollider:
   m_ObjectHideFlags: 1

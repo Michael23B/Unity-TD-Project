@@ -9,21 +9,15 @@ public class Spawn : MonoBehaviour {
     public float amount = 0f;
 
     public float countdown = 1.5f;
-    public float debuffDuration = 1.5f;
 
-    [Header("Enemy target? false = turret target")]
+    [Header("Enemy target? False = Turret target")]
     public bool targetEnemy = true;
 
-    [Header("Debuffs to apply (enemy target)")]
-    public bool freeze = false;
-    public bool slow = false;
-    public bool poison = false; 
-    public bool heal = false;
-    public bool amplifyDmg = false;
-    public bool fear = false;
+    [Header("Debuffs (For enemies)")]
+    public Debuff[] debuffs;
 
-    [Header("Buffs to apply (turret target)")]
-    public bool atkSpeed = false;
+    [Header("Buffs (For turrets)")]
+    public Debuff[] buffs;
 
     private void Start()
     {
@@ -72,43 +66,16 @@ public class Spawn : MonoBehaviour {
         }
     }
 
-    void Debuff(Transform target)   //TODO: combine this with the bullet damage function
+    void Debuff(Transform target)
     {
         if (targetEnemy)
         {
             Enemy e = target.GetComponent<Enemy>();
-            GameObject debuffTemp = debuffEffect;
             if (e != null)
             {
-                if (fear)
+                foreach (Debuff debuff in debuffs)
                 {
-                    BuffHelper.AddDebuff(e, DebuffType.Fear, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;
-                }
-                if (freeze)
-                {
-                    BuffHelper.AddDebuff(e, DebuffType.Freeze, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;
-                }
-                if (slow)
-                {
-                    BuffHelper.AddDebuff(e, DebuffType.Slow, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;   //if you instantiate an effect, don't stack it
-                }
-                if (poison)
-                {
-                    BuffHelper.AddDebuff(e, DebuffType.Poison, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;
-                }
-                if (heal)
-                {
-                    BuffHelper.AddDebuff(e, DebuffType.Heal, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;
-                }
-                if (amplifyDmg)
-                {
-                    BuffHelper.AddDebuff(e, DebuffType.AmplifyDmg, debuffDuration, amount, debuffTemp);
-                    debuffTemp = null;
+                    BuffHelper.AddDebuff(e, debuff);
                 }
             }
         }
@@ -117,7 +84,10 @@ public class Spawn : MonoBehaviour {
             Turret t = target.GetComponent<Turret>();
             if (t != null)
             {
-                if (atkSpeed) BuffHelper.AddDebuff(t, DebuffType.AtkSpeed, debuffDuration, amount, debuffEffect);
+                foreach (Debuff buff in buffs)
+                {
+                    BuffHelper.AddDebuff(t, buff);
+                }
             }
         }
     }

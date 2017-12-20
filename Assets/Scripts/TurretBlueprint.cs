@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public enum FetchStat { Damage, FireRate, Range, Cost, ResourceCost, ResourceType, DebuffAmount, DebuffType, ExtraTargets, DebuffDuration, BuildUpTime}
+public enum FetchStat { Damage, FireRate, Range, Cost, ResourceCost, ResourceType, DebuffAmount, DebuffType, ExtraTargets, DebuffDuration, BuildUpTime, AOE}
 
 [System.Serializable]
 public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
@@ -52,7 +52,6 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
     {
         if (prefabTurret == null) prefabTurret = prefab.GetComponent<Turret>();
         string statString = "";
-
         switch (stat)   //general stats (no type check required)
         {
             case FetchStat.Cost:
@@ -68,7 +67,6 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
                 statString += prefabTurret.baseFireRate;
                 break;
         }
-
         if (prefabTurret.useLaser)  //stats for laser types
         {
             switch (stat)
@@ -80,7 +78,9 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
                     statString += GetRange(false);
                     break;
                 case FetchStat.DebuffType:
-                    statString += prefabTurret.type;
+                    if (prefabTurret.type == DebuffType.LaserSlow) statString += "Slow";    //TODO: differentiate these with some variable or a new debufftype
+                    else if (prefabTurret.type == DebuffType.Freeze) statString += "Stun";
+                    else statString += prefabTurret.type;
                     break;
                 case FetchStat.DebuffAmount:
                     statString += prefabTurret.debuffAmount;
@@ -96,27 +96,35 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
 
         else if (prefabTurret.useSpawner)   //stats for spawner types
         {
-            if (prefabSpawn == null) prefabTurret.spawnPrefab.GetComponent<Spawn>();
+            if (prefabSpawn == null) prefabSpawn = prefabTurret.spawnPrefab.GetComponent<Spawn>();
+
             switch (stat)
             {
                 case FetchStat.Range:
                     statString += prefabSpawn.explosionRadius;
                     break;
                 case FetchStat.DebuffType:
-                    statString += prefabTurret.type;  //TODO:Implement better debuff system for spawns and bullets
+                    if (prefabSpawn.debuffs.Length != 0) statString += prefabSpawn.debuffs[0].type;
+                    else if (prefabSpawn.buffs.Length != 0) statString += prefabSpawn.buffs[0].type;
                     break;
                 case FetchStat.DebuffAmount:
-                    statString += prefabTurret.debuffAmount;
+                    if (prefabSpawn.debuffs.Length != 0) statString += prefabSpawn.debuffs[0].amount;
+                    else if (prefabSpawn.buffs.Length != 0) statString += prefabSpawn.buffs[0].amount;
                     break;
                 case FetchStat.DebuffDuration:
-                    statString += prefabSpawn.debuffDuration;
+                    if (prefabSpawn.debuffs.Length != 0) statString += prefabSpawn.debuffs[0].time;
+                    else if (prefabSpawn.buffs.Length != 0) statString += prefabSpawn.buffs[0].time;
+                    break;
+                case FetchStat.AOE:
+                    if (!prefabSpawn.targetEnemy) statString += "Can hit multiple turrets";
+                    else statString += prefabSpawn.explosionRadius;
                     break;
             }
         }
-
         else   //stats for bullet types
         {
-            if (prefabBullet == null) prefabTurret.bulletPrefab.GetComponent<Bullet>();
+            if (prefabBullet == null) prefabBullet = prefabTurret.bulletPrefab.GetComponent<Bullet>();
+
             switch (stat)
             {
                 case FetchStat.Damage:
@@ -126,15 +134,18 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
                     statString += GetRange(false);
                     break;
                 case FetchStat.DebuffType:
-                    //statString += prefabBullet.type;  //TODO:Implement better debuff system for spawns and bullets
+                    if (prefabBullet.debuffs.Length > 0) statString += prefabBullet.debuffs[0].type;
                     break;
                 case FetchStat.DebuffAmount:
-                    //statString = prefabBullet.amount;
+                    if (prefabBullet.debuffs.Length > 0) statString += prefabBullet.debuffs[0].amount;
                     break;
                 case FetchStat.DebuffDuration:
-                    statString += prefabBullet.duration;
+                    if (prefabBullet.debuffs.Length > 0) statString += prefabBullet.debuffs[0].time;
                     break;
-                //case FetchStat.ExtraTargets:  //TODO: add extra targets for bullets
+                case FetchStat.AOE:
+                    statString += prefabBullet.explosionRadius;
+                    break;
+                    //case FetchStat.ExtraTargets:  //TODO: add extra targets for bullets
                     //statString += prefabTurret.extraTargetNumber;
                     //break;
             }

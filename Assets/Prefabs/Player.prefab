@@ -773,6 +773,8 @@ MonoBehaviour:
     type: 2}
   commands: {fileID: 114912970234416564}
   networkAudio: {fileID: 114845243929250618}
+  bottomCanvas: {fileID: 0}
+  bottomCanvasGroup: {fileID: 0}
 --- !u!114 &114415384887872832
 MonoBehaviour:
   m_ObjectHideFlags: 1

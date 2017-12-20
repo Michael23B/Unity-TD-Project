@@ -13,7 +13,8 @@ public class EnemyAttack : MonoBehaviour {
     [Header("Spawn an object with Spawn script?")]
     public bool useSpawner = true;
     public GameObject spawnPrefab;
-    public bool setParent = true;   //if the spawn should be removed when the parent is, or if you want the spawn to follow the parent
+    [Tooltip("if the spawn should be removed when the parent is, or if you want the spawn to follow the parent")]
+    public bool setParent = true;
     public bool isEnemy = false;    //is the spawn an enemy?
 
     [Header("Gun?")]
