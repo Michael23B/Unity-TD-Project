@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198839195638761650}
   - component: {fileID: 199103870252276430}
   m_Layer: 0
-  m_Name: ZombieDeathEffect
+  m_Name: Zombie_BossDeathEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

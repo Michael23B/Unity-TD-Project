@@ -140,7 +140,7 @@ public class Bullet : MonoBehaviour {
         if (travelEffect)
         {
             travelEffectPS.Stop();
-            Destroy(travelEffect, 1.5f);
+            Destroy(travelEffect, 1f);
         }
     }
 }

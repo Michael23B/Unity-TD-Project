@@ -14,6 +14,7 @@ public class EnemyAttack : MonoBehaviour {
     [Header("Spawn an object with Spawn script?")]
     public bool useSpawner = true;
     public GameObject spawnPrefab;
+    public GameObject spawnEffect;
     [Tooltip("Makes the spawn follow the parent, and removes it when parent dies")]
     public bool setParent = true;
     [Tooltip("Is the spawn prefab an enemy?")]
@@ -62,6 +63,11 @@ public class EnemyAttack : MonoBehaviour {
     void Spawn()
     {
         if (spawnPrefab == null) return;
+        if (spawnEffect != null)
+        {
+            GameObject effectIns = Instantiate(spawnEffect, transform.position, transform.rotation);
+            Destroy(effectIns, 4f);
+        }
         GameObject spawnins = Instantiate(spawnPrefab, transform.position, transform.rotation);
         if (setParent) spawnins.transform.SetParent(transform);
         if (isEnemy)

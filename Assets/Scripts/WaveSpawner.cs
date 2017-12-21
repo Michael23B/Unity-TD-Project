@@ -32,6 +32,8 @@ public class WaveSpawner : MonoBehaviour {
     public bool buildTime = true;
     Shop shop;
 
+    public bool cleanUpScene = true;
+
     public int waitForPlayersCount = 1;
     private bool finishedWaveAndReady = false;
 
@@ -48,7 +50,7 @@ public class WaveSpawner : MonoBehaviour {
 
         Random.InitState(1);
 
-        CleanUpEnemies();
+        if (cleanUpScene) CleanUpEnemies();
     }
 
 

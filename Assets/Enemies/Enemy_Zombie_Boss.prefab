@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114090846819910932}
   - component: {fileID: 114012354945534754}
   m_Layer: 9
-  m_Name: Enemy_Zombie
+  m_Name: Enemy_Zombie_Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,8 +125,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150643718877460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.644417, y: 2.22, z: 63.900486}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalPosition: {x: 31.41539, y: 3.34, z: 67.42166}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children:
   - {fileID: 224525241408456802}
   m_Father: {fileID: 0}
@@ -146,7 +146,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 163a52499afd68846b82a6c7611293cf, type: 2}
+  - {fileID: 2100000, guid: 21789f8b45fe86542a519be885e4300f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   fireRate: 0
   delay: 0
   useSpawner: 0
-  spawnPrefab: {fileID: 1150643718877460, guid: dde74c17879eebc46864a7afdfdf9bbd,
+  spawnPrefab: {fileID: 1150643718877460, guid: d53999bb15aa00742bbff5cdacbee787,
     type: 2}
   spawnEffect: {fileID: 0}
   setParent: 0
@@ -223,19 +223,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1682492b85324245ba578238b79e18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 4.5
+  startSpeed: 4
   minSpeed: 1
-  startHealth: 150
+  startHealth: 800
   health: 0
   startShield: 0
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
-  bounty: 0
+  bounty: 60
   speed: 10
   moveable: 1
   debuffList: []
-  deathEffect: {fileID: 1491607627031414, guid: d1826a40e44153f419ee9ff4bbac2981,
+  deathEffect: {fileID: 1491607627031414, guid: 104a880af0571a74c952139cb1f13535,
     type: 2}
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}

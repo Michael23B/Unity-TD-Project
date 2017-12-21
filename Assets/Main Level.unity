@@ -26220,16 +26220,16 @@ MonoBehaviour:
   enemiesAlive: 0
   waves:
   - wave:
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 15
     - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
       count: 5
-      spawnRate: 1
-      waitTime: 2
+      spawnRate: 0.8
+      waitTime: 4
     - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
       count: 10
-      spawnRate: 1
-      waitTime: 2
-    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
-      count: 15
       spawnRate: 1
       waitTime: 2
     randomOrder: 0
@@ -26434,6 +26434,7 @@ MonoBehaviour:
   waveMulti: 0
   playersReady: 0
   buildTime: 1
+  cleanUpScene: 1
   waitForPlayersCount: 1
 --- !u!114 &1131
 MonoBehaviour:
@@ -34132,7 +34133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000012589928}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000027151655}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -35497,7 +35498,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2041626116}
   m_HandleRect: {fileID: 2041626114}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
