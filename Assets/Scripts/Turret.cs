@@ -62,6 +62,9 @@ public class Turret : MonoBehaviour
 
     public float turnSpeed = 10f;
 
+    public bool childTurret = false;
+    public Turret parentTurret;
+
     public List<Debuff> debuffList = new List<Debuff>();
 
     public GameObject emptyPlaceHolder; //TODO: this is so stupid honestly
@@ -79,6 +82,11 @@ public class Turret : MonoBehaviour
 
     void UpdateTarget()
     {
+        if (childTurret)
+        {
+            target = parentTurret.target;
+            return;
+        }
         if (target != null && !targetNearest)
         {
             float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
@@ -145,7 +153,7 @@ public class Turret : MonoBehaviour
             return;
         }
 
-        if (!useSpawner) LockOnTarget();
+        if (!useSpawner && !childTurret) LockOnTarget();
 
         if (useLaser) Laser();
         else
