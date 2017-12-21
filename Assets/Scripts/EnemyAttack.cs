@@ -7,15 +7,21 @@
 public class EnemyAttack : MonoBehaviour {
 
     public float fireRate = 0.2f;
+    public float delay = 0f;
 
     private float countDown;
 
     [Header("Spawn an object with Spawn script?")]
     public bool useSpawner = true;
     public GameObject spawnPrefab;
-    [Tooltip("if the spawn should be removed when the parent is, or if you want the spawn to follow the parent")]
+    [Tooltip("Makes the spawn follow the parent, and removes it when parent dies")]
     public bool setParent = true;
-    public bool isEnemy = false;    //is the spawn an enemy?
+    [Tooltip("Is the spawn prefab an enemy?")]
+    public bool isEnemy = false;
+    [Tooltip("Destroy object after one spawn")]
+    public bool destroyAfterSpawn = false;
+    [Tooltip("Spawn the prefab on death? No need to select 'useSpawner' with this, if you only want on death")]
+    public bool onDeath = false;
 
     [Header("Gun?")]
     public bool useBullets = false;
@@ -26,10 +32,13 @@ public class EnemyAttack : MonoBehaviour {
 
     public string enemyTag = "Enemy";
     private Transform target;
+    [HideInInspector]
+    public bool isQuitting = false;
 
     private void Start()
     {
         countDown = 1 / fireRate;
+        countDown += delay;
     }
 
     void Update () {
@@ -52,6 +61,7 @@ public class EnemyAttack : MonoBehaviour {
 
     void Spawn()
     {
+        if (spawnPrefab == null) return;
         GameObject spawnins = Instantiate(spawnPrefab, transform.position, transform.rotation);
         if (setParent) spawnins.transform.SetParent(transform);
         if (isEnemy)
@@ -61,6 +71,7 @@ public class EnemyAttack : MonoBehaviour {
             int parentWaypoint = GetComponent<EnemyMovement>().GetWaypoint;
             spawnins.GetComponent<EnemyMovement>().SetWaypoint(parentWaypoint);
         }
+        if (destroyAfterSpawn) Destroy(gameObject);
     }
     //
     //TODO: Add update target and shoot and stuff to a seperate class instead of re defining them here and in bullet and turret
@@ -94,5 +105,15 @@ public class EnemyAttack : MonoBehaviour {
             }
         }
         target = null;
+    }
+
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
+    private void OnDestroy()
+    {
+        if (onDeath && !isQuitting) Spawn();
     }
 }

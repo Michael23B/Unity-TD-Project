@@ -6,7 +6,8 @@ public class Ondeath : MonoBehaviour {
     public bool countDown = false; //if you handle your own death no need to countdown
     public float timeToDeath = 0f;
     public GameObject deathEffect;
-    private bool isQuitting = false;
+    [HideInInspector]
+    public bool isQuitting = false;
 
     private void OnApplicationQuit()
     {

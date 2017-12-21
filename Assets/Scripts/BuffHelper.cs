@@ -30,7 +30,7 @@ public static class BuffHelper {
     //
     public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null)
     {
-        if (_type == DebuffType.None) Debug.Log("Empty debuff called");
+        if (_type == DebuffType.None) Debug.Log("Empty debuff called"); //oh oh
         if (e.shield > 0 && _type != DebuffType.Heal)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through
         {
             if (_amount >= 0f) return;

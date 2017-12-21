@@ -47,7 +47,10 @@ public class WaveSpawner : MonoBehaviour {
         shop = FindObjectOfType<Shop>();
 
         Random.InitState(1);
+
+        CleanUpEnemies();
     }
+
 
     private void Update()
     {
@@ -142,6 +145,21 @@ public class WaveSpawner : MonoBehaviour {
             int r = Random.Range(i, arr.Length);
             arr[i] = arr[r];
             arr[r] = tmp;
+        }
+    }
+
+    void CleanUpEnemies()    //cleans any enemies from the scene on load
+    {
+        Enemy[] enemiesToCleanUp = GameObject.FindObjectsOfType<Enemy>();
+
+        foreach (Enemy e in enemiesToCleanUp)
+        {
+            EnemyAttack eAttack = e.GetComponent<EnemyAttack>();
+            if (eAttack != null) eAttack.isQuitting = true; //So it won't spawn more enemies
+            Ondeath eOndeath = e.GetComponent<Ondeath>();
+            if (eOndeath != null) eOndeath.isQuitting = true;
+
+            DestroyImmediate(e.gameObject);
         }
     }
 }
