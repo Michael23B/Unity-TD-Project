@@ -108,11 +108,11 @@ MonoBehaviour:
     effect: {fileID: 1465175319799968, guid: b75e726d57a18ad4d9d6956aac56ea50, type: 2}
   - type: 7
     time: 2
-    amount: -0.2
+    amount: -0.3
     effect: {fileID: 0}
   - type: 8
     time: 2
-    amount: -0.75
+    amount: -0.5
     effect: {fileID: 0}
 --- !u!135 &135186040349639490
 SphereCollider:

@@ -836,7 +836,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433889198367424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.888058, y: 0.5, z: 60.107796}
+  m_LocalPosition: {x: 24.900434, y: 0.5, z: 60.169743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4943980641861138}
@@ -1971,7 +1971,7 @@ MonoBehaviour:
   extraTargetFindRange: 5
   buildUpTime: 1
   debuffDuration: 3
-  debuffEffect: {fileID: 1507132569338688, guid: 84ca734c326fcdb459052927b6005fd6,
+  debuffEffect: {fileID: 1636151516639316, guid: 710e51e1768852744acfb5cd260583f9,
     type: 2}
   lineRenderer: {fileID: 120641961557114316}
   impactEffect: {fileID: 198973358862643686}

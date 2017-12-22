@@ -37,6 +37,8 @@ public class WaveSpawner : MonoBehaviour {
     public int waitForPlayersCount = 1;
     private bool finishedWaveAndReady = false;
 
+    //string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+
     private void Awake()
     {
         if (Instance != null)
@@ -51,8 +53,14 @@ public class WaveSpawner : MonoBehaviour {
         Random.InitState(1);
 
         if (cleanUpScene) CleanUpEnemies();
+
+        //InvokeRepeating("DisplayEnemiesLeft", 10f, 5f);
     }
 
+    void DisplayEnemiesLeft()//for debugging
+    {
+        Debug.Log("Enemies left: " + enemiesAlive);
+    }
 
     private void Update()
     {
@@ -63,6 +71,8 @@ public class WaveSpawner : MonoBehaviour {
             if (player == null) player = FindObjectOfType<LocalPlayerCommands>();
             player.CmdReady();
             finishedWaveAndReady = false;
+            //dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+            //Log.LogToFile("////////        Wave finished at " + dateAndTimeVar + "        ////////");
         }
         if (playersReady < waitForPlayersCount) return;
         if (countdown <= 0f)
@@ -97,8 +107,6 @@ public class WaveSpawner : MonoBehaviour {
         waveActive = true;
 
         if (currentWave.randomOrder || waveMulti > 0) ShuffleArr(currentWave.wave);
-
-        //yield return new WaitForSeconds(5f);    //wait for 5 seconds so all clients are caught up before starting
 
         for (int i = 0; i < currentWave.wave.Length; ++i)
         {
@@ -163,5 +171,11 @@ public class WaveSpawner : MonoBehaviour {
 
             DestroyImmediate(e.gameObject);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        //Log.logFile.Close();
+        //Log.isOpen = false;
     }
 }

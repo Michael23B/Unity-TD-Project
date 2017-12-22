@@ -19,9 +19,9 @@ public class EnemyAttack : MonoBehaviour {
     public bool setParent = true;
     [Tooltip("Is the spawn prefab an enemy?")]
     public bool isEnemy = false;
-    [Tooltip("Destroy object after one spawn")]
+    [Tooltip("Destroy object after one spawn. NOT COMPATIBLE with onDeath.")]
     public bool destroyAfterSpawn = false;
-    [Tooltip("Spawn the prefab on death? No need to select 'useSpawner' with this, if you only want on death")]
+    [Tooltip("Spawn the prefab on death? No need to select 'useSpawner' with this, if you only want on death. NOT COMPATIBLE with destroyAfterSpawn.")]
     public bool onDeath = false;
 
     [Header("Gun?")]
@@ -35,11 +35,13 @@ public class EnemyAttack : MonoBehaviour {
     private Transform target;
     [HideInInspector]
     public bool isQuitting = false;
+    Enemy enemy;
 
     private void Start()
     {
         countDown = 1 / fireRate;
         countDown += delay;
+        enemy = GetComponent<Enemy>();
     }
 
     void Update () {
@@ -50,7 +52,7 @@ public class EnemyAttack : MonoBehaviour {
             {
                 UpdateTarget();
                 if (target == null) {
-                    countDown = 1f; //if theres no target in range, wait for 1 second before trying again
+                    countDown = 0.2f; //if theres no target in range, wait before trying again
                     return;
                 }
                 else Shoot();
@@ -73,11 +75,17 @@ public class EnemyAttack : MonoBehaviour {
         if (isEnemy)
         {
             WaveSpawner.Instance.AddEnemy(spawnins);
-
+            //set the enemy waypoint based on the spawner waypoint
             int parentWaypoint = GetComponent<EnemyMovement>().GetWaypoint;
             spawnins.GetComponent<EnemyMovement>().SetWaypoint(parentWaypoint);
+            //lower the enemy offset by the spawner offset
+            spawnins.GetComponent<Enemy>().yOffset -= enemy.yOffset;
         }
-        if (destroyAfterSpawn) Destroy(gameObject);
+        if (destroyAfterSpawn)
+        {
+            enemy.bounty = 0;   //If this is called, it means the spawn was successful, so don't award a bounty
+            enemy.Kill();   //the enemy Die() function won't be called again if its health is 0 or lower
+        }
     }
     //
     //TODO: Add update target and shoot and stuff to a seperate class instead of re defining them here and in bullet and turret

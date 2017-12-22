@@ -4,6 +4,10 @@ using System.Collections.Generic;
 //TODO: Pool enemy health bars, enemies, projects etc.
 public class Enemy : MonoBehaviour
 {
+    static int enemyID = 0;
+    [HideInInspector]
+    public int ID;
+
     [Header("Stats")]
     public float startSpeed = 10f;
     [HideInInspector]
@@ -45,9 +49,18 @@ public class Enemy : MonoBehaviour
     public Image shieldBarBG; //TODO: One canvas with all health bars instead of serperate canvasii
 
     public EnemyMovement enemyMovement;
+    [Space(10)]
+    public float yOffset = 0f;
+    public float debuffScale = 0f;
+
+    //string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
 
     void Start()
     {
+        //Assign enemy unique ID
+        ID = enemyID;
+        enemyID++;
+
         //stats set up
         baseDamageMulti /= (1 + WaveSpawner.Instance.waveMulti);  //waveMulti starts at 0
         speed = startSpeed;
@@ -55,6 +68,9 @@ public class Enemy : MonoBehaviour
         health = startHealth;
         if (useShield) shield = startShield;
         damageMulti = baseDamageMulti;
+
+        //position adjust
+        gameObject.transform.position += new Vector3 (0f, yOffset, 0f);
 
         //enemyMovement = GetComponent<EnemyMovement>();
     }
@@ -126,8 +142,15 @@ public class Enemy : MonoBehaviour
         return;
     }
 
+    public void Kill()
+    {
+        Die();
+    }
+
     private void OnDestroy()
     {
+        //dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+        //if (Log.isOpen) Log.LogToFile("Enemy " + ID + " destroyed at " + dateAndTimeVar);
         for (int i = debuffList.Count - 1; i >= 0; --i)
         {
             if (debuffList[i].effect != null) Destroy(debuffList[i].effect);

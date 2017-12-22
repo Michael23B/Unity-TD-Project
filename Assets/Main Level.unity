@@ -4154,7 +4154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  startMoney: 650
+  startMoney: 1300
   lives: 0
   startLives: 20
   rounds: 0
@@ -26221,18 +26221,18 @@ MonoBehaviour:
   enemiesAlive: 0
   waves:
   - wave:
-    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
-      count: 1
-      spawnRate: 1
-      waitTime: 15
-    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
-      count: 5
-      spawnRate: 0.8
-      waitTime: 4
-    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 10
       spawnRate: 1
-      waitTime: 2
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 15
+      spawnRate: 1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 15
+      spawnRate: 2
+      waitTime: 1
     randomOrder: 0
   - wave:
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
@@ -26375,8 +26375,8 @@ MonoBehaviour:
       count: 2
       spawnRate: 0.25
       waitTime: 4
-    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 5
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 10
       spawnRate: 1.25
       waitTime: 2
     randomOrder: 0
@@ -26405,6 +26405,14 @@ MonoBehaviour:
       count: 3
       spawnRate: 6
       waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 2
+      spawnRate: 0.25
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 2
     randomOrder: 0
   - wave:
     - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
@@ -26427,6 +26435,18 @@ MonoBehaviour:
       count: 25
       spawnRate: 2.25
       waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 3
+      spawnRate: 0.4
+      waitTime: 8
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 15
+      spawnRate: 1.25
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 30
+      spawnRate: 2
+      waitTime: 5
     randomOrder: 0
   spawnPoint: {fileID: 444}
   enemyList: []
@@ -34225,7 +34245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.00002232476}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000011288624}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
