@@ -67,6 +67,7 @@ public class Node : MonoBehaviour
                 buildManager.message.PlayMessage("Not Enough Money!", transform);
                 return;
             }
+            playerStats.money -= turretBlueprint.upgradeCost;
         }
         else
         {
@@ -80,6 +81,7 @@ public class Node : MonoBehaviour
                 buildManager.message.PlayMessage("Not Enough Resources!", transform);
                 return;
             }
+
             switch (buildManager.GetTurretToBuild().resourceType)
             {
                 case ResourceTypes.stone:

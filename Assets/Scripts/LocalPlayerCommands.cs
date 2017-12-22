@@ -8,6 +8,7 @@ public class LocalPlayerCommands : NetworkBehaviour
     void Start()
     {
         shop = FindObjectOfType<Shop>();
+        if(isLocalPlayer) CmdUpdatePlayerCount();
     }
 
     #region Networking
@@ -39,6 +40,13 @@ public class LocalPlayerCommands : NetworkBehaviour
     public void CmdPlaySound(int index)
     {
         RpcPlaySound(index);
+    }
+
+    [Command]
+    public void CmdUpdatePlayerCount()
+    {
+        int playerCount = NetworkServer.connections.Count;
+        RpcUpdatePlayerCount(playerCount);
     }
 
     //RPCs
@@ -84,6 +92,12 @@ public class LocalPlayerCommands : NetworkBehaviour
     void RpcPlaySound(int index)
     {
         networkAudio.source.PlayOneShot(networkAudio.soundClips[index]);
+    }
+
+    [ClientRpc]
+    void RpcUpdatePlayerCount(int playerCount)
+    {
+        WaveSpawner.Instance.waitForPlayersCount = playerCount;
     }
     #endregion
 }
