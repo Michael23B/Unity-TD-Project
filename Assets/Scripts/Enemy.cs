@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
     public float yOffset = 0f;
     public float debuffScale = 0f;
 
-    //string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+    string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
 
     void Start()
     {
@@ -149,8 +149,8 @@ public class Enemy : MonoBehaviour
 
     private void OnDestroy()
     {
-        //dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
-        //if (Log.isOpen) Log.LogToFile("Enemy " + ID + " destroyed at " + dateAndTimeVar);
+        dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+        if (Log.isOpen) Log.LogToFile("Enemy " + ID + " destroyed at " + dateAndTimeVar);
         for (int i = debuffList.Count - 1; i >= 0; --i)
         {
             if (debuffList[i].effect != null) Destroy(debuffList[i].effect);

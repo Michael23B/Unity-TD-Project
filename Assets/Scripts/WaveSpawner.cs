@@ -37,7 +37,7 @@ public class WaveSpawner : MonoBehaviour {
     public int waitForPlayersCount = 1;
     private bool finishedWaveAndReady = false;
 
-    //string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+    string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
 
     private void Awake()
     {
@@ -71,8 +71,8 @@ public class WaveSpawner : MonoBehaviour {
             if (player == null) player = FindObjectOfType<LocalPlayerCommands>();
             player.CmdReady();
             finishedWaveAndReady = false;
-            //dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
-            //Log.LogToFile("////////        Wave finished at " + dateAndTimeVar + "        ////////");
+            dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+            Log.LogToFile("////////        Wave finished at " + dateAndTimeVar + "        ////////");
         }
         if (playersReady < waitForPlayersCount) return;
         if (countdown <= 0f)
@@ -175,7 +175,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void OnApplicationQuit()
     {
-        //Log.logFile.Close();
-        //Log.isOpen = false;
+        Log.logFile.Close();
+        Log.isOpen = false;
     }
 }
