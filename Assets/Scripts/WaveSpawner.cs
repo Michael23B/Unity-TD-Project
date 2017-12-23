@@ -26,7 +26,7 @@ public class WaveSpawner : MonoBehaviour {
     private int waveIndex = 0;
     public float waveMulti = 0;  //multiplier for repeating created waves
 
-    LocalPlayerCommands player;
+    LocalPlayerCommands commands;
     public int playersReady = 0;
 
     public bool buildTime = true;
@@ -36,6 +36,8 @@ public class WaveSpawner : MonoBehaviour {
 
     public int waitForPlayersCount = 1;
     private bool finishedWaveAndReady = false;
+
+    LocalRandom rand = LocalRandom.Instance;
 
     //string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
 
@@ -50,16 +52,8 @@ public class WaveSpawner : MonoBehaviour {
 
         shop = FindObjectOfType<Shop>();
 
-        Random.InitState(1);
-
         if (cleanUpScene) CleanUpEnemies();
-
-        //InvokeRepeating("DisplayEnemiesLeft", 10f, 5f);
-    }
-
-    void DisplayEnemiesLeft()//for debugging
-    {
-        Debug.Log("Enemies left: " + enemiesAlive);
+        rand = LocalRandom.Instance;
     }
 
     private void Update()
@@ -68,8 +62,8 @@ public class WaveSpawner : MonoBehaviour {
         if (enemiesAlive > 0) return;
         if (finishedWaveAndReady == true)
         {
-            if (player == null) player = FindObjectOfType<LocalPlayerCommands>();
-            player.CmdReady();
+            if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
+            commands.CmdReady();
             finishedWaveAndReady = false;
             //dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
             //Log.LogToFile("////////        Wave finished at " + dateAndTimeVar + "        ////////");
@@ -106,7 +100,7 @@ public class WaveSpawner : MonoBehaviour {
         EnemyWave currentWave = waves[waveIndex % waves.Length];
         waveActive = true;
 
-        if (currentWave.randomOrder || waveMulti > 0) ShuffleArr(currentWave.wave);
+        if (!currentWave.randomOrder) ShuffleArr(currentWave.wave);
 
         for (int i = 0; i < currentWave.wave.Length; ++i)
         {
@@ -132,8 +126,8 @@ public class WaveSpawner : MonoBehaviour {
 
     void SpawnEnemy(GameObject enemy)
     {
-        float rX = Random.Range(-1, 1);
-        float rZ = Random.Range(-4, 4);
+        float rX = rand.GetNextRandom(1f, false);//Random.Range(-1, 1);
+        float rZ = rand.GetNextRandom(4f, false);//Random.Range(-4, 4);
 
         GameObject e = Instantiate(enemy, spawnPoint.position + new Vector3(rX, 0f, rZ), spawnPoint.rotation);
         enemyList.Add(e);
@@ -152,7 +146,8 @@ public class WaveSpawner : MonoBehaviour {
         for (int i = 0; i < arr.Length; i++)
         {
             T tmp = arr[i];
-            int r = Random.Range(i, arr.Length);
+            int r = rand.GetNextRandom(arr.Length-1);//Random.Range(i, arr.Length);
+            //TODO: this shuffle will not be as random as if i increasing reduced the range accordingly (like the first algorithm)
             arr[i] = arr[r];
             arr[r] = tmp;
         }

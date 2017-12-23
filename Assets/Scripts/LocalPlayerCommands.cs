@@ -1,4 +1,5 @@
 ﻿using UnityEngine.Networking;
+using UnityEngine;
 
 public class LocalPlayerCommands : NetworkBehaviour
 {
@@ -8,7 +9,7 @@ public class LocalPlayerCommands : NetworkBehaviour
     void Start()
     {
         shop = FindObjectOfType<Shop>();
-        if(isLocalPlayer) CmdUpdatePlayerCount();
+        if (isLocalPlayer) CmdUpdatePlayerCount();
     }
 
     #region Networking
@@ -47,6 +48,14 @@ public class LocalPlayerCommands : NetworkBehaviour
     {
         int playerCount = NetworkServer.connections.Count;
         RpcUpdatePlayerCount(playerCount);
+    }
+
+    [Command]
+    public void CmdSetClientsRandomValues()
+    {
+        LocalRandom rand = FindObjectOfType<LocalRandom>();
+        float[] arr = rand.GetRandomValues();
+        RpcSetClientsRandomValues(arr);
     }
 
     //RPCs
@@ -98,6 +107,14 @@ public class LocalPlayerCommands : NetworkBehaviour
     void RpcUpdatePlayerCount(int playerCount)
     {
         WaveSpawner.Instance.waitForPlayersCount = playerCount;
+    }
+
+    [ClientRpc]
+    void RpcSetClientsRandomValues(float[] arr)
+    {
+        LocalRandom.Instance.randomValues = arr;
+        LocalRandom.Instance.index = 0;
+        Debug.Log("Random values updated.");
     }
     #endregion
 }

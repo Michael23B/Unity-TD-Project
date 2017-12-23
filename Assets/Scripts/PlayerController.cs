@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     Camera fpCamera;
 
-    private bool evenFurtherBeyondAHHHHHHHHHHHHHHH = false;
+    private bool soundTest = false;
 
     public GameObject bankaiEffect;
 
@@ -37,11 +37,17 @@ public class PlayerController : MonoBehaviour {
         playerCamera = GetComponentInChildren<Camera>();
         motor = GetComponent<PlayerMotor>();
         speed = startSpeed;
+        commands = FindObjectOfType<LocalPlayerCommands>();
     }
 
     private void Update()
     {
-        if (evenFurtherBeyondAHHHHHHHHHHHHHHH)
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
+            commands.CmdSetClientsRandomValues();
+        }
+        if (soundTest)
         {
             startSpeed = 50;
             verySpeed = 150;
@@ -55,7 +61,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.B))
         {
-            if (!evenFurtherBeyondAHHHHHHHHHHHHHHH)
+            if (!soundTest)
             {
                 commands.CmdUnleashThis(GetComponent<NetworkIdentity>());
             }
@@ -142,7 +148,7 @@ public class PlayerController : MonoBehaviour {
         effectIns.transform.position = transform.position;
         GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
         Destroy(effectIns, 22f);
-        evenFurtherBeyondAHHHHHHHHHHHHHHH = true;
+        soundTest = true;
 
         Invoke("LeashThis", 22f);
     }
@@ -150,7 +156,7 @@ public class PlayerController : MonoBehaviour {
     void LeashThis()
     {
         GetComponentInChildren<MeshRenderer>().material.color = Color.white;
-        evenFurtherBeyondAHHHHHHHHHHHHHHH = false;
+        soundTest = false;
         startSpeed = 10;
         verySpeed = 30;
     }

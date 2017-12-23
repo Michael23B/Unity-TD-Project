@@ -771,7 +771,7 @@ MonoBehaviour:
   fpCamera: {fileID: 20473088320893328}
   bankaiEffect: {fileID: 1379739830484992, guid: e8f1d05b4a3674c42af44c4ff5206655,
     type: 2}
-  commands: {fileID: 114912970234416564}
+  player: {fileID: 114912970234416564}
   networkAudio: {fileID: 114845243929250618}
   bottomCanvas: {fileID: 0}
   bottomCanvasGroup: {fileID: 0}

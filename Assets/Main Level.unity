@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 221}
   - component: {fileID: 84}
   - component: {fileID: 29}
+  - component: {fileID: 38}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -708,6 +709,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &38
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8814647131f124a459e6be35f298715f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomValues: []
+  index: 0
 --- !u!1 &39
 GameObject:
   m_ObjectHideFlags: 0
@@ -34245,7 +34259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.00003089475}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000015266945}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -35832,7 +35846,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2041626116}
   m_HandleRect: {fileID: 2041626114}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
