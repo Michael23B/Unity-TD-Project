@@ -6,10 +6,10 @@
 [RequireComponent(typeof(Enemy))]
 public class EnemyAttack : MonoBehaviour {
 
-    public float fireRate = 0.2f;
+    public double fireRate = 0.2;
     public float delay = 0f;
 
-    private float countDown;
+    private double countDown;
 
     [Header("Spawn an object with Spawn script?")]
     public bool useSpawner = true;
@@ -103,7 +103,8 @@ public class EnemyAttack : MonoBehaviour {
     //TODO: enemy that spawns enemies
     void UpdateTarget()
     {
-        GameObject[] enemies = WaveSpawner.Instance.enemyList.ToArray();    //Dont want to shuffle the main array while something might be using it
+        GameObject[] enemies = new GameObject[WaveSpawner.Instance.enemyList.Count];
+        WaveSpawner.Instance.enemyList.CopyTo(enemies);    //Dont want to shuffle the main array while something might be using it
         WaveSpawner.Instance.ShuffleArr(enemies);
 
         foreach (GameObject enemy in enemies)

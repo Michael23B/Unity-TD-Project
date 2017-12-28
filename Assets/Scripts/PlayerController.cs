@@ -38,15 +38,12 @@ public class PlayerController : MonoBehaviour {
         motor = GetComponent<PlayerMotor>();
         speed = startSpeed;
         commands = FindObjectOfType<LocalPlayerCommands>();
+        commands.CmdSetClientsRandomValues();
+        WaveSpawner.Instance.commands = commands;
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
-            commands.CmdSetClientsRandomValues();
-        }
         if (soundTest)
         {
             startSpeed = 50;

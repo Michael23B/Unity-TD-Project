@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Collections;
 //TODO: update all client nodes with correct turrets when clientjoins()
+
 public class WaveSpawner : MonoBehaviour {
     
     public static WaveSpawner Instance;
@@ -13,9 +14,15 @@ public class WaveSpawner : MonoBehaviour {
     [Header("Waves Array")]
     public EnemyWave[] waves;
     public Transform spawnPoint;
+    
+    [HideInInspector]
+    public EnemyWave[] ghostWaves;
+    public Transform ghostSpawnPoint;
 
     [HideInInspector]
     public List<GameObject> enemyList = new List<GameObject>();
+    [HideInInspector]
+    public List<GameObject> enemyGhostList = new List<GameObject>();
 
     public float waveCountdownTimer = 20f;
     private float countdown = 2f;
@@ -26,7 +33,8 @@ public class WaveSpawner : MonoBehaviour {
     private int waveIndex = 0;
     public float waveMulti = 0;  //multiplier for repeating created waves
 
-    LocalPlayerCommands commands;
+    public int playerID;
+    public LocalPlayerCommands commands;
     public int playersReady = 0;
 
     public bool buildTime = true;
@@ -38,8 +46,9 @@ public class WaveSpawner : MonoBehaviour {
     private bool finishedWaveAndReady = false;
 
     LocalRandom rand = LocalRandom.Instance;
-
-    //string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+    [Space(10)]
+    public Material ghostMaterial;
+    public bool ghostOnly = false;
 
     private void Awake()
     {
@@ -54,6 +63,7 @@ public class WaveSpawner : MonoBehaviour {
 
         if (cleanUpScene) CleanUpEnemies();
         rand = LocalRandom.Instance;
+        ghostWaves = waves; //take this out and make a seperate wave array for each player
     }
 
     private void Update()
@@ -65,14 +75,14 @@ public class WaveSpawner : MonoBehaviour {
             if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
             commands.CmdReady();
             finishedWaveAndReady = false;
-            //dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
-            //Log.LogToFile("////////        Wave finished at " + dateAndTimeVar + "        ////////");
         }
         if (playersReady < waitForPlayersCount) return;
         if (countdown <= 0f)
         {
             buildTimeToggle();
-            StartCoroutine(SpawnWave());
+            if (!ghostOnly) StartCoroutine(SpawnWave());
+            StartCoroutine(SpawnGhostWave());
+
             countdown = waveCountdownTimer;
             return;
         }
@@ -100,13 +110,41 @@ public class WaveSpawner : MonoBehaviour {
         EnemyWave currentWave = waves[waveIndex % waves.Length];
         waveActive = true;
 
-        if (!currentWave.randomOrder) ShuffleArr(currentWave.wave);
+        if (currentWave.randomOrder) ShuffleArr(currentWave.wave);
 
         for (int i = 0; i < currentWave.wave.Length; ++i)
         {
             for (int n = 0; n < currentWave.wave[i].count; ++n)
             {
                 SpawnEnemy(currentWave.wave[i].enemy);
+                yield return new WaitForSeconds(1f / currentWave.wave[i].spawnRate);
+            }
+            yield return new WaitForSeconds(currentWave.wave[i].waitTime);
+        }
+        waveIndex++;
+        waveActive = false;
+        finishedWaveAndReady = true;
+
+        waveMulti = waveIndex * 0.1f;
+
+        if (waveIndex == waves.Length * 5)
+        {
+            Debug.Log("Level Complete!");
+            enabled = false;
+        }
+    }
+
+    IEnumerator SpawnGhostWave()
+    {
+        EnemyWave currentWave = ghostWaves[waveIndex % waves.Length];   //ghostwaves will be populated by the other player 
+
+        if (currentWave.randomOrder) ShuffleArr(currentWave.wave);
+
+        for (int i = 0; i < currentWave.wave.Length; ++i)
+        {
+            for (int n = 0; n < currentWave.wave[i].count; ++n)
+            {
+                SpawnGhost(currentWave.wave[i].enemy);
                 yield return new WaitForSeconds(1f / currentWave.wave[i].spawnRate);
             }
             yield return new WaitForSeconds(currentWave.wave[i].waitTime);
@@ -134,10 +172,40 @@ public class WaveSpawner : MonoBehaviour {
         enemiesAlive++;
     }
 
-    public void AddEnemy(GameObject enemy)  //for enemy-spawning enemies
+    void SpawnGhost(GameObject enemy)
     {
-        enemyList.Add(enemy);
-        enemiesAlive++;
+        float rX = rand.GetNextRandom(1f, false);//Random.Range(-1, 1);
+        float rZ = rand.GetNextRandom(4f, false);//Random.Range(-4, 4);
+
+        GameObject e = Instantiate(enemy, ghostSpawnPoint.position + new Vector3(rX, 0f, rZ), ghostSpawnPoint.rotation);
+        enemyGhostList.Add(e);
+
+        Enemy enemyComponent = e.GetComponent<Enemy>();
+        Renderer enemyRenderer = e.GetComponent<Renderer>();
+
+        enemyRenderer.material = ghostMaterial;
+        enemyRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        enemyComponent.ghost = true;
+    }
+
+    public void AddEnemy(GameObject enemy, bool ghost = false)  //for enemy-spawning enemies
+    {
+        if (ghost)
+        {
+            enemyGhostList.Add(enemy);
+
+            Enemy enemyComponent = enemy.GetComponent<Enemy>();
+            Renderer enemyRenderer = enemy.GetComponent<Renderer>();
+
+            enemyRenderer.material = ghostMaterial;
+            enemyRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            enemyComponent.ghost = true;
+        }
+        else
+        {
+            enemyList.Add(enemy);
+            enemiesAlive++;
+        }
     }
 
     //TODO: add general class for helper function like this and update target (bullets,turrets,enemies) and some other stuff
@@ -168,9 +236,22 @@ public class WaveSpawner : MonoBehaviour {
         }
     }
 
-    private void OnApplicationQuit()
+    public void AlternateSpawner()
     {
-        //Log.logFile.Close();
-        //Log.isOpen = false;
+        Transform spawnTemp;
+        EnemyWave[] wavesTemp = new EnemyWave[waves.Length];
+        Transform[] waypointsTemp = new Transform[Waypoints.points.Length];
+        //copy to temp
+        waves.CopyTo(wavesTemp, 0);
+        spawnTemp = spawnPoint;
+        Waypoints.points.CopyTo(waypointsTemp, 0);
+        //make alternate paths, spawnpoints and waves the main
+        spawnPoint = ghostSpawnPoint;
+        ghostWaves.CopyTo(waves, 0);
+        WaypointsAlternate.pointsAlternate.CopyTo(Waypoints.points, 0);
+        //copy main back to alternate
+        ghostSpawnPoint = spawnTemp;
+        wavesTemp.CopyTo(ghostWaves, 0);
+        waypointsTemp.CopyTo(WaypointsAlternate.pointsAlternate, 0);
     }
 }

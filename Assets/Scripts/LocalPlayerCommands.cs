@@ -9,8 +9,13 @@ public class LocalPlayerCommands : NetworkBehaviour
     void Start()
     {
         shop = FindObjectOfType<Shop>();
-        if (isLocalPlayer) CmdUpdatePlayerCount();
+        if (isLocalPlayer)
+        {
+            CmdUpdatePlayerCount();
+            WaveSpawner.Instance.playerID = connectionToServer.connectionId;
+        }
     }
+
 
     #region Networking
     [Command]
@@ -58,6 +63,12 @@ public class LocalPlayerCommands : NetworkBehaviour
         RpcSetClientsRandomValues(arr);
     }
 
+    [Command]
+    public void CmdKillGhost(int enemyID, int netID)
+    {
+        RpcKillGhost(enemyID, netID);
+    }
+
     //RPCs
     [ClientRpc]
     void RpcBuildTurret(int nodeID, int turretID, bool upgrading)
@@ -87,7 +98,7 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [ClientRpc]
-    void RpcUnleashThis(NetworkIdentity netID)
+    void RpcUnleashThis(NetworkIdentity netID)  //this is probably not working the way i thought. finding the networkid of a playercontroller doesnt work like that
     {
         PlayerController[] players = FindObjectsOfType<PlayerController>();
 
@@ -114,7 +125,22 @@ public class LocalPlayerCommands : NetworkBehaviour
     {
         LocalRandom.Instance.randomValues = arr;
         LocalRandom.Instance.index = 0;
-        Debug.Log("Random values updated.");
+    }
+    
+    [ClientRpc]
+    void RpcKillGhost(int GID, int netID)
+    {
+        if (WaveSpawner.Instance.playerID == netID) return;   //ignore the player that called it
+
+        foreach (GameObject ghost in WaveSpawner.Instance.enemyGhostList)
+        {
+            Enemy ghostComponent = ghost.GetComponent<Enemy>();
+            if (ghostComponent.GID == GID)
+            {
+                ghostComponent.Kill();
+                return;
+            }
+        }
     }
     #endregion
 }

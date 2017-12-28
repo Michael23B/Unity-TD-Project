@@ -6,7 +6,7 @@ public class Spawn : MonoBehaviour {
     public float explosionRadius = 10f;
     public GameObject spawnEffect;
     public GameObject debuffEffect;
-    public float amount = 0f;
+    public float damage = 0f;
 
     public float countdown = 1.5f;
 
@@ -73,6 +73,7 @@ public class Spawn : MonoBehaviour {
             Enemy e = target.GetComponent<Enemy>();
             if (e != null)
             {
+                e.TakeDamage(damage);
                 foreach (Debuff debuff in debuffs)
                 {
                     BuffHelper.AddDebuff(e, debuff);

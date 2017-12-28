@@ -24,7 +24,13 @@ public class PlayerSetup : NetworkBehaviour {
             {
                 sceneCamera.gameObject.SetActive(false);
             }
+
+            if (connectionToServer.connectionId != 0 && connectionToServer.connectionId != -1)
+            {
+                WaveSpawner.Instance.AlternateSpawner();
+            }
         }
+
     }
 
     public override void OnStartLocalPlayer()

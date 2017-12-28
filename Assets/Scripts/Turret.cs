@@ -8,13 +8,13 @@ public class Turret : MonoBehaviour
 
     [Header("General")]
     public float range = 15f;
-    public float baseFireRate = 1f;
+    public double baseFireRate = 1f;
     public float baseDamage = 50f;
     [HideInInspector]
     public float damage;
     [HideInInspector]
-    public float fireRate;
-    private float fireCountDown = 0f;
+    public double fireRate;
+    private double fireCountDown = 0f;
 
     public bool targetNearest = false;
     //TODO: add prioritze closest to end
@@ -105,6 +105,7 @@ public class Turret : MonoBehaviour
             if (enemy != null)
             {
                 float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+
                 if (distanceToEnemy < shortestDistance)
                 {
                     shortestDistance = distanceToEnemy;
@@ -223,7 +224,7 @@ public class Turret : MonoBehaviour
 
     void Laser()
     {
-        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime * fireRate);
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime * (float)fireRate);
         //for multitarget
         bool debuffApplied = false; //if a debuff is applied, apply it to any other targets needed
         bool resetTargets = false;  //if the mulitargets are still valid dont update the array (targets[])
@@ -236,7 +237,7 @@ public class Turret : MonoBehaviour
                 currentBuildUp = 0.001f;
                 debuffApplied = true;
             }
-            else currentBuildUp += Time.deltaTime * fireRate;
+            else currentBuildUp += Time.deltaTime * (float)fireRate;
         }
         else if (debuffAmount != 0) BuffHelper.AddDebuff(targetEnemy, type, 0.01f, debuffAmount, null);   //if buildUpTime is 0 just apply it for the minimum time
 
@@ -310,7 +311,7 @@ public class Turret : MonoBehaviour
             {
                 if (targets[i] == null) break;
                 targetEnemies[i] = targets[i].GetComponent<Enemy>();
-                targetEnemies[i].TakeDamage(damageOverTime * Time.deltaTime * fireRate);
+                targetEnemies[i].TakeDamage(damageOverTime * Time.deltaTime * (float)fireRate);
 
                 if (debuffApplied && debuffDuration != 0)  //don't keep track of build up on all enemies just apply it to all when one is affected
                 {

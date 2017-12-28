@@ -59,7 +59,6 @@ public class Bullet : MonoBehaviour {
         {
             travelEffect.transform.position = this.transform.position;
         }
-
 	}
     void HitTarget()
     {
@@ -114,6 +113,7 @@ public class Bullet : MonoBehaviour {
             if (enemy != null)
             {
                 float distanceToEnemy = Vector3.Distance(firePoint, enemy.transform.position);
+
                 if (distanceToEnemy < shortestDistance)
                 {
                     shortestDistance = distanceToEnemy;
