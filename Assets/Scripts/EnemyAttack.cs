@@ -62,7 +62,7 @@ public class EnemyAttack : MonoBehaviour {
         else countDown -= Time.deltaTime;
 	}
 
-    void Spawn()
+    void Spawn()//TODO: need a new ID for enemies that are spawned from enemies, the order the spawn order may not match from client to server (dont spawn enemies from ghosts, only send command from the player)
     {
         if (spawnPrefab == null) return;
         if (spawnEffect != null)
@@ -76,7 +76,9 @@ public class EnemyAttack : MonoBehaviour {
         {
             WaveSpawner.Instance.AddEnemy(spawnins);
             //set the enemy waypoint based on the spawner waypoint
-            int parentWaypoint = GetComponent<EnemyMovement>().GetWaypoint;
+            EnemyMovement parentMove = GetComponent<EnemyMovement>();
+            int parentWaypoint = parentMove.GetWaypoint;
+            if (parentMove.fear) parentWaypoint++;
             spawnins.GetComponent<EnemyMovement>().SetWaypoint(parentWaypoint);
             //lower the enemy offset by the spawner offset
             spawnins.GetComponent<Enemy>().yOffset -= enemy.yOffset;
@@ -100,7 +102,7 @@ public class EnemyAttack : MonoBehaviour {
             bullet.setupBullet(damage, range, transform.position, target);
         }
     }
-    //TODO: enemy that spawns enemies
+
     void UpdateTarget()
     {
         GameObject[] enemies = new GameObject[WaveSpawner.Instance.enemyList.Count];

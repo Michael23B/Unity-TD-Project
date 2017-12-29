@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour {
 
     private Transform target;
 
-    private int waypointIndex = 1;  //skip the first waypoint at the spawn point
+    public int waypointIndex = 1;  //skip the first waypoint at the spawn point
 
     private Enemy enemy;
     bool ghost = false;
@@ -16,10 +16,13 @@ public class EnemyMovement : MonoBehaviour {
     public int GetWaypoint { get { return waypointIndex; } }
     public void SetWaypoint(int i)
     {
+        waypointIndex = i;
+    }
+    public void SetAndUpdateWaypoint(int i)
+    {
         waypointIndex = i - 1;
         GetNextWaypoint();
     }
-
     [HideInInspector]
     public bool fear = false;
 

@@ -64,6 +64,7 @@ public class WaveSpawner : MonoBehaviour {
         if (cleanUpScene) CleanUpEnemies();
         rand = LocalRandom.Instance;
         ghostWaves = waves; //take this out and make a seperate wave array for each player
+        InvokeRepeating("UpdateGhostPositions", 0f, 5f);
     }
 
     private void Update()
@@ -253,5 +254,24 @@ public class WaveSpawner : MonoBehaviour {
         ghostSpawnPoint = spawnTemp;
         wavesTemp.CopyTo(ghostWaves, 0);
         waypointsTemp.CopyTo(WaypointsAlternate.pointsAlternate, 0);
+    }
+
+    public void UpdateGhostPositions()
+    {
+        if (enemyList.Count == 0) return;
+
+        EnemyState[] state = new EnemyState[enemyList.Count];
+
+        for (int i = 0; i < state.Length; ++i)
+        {
+            state[i] = new EnemyState();
+            Enemy e = enemyList[i].GetComponent<Enemy>();   //TODO: stop getting component and add a reference on the enemy itself
+
+            state[i].ID = e.ID; // state[i] is null fix
+            state[i].movementTarget = e.enemyMovement.waypointIndex;   //TODO: change this to just send the target index and update on the client
+            state[i].pos = enemyList[i].transform.position;
+        }
+
+        commands.CmdUpdateGhostPositions(playerID, state);
     }
 }

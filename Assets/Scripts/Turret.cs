@@ -15,6 +15,10 @@ public class Turret : MonoBehaviour
     [HideInInspector]
     public double fireRate;
     private double fireCountDown = 0f;
+    [HideInInspector]
+    public int owner;   //0 for player 1, 1 for player 2
+    [HideInInspector]
+    public bool owned = true;
 
     public bool targetNearest = false;
     //TODO: add prioritze closest to end
@@ -78,6 +82,22 @@ public class Turret : MonoBehaviour
 
         targetEnemies = new Enemy[extraTargetNumber+1];
         targets = new Transform[extraTargetNumber+1];
+        //TODO: need to free up resources manually when editing renderer settings
+        //https://forum.unity.com/threads/is-it-necessary-to-destroy-the-instance-material-manaully-in-unity-3-5.146946/
+        if (owner != WaveSpawner.Instance.playerID)
+        {
+            owned = false;  //turret shoots at ghosts not your enemies
+            Renderer[] arr = GetComponentsInChildren<Renderer>();   //make turret faded (ghost material)
+            for (int i = 0; i < arr.Length; ++i)
+            {
+                Material[] matarr = new Material[arr[i].materials.Length];
+                for (int j = 0; j < matarr.Length; ++j)
+                {
+                    matarr[j] = WaveSpawner.Instance.ghostMaterial;
+                }
+                arr[i].materials = matarr;
+            }
+        }
     }
 
     void UpdateTarget()
@@ -99,8 +119,11 @@ public class Turret : MonoBehaviour
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
-        if (WaveSpawner.Instance.enemyList.Count == 0) return;
-        foreach (GameObject enemy in WaveSpawner.Instance.enemyList)
+        List<GameObject> enemyList = WaveSpawner.Instance.enemyList;
+        if (!owned) enemyList = WaveSpawner.Instance.enemyGhostList;
+
+        if (enemyList.Count == 0) return;
+        foreach (GameObject enemy in enemyList)
         {
             if (enemy != null)
             {
@@ -174,8 +197,11 @@ public class Turret : MonoBehaviour
         GameObject nearestEnemy = null;
         bool ignoredTarget = false;
 
-        if (WaveSpawner.Instance.enemyList.Count == 0) return null;
-        foreach (GameObject enemy in WaveSpawner.Instance.enemyList)
+        List<GameObject> enemyList = WaveSpawner.Instance.enemyList;
+        if (!owned) enemyList = WaveSpawner.Instance.enemyGhostList;
+
+        if (enemyList.Count == 0) return null;
+        foreach (GameObject enemy in enemyList)
         {
             if (enemy != null)
             {

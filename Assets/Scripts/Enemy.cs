@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEngine.Networking;
+
 //TODO: Pool enemy health bars, enemies, projects etc.
 public class Enemy : MonoBehaviour
 {
@@ -85,10 +85,13 @@ public class Enemy : MonoBehaviour
 
         //position adjust
         gameObject.transform.position += new Vector3 (0f, yOffset, 0f);
+
+        if (enemyMovement == null) enemyMovement = GetComponent<EnemyMovement>();
     }
 
     public void TakeDamage(float amount)
     {
+        if (ghost) return;
         if (health <= 0f) return; //already dead, don't call die() more than once
 
         if(amount > 0) amount *= damageMulti;   //don't reduce healing
@@ -161,7 +164,7 @@ public class Enemy : MonoBehaviour
 
         WaveSpawner.Instance.enemiesAlive--;
         WaveSpawner.Instance.enemyList.Remove(gameObject);
-        WaveSpawner.Instance.commands.CmdKillGhost(ID, WaveSpawner.Instance.playerID);
+        WaveSpawner.Instance.commands.CmdKillGhost(WaveSpawner.Instance.playerID, ID);
         Destroy(gameObject);
         return;
     }

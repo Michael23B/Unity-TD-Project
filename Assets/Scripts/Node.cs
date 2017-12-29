@@ -7,7 +7,8 @@ public class Node : MonoBehaviour
     public Vector3 positionOffset;
     public Color hoverColor;
     public Color hoverColorBad;
-
+    [Tooltip("0 for p1, 1 for p2")]
+    public int owner;
     [HideInInspector]
     public GameObject turret;
     [HideInInspector]
@@ -100,6 +101,7 @@ public class Node : MonoBehaviour
         if (player == null) player = FindObjectOfType<LocalPlayerCommands>();
 
         int _tID = buildManager.GetTurretToBuildIndex();
+
         player.CmdBuildTurret(nodeID, _tID, upgrading);
     }
 
@@ -122,6 +124,8 @@ public class Node : MonoBehaviour
         GameObject effect = Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
+        turret.GetComponent<Turret>().owner = owner;
+
         Debug.Log("Turret Built!");
     }
 
@@ -138,6 +142,8 @@ public class Node : MonoBehaviour
 
         isUpgraded = true;
         //TODO: Bool -> int for upgrade levels, array of upgraded turrets
+
+        turret.GetComponent<Turret>().owner = owner;
 
         Debug.Log("Turret Upgraded!");
     }

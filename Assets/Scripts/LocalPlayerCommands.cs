@@ -64,9 +64,27 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [Command]
-    public void CmdKillGhost(int enemyID, int netID)
+    public void CmdKillGhost(int myID, int enemyID)
     {
-        RpcKillGhost(enemyID, netID);
+        foreach (NetworkConnection target in NetworkServer.connections)
+        {
+            if (target.connectionId != myID)
+            {
+                TargetRpcKillGhost(target, enemyID);
+            }
+        }
+    }
+
+    [Command]
+    public void CmdUpdateGhostPositions(int myID, EnemyState[] state)
+    {
+        foreach (NetworkConnection target in NetworkServer.connections)
+        {
+            if (target.connectionId != myID && target.connectionId != -1)
+            {
+                TargetRpcUpdateGhostPositions(target, state);
+            }
+        }
     }
 
     //RPCs
@@ -127,11 +145,9 @@ public class LocalPlayerCommands : NetworkBehaviour
         LocalRandom.Instance.index = 0;
     }
     
-    [ClientRpc]
-    void RpcKillGhost(int GID, int netID)
+    [TargetRpc]
+    void TargetRpcKillGhost(NetworkConnection target, int GID)
     {
-        if (WaveSpawner.Instance.playerID == netID) return;   //ignore the player that called it
-
         foreach (GameObject ghost in WaveSpawner.Instance.enemyGhostList)
         {
             Enemy ghostComponent = ghost.GetComponent<Enemy>();
@@ -139,6 +155,25 @@ public class LocalPlayerCommands : NetworkBehaviour
             {
                 ghostComponent.Kill();
                 return;
+            }
+        }
+    }
+
+    [TargetRpc]
+    void TargetRpcUpdateGhostPositions(NetworkConnection target, EnemyState[] state)
+    {
+        for (int i = 0; i < WaveSpawner.Instance.enemyGhostList.Count; ++i)
+        {
+            Enemy ghost = WaveSpawner.Instance.enemyGhostList[i].GetComponent<Enemy>(); //TODO: make enemy component list in 
+
+            for (int j = 0; j < state.Length; ++j)  //check if this ghosts id is in the state array (redundant since the enemies should be in the same order in both arrays, but this is very safe)
+            {
+                if (ghost.GID == state[j].ID)
+                {
+                    ghost.transform.position = state[j].pos;
+                    ghost.enemyMovement.SetAndUpdateWaypoint(state[j].movementTarget);
+                    break;
+                }
             }
         }
     }
