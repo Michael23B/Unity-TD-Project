@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour {
     Camera sceneCamera, playerCamera;
     [SerializeField]
     Camera fpCamera;
+    public Image crosshair;
 
     private bool soundTest = false;
 
@@ -31,21 +33,41 @@ public class PlayerController : MonoBehaviour {
     public Canvas bottomCanvas;
     public CanvasGroup bottomCanvasGroup;
 
+    public Gun gun;
+    float nextTimeToFire = 0f;
+    float nextTimeToFire2 = 0f;
+
     private void Start()
     {
         sceneCamera = Camera.main;
         playerCamera = GetComponentInChildren<Camera>();
         motor = GetComponent<PlayerMotor>();
         speed = startSpeed;
+
         commands = FindObjectOfType<LocalPlayerCommands>();
+        commands.CmdSetClientsRandomValues();
+
+        WaveSpawner.Instance.commands = commands;
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
-            if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
-            commands.CmdSetClientsRandomValues();
+            if (gun != null) {
+                nextTimeToFire = Time.time + 0.20f;
+                gun.Shoot();
+                commands.CmdPlayShootEffect(WaveSpawner.Instance.playerID, 1);
+            }
+        }
+        if (Input.GetMouseButtonDown(1) && Time.time >= nextTimeToFire2)
+        {
+            if (gun != null)
+            {
+                nextTimeToFire2 = Time.time + 20f;
+                gun.AltShoot();
+                commands.CmdPlayShootEffect(WaveSpawner.Instance.playerID, 2);
+            }
         }
         if (soundTest)
         {
@@ -59,7 +81,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             if (!soundTest)
             {
@@ -67,13 +89,9 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (coolDownCamera <= 0)
-            {
-                FirstPersonCamera();
-                coolDownCamera = 1f;
-            }
+            FirstPersonCamera();
         }
         coolDownCamera -= Time.deltaTime;
 
@@ -144,9 +162,9 @@ public class PlayerController : MonoBehaviour {
     #region Particle test (ss3)
     public void UnleashThis()
     {
+        if (soundTest) return;
         GameObject effectIns = Instantiate(bankaiEffect, transform);
         effectIns.transform.position = transform.position;
-        GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
         Destroy(effectIns, 22f);
         soundTest = true;
 
@@ -155,7 +173,6 @@ public class PlayerController : MonoBehaviour {
 
     void LeashThis()
     {
-        GetComponentInChildren<MeshRenderer>().material.color = Color.white;
         soundTest = false;
         startSpeed = 10;
         verySpeed = 30;

@@ -11,6 +11,7 @@ public class LocalRandom : MonoBehaviour {
 
     void Start()
     {
+        UnityEngine.Random.InitState(DateTime.Now.Millisecond);
         randomValues = new float[randomLength];
     }
 

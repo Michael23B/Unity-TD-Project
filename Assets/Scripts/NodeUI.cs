@@ -9,7 +9,13 @@ public class NodeUI : MonoBehaviour {
     public Button upgradeButton;
     public Text sellAmount;
     public GameObject rangeIndicator;
-
+    /*
+    public Button moveButton;
+    public Text moveText;
+    public GameObject MoveEffect;
+    public float moveCooldown = 30f;
+    float nextMoveTime;
+    */
     private Node target;
 
     public void SetTarget(Node _target)
@@ -27,7 +33,6 @@ public class NodeUI : MonoBehaviour {
 
         if (!target.isUpgraded)
         {
-
             upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
             upgradeButton.interactable = true;
         } else
@@ -57,5 +62,10 @@ public class NodeUI : MonoBehaviour {
     {
         target.CallSellTurret();
         BuildManager.Instance.DeselectNode();
+    }
+
+    public void Move()
+    {
+        
     }
 }

@@ -16,6 +16,7 @@ public class PlayerSetup : NetworkBehaviour {
             {
                 componentsToDisable[i].enabled = false;
             }
+            gameObject.tag = "Player2";
         }
         else
         {
@@ -24,12 +25,13 @@ public class PlayerSetup : NetworkBehaviour {
             {
                 sceneCamera.gameObject.SetActive(false);
             }
-        }
-    }
 
-    public override void OnStartLocalPlayer()
-    {
-        GetComponentInChildren<MeshRenderer>().material.color = Color.blue;
+            if (connectionToServer.connectionId != 0 && connectionToServer.connectionId != -1)
+            {
+                WaveSpawner.Instance.AlternateSpawner();
+            }
+        }
+        WaveSpawner.Instance.commands.CmdPlayerColorsUpdate();
     }
 
     private void OnDisable()

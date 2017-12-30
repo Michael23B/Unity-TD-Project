@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+
 //TODO: Pool enemy health bars, enemies, projects etc.
 public class Enemy : MonoBehaviour
 {
-    static int enemyID = 0;
+    static int enemyID = 0; //TODO: need a new ID for spawned enemies since the order of spawned enemies vs wave spawned enemies may be different on clients
     [HideInInspector]
     public int ID;
+
+    static int ghostID = 0;
+    [HideInInspector]
+    public int GID;
 
     [Header("Stats")]
     public float startSpeed = 10f;
@@ -53,13 +58,22 @@ public class Enemy : MonoBehaviour
     public float yOffset = 0f;
     public float debuffScale = 0f;
 
-    //string dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
+    [HideInInspector]
+    public bool ghost = false;
 
     void Start()
     {
         //Assign enemy unique ID
-        ID = enemyID;
-        enemyID++;
+        if (ghost)
+        {
+            GID = ghostID;
+            ghostID++;
+        }
+        else
+        {
+            ID = enemyID;
+            enemyID++;
+        }
 
         //stats set up
         baseDamageMulti /= (1 + WaveSpawner.Instance.waveMulti);  //waveMulti starts at 0
@@ -72,11 +86,12 @@ public class Enemy : MonoBehaviour
         //position adjust
         gameObject.transform.position += new Vector3 (0f, yOffset, 0f);
 
-        //enemyMovement = GetComponent<EnemyMovement>();
+        if (enemyMovement == null) enemyMovement = GetComponent<EnemyMovement>();
     }
 
     public void TakeDamage(float amount)
     {
+        if (ghost) return;
         if (health <= 0f) return; //already dead, don't call die() more than once
 
         if(amount > 0) amount *= damageMulti;   //don't reduce healing
@@ -95,6 +110,12 @@ public class Enemy : MonoBehaviour
         if (health > startHealth)
         {
             health = startHealth; //healing cap
+        }
+
+        if (ghost)  //don't toggle health bars on ghosts
+        {
+            if (health <= 0f) GhostDie();
+            return;
         }
 
         if(health != startHealth || shield != startShield)
@@ -131,6 +152,11 @@ public class Enemy : MonoBehaviour
 
     void Die()//TODO: deal with desync when an enemy dies on client but not server
     {
+        if (ghost)
+        {
+            GhostDie();
+            return;
+        }
         PlayerStats.Instance.money += bounty;
 
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -138,6 +164,20 @@ public class Enemy : MonoBehaviour
 
         WaveSpawner.Instance.enemiesAlive--;
         WaveSpawner.Instance.enemyList.Remove(gameObject);
+        WaveSpawner.Instance.commands.CmdKillGhost(WaveSpawner.Instance.playerID, ID);
+        Destroy(gameObject);
+        return;
+    }
+
+    void GhostDie()
+    {
+        //GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);    //change to some ghost effect
+        //Destroy(effect, 5f);
+
+        WaveSpawner.Instance.enemyGhostList.Remove(gameObject);
+        EnemyAttack attackComponent = GetComponent<EnemyAttack>();
+        if (attackComponent != null) attackComponent.isQuitting = true;  //stops spawning from ghosts
+
         Destroy(gameObject);
         return;
     }
@@ -149,8 +189,6 @@ public class Enemy : MonoBehaviour
 
     private void OnDestroy()
     {
-        //dateAndTimeVar = System.DateTime.Now.ToString("HH:mm:ss");
-        //if (Log.isOpen) Log.LogToFile("Enemy " + ID + " destroyed at " + dateAndTimeVar);
         for (int i = debuffList.Count - 1; i >= 0; --i)
         {
             if (debuffList[i].effect != null) Destroy(debuffList[i].effect);

@@ -18,18 +18,17 @@ public class ResourceSpawner : MonoBehaviour {
             return;
         }
         Instance = this;
-
-        Random.InitState(1);
     }
 
     public void SpawnResources(int amount)
     {
-        int r,rX,rZ;
+        int r;
+        float rX,rZ;
         for (int i = 0; i < amount; ++i)
         {
-            r = Random.Range(0, resourceList.Count);
-            rX = Random.Range(-400, 400);
-            rZ = Random.Range(-400, 400);
+            r = LocalRandom.Instance.GetNextRandom(resourceList.Count - 1);    //Random.Range(0, resourceList.Count);
+            rX = LocalRandom.Instance.GetNextRandom(400f, false);   //Random.Range(-400, 400);
+            rZ = LocalRandom.Instance.GetNextRandom(400f, false);   //Random.Range(-400, 400);
             Vector3 randomPos = new Vector3(rX, ySpawnOffset, rZ);
 
             Collider[] colliders = Physics.OverlapSphere(randomPos, 75);    //find any nodes within 75 units of the new resource

@@ -9,6 +9,8 @@ TagManager:
   - PlayerCamera
   - Node
   - Freeze(Alternate)
+  - Crosshair
+  - Player2
   layers:
   - Default
   - TransparentFX
