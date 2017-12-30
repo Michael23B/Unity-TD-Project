@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: d25eb897a2efc5b4e93baf95ce3d5374
+timeCreated: 1514620069
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Array
+    100002: Cylinder
+    100004: Cylinder_10
+    100006: Cylinder_2
+    100008: Cylinder_3
+    100010: Cylinder_4
+    100012: Cylinder_5
+    100014: Cylinder_6
+    100016: Cylinder_7
+    100018: Cylinder_8
+    100020: Cylinder_9
+    100022: //RootNode
+    100024: Plane
+    100026: Sphere
+    100028: Subdivision_Surface_1
+    100030: Subdivision_Surface_10
+    100032: Subdivision_Surface_2
+    100034: Subdivision_Surface_3
+    100036: Subdivision_Surface_4
+    100038: Subdivision_Surface_5
+    100040: Subdivision_Surface_6
+    100042: Subdivision_Surface_7
+    100044: Subdivision_Surface_8
+    100046: Subdivision_Surface_9
+    100048: Tube
+    400000: Array
+    400002: Cylinder
+    400004: Cylinder_10
+    400006: Cylinder_2
+    400008: Cylinder_3
+    400010: Cylinder_4
+    400012: Cylinder_5
+    400014: Cylinder_6
+    400016: Cylinder_7
+    400018: Cylinder_8
+    400020: Cylinder_9
+    400022: //RootNode
+    400024: Plane
+    400026: Sphere
+    400028: Subdivision_Surface_1
+    400030: Subdivision_Surface_10
+    400032: Subdivision_Surface_2
+    400034: Subdivision_Surface_3
+    400036: Subdivision_Surface_4
+    400038: Subdivision_Surface_5
+    400040: Subdivision_Surface_6
+    400042: Subdivision_Surface_7
+    400044: Subdivision_Surface_8
+    400046: Subdivision_Surface_9
+    400048: Tube
+    2100000: No Name
+    2300000: Cylinder
+    2300002: Cylinder_10
+    2300004: Cylinder_2
+    2300006: Cylinder_3
+    2300008: Cylinder_4
+    2300010: Cylinder_5
+    2300012: Cylinder_6
+    2300014: Cylinder_7
+    2300016: Cylinder_8
+    2300018: Cylinder_9
+    2300020: Plane
+    2300022: Sphere
+    2300024: Tube
+    3300000: Cylinder
+    3300002: Cylinder_10
+    3300004: Cylinder_2
+    3300006: Cylinder_3
+    3300008: Cylinder_4
+    3300010: Cylinder_5
+    3300012: Cylinder_6
+    3300014: Cylinder_7
+    3300016: Cylinder_8
+    3300018: Cylinder_9
+    3300020: Plane
+    3300022: Sphere
+    3300024: Tube
+    4300000: Cylinder
+    4300002: Cylinder_2
+    4300004: Cylinder_3
+    4300006: Cylinder_4
+    4300008: Cylinder_5
+    4300010: Cylinder_6
+    4300012: Cylinder_7
+    4300014: Cylinder_8
+    4300016: Cylinder_9
+    4300018: Cylinder_10
+    4300020: Plane
+    4300022: Sphere
+    4300024: Tube
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
