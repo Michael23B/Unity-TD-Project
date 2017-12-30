@@ -16,7 +16,6 @@ public class LocalPlayerCommands : NetworkBehaviour
         }
     }
 
-
     #region Networking
     [Command]
     public void CmdBuildTurret(int nodeID, int turretID, bool upgrading)
@@ -85,6 +84,30 @@ public class LocalPlayerCommands : NetworkBehaviour
                 TargetRpcUpdateGhostPositions(target, state);
             }
         }
+    }
+
+    [Command]
+    public void CmdReduceLives()
+    {
+        RpcReduceLives();
+    }
+
+    [Command]
+    public void CmdPlayShootEffect(int myID, int shotID)    //one for left mouse fire, 2 for right mouse fire
+    {
+        foreach (NetworkConnection target in NetworkServer.connections)
+        {
+            if (target.connectionId != myID && target.connectionId != -1)
+            {
+                TargetRpcPlayShootEffect(target, shotID);
+            }
+        }
+    }
+
+    [Command]
+    public void CmdPlayerColorsUpdate()
+    {
+        RpcPlayerColorsUpdate();
     }
 
     //RPCs
@@ -175,6 +198,39 @@ public class LocalPlayerCommands : NetworkBehaviour
                     break;
                 }
             }
+        }
+    }
+
+    [ClientRpc]
+    void RpcReduceLives()
+    {
+        PlayerStats.Instance.lives--;
+    }
+
+    [TargetRpc]
+    void TargetRpcPlayShootEffect(NetworkConnection target, int id)
+    {
+        if (id == 1) GetComponent<Gun>().shootEffect.Play();
+        else if (id == 2) GetComponent<Gun>().AltShoot();
+    }
+
+    [ClientRpc]
+    void RpcPlayerColorsUpdate()
+    {
+        if (WaveSpawner.Instance.playerID == 0)
+        {
+            GetComponentInChildren<MeshRenderer>().material.color = Color.grey;
+
+            GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
+            if (p2 != null) p2.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+
+        }
+        else
+        {
+            GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+
+            GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
+            if (p2 != null) p2.GetComponentInChildren<MeshRenderer>().material.color = Color.grey;
         }
     }
     #endregion

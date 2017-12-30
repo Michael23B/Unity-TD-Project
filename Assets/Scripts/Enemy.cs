@@ -175,6 +175,9 @@ public class Enemy : MonoBehaviour
         //Destroy(effect, 5f);
 
         WaveSpawner.Instance.enemyGhostList.Remove(gameObject);
+        EnemyAttack attackComponent = GetComponent<EnemyAttack>();
+        if (attackComponent != null) attackComponent.isQuitting = true;  //stops spawning from ghosts
+
         Destroy(gameObject);
         return;
     }

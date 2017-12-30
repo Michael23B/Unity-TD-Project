@@ -20,6 +20,11 @@ public class EnemyMovement : MonoBehaviour {
     }
     public void SetAndUpdateWaypoint(int i)
     {
+        if (points.Length == 0)
+        {
+            waypointIndex = i; //at some point i got an error here saying points was void so this might fix it
+            return;
+        }
         waypointIndex = i - 1;
         GetNextWaypoint();
     }
@@ -94,7 +99,7 @@ public class EnemyMovement : MonoBehaviour {
             WaveSpawner.Instance.enemyGhostList.Remove(gameObject);
             return;
         }
-        PlayerStats.Instance.lives--;
+        WaveSpawner.Instance.commands.CmdReduceLives();
         WaveSpawner.Instance.enemiesAlive--;
         WaveSpawner.Instance.enemyList.Remove(gameObject);
         Destroy(gameObject);
