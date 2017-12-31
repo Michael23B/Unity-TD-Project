@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-//TODO: a feared enemy that spawns an enemy will give its target to the child, meaning the child will act feared until it reaches the first waypoint
-//i think making many more waypoints to smooth out the travel path might work for now, as well as allowing a teleport ability to be easily implemented
 [RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour {
 

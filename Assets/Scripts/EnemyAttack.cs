@@ -45,6 +45,7 @@ public class EnemyAttack : MonoBehaviour {
     }
 
     void Update () {
+        if (enemy.ghost && isEnemy) enabled = false;
         if (countDown <= 0)
         {
             if(useSpawner) Spawn();

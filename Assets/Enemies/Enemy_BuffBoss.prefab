@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150643718877460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.802542, y: 0.5, z: 68.22344}
+  m_LocalPosition: {x: -12.300581, y: 2.95, z: 67.031}
   m_LocalScale: {x: 3, y: 4.5, z: 3}
   m_Children:
   - {fileID: 224525241408456802}
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58d4741ca6ad954a866d1e8f75086a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  waypointIndex: 1
   fear: 0
 --- !u!114 &114468908536672316
 MonoBehaviour:
@@ -340,6 +340,7 @@ MonoBehaviour:
   speed: 10
   moveable: 1
   debuffList: []
+  debuffEffectScale: {x: 2, y: 2, z: 2}
   deathEffect: {fileID: 1491607627031414, guid: c3f6466502a3777429b6cda00f8a3b9d,
     type: 2}
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
@@ -351,7 +352,6 @@ MonoBehaviour:
   shieldBarBG: {fileID: 114600479087140086}
   enemyMovement: {fileID: 114090846819910932}
   yOffset: 1
-  debuffScale: 0
   ghost: 0
 --- !u!114 &114585292175636046
 MonoBehaviour:

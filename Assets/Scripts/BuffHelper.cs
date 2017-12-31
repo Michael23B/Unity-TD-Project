@@ -2,7 +2,7 @@
 
 //Definitions for buffs and methods for adding and stacking etc.
 
-public enum DebuffType { None, LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg }    //nostun (if stunned for too long become immune)
+public enum DebuffType { None, LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg, ShieldBreak }    //nostun (if stunned for too long become immune), silence (disable enemyattack)
 
 [System.Serializable]
 public class Debuff
@@ -31,7 +31,7 @@ public static class BuffHelper {
     public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null)
     {
         if (_type == DebuffType.None) Debug.Log("Empty debuff called"); //oh oh
-        if (e.shield > 0 && _type != DebuffType.Heal)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through
+        if (e.shield > 0 && _type != DebuffType.Heal && _type != DebuffType.ShieldBreak)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through (and shieldbreak)
         {
             if (_amount >= 0f) return;
         }
@@ -62,6 +62,7 @@ public static class BuffHelper {
         if (_effect != null)
         {
             GameObject effectIns = GameObject.Instantiate(_effect, e.transform.position, Quaternion.Euler(0, 0, 0)); //Don't want the effect rotating with the enemy i believe
+            effectIns.transform.localScale = e.debuffEffectScale;
             effectIns.transform.SetParent(e.transform);
             e.debuffList.Add(new Debuff(_type, _time, _amount, effectIns));
 
@@ -119,6 +120,9 @@ public static class BuffHelper {
                     break;
                 case DebuffType.AmplifyDmg:
                     BuffHelper.AmplifyDmg(e, i);
+                    break;
+                case DebuffType.ShieldBreak:
+                    BuffHelper.ShieldBreak(e, i);
                     break;
             }
         }
@@ -283,6 +287,21 @@ public static class BuffHelper {
         else
         {
             e.damageMulti += e.debuffList[i].amount;
+            e.debuffList[i].time -= Time.deltaTime;
+        }
+    }
+
+    public static void ShieldBreak(Enemy e, int i)
+    {
+        if (!e.useShield) e.debuffList[i].time = 0;
+        if (e.debuffList[i].time <= 0)
+        {
+            GameObject.Destroy(e.debuffList[i].effect);
+            e.debuffList.RemoveAt(i);
+        }
+        else
+        {
+            e.TakeShieldDamage(e.debuffList[i].amount * Time.deltaTime);
             e.debuffList[i].time -= Time.deltaTime;
         }
     }

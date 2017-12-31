@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     public bool moveable = true; //is enemy stunned?
     [HideInInspector]
     public List<Debuff> debuffList = new List<Debuff>();
+    public Vector3 debuffEffectScale = new Vector3(1f,1f,1f);
 
     [Header("Setup Fields")]
     public GameObject deathEffect;
@@ -56,7 +57,6 @@ public class Enemy : MonoBehaviour
     public EnemyMovement enemyMovement;
     [Space(10)]
     public float yOffset = 0f;
-    public float debuffScale = 0f;
 
     [HideInInspector]
     public bool ghost = false;
@@ -133,6 +133,32 @@ public class Enemy : MonoBehaviour
             ShieldBarTogle(false);
         }
         if (health <= 0f) Die();
+    }
+
+    public void TakeShieldDamage(float amount)
+    {
+        if (ghost) return;
+        if (!useShield) return;
+        if (shield != 0f)
+        {
+            shield -= amount;
+            if (shield < 0f) shield = 0f;
+        }
+        if (health != startHealth || shield != startShield)
+        {
+            HealthBarTogle(true);
+            healthBar.fillAmount = health / startHealth;
+            if (useShield)
+            {
+                ShieldBarTogle(true);
+                shieldBar.fillAmount = shield / startShield;
+            }
+        }
+        else
+        {
+            HealthBarTogle(false);
+            ShieldBarTogle(false);
+        }
     }
 
     void HealthBarTogle(bool b)

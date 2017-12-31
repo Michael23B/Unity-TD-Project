@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58d4741ca6ad954a866d1e8f75086a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  waypointIndex: 1
   fear: 0
 --- !u!114 &114468908536672316
 MonoBehaviour:
@@ -238,6 +238,7 @@ MonoBehaviour:
   speed: 10
   moveable: 1
   debuffList: []
+  debuffEffectScale: {x: 0.5, y: 0.5, z: 0.5}
   deathEffect: {fileID: 1491607627031414, guid: 771120ffd232be243996f2052eb1a480,
     type: 2}
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
@@ -249,7 +250,6 @@ MonoBehaviour:
   shieldBarBG: {fileID: 114600479087140086}
   enemyMovement: {fileID: 114090846819910932}
   yOffset: 0
-  debuffScale: 0
   ghost: 0
 --- !u!114 &114585292175636046
 MonoBehaviour:
