@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 82830262357739794}
   - component: {fileID: 114845243929250618}
   - component: {fileID: 114303666596192438}
+  - component: {fileID: 114181838510539280}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -375,13 +376,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385454221851826}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4994581824317496}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4994581824317496
 Transform:
   m_ObjectHideFlags: 1
@@ -389,7 +390,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088453242561702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.144995, y: 2.03, z: 56.152084}
+  m_LocalPosition: {x: 15.253969, y: 2.36, z: 68.925255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4650340046654656}
@@ -852,6 +853,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114181838510539280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088453242561702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1267208747, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 4650340046654656}
+  m_ChildIndex: 0
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 2
+  m_RotationSyncCompression: 0
+  m_MovementThreshold: 0.1
+  m_InterpolateRotation: 0.5
+  m_InterpolateMovement: 0.5
 --- !u!114 &114187429434525958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -892,6 +912,7 @@ MonoBehaviour:
   bottomCanvas: {fileID: 0}
   bottomCanvasGroup: {fileID: 0}
   gun: {fileID: 114303666596192438}
+  graphics: {fileID: 1052940424550844}
 --- !u!114 &114303666596192438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -906,6 +927,7 @@ MonoBehaviour:
   damage: 25
   range: 25
   fpsCamera: {fileID: 20473088320893328}
+  graphics: {fileID: 1052940424550844}
   shootEffect: {fileID: 198287032855554978}
   shootEffect2: {fileID: 198448149762948702}
   altShootBuffEffect: {fileID: 1731228379005884, guid: 979c38670b2e0904089487fc7b67ef16,
@@ -1113,7 +1135,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2089336490
+  randomSeed: 1115455366
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2303,7 +2325,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -60
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2344,7 +2366,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 60
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4564,7 +4586,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -873577836
+  randomSeed: 993377581
   InitialModule:
     serializedVersion: 3
     enabled: 1

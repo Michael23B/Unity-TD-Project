@@ -2,10 +2,11 @@
 
 public class Gun : MonoBehaviour {
 
-    public float damage = 10f;
-    public float range = 15f;
+    public float damage = 25f;
+    public float range = 25f;
 
     public Camera fpsCamera;
+    public GameObject graphics;
     public ParticleSystem shootEffect;
     public ParticleSystem shootEffect2;
     public GameObject altShootBuffEffect;
@@ -13,8 +14,10 @@ public class Gun : MonoBehaviour {
     public void Shoot()
     {
         shootEffect.Play();
+        shootEffect.transform.rotation = graphics.transform.rotation;
+
         RaycastHit hit;
-        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
+        if (Physics.Raycast(fpsCamera.transform.position, graphics.transform.rotation * Vector3.forward, out hit, range))
         {
             Enemy enemy = hit.transform.GetComponent<Enemy>();
 

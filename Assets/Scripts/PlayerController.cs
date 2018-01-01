@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour {
     float nextTimeToFire = 0f;
     float nextTimeToFire2 = 0f;
 
+    public GameObject graphics;
+
     private void Start()
     {
         sceneCamera = Camera.main;
@@ -52,9 +54,19 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        SoundTest();
+        Move();
+        CameraCheck();
+        CameraRotate();
+        FireGun();
+    }
+
+    void FireGun()
+    {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
-            if (gun != null) {
+            if (gun != null)
+            {
                 nextTimeToFire = Time.time + 0.20f;
                 gun.Shoot();
                 commands.CmdPlayShootEffect(WaveSpawner.Instance.playerID, 1);
@@ -69,6 +81,76 @@ public class PlayerController : MonoBehaviour {
                 commands.CmdPlayShootEffect(WaveSpawner.Instance.playerID, 2);
             }
         }
+    }
+
+    void Move()
+    {
+        if (Input.GetKey(KeyCode.LeftShift)) speed = verySpeed;
+        else speed = startSpeed;
+
+        //Calculate movement velocity as vector3
+        float xMov = Input.GetAxisRaw("Horizontal");
+        float zMov = Input.GetAxisRaw("Vertical");
+
+        Vector3 moveHorizontal = transform.right * xMov;
+        Vector3 moveVertical = transform.forward * zMov;
+
+        //Final movement vector
+        Vector3 velocity = (moveHorizontal + moveVertical).normalized * speed;
+
+        //Apply movement
+        motor.Move(velocity);
+    }
+
+    void CameraCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            FirstPersonCamera();
+        }
+        coolDownCamera -= Time.deltaTime;
+
+        if (!fpCamera.isActiveAndEnabled)   //if fpcamera is enabled don't switch with tab
+        {
+            if (Input.GetKey(KeyCode.Tab)) ToggleCamera(true);
+            else ToggleCamera(false);
+        }
+    }
+
+    void CameraRotate()
+    {
+        if (fpCamera.isActiveAndEnabled)
+        {
+            //Calculate roation as vector3
+            float yRot = Input.GetAxisRaw("Mouse X");
+
+            Vector3 rotation = new Vector3(0, yRot, 0) * turnSpeed;
+
+            //Apply rotation
+            motor.transform.Rotate(rotation);
+        }
+        else
+        {
+            RotateToMouse();
+        }
+    }
+
+    private void RotateToMouse()
+    {
+        Ray cameraRay = playerCamera.ScreenPointToRay(Input.mousePosition);
+        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        float rayLength;
+
+        if (groundPlane.Raycast(cameraRay, out rayLength))
+        {
+            Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+
+            graphics.transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+        }
+    }
+
+    void SoundTest()
+    {
         if (soundTest)
         {
             startSpeed = 50;
@@ -88,50 +170,8 @@ public class PlayerController : MonoBehaviour {
                 commands.CmdUnleashThis(GetComponent<NetworkIdentity>());
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            FirstPersonCamera();
-        }
-        coolDownCamera -= Time.deltaTime;
-
-        if (!fpCamera.isActiveAndEnabled)   //if fpcamera is enabled don't switch with tab
-        {
-            if (Input.GetKey(KeyCode.Tab)) ToggleCamera(true);
-            else ToggleCamera(false);
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift)) speed = verySpeed;
-        else speed = startSpeed;
-
-        //Calculate movement velocity as vector3
-        float xMov = Input.GetAxisRaw("Horizontal");
-        float zMov = Input.GetAxisRaw("Vertical");
-
-        Vector3 moveHorizontal = transform.right * xMov;
-        Vector3 moveVertical = transform.forward * zMov;
-
-        //Final movement vector
-        Vector3 velocity = (moveHorizontal + moveVertical).normalized * speed;
-
-        //Apply movement
-        motor.Move(velocity);
-
-        if (fpCamera.isActiveAndEnabled)
-        {
-            //Calculate roation as vector3
-            float yRot = Input.GetAxisRaw("Mouse X");
-
-            Vector3 rotation = new Vector3(0, yRot, 0) * turnSpeed;
-
-            //Apply rotation
-            motor.transform.Rotate(rotation);
-        }
-        else
-        {
-            motor.transform.rotation = Quaternion.identity; //reset camera rotation
-        }
     }
+
     #region Camera controls
     void ToggleCamera(bool active)  //turns off fpcamera then activates either scene cam or player cam
     {
@@ -155,8 +195,18 @@ public class PlayerController : MonoBehaviour {
         playerCamera.gameObject.SetActive(!fpCamera.isActiveAndEnabled);
 
         Cursor.visible = (!fpCamera.isActiveAndEnabled);
-        if(fpCamera.isActiveAndEnabled) Cursor.lockState = CursorLockMode.Locked;
-        else Cursor.lockState = CursorLockMode.None;
+        if (fpCamera.isActiveAndEnabled)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            motor.transform.rotation = graphics.transform.rotation;
+            graphics.transform.localRotation = Quaternion.identity;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            motor.transform.rotation = Quaternion.identity;
+            graphics.transform.rotation = Quaternion.identity;
+        }
     }
     #endregion
     #region Particle test (ss3)

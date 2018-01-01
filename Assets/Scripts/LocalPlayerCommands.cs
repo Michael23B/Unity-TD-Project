@@ -208,10 +208,15 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [TargetRpc]
-    void TargetRpcPlayShootEffect(NetworkConnection target, int id)
+    void TargetRpcPlayShootEffect(NetworkConnection target, int id) //TODO: change to a grey shoot effect so its obvious the player can't hurt the other players enemies
     {
-        if (id == 1) GetComponent<Gun>().shootEffect.Play();
-        else if (id == 2) GetComponent<Gun>().AltShoot();
+        Gun gun = GetComponent<Gun>();
+        if (id == 1)
+        {
+            gun.shootEffect.Play();
+            gun.shootEffect.transform.rotation = gun.graphics.transform.rotation;
+        }
+        else if (id == 2) gun.AltShoot();
     }
 
     [ClientRpc]
@@ -223,7 +228,6 @@ public class LocalPlayerCommands : NetworkBehaviour
 
             GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
             if (p2 != null) p2.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
-
         }
         else
         {
