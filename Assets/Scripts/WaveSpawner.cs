@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Networking;
 //TODO: update all client nodes with correct turrets when clientjoins()
-
+//TODO: bug when resetting level that makes the second player call effects on the main players avatar instead of their own
 public class WaveSpawner : MonoBehaviour {
     
     public static WaveSpawner Instance;
@@ -50,6 +51,8 @@ public class WaveSpawner : MonoBehaviour {
     public Material ghostMaterial;
     public bool ghostOnly = false;
 
+    public Camera sceneCamera;
+    
     private void Awake()
     {
         if (Instance != null)
@@ -60,11 +63,16 @@ public class WaveSpawner : MonoBehaviour {
         Instance = this;
 
         shop = FindObjectOfType<Shop>();
+        if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
+        if (NetworkServer.connections.Count != 0) waitForPlayersCount = NetworkServer.connections.Count;
 
         if (cleanUpScene) CleanUpEnemies();
         rand = LocalRandom.Instance;
         ghostWaves = waves; //take this out and make a seperate wave array for each player
         InvokeRepeating("UpdateGhostPositions", 0f, 5f);
+
+        if (FindObjectOfType<PlayerController>()) sceneCamera.gameObject.SetActive(false);
+        DontDestroyOnLoad(sceneCamera);
     }
 
     private void Update()

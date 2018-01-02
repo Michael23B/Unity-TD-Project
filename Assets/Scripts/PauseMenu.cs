@@ -40,4 +40,9 @@ public class PauseMenu : MonoBehaviour {
         Toggle();
         sceneFader.FadeTo(menuSceneName);
     }
+
+    public void CallRetry()
+    {
+        WaveSpawner.Instance.commands.CmdResetLevel();
+    }
 }

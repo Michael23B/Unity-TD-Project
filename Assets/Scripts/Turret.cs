@@ -59,7 +59,6 @@ public class Turret : MonoBehaviour
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";
-    public bool hasAnimation = false;
 
     public Transform PartToRotate;
     public Transform firePoint;
@@ -153,7 +152,6 @@ public class Turret : MonoBehaviour
     {
         BuffHelper.ResetDebuffs(this);
         BuffHelper.CheckDebuffs(this);
-        if (hasAnimation) Animate();
 
         fireCountDown -= Time.deltaTime;
 
@@ -233,11 +231,6 @@ public class Turret : MonoBehaviour
             return nearestEnemy.transform;
         }
         else return null;
-    }
-
-    void Animate()
-    {
-        PartToRotate.transform.Rotate(1f, -1f, 1f); //TODO: actually animate it
     }
 
     void LockOnTarget()

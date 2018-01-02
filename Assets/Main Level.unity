@@ -3613,7 +3613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  startMoney: 1300
+  startMoney: 1000
   lives: 0
   startLives: 20
   rounds: 0
@@ -24394,6 +24394,7 @@ MonoBehaviour:
   waitForPlayersCount: 1
   ghostMaterial: {fileID: 2100000, guid: 1ab627500b7e637499c8278250165341, type: 2}
   ghostOnly: 0
+  sceneCamera: {fileID: 460}
 --- !u!114 &1131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24840,17 +24841,17 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Fear Turret
     displayDesc: Forces an enemy to run away.
-  - prefab: {fileID: 1416395722897164, guid: 43b593ed8a28174448a4a52f6328d5d3, type: 2}
+  - prefab: {fileID: 1958084846982880, guid: 52d89588298570d4fa0fa668c621a939, type: 2}
     cost: 1000
-    upgradedPrefab: {fileID: 1416395722897164, guid: 074ae3ab5a001ef469bb67f6a2b545d5,
+    upgradedPrefab: {fileID: 1958084846982880, guid: 685bc6454dcc80a469d296435037e9aa,
       type: 2}
     upgradeCost: 1500
     resourceCost: 30
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
-    displayName: Long Turret
-    displayDesc: Well now that's a mighty looooong turret.
+    displayName: Pyramid Turret
+    displayDesc: My grandfather's deck has no pathetic turrets.
   - prefab: {fileID: 1507746948647926, guid: 3e8b9b7c2df0b374f99d36a4735a1975, type: 2}
     cost: 275
     upgradedPrefab: {fileID: 1507746948647926, guid: d579729c36f0f4d49ad3a3da1daaa7d4,
@@ -24883,7 +24884,7 @@ MonoBehaviour:
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Shield Breaker
-    displayDesc: Deals very large damage to shielded enemies, low damage to non-shielded
+    displayDesc: Deals very high damage to shielded enemies, low damage to non-shielded
       ones.
   buttons: []
 --- !u!114 &1144
@@ -25898,7 +25899,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 84}
-        m_MethodName: Retry
+        m_MethodName: CallRetry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33942,7 +33943,7 @@ GameObject:
   - component: {fileID: 215004060}
   - component: {fileID: 215004059}
   m_Layer: 5
-  m_Name: LongTurretItem
+  m_Name: PyramidTurretItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34062,7 +34063,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 576f65b402cdb4549b5327c1943b4573, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82467e11e34b99f439611ebac5dd64ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35330,7 +35331,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.034482896, g: 0, b: 0.29411763, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -35383,7 +35384,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 480d5214fbc5cc84f941a46819e51f5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50e640ce08f19a64fabdd8f446f67cf3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42464,7 +42465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000015258789}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 3.767769e-12}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -43834,7 +43835,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0d56f5a551ca80440b204eaca1938e12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1f0f53fc776a5849b010fb32f5b3139, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -54426,8 +54427,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2041626116}
   m_HandleRect: {fileID: 2041626114}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -58975,6 +58976,81 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579677357}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1589347145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1589347148}
+  - component: {fileID: 1589347147}
+  - component: {fileID: 1589347146}
+  m_Layer: 0
+  m_Name: PlayerSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1589347146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589347145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef667514400d2f84091dc55267d63c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPrefab: {fileID: 1088453242561702, guid: a93aca66159a5554685cf231bd3f556a,
+    type: 2}
+--- !u!114 &1589347147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589347145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 1
+  m_LocalPlayerAuthority: 0
+--- !u!4 &1589347148
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589347145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.266455, y: -3.482067, z: 69.4032}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592410223
 GameObject:
   m_ObjectHideFlags: 0
@@ -60986,7 +61062,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 86078afe3b717094e9bdb6ec8026c6ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23fa4710eb51f7847915d5495b730d73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

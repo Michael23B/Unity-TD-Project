@@ -903,6 +903,8 @@ MonoBehaviour:
   startSpeed: 10
   verySpeed: 30
   turnSpeed: 3
+  sceneCamera: {fileID: 0}
+  playerCamera: {fileID: 20349614592647910}
   fpCamera: {fileID: 20473088320893328}
   crosshair: {fileID: 0}
   bankaiEffect: {fileID: 1379739830484992, guid: e8f1d05b4a3674c42af44c4ff5206655,

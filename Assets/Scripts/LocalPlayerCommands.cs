@@ -1,5 +1,6 @@
 ﻿using UnityEngine.Networking;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LocalPlayerCommands : NetworkBehaviour
 {
@@ -14,6 +15,26 @@ public class LocalPlayerCommands : NetworkBehaviour
             CmdUpdatePlayerCount();
             WaveSpawner.Instance.playerID = connectionToServer.connectionId;
         }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        shop = FindObjectOfType<Shop>();
+        if (isLocalPlayer)
+        {
+            CmdUpdatePlayerCount();
+            WaveSpawner.Instance.playerID = connectionToServer.connectionId;
+        }
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     #region Networking
@@ -108,6 +129,12 @@ public class LocalPlayerCommands : NetworkBehaviour
     public void CmdPlayerColorsUpdate()
     {
         RpcPlayerColorsUpdate();
+    }
+
+    [Command]
+    public void CmdResetLevel()
+    {
+        RpcResetLevel();
     }
 
     //RPCs
@@ -236,6 +263,12 @@ public class LocalPlayerCommands : NetworkBehaviour
             GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
             if (p2 != null) p2.GetComponentInChildren<MeshRenderer>().material.color = Color.grey;
         }
+    }
+
+    [ClientRpc]
+    void RpcResetLevel()
+    {
+        FindObjectOfType<PauseMenu>().Retry();
     }
     #endregion
 }

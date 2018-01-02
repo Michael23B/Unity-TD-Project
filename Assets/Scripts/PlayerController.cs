@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
@@ -16,9 +17,8 @@ public class PlayerController : MonoBehaviour {
     float coolDownCamera, coolDownSS3;   //otherwise camera toggle gets spammed every update
 
     private PlayerMotor motor;
-    Camera sceneCamera, playerCamera;
-    [SerializeField]
-    Camera fpCamera;
+    public Camera sceneCamera, playerCamera, fpCamera;
+
     public Image crosshair;
 
     private bool soundTest = false;
@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour {
     private void Start()
     {
         sceneCamera = Camera.main;
-        playerCamera = GetComponentInChildren<Camera>();
         motor = GetComponent<PlayerMotor>();
         speed = startSpeed;
 
@@ -50,6 +49,27 @@ public class PlayerController : MonoBehaviour {
         commands.CmdSetClientsRandomValues();
 
         WaveSpawner.Instance.commands = commands;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        motor = GetComponent<PlayerMotor>();
+        speed = startSpeed;
+
+        commands = FindObjectOfType<LocalPlayerCommands>();
+        commands.CmdSetClientsRandomValues();
+
+        WaveSpawner.Instance.commands = commands;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void Update()
