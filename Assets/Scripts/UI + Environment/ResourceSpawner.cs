@@ -40,4 +40,9 @@ public class ResourceSpawner : MonoBehaviour {
             Instantiate(resourceList[r],randomPos, Quaternion.identity);
         }
     }
+
+    public GameObject GetResource(int index)
+    {
+        return resourceList[index];
+    }
 }

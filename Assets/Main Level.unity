@@ -4934,7 +4934,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 21.2, y: 64.3, z: 0}
 --- !u!4 &326
 Transform:
@@ -5045,7 +5045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
 --- !u!4 &337
 Transform:
@@ -5116,7 +5116,7 @@ Transform:
   - {fileID: 1556550372}
   - {fileID: 1622292438}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &342
 Transform:
@@ -5845,7 +5845,7 @@ Transform:
   - {fileID: 1373160902}
   - {fileID: 2083206456}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &407
 Transform:
@@ -6580,7 +6580,7 @@ Transform:
   - {fileID: 6333303}
   - {fileID: 455850068}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &440
 Transform:
@@ -6663,7 +6663,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &447
 Transform:
@@ -22696,7 +22696,7 @@ RectTransform:
   m_Children:
   - {fileID: 1078}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22886,7 +22886,7 @@ RectTransform:
   m_Children:
   - {fileID: 1044}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23007,7 +23007,7 @@ RectTransform:
   - {fileID: 1671998914}
   - {fileID: 1250084047}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23341,7 +23341,7 @@ RectTransform:
   - {fileID: 1173397120}
   - {fileID: 996986295}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -24171,30 +24171,30 @@ MonoBehaviour:
       spawnRate: 1.25
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
-      count: 3
+      count: 1
       spawnRate: 0.5
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 15
-      spawnRate: 1.25
-      waitTime: 3
+      spawnRate: 1
+      waitTime: 6
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
       count: 1
-      spawnRate: 1
+      spawnRate: 0.5
       waitTime: 3
     randomOrder: 0
   - wave:
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 15
-      spawnRate: 3
+      spawnRate: 2.75
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
       count: 2
       spawnRate: 1
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 2
-      spawnRate: 1.75
+      count: 1
+      spawnRate: 1
       waitTime: 4
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
       count: 25
@@ -24205,11 +24205,11 @@ MonoBehaviour:
       spawnRate: 4
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
-      count: 2
+      count: 1
       spawnRate: 1
       waitTime: 0
     - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
-      count: 2
+      count: 1
       spawnRate: 1
       waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
@@ -31188,9 +31188,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &44908345
 GameObject:
   m_ObjectHideFlags: 0
@@ -32887,9 +32888,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &117378002
 GameObject:
   m_ObjectHideFlags: 0
@@ -33126,9 +33128,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &123626615
 GameObject:
   m_ObjectHideFlags: 0
@@ -33803,9 +33806,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &177123549
 GameObject:
   m_ObjectHideFlags: 0
@@ -34282,9 +34286,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &212284483
 GameObject:
   m_ObjectHideFlags: 0
@@ -34910,9 +34915,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &242482505
 GameObject:
   m_ObjectHideFlags: 0
@@ -35102,9 +35108,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &248384071
 GameObject:
   m_ObjectHideFlags: 0
@@ -37189,9 +37196,16 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
+--- !u!114 &389414888 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114695075790585050, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1943970976}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &398132958
 GameObject:
   m_ObjectHideFlags: 0
@@ -37668,9 +37682,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &426004353
 GameObject:
   m_ObjectHideFlags: 0
@@ -37787,9 +37802,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &432215832
 GameObject:
   m_ObjectHideFlags: 0
@@ -37906,9 +37922,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &433215089
 GameObject:
   m_ObjectHideFlags: 0
@@ -38025,9 +38042,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &438984635
 GameObject:
   m_ObjectHideFlags: 0
@@ -39800,7 +39818,7 @@ Transform:
   - {fileID: 1910888709}
   - {fileID: 643860725}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &612391529
 GameObject:
@@ -41549,9 +41567,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &691062333
 GameObject:
   m_ObjectHideFlags: 0
@@ -41938,9 +41957,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &725356497
 GameObject:
   m_ObjectHideFlags: 0
@@ -43545,7 +43565,7 @@ Transform:
   - {fileID: 444}
   - {fileID: 449}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &794498851
 GameObject:
@@ -44132,7 +44152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.0000152516195}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000015258787}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -44755,9 +44775,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &833947486
 GameObject:
   m_ObjectHideFlags: 0
@@ -45365,7 +45386,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925895800
 GameObject:
@@ -45950,9 +45971,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &945780083
 GameObject:
   m_ObjectHideFlags: 0
@@ -46598,9 +46620,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &985884674
 GameObject:
   m_ObjectHideFlags: 0
@@ -46837,9 +46860,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &995924685
 GameObject:
   m_ObjectHideFlags: 0
@@ -47165,9 +47189,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1034715918
 GameObject:
   m_ObjectHideFlags: 0
@@ -51041,9 +51066,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1048095769
 GameObject:
   m_ObjectHideFlags: 0
@@ -53820,9 +53846,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1199885845
 GameObject:
   m_ObjectHideFlags: 0
@@ -54183,6 +54210,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202156903}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1203710790 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1943970976}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1203996760
 GameObject:
   m_ObjectHideFlags: 0
@@ -56139,9 +56172,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1290898489
 GameObject:
   m_ObjectHideFlags: 0
@@ -57713,7 +57747,7 @@ Transform:
   - {fileID: 605301281}
   - {fileID: 493167609}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1364632422
 GameObject:
@@ -59755,9 +59789,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1442962265
 GameObject:
   m_ObjectHideFlags: 0
@@ -60155,9 +60190,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1477503233
 GameObject:
   m_ObjectHideFlags: 0
@@ -60274,9 +60310,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1479468723
 GameObject:
   m_ObjectHideFlags: 0
@@ -62025,7 +62062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592410223
 GameObject:
@@ -62743,9 +62780,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1622292437
 GameObject:
   m_ObjectHideFlags: 0
@@ -62818,6 +62856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4488705181d7c8f4aa116b549ba4d61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 1793939423}
 --- !u!1 &1657075990
 GameObject:
   m_ObjectHideFlags: 0
@@ -64360,9 +64399,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1739689577
 GameObject:
   m_ObjectHideFlags: 0
@@ -64797,9 +64837,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1769225225
 GameObject:
   m_ObjectHideFlags: 0
@@ -65022,6 +65063,12 @@ Transform:
   m_Father: {fileID: 792962006}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1793939423 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1943970976}
+  m_Script: {fileID: 11500000, guid: 822527dd5bb5f8848a6706e79d43a021, type: 3}
 --- !u!1 &1802376392
 GameObject:
   m_ObjectHideFlags: 0
@@ -65168,9 +65215,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &1804605856
 GameObject:
   m_ObjectHideFlags: 0
@@ -66832,6 +66880,110 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1940673128}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1943970976
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1793939423}
+    - target: {fileID: 114908082515582942, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1793939423}
+    - target: {fileID: 1911378674513684, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_Name
+      value: Harvest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562459304950126, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_Name
+      value: Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618184581702004, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_Name
+      value: Time
+      objectReference: {fileID: 0}
+    - target: {fileID: 114244193989680192, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_Text
+      value: 0 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 114695075790585050, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_Text
+      value: $10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114908082515582942, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Harvest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: plantButton
+      value: 
+      objectReference: {fileID: 1203710790}
+    - target: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: PlantCost
+      value: 
+      objectReference: {fileID: 389414888}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1945433796
 GameObject:
   m_ObjectHideFlags: 0
@@ -68246,9 +68398,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &2049134612
 GameObject:
   m_ObjectHideFlags: 0
@@ -68605,9 +68758,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &2067816543
 GameObject:
   m_ObjectHideFlags: 0
@@ -68754,9 +68908,10 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
-  isRipe: 0
+  harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
+  UI: {fileID: 0}
 --- !u!1 &2069731066
 GameObject:
   m_ObjectHideFlags: 0

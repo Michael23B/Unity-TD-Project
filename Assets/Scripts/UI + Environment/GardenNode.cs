@@ -9,8 +9,7 @@ public class GardenNode : MonoBehaviour {
     public GameObject plant;
     [HideInInspector]
     public TurretBlueprint plantBlueprint; //change to plant blueprint
-    [HideInInspector]
-    public bool isRipe = false;
+    public float harvestTime = 10f;
     [HideInInspector]
     public float timeTillRipe = 0f;
 
@@ -25,6 +24,7 @@ public class GardenNode : MonoBehaviour {
     public int nodeID;
 
     LocalPlayerCommands player;
+    public GardenNodeUI UI;
 
     private void Start()
     {
@@ -35,21 +35,16 @@ public class GardenNode : MonoBehaviour {
 
     void SelectGardenNode()
     {
-        //GardenNodeUI.transform.position = transform.position + positionOffset;
+        UI.transform.position = transform.position + positionOffset;
+        UI.SetTarget(this);
         //if its active, show() it else hide() it
     }
 
     private void OnMouseDown()
     {
-        if (!WaveSpawner.Instance.buildTime) return;
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        if (plant != null)
-        {
-            SelectGardenNode();
-            return;
-        }
-
+        SelectGardenNode();
 
         //gardennodeUI has buttons to plant each plant which call CallPlantPlant(Plantblueprint plant); 
     }
@@ -57,14 +52,32 @@ public class GardenNode : MonoBehaviour {
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
-        if (plant == null) return;
 
-        if (plant != null && !isRipe) rend.material.color = hoverColorBad;
+        if (plant != null && !CheckRipe()) rend.material.color = hoverColorBad;
         else rend.material.color = hoverColor;
     }
 
     private void OnMouseExit()
     {
         rend.material.color = startColor;
+    }
+
+    public void Plant(int index)
+    {
+        plant = Instantiate(ResourceSpawner.Instance.GetResource(index), transform.position - positionOffset, Quaternion.identity);
+        timeTillRipe = Time.time + harvestTime; //todo plants blueprint harvest time
+    }
+
+    public void Harvest()
+    {
+        if (plant == null) return;
+
+        timeTillRipe = Time.time + harvestTime;
+        Destroy(plant); //todo plant.harvest
+    }
+
+    public bool CheckRipe()
+    {
+        return (Time.time >= timeTillRipe);
     }
 }
