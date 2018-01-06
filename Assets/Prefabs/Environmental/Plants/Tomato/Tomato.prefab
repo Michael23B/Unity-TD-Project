@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33605972130860604}
   - component: {fileID: 65280184268729100}
   - component: {fileID: 23515371081629014}
-  - component: {fileID: 114345187160550332}
+  - component: {fileID: 114998372743016776}
   m_Layer: 0
   m_Name: Tomato
   m_TagString: Untagged
@@ -181,7 +181,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114345187160550332
+--- !u!114 &114998372743016776
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -189,6 +189,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1648846640060970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1776c8f6cb8aea249a9e5d86dd72c6b8, type: 3}
+  m_Script: {fileID: 11500000, guid: b16f26e2271ea9646ad9d76e346c376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 1473482693974122, guid: 76bde8875ea08ef4f85f08675c8107aa, type: 2}
+  onCooldownHitEffect: {fileID: 1473482693974122, guid: 091f623f25c4aed45a402180d7095ec4,
+    type: 2}
+  money: 10
+  stone: 0
+  green: 0
+  diamond: 0
+  timesToReGrow: 3
+  harvestTime: 15
+  node: {fileID: 0}

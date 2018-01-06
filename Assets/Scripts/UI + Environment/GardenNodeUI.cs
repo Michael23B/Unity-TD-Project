@@ -12,6 +12,24 @@ public class GardenNodeUI : MonoBehaviour {
 
     private GardenNode target;
 
+    public GameObject[] plantList;
+
+    private void Update()
+    {
+        if (target == null) return;
+
+        if (!target.CheckRipe())
+        {
+            harvestTime.text = string.Format("{0:00}", + target.timeTillRipe - Time.time);
+            harvestButton.interactable = false;
+        }
+        else
+        {
+            harvestTime.text = "Ready!";
+            harvestButton.interactable = true;
+        }
+    }
+
     public void SetTarget(GardenNode _target)
     {
         if (_target == target && isActiveAndEnabled)
@@ -53,7 +71,7 @@ public class GardenNodeUI : MonoBehaviour {
 
     public void Plant(int index)   //TODO: hover over upgrade shows upgraded range
     {
-        target.Plant(index);
+        target.Plant(plantList[index]);
         Hide();
     }
 

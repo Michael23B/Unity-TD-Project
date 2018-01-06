@@ -8,7 +8,7 @@ public class GardenNode : MonoBehaviour {
     [HideInInspector]
     public GameObject plant;
     [HideInInspector]
-    public TurretBlueprint plantBlueprint; //change to plant blueprint
+    public Plant plantComponent;
     public float harvestTime = 10f;
     [HideInInspector]
     public float timeTillRipe = 0f;
@@ -18,19 +18,17 @@ public class GardenNode : MonoBehaviour {
     private Color startColor;
     private Renderer rend;
 
-    PlayerStats playerStats;
-
     [HideInInspector]
     public int nodeID;
 
     LocalPlayerCommands player;
     public GardenNodeUI UI;
 
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
-        playerStats = PlayerStats.Instance;
     }
 
     void SelectGardenNode()
@@ -62,10 +60,12 @@ public class GardenNode : MonoBehaviour {
         rend.material.color = startColor;
     }
 
-    public void Plant(int index)
+    public void Plant(GameObject plant)
     {
-        plant = Instantiate(ResourceSpawner.Instance.GetResource(index), transform.position - positionOffset, Quaternion.identity);
-        timeTillRipe = Time.time + harvestTime; //todo plants blueprint harvest time
+        plant = Instantiate(plant, transform.position + positionOffset, Quaternion.identity);
+        plantComponent = plant.GetComponent<Plant>();
+        timeTillRipe = Time.time + plantComponent.harvestTime; //todo plants blueprint harvest time
+        plantComponent.node = this;
     }
 
     public void Harvest()

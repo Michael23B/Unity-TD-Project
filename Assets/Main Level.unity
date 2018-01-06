@@ -31177,17 +31177,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -32877,17 +32867,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -33117,17 +33097,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -33795,17 +33765,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -34275,17 +34235,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -34904,17 +34854,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -35097,17 +35037,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -36091,6 +36021,59 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 311935607}
+--- !u!1001 &327892843
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: plantList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
+        type: 2}
+      propertyPath: plantList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1648846640060970, guid: b86448ee705a76f48a1a447efdadd129,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &332969601
 GameObject:
   m_ObjectHideFlags: 0
@@ -37185,27 +37168,11 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
   UI: {fileID: 0}
---- !u!114 &389414888 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114695075790585050, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1943970976}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &398132958
 GameObject:
   m_ObjectHideFlags: 0
@@ -37671,17 +37638,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -37791,17 +37748,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -37911,17 +37858,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -38031,17 +37968,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -39343,6 +39270,11 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 114267496840985906, guid: 8cc407885eaf10743b265f797e39846e,
+        type: 2}
+      propertyPath: m_DynamicPixelsPerUnit
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 136997331676544322, guid: 8cc407885eaf10743b265f797e39846e, type: 2}
@@ -41556,17 +41488,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -41946,17 +41868,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -44152,7 +44064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000015258787}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000017827648}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -44764,17 +44676,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -45960,17 +45862,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -46609,17 +46501,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -46849,17 +46731,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -47178,17 +47050,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -51055,17 +50917,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -53835,17 +53687,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -54210,12 +54052,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202156903}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1203710790 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1943970976}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1203996760
 GameObject:
   m_ObjectHideFlags: 0
@@ -56161,17 +55997,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -59778,17 +59604,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -60179,17 +59995,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -60299,17 +60105,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -62769,17 +62565,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -64388,17 +64174,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -64826,17 +64602,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -65067,7 +64833,7 @@ Transform:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
     type: 2}
-  m_PrefabInternal: {fileID: 1943970976}
+  m_PrefabInternal: {fileID: 327892843}
   m_Script: {fileID: 11500000, guid: 822527dd5bb5f8848a6706e79d43a021, type: 3}
 --- !u!1 &1802376392
 GameObject:
@@ -65204,17 +64970,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -66880,110 +66636,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1940673128}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1943970976
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1793939423}
-    - target: {fileID: 114908082515582942, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1793939423}
-    - target: {fileID: 1911378674513684, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_Name
-      value: Harvest
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562459304950126, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_Name
-      value: Plant
-      objectReference: {fileID: 0}
-    - target: {fileID: 1618184581702004, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-      propertyPath: m_Name
-      value: Time
-      objectReference: {fileID: 0}
-    - target: {fileID: 114244193989680192, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_Text
-      value: 0 seconds
-      objectReference: {fileID: 0}
-    - target: {fileID: 114695075790585050, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_Text
-      value: $10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Plant
-      objectReference: {fileID: 0}
-    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114607037328599766, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114908082515582942, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Harvest
-      objectReference: {fileID: 0}
-    - target: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: plantButton
-      value: 
-      objectReference: {fileID: 1203710790}
-    - target: {fileID: 114481949139650384, guid: e715ab0eb85dbde42b1b07f7df3d4f7c,
-        type: 2}
-      propertyPath: PlantCost
-      value: 
-      objectReference: {fileID: 389414888}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1945433796
 GameObject:
   m_ObjectHideFlags: 0
@@ -68387,17 +68039,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -68747,17 +68389,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
@@ -68897,17 +68529,7 @@ MonoBehaviour:
   hoverColor: {r: 0.45712587, g: 0.6985294, b: 0.5287145, a: 0}
   hoverColorBad: {r: 0.75, g: 0.15992649, b: 0.15992649, a: 0}
   plant: {fileID: 0}
-  plantBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-    resourceCost: 0
-    resourceType: 0
-    turretRange: -1
-    turretUpgradedRange: -1
-    displayName: 
-    displayDesc: 
+  plantComponent: {fileID: 0}
   harvestTime: 10
   timeTillRipe: 0
   nodeID: 0
