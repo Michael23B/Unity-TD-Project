@@ -137,6 +137,23 @@ public class LocalPlayerCommands : NetworkBehaviour
         RpcResetLevel();
     }
 
+    [Command]
+    public void CmdPlant(int nodeID, int plantID)
+    {
+        RpcPlant(nodeID, plantID);
+    }
+
+    [Command]
+    public void CmdHarvest(int nodeID)
+    {
+        RpcHarvest(nodeID);
+    }
+    [Command]
+    public void CmdDestroyResource(int resourceID)
+    {
+        RpcDestroyResource(resourceID);
+    }
+
     //RPCs
     [ClientRpc]
     void RpcBuildTurret(int nodeID, int turretID, bool upgrading)
@@ -269,6 +286,37 @@ public class LocalPlayerCommands : NetworkBehaviour
     void RpcResetLevel()
     {
         FindObjectOfType<PauseMenu>().Retry();
+    }
+
+    [ClientRpc]
+    void RpcPlant(int nodeID, int plantID)
+    {
+        GardenNode _node = GardenNodes.gardenNodes[nodeID].GetComponent<GardenNode>();
+
+        if (_node.plantComponent != null) Destroy(_node.plant);
+        _node.Plant(GardenNodeUI.plantListReference[plantID]);
+    }
+
+    [ClientRpc]
+    void RpcHarvest(int nodeID)
+    {
+        GardenNode _node = GardenNodes.gardenNodes[nodeID].GetComponent<GardenNode>();
+
+        if (_node.plantComponent == null) return;
+        _node.plantComponent.Harvest(true);
+    }
+
+    [ClientRpc]
+    void RpcDestroyResource(int resourceID)
+    {
+        foreach (Resource resource in ResourceSpawner.Instance.resources)
+        {
+            if (resource.ID == resourceID)
+            {
+                Destroy(resource.gameObject);
+                return;
+            }
+        }
     }
     #endregion
 }

@@ -18,6 +18,11 @@ public class EnemyMovement : MonoBehaviour {
     }
     public void SetAndUpdateWaypoint(int i)
     {
+        if (points == null) //still got error
+        {
+            waypointIndex = i;
+            return;
+        }
         if (points.Length == 0)
         {
             waypointIndex = i; //at some point i got an error here saying points was void so this might fix it

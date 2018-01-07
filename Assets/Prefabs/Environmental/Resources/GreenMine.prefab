@@ -2039,15 +2039,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0664be5829cf1fb4981811085172c64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.25
-  hitEffect: {fileID: 1473482693974122, guid: b90ad5a33228435498457045c0cff176, type: 2}
-  onCooldownHitEffect: {fileID: 1473482693974122, guid: 5e4eb5fc46d6e2b4ba1103315623f905,
+  hitEffect: {fileID: 1895723489901300, guid: 19c00f74e53fcae46b532252207c9aac, type: 2}
+  breakingEffect: {fileID: 1337034464167292, guid: 6cc8007e5d9b462468fee884624acabf,
     type: 2}
   money: 0
   stone: 0
-  green: 2
+  green: 8
   diamond: 0
-  resourceAmount: 10
+  hitsToDestroy: 6
+  ID: 0
 --- !u!198 &198431153006293638
 ParticleSystem:
   m_ObjectHideFlags: 1

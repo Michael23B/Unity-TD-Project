@@ -35,7 +35,6 @@ public class GardenNode : MonoBehaviour {
     {
         UI.transform.position = transform.position + positionOffset;
         UI.SetTarget(this);
-        //if its active, show() it else hide() it
     }
 
     private void OnMouseDown()
@@ -43,8 +42,6 @@ public class GardenNode : MonoBehaviour {
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
         SelectGardenNode();
-
-        //gardennodeUI has buttons to plant each plant which call CallPlantPlant(Plantblueprint plant); 
     }
 
     private void OnMouseEnter()
@@ -60,7 +57,7 @@ public class GardenNode : MonoBehaviour {
         rend.material.color = startColor;
     }
 
-    public void Plant(GameObject plant)
+    public void Plant(GameObject plant) //TODO: add networking (commands.CallPlant())
     {
         plant = Instantiate(plant, transform.position + positionOffset, Quaternion.identity);
         plantComponent = plant.GetComponent<Plant>();
@@ -68,12 +65,14 @@ public class GardenNode : MonoBehaviour {
         plantComponent.node = this;
     }
 
-    public void Harvest()
+    public void CallPlant(int plantID)
     {
-        if (plant == null) return;
+        WaveSpawner.Instance.commands.CmdPlant(nodeID, plantID);
+    }
 
-        timeTillRipe = Time.time + harvestTime;
-        Destroy(plant); //todo plant.harvest
+    public void CallHarvest()
+    {
+        WaveSpawner.Instance.commands.CmdHarvest(nodeID);
     }
 
     public bool CheckRipe()

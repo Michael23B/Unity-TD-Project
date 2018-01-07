@@ -5,26 +5,59 @@ public class GardenNodeUI : MonoBehaviour {
 
     public GameObject UI;
 
-    public Text PlantCost;
-    public Button plantButton;
+    public GameObject plantButtons;
     public Text harvestTime;
     public Button harvestButton;
+
+    public GameObject currentPlantInfoBox;
+    public Text currentPlantNameText;
+    public Text currentPlantInfoText;
+    Image currentPlantInfoBoxImage;
+
+    public Image harvestCooldown;
 
     private GardenNode target;
 
     public GameObject[] plantList;
+    [HideInInspector]
+    public Plant[] plantComponentList;
+    public static GameObject[] plantListReference;
+
+    private void Start()
+    {
+        plantListReference = plantList;
+        plantComponentList = new Plant[plantList.Length];
+        for (int i = 0; i < plantList.Length; ++i)
+        {
+            plantComponentList[i] = plantList[i].GetComponent<Plant>();
+        }
+        currentPlantInfoBoxImage = currentPlantInfoBox.GetComponent<Image>();
+    }
 
     private void Update()
     {
         if (target == null) return;
 
+        if (target.plantComponent == null)
+        {
+            harvestTime.text = "No plant!";
+            harvestButton.interactable = false;
+            plantButtons.SetActive(true);
+            currentPlantInfoBox.SetActive(false);
+            return;
+        }
+
         if (!target.CheckRipe())
         {
-            harvestTime.text = string.Format("{0:00}", + target.timeTillRipe - Time.time);
+            float timeLeft = target.timeTillRipe - Time.time;
+
+            harvestTime.text = string.Format("{0:00}", timeLeft);
+            harvestCooldown.fillAmount = timeLeft / target.plantComponent.harvestTime;
             harvestButton.interactable = false;
         }
         else
         {
+            harvestCooldown.fillAmount = 0;
             harvestTime.text = "Ready!";
             harvestButton.interactable = true;
         }
@@ -32,23 +65,30 @@ public class GardenNodeUI : MonoBehaviour {
 
     public void SetTarget(GardenNode _target)
     {
-        if (_target == target && isActiveAndEnabled)
+        if (_target == target)
         {
-            target = null;
             Hide();
             return;
         }
+
         target = _target;
 
         transform.position = target.transform.position;
 
-        if (target.plant != null)
+        if (target.plantComponent != null)
         {
-            plantButton.interactable = false;
+            plantButtons.SetActive(false);
+
+            currentPlantInfoBox.SetActive(true);
+            currentPlantNameText.text = target.plantComponent.displayName;
+            currentPlantInfoText.text = target.plantComponent.info;
+            currentPlantInfoBoxImage.color = target.plantComponent.displayColor;
         }
         else
         {
-            plantButton.interactable = true;
+            plantButtons.SetActive(true);
+            currentPlantInfoBox.SetActive(false);
+            harvestCooldown.fillAmount = 0;
         }
 
         if (!target.CheckRipe())
@@ -67,17 +107,27 @@ public class GardenNodeUI : MonoBehaviour {
     public void Hide()
     {
         UI.SetActive(false);
+        target = null;
     }
 
     public void Plant(int index)   //TODO: hover over upgrade shows upgraded range
     {
-        target.Plant(plantList[index]);
-        Hide();
+        if (PlayerStats.Instance.money >= plantComponentList[index].cost)
+        {
+            PlayerStats.Instance.money -= plantComponentList[index].cost;
+            target.CallPlant(index);
+            Hide();
+        }
+        else
+        {
+            BuildManager.Instance.message.PlayMessage("Not Enough Money!", transform);
+        }
     }
 
     public void Harvest()
     {
-        target.Harvest();
+        target.plantComponent.Harvest();
+        target.CallHarvest();
         Hide();
     }
 }

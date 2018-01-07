@@ -136,12 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0664be5829cf1fb4981811085172c64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.25
-  hitEffect: {fileID: 1473482693974122, guid: 0dbc3f76a235ed54bb986f65068a6bc0, type: 2}
-  onCooldownHitEffect: {fileID: 1473482693974122, guid: 5e4eb5fc46d6e2b4ba1103315623f905,
+  hitEffect: {fileID: 1870459648079722, guid: 8808015ee4c77cf4b8d4d7b980cdde29, type: 2}
+  breakingEffect: {fileID: 1337034464167292, guid: 6cc8007e5d9b462468fee884624acabf,
     type: 2}
   money: 0
-  stone: 2
+  stone: 12
   green: 0
   diamond: 0
-  resourceAmount: 20
+  hitsToDestroy: 4
+  ID: 0

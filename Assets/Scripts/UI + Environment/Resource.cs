@@ -1,54 +1,50 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 
 public enum ResourceTypes { stone, green, diamond }
 
 public class Resource : MonoBehaviour {
 
-    public float cooldown = 1f;
-    [HideInInspector]
-    float countdown = 0f;
-
     [SerializeField]
     GameObject hitEffect;
     [SerializeField]
-    GameObject onCooldownHitEffect;
+    GameObject breakingEffect;
 
     [Header("Resources to give")]
     public int money;
     public int stone, green, diamond;
 
-    public int resourceAmount = 10;
+    public int hitsToDestroy = 7;
 
-    void Update () {
-        if (countdown < 0f) return;
-        countdown -= Time.deltaTime;
-	}
+    [HideInInspector]
+    public int ID;
+
+    static int indexOfID;
+
+    private void Start()
+    {
+        ID = indexOfID;
+        ++indexOfID;
+    }
 
     private void OnMouseDown()
     {
-        if (EventSystem.current.IsPointerOverGameObject()) return;
-        if (countdown > 0f)
+        if (--hitsToDestroy == 0)
         {
-            Destroy(Instantiate(onCooldownHitEffect,transform), 0.75f);
+            Destroy(Instantiate(hitEffect, transform.position, Quaternion.identity), 2f);
+            TakeResources();
+            Destroy(gameObject);
             return;
         }
-        CheckResources();
-
-        Destroy(Instantiate(hitEffect, transform.position, Quaternion.identity), 2f);
-
-        countdown = cooldown;
-
-        if (--resourceAmount == 0) Destroy(gameObject);
-
-
+        Destroy(Instantiate(breakingEffect, transform.position, Quaternion.identity), 2f);
     }
 
-    void CheckResources()
+    void TakeResources()
     {
         if (money != 0) PlayerStats.Instance.money += money;
         if (stone != 0) PlayerStats.Instance.stone += stone;
         if (green != 0) PlayerStats.Instance.green += green;
         if (diamond != 0) PlayerStats.Instance.diamond += diamond;
+
+        WaveSpawner.Instance.commands.CmdDestroyResource(ID);
     }
 }
