@@ -52,9 +52,11 @@ public class WaveSpawner : MonoBehaviour {
     public bool ghostOnly = false;
 
     public Camera sceneCamera;
-
+    [Space(10)]
     public Text enemyCountText;
-    
+    public Text waveMultiText;
+    public Text waveIndexText;
+
     private void Awake()
     {
         if (Instance != null)
@@ -117,6 +119,9 @@ public class WaveSpawner : MonoBehaviour {
 
     IEnumerator SpawnWave()
     {
+        waveIndexText.text = "WAVE " + (waveIndex + 1) + " ARRIVED";
+        waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti) + "x";
+
         playersReady = 0;
         ResourceSpawner.Instance.SpawnResources(25);
         PlayerStats.Instance.rounds++;
@@ -141,11 +146,8 @@ public class WaveSpawner : MonoBehaviour {
 
         waveMulti = waveIndex * 0.1f;
 
-        if (waveIndex == waves.Length * 5)
-        {
-            Debug.Log("Level Complete!");
-            enabled = false;
-        }
+        waveIndexText.text = "WAVE " + (waveIndex + 1) + " INCOMING";
+        waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti) + "x";
     }
     /*
     IEnumerator SpawnGhostWave()

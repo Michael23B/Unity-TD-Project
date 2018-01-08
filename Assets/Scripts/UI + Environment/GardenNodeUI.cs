@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+//TODO: add check for a wavespawner variable hasGameStarted that is true only when the first wave has begun, don't allow planting until then
 public class GardenNodeUI : MonoBehaviour {
 
     public GameObject UI;
