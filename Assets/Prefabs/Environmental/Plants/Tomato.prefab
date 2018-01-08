@@ -456,6 +456,7 @@ MonoBehaviour:
   stone: 0
   green: 0
   diamond: 0
+  lives: 0
   harvestTime: 25
   displayName: Tomato
   info: Fast grow speed. +15 money.

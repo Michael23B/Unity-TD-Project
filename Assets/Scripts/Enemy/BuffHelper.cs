@@ -130,7 +130,7 @@ public static class BuffHelper {
         if (e.damageMulti < 0) e.damageMulti = 0;   //don't heal from damage. TODO: unless some variable
     }
 
-    public static void ResetDebuffs(Enemy e)    //TODO: instead of applying and resetting every update, just apply once and fix clean up when its finished
+    public static void ResetDebuffs(Enemy e)
     {
         e.speed = e.startSpeed;
         e.damageMulti = e.baseDamageMulti;

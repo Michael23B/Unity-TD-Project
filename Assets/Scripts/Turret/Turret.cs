@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
+//TODO: pool turret bullets
 public class Turret : MonoBehaviour
 {
     private Enemy targetEnemy;

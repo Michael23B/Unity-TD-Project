@@ -18,14 +18,14 @@ public class EnemyMovement : MonoBehaviour {
     }
     public void SetAndUpdateWaypoint(int i)
     {
-        if (points == null) //still got error
+        if (points == null) //very strict checking trying to find where error appears
         {
             waypointIndex = i;
             return;
         }
         if (points.Length == 0)
         {
-            waypointIndex = i; //at some point i got an error here saying points was void so this might fix it
+            waypointIndex = i;
             return;
         }
         waypointIndex = i - 1;
@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour {
 
     private void Move()
     {
-        if (!fear || waypointIndex >= 0)  //if you stuck at the spawn don't try to update movement target
+        if (!fear || waypointIndex >= 0)  //if you're stuck at the spawn don't try to update movement target
         {
             Vector3 targetXZ = new Vector3(target.position.x, transform.position.y, target.position.z);   //move towards the waypoint on the x and z axis only
 
@@ -98,13 +98,17 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (ghost)
         {
-            Destroy(gameObject);
-            WaveSpawner.Instance.enemyGhostList.Remove(gameObject);
+            enemy.Kill();   //ghost kills can be handled by the enemy normally
             return;
         }
-        WaveSpawner.Instance.commands.CmdReduceLives();
+
+        WaveSpawner.Instance.commands.CmdReduceLives(enemy.coreDamage);
         WaveSpawner.Instance.enemiesAlive--;
         WaveSpawner.Instance.enemyList.Remove(gameObject);
+
+        EnemyAttack attackComponent = GetComponent<EnemyAttack>();
+        if (attackComponent != null) attackComponent.isQuitting = true;  //enemies that reach the end shouldn't spawn on death objects
+
         Destroy(gameObject);
     }
 

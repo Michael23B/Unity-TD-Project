@@ -399,6 +399,7 @@ MonoBehaviour:
   stone: 15
   green: 15
   diamond: 15
+  lives: 0
   harvestTime: 225
   displayName: Atmosphere
   info: Very slow grow speed. +15 to all resources.

@@ -210,7 +210,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150643718877460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.52927, y: 0.5000001, z: 57.107574}
+  m_LocalPosition: {x: 12.464895, y: -0.25, z: 65.45358}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 224525241408456802}
@@ -252,7 +252,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1610490470161472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4699690811616810}
@@ -268,7 +268,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1266780988590254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.369, z: 0}
+  m_LocalPosition: {x: 0, y: 0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4409134522421890}
@@ -526,6 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58d4741ca6ad954a866d1e8f75086a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypointIndex: 1
   fear: 0
 --- !u!114 &114572692136303100
 MonoBehaviour:
@@ -538,6 +539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1682492b85324245ba578238b79e18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
+  GID: 0
   startSpeed: 0
   minSpeed: 1
   startHealth: 100
@@ -547,9 +550,11 @@ MonoBehaviour:
   baseDamageMulti: 1
   damageMulti: 0
   bounty: 5
+  coreDamage: 1
   speed: 10
   moveable: 1
   debuffList: []
+  debuffEffectScale: {x: 1, y: 1, z: 1}
   deathEffect: {fileID: 1491607627031414, guid: 3e15b32b972700142aac5f4093a75be2,
     type: 2}
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
@@ -560,6 +565,9 @@ MonoBehaviour:
   shieldBar: {fileID: 0}
   shieldBarBG: {fileID: 0}
   enemyMovement: {fileID: 114090846819910932}
+  yOffset: 0
+  ghost: 0
+  managerID: 7
 --- !u!114 &114585292175636046
 MonoBehaviour:
   m_ObjectHideFlags: 1

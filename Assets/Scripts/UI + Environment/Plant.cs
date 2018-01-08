@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 //TODO: stop from counting down in the initial build time but not after then
+//TODO: expensive plant that gives a life after a long growing time
 public enum PlantTypes { tomato, carrot, fish, cactus, atmosphere }
 
 public class Plant : MonoBehaviour {
@@ -19,7 +20,7 @@ public class Plant : MonoBehaviour {
 
     [Header("Resources to give")]
     public int money;
-    public int stone, green, diamond;
+    public int stone, green, diamond, lives;
 
     public float harvestTime = 35f;
     public string displayName;
@@ -50,6 +51,7 @@ public class Plant : MonoBehaviour {
         if (stone != 0) PlayerStats.Instance.stone += stone;
         if (green != 0) PlayerStats.Instance.green += green;
         if (diamond != 0) PlayerStats.Instance.diamond += diamond;
+        if (lives != 0) WaveSpawner.Instance.commands.CmdReduceLives(-lives);
     }
 
     public void Harvest(bool calledFromClient = false)

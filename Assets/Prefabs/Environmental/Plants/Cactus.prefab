@@ -2900,12 +2900,13 @@ MonoBehaviour:
   baseModel: {fileID: 1274642966017674}
   ripeModel: {fileID: 1720083070592932}
   cost: 30
-  money: 180
+  money: 190
   stone: 0
   green: 5
   diamond: 0
+  lives: 0
   harvestTime: 115
   displayName: Cactus
-  info: Average grow speed. +180 money & +5 green.
+  info: Average grow speed. +190 money & +5 green.
   displayColor: {r: 0.12508646, g: 0.42647058, b: 0.100346014, a: 0.747}
   node: {fileID: 0}

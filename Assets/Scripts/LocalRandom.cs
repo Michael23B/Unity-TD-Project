@@ -9,12 +9,6 @@ public class LocalRandom : MonoBehaviour {
     public int index = 0;
     int randomLength = 100;
 
-    void Start()
-    {
-        UnityEngine.Random.InitState(DateTime.Now.Millisecond);
-        randomValues = new float[randomLength];
-    }
-
     private void Awake()
     {
         if (Instance != null)
@@ -23,6 +17,9 @@ public class LocalRandom : MonoBehaviour {
             return;
         }
         Instance = this;
+
+        UnityEngine.Random.InitState(DateTime.Now.Millisecond);
+        randomValues = new float[randomLength];
     }
 
     public int GetNextRandom(int max = 1, bool positiveOnly = true) //TODO: im sure theres a better way to do this but it works for now

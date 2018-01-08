@@ -96,6 +96,18 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [Command]
+    public void CmdCreateGhost(int myID, int _GID, int enemyPrefabID, EnemyState state)
+    {
+        foreach (NetworkConnection target in NetworkServer.connections)
+        {
+            if (target.connectionId != myID)
+            {
+                TargetRpcCreateGhost(target, _GID, enemyPrefabID, state);
+            }
+        }
+    }
+
+    [Command]
     public void CmdUpdateGhostPositions(int myID, EnemyState[] state)
     {
         foreach (NetworkConnection target in NetworkServer.connections)
@@ -108,9 +120,9 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [Command]
-    public void CmdReduceLives()
+    public void CmdReduceLives(int amount)
     {
-        RpcReduceLives();
+        RpcReduceLives(amount);
     }
 
     [Command]
@@ -184,7 +196,7 @@ public class LocalPlayerCommands : NetworkBehaviour
 
     [ClientRpc]
     void RpcUnleashThis(NetworkIdentity netID)  //this is probably not working the way i thought. finding the networkid of a playercontroller doesnt work like that
-    {
+    {                                           //it looks like its working so im going to leave it
         PlayerController[] players = FindObjectsOfType<PlayerController>();
 
         foreach (PlayerController player in players)
@@ -211,7 +223,7 @@ public class LocalPlayerCommands : NetworkBehaviour
         LocalRandom.Instance.randomValues = arr;
         LocalRandom.Instance.index = 0;
     }
-    
+
     [TargetRpc]
     void TargetRpcKillGhost(NetworkConnection target, int GID)
     {
@@ -227,11 +239,17 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [TargetRpc]
+    void TargetRpcCreateGhost(NetworkConnection target, int _GID, int enemyPrefabID, EnemyState state)
+    {
+        WaveSpawner.Instance.SpawnGhost(EnemyManager.Instance.enemyPrefabList[enemyPrefabID], _GID, state);
+    }
+
+    [TargetRpc]
     void TargetRpcUpdateGhostPositions(NetworkConnection target, EnemyState[] state)
     {
         for (int i = 0; i < WaveSpawner.Instance.enemyGhostList.Count; ++i)
         {
-            Enemy ghost = WaveSpawner.Instance.enemyGhostList[i].GetComponent<Enemy>(); //TODO: make enemy component list in 
+            Enemy ghost = WaveSpawner.Instance.enemyGhostList[i].GetComponent<Enemy>(); //TODO: make enemy component list 
 
             for (int j = 0; j < state.Length; ++j)  //check if this ghosts id is in the state array (redundant since the enemies should be in the same order in both arrays, but this is very safe)
             {
@@ -246,21 +264,26 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [ClientRpc]
-    void RpcReduceLives()
+    void RpcReduceLives(int amount)
     {
-        PlayerStats.Instance.lives--;
+        PlayerStats.Instance.lives -= amount;
     }
 
     [TargetRpc]
     void TargetRpcPlayShootEffect(NetworkConnection target, int id) //TODO: change to a grey shoot effect so its obvious the player can't hurt the other players enemies
     {
+        GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
+        PlayerController player = p2.GetComponent<PlayerController>();
+        if (player == null) return;
+
         Gun gun = GetComponent<Gun>();
+
         if (id == 1)
         {
-            gun.shootEffect.Play();
-            gun.shootEffect.transform.rotation = gun.graphics.transform.rotation;
+            player.gun.shootEffect.Play();
+            player.gun.shootEffect.transform.rotation = gun.graphics.transform.rotation;
         }
-        else if (id == 2) gun.AltShoot();
+        else if (id == 2) player.gun.AltShoot();
     }
 
     [ClientRpc]
@@ -313,6 +336,7 @@ public class LocalPlayerCommands : NetworkBehaviour
         {
             if (resource.ID == resourceID)
             {
+                resource.PlayHitEffect();
                 Destroy(resource.gameObject);
                 return;
             }

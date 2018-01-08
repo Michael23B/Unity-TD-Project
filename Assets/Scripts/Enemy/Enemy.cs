@@ -3,15 +3,15 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 
 //TODO: Pool enemy health bars, enemies, projects etc.
+//TODO: add snitch enemy thats very fast and tanky but drops lots of gold. does no core damage, so its just a bonus.
 public class Enemy : MonoBehaviour
 {
-    static int enemyID = 0; //TODO: need a new ID for spawned enemies since the order of spawned enemies vs wave spawned enemies may be different on clients
+    static int enemyID = 0;
     [HideInInspector]
     public int ID;
 
-    static int ghostID = 0;
     [HideInInspector]
-    public int GID;
+    public int GID; //set by the player that spawned the original enemy
 
     [Header("Stats")]
     public float startSpeed = 10f;
@@ -33,6 +33,8 @@ public class Enemy : MonoBehaviour
     public float damageMulti;
 
     public int bounty = 25;
+
+    public int coreDamage = 1;
 
     [HideInInspector]
     public float speed; //current speed
@@ -61,18 +63,24 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public bool ghost = false;
 
+    public int managerID;   //ID to send to other players when the local player spawns an enemy
+
+
     void Start()
     {
         //Assign enemy unique ID
-        if (ghost)
-        {
-            GID = ghostID;
-            ghostID++;
-        }
-        else
+        if (!ghost)
         {
             ID = enemyID;
             enemyID++;
+
+            //Make a state of self and send ghost to other player
+            EnemyState _state = new EnemyState();
+            _state.ID = ID;
+            _state.movementTarget = enemyMovement.waypointIndex;
+            _state.pos = transform.position;
+
+            WaveSpawner.Instance.commands.CmdCreateGhost(WaveSpawner.Instance.playerID, ID, managerID, _state);
         }
 
         //stats set up
@@ -217,7 +225,7 @@ public class Enemy : MonoBehaviour
     {
         for (int i = debuffList.Count - 1; i >= 0; --i)
         {
-            if (debuffList[i].effect != null) Destroy(debuffList[i].effect);
+            if (debuffList[i].effect != null) Destroy(debuffList[i].effect);    //clean up debuff effects that may be in world
         }
     }
 }    //public void SubtractLives() {}

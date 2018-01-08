@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
 //TODO: update all client nodes with correct turrets when clientjoins()
-//TODO: bug when resetting level that makes the second player call effects on the main players avatar instead of their own
+//TODO: remove the ghost wave stuff from before i sent spawn commands, leaving them in now because i havent tested the new system enough
 public class WaveSpawner : MonoBehaviour {
     
     public static WaveSpawner Instance;
@@ -52,6 +52,8 @@ public class WaveSpawner : MonoBehaviour {
     public bool ghostOnly = false;
 
     public Camera sceneCamera;
+
+    public Text enemyCountText;
     
     private void Awake()
     {
@@ -68,17 +70,20 @@ public class WaveSpawner : MonoBehaviour {
 
         if (cleanUpScene) CleanUpEnemies();
         rand = LocalRandom.Instance;
-        ghostWaves = waves; //take this out and make a seperate wave array for each player
+        //ghostWaves = waves; //take this out and make a seperate wave array for each player
         InvokeRepeating("UpdateGhostPositions", 0f, 5f);
 
         if (FindObjectOfType<PlayerController>()) sceneCamera.gameObject.SetActive(false);
         DontDestroyOnLoad(sceneCamera);
     }
 
-    private void Update()
+    private void Update()   //resources didnt respawn  onm restart level
     {
+        enemyCountText.text = enemiesAlive.ToString();
+
         if (waveActive) return;
         if (enemiesAlive > 0) return;
+
         if (finishedWaveAndReady == true)
         {
             if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
@@ -90,7 +95,7 @@ public class WaveSpawner : MonoBehaviour {
         {
             buildTimeToggle();
             if (!ghostOnly) StartCoroutine(SpawnWave());
-            StartCoroutine(SpawnGhostWave());
+            //StartCoroutine(SpawnGhostWave());
 
             countdown = waveCountdownTimer;
             return;
@@ -142,7 +147,7 @@ public class WaveSpawner : MonoBehaviour {
             enabled = false;
         }
     }
-
+    /*
     IEnumerator SpawnGhostWave()
     {
         EnemyWave currentWave = ghostWaves[waveIndex % waves.Length];   //ghostwaves will be populated by the other player 
@@ -170,7 +175,7 @@ public class WaveSpawner : MonoBehaviour {
             enabled = false;
         }
     }
-
+    */
     void SpawnEnemy(GameObject enemy)
     {
         float rX = rand.GetNextRandom(1f, false);//Random.Range(-1, 1);
@@ -181,12 +186,9 @@ public class WaveSpawner : MonoBehaviour {
         enemiesAlive++;
     }
 
-    void SpawnGhost(GameObject enemy)
+    public void SpawnGhost(GameObject enemy, int _GID, EnemyState state)
     {
-        float rX = rand.GetNextRandom(1f, false);//Random.Range(-1, 1);
-        float rZ = rand.GetNextRandom(4f, false);//Random.Range(-4, 4);
-
-        GameObject e = Instantiate(enemy, ghostSpawnPoint.position + new Vector3(rX, 0f, rZ), ghostSpawnPoint.rotation);
+        GameObject e = Instantiate(enemy, ghostSpawnPoint.position, ghostSpawnPoint.rotation);
         enemyGhostList.Add(e);
 
         Enemy enemyComponent = e.GetComponent<Enemy>();
@@ -195,6 +197,11 @@ public class WaveSpawner : MonoBehaviour {
         enemyRenderer.material = ghostMaterial;
         enemyRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         enemyComponent.ghost = true;
+        enemyComponent.GID = _GID;
+
+        //set state
+        enemyComponent.transform.position = state.pos;
+        enemyComponent.GetComponent<EnemyMovement>().SetAndUpdateWaypoint(state.movementTarget);
     }
 
     public void AddEnemy(GameObject enemy, bool ghost = false)  //for enemy-spawning enemies
@@ -273,10 +280,10 @@ public class WaveSpawner : MonoBehaviour {
         for (int i = 0; i < state.Length; ++i)
         {
             state[i] = new EnemyState();
-            Enemy e = enemyList[i].GetComponent<Enemy>();   //TODO: stop getting component and add a reference on the enemy itself
+            Enemy e = enemyList[i].GetComponent<Enemy>();   //TODO: add enemy component list to wavespawner or make a manager class for enemies rather than getting component every time
 
-            state[i].ID = e.ID; // state[i] is null fix
-            state[i].movementTarget = e.enemyMovement.waypointIndex;   //TODO: change this to just send the target index and update on the client
+            state[i].ID = e.ID;
+            state[i].movementTarget = e.enemyMovement.waypointIndex;
             state[i].pos = enemyList[i].transform.position;
         }
 

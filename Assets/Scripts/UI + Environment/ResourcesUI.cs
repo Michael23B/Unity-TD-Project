@@ -16,12 +16,12 @@ public class ResourcesUI : MonoBehaviour {
     void GetResourceAmount()
     {
         stoneAmount = PlayerStats.Instance.stone;
-        stoneText.text = "Stone: " + stoneAmount;
+        stoneText.text = stoneAmount.ToString();
 
         diamondAmount = PlayerStats.Instance.diamond;
-        diamondText.text = "Diamond: " + diamondAmount;
+        diamondText.text = diamondAmount.ToString();
 
         greenAmount = PlayerStats.Instance.green;
-        greenText.text = "Green: " + greenAmount;
+        greenText.text = greenAmount.ToString();
     }
 }

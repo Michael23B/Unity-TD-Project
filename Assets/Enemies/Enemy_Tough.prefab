@@ -207,6 +207,7 @@ MonoBehaviour:
   baseDamageMulti: 1
   damageMulti: 0
   bounty: 15
+  coreDamage: 1
   speed: 10
   moveable: 1
   debuffList: []
@@ -223,6 +224,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 114090846819910932}
   yOffset: 0
   ghost: 0
+  managerID: 2
 --- !u!114 &114585292175636046
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -24,6 +24,8 @@ public class Resource : MonoBehaviour {
     {
         ID = indexOfID;
         ++indexOfID;
+
+        ResourceSpawner.Instance.resources.Add(this);
     }
 
     private void OnMouseDown()
@@ -45,6 +47,17 @@ public class Resource : MonoBehaviour {
         if (green != 0) PlayerStats.Instance.green += green;
         if (diamond != 0) PlayerStats.Instance.diamond += diamond;
 
+        Debug.Log(ID + " resource taken.");
         WaveSpawner.Instance.commands.CmdDestroyResource(ID);
+    }
+
+    public void PlayHitEffect()
+    {
+        Destroy(Instantiate(hitEffect, transform.position, Quaternion.identity), 2f);
+    }
+
+    private void OnDestroy()
+    {
+        ResourceSpawner.Instance.resources.Remove(this);
     }
 }
