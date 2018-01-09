@@ -13,6 +13,10 @@ public class Resource : MonoBehaviour {
     public int money;
     public int stone, green, diamond;
 
+    [Header("Additional effects")]
+    public GameObject enemyEncounter = null;
+    public bool additionalEffects = false;
+
     public int hitsToDestroy = 7;
 
     [HideInInspector]
@@ -47,7 +51,25 @@ public class Resource : MonoBehaviour {
         if (green != 0) PlayerStats.Instance.green += green;
         if (diamond != 0) PlayerStats.Instance.diamond += diamond;
 
+        if (additionalEffects) CheckEffects();
+
         WaveSpawner.Instance.commands.CmdDestroyResource(ID);
+    }
+
+    void CheckEffects()
+    {
+        EnemyWave wave = WaveSpawner.Instance.waves[WaveSpawner.Instance.nextWaveIndex];
+        if (enemyEncounter != null) {
+            EnemyGroup[] newGroup = new EnemyGroup[wave.wave.Length + 1];   //make a new group
+            wave.wave.CopyTo(newGroup, 1);
+            newGroup[0] = new EnemyGroup();
+            newGroup[0].enemy = enemyEncounter;
+            newGroup[0].count = 1;
+            newGroup[0].spawnRate = 1;
+            newGroup[0].waitTime = 5;
+
+            wave.wave = newGroup;
+        }
     }
 
     public void PlayHitEffect()

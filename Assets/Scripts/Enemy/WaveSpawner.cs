@@ -32,6 +32,8 @@ public class WaveSpawner : MonoBehaviour {
     public Text waveCountdownText;
 
     private int waveIndex = 0;
+    [HideInInspector]
+    public int nextWaveIndex = 0;
     public float waveMulti = 0;  //multiplier for repeating created waves
 
     public int playerID;
@@ -122,6 +124,7 @@ public class WaveSpawner : MonoBehaviour {
 
     IEnumerator SpawnWave()
     {
+        nextWaveIndex = waveIndex + 1;
         waveIndexText.text = "WAVE " + (waveIndex + 1) + " ARRIVED";
         waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti) + "x";
 
