@@ -269,17 +269,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 30
-  baseFireRate: 0.35
+  baseFireRate: 0.4
   baseDamage: 75
   damage: 0
   fireRate: 0.3
-  fireCountDown: 0
+  owner: 0
+  owned: 1
   targetNearest: 0
   bulletPrefab: {fileID: 1770962638200770, guid: 2a4e5e835aa372948a6974e63b4a2aa3,
     type: 2}
   useLaser: 0
   damageOverTime: 30
-  slowAmount: 2
+  debuffAmount: 0.15
+  type: 1
+  extraTargetNumber: 0
+  extraTargetFindRange: 5
+  buildUpTime: 0
+  debuffDuration: 0
+  debuffEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   impactLight: {fileID: 0}
@@ -287,9 +294,11 @@ MonoBehaviour:
   noTarget: 0
   spawnPrefab: {fileID: 0}
   enemyTag: Enemy
-  hasAnimation: 0
   PartToRotate: {fileID: 4017955282552948}
   firePoint: {fileID: 4489097228175158}
   turnSpeed: 10
+  childTurret: 0
+  parentTurret: {fileID: 0}
+  debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}

@@ -62,6 +62,6 @@ MonoBehaviour:
   debuffs:
   - type: 9
     time: 1.25
-    amount: 150
+    amount: 175
     effect: {fileID: 1466274310218158, guid: b2a1dbb7db8a9dd4cb09fa499e0da39e, type: 2}
   buffs: []

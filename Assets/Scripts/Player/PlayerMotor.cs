@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMotor : MonoBehaviour {
 
     private Vector3 velocity = Vector3.zero;
-    //private Vector3 rotation = Vector3.zero;
+    private Vector3 rotation = Vector3.zero;
 
     private Rigidbody rb;
 
@@ -33,7 +33,7 @@ public class PlayerMotor : MonoBehaviour {
     private void FixedUpdate()
     {
         PerformMovement();
-        //PerformRotation();
+        PerformRotation();
     }
 
     //Gets a movement vector
@@ -49,7 +49,7 @@ public class PlayerMotor : MonoBehaviour {
             rb.MovePosition(transform.position + velocity * Time.fixedDeltaTime);
         }
     }
-    /*
+    
     public void Rotate(Vector3 _rotation)
     {
         rotation = _rotation;
@@ -59,5 +59,5 @@ public class PlayerMotor : MonoBehaviour {
     {
         rb.MoveRotation(transform.rotation * Quaternion.Euler(rotation));
     }
-    */
+    
 }

@@ -4071,7 +4071,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 25
+  damageOverTime: 35
   debuffAmount: 1
   type: 2
   extraTargetNumber: 4
@@ -4087,7 +4087,6 @@ MonoBehaviour:
   noTarget: 0
   spawnPrefab: {fileID: 0}
   enemyTag: Enemy
-  hasAnimation: 0
   PartToRotate: {fileID: 4047525615116446}
   firePoint: {fileID: 4726620063414790}
   turnSpeed: 10

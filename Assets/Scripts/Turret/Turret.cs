@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 //TODO: pool turret bullets
+//make child turrets get the buffs of the parent turret, have an option for the child turrets to have their own targets (pyramid needs both of these to function properly with speed turret)
 public class Turret : MonoBehaviour
 {
     private Enemy targetEnemy;

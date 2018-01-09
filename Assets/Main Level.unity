@@ -1265,6 +1265,7 @@ GameObject:
   - component: {fileID: 970}
   - component: {fileID: 979}
   - component: {fileID: 969}
+  - component: {fileID: 83}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1349,6 +1350,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &83
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 78}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f72a8eb37d62b4b8465ec2f8647d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &84
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3635,13 +3647,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  startMoney: 1000
+  startMoney: 600
   lives: 0
-  startLives: 20
+  startLives: 15
   rounds: 0
-  stone: 30
-  green: 30
-  diamond: 30
+  stone: 20
+  green: 20
+  diamond: 20
 --- !u!1 &222
 GameObject:
   m_ObjectHideFlags: 0
@@ -6004,8 +6016,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.5, y: -0.5, z: 37.5}
-  m_LocalScale: {x: 79, y: 0.5, z: 79}
+  m_LocalPosition: {x: 37.492, y: -0.5, z: 37.524}
+  m_LocalScale: {x: 79.16698, y: 0.5, z: 79.22778}
   m_Children: []
   m_Father: {fileID: 341}
   m_RootOrder: 1
@@ -11085,7 +11097,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 56e058d195c1b544888d3f5925a2e0d1, type: 2}
+  - {fileID: 2100000, guid: e7d1428786078344691dee66833f0cf8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24214,12 +24226,12 @@ MonoBehaviour:
   enemiesAlive: 0
   waves:
   - wave:
-    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
-      count: 6
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 7
       spawnRate: 0.9
       waitTime: 3
-    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
-      count: 1
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 10
       spawnRate: 1.1
       waitTime: 4
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
@@ -24450,6 +24462,7 @@ MonoBehaviour:
   ghostMaterial: {fileID: 2100000, guid: 1ab627500b7e637499c8278250165341, type: 2}
   ghostOnly: 0
   sceneCamera: {fileID: 460}
+  tacticalCamera: {fileID: 538743055}
   enemyCountText: {fileID: 943631858}
   waveMultiText: {fileID: 1540474583}
   waveIndexText: {fileID: 370990471}
@@ -24826,7 +24839,7 @@ MonoBehaviour:
     cost: 100
     upgradedPrefab: {fileID: 1433889198367424, guid: f6b18ebb21c94f54bb6a9f86cb90153c,
       type: 2}
-    upgradeCost: 225
+    upgradeCost: 200
     resourceCost: 0
     resourceType: 0
     turretRange: -1
@@ -24834,10 +24847,10 @@ MonoBehaviour:
     displayName: Turret
     displayDesc: Fires fast with average damage.
   - prefab: {fileID: 1273892611175448, guid: 8a9704c47ae98344dad3c3facb190670, type: 2}
-    cost: 250
+    cost: 175
     upgradedPrefab: {fileID: 1273892611175448, guid: 108821c09d7cf0f4b82265ce077e1755,
       type: 2}
-    upgradeCost: 200
+    upgradeCost: 225
     resourceCost: 15
     resourceType: 0
     turretRange: -1
@@ -24845,44 +24858,44 @@ MonoBehaviour:
     displayName: Missle Launcher
     displayDesc: High AOE damage.
   - prefab: {fileID: 1507746948647926, guid: c3ffd00eb8eb0ff4da111bc99bfe510b, type: 2}
-    cost: 200
+    cost: 150
     upgradedPrefab: {fileID: 1507746948647926, guid: 3319b3d74a71da848b5cfb235323304d,
       type: 2}
-    upgradeCost: 200
-    resourceCost: 5
+    upgradeCost: 180
+    resourceCost: 8
     resourceType: 1
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Laser Turret
     displayDesc: Slows and damages over time.
   - prefab: {fileID: 1687727007058188, guid: af7966a341c63ba46a18f32fbd4c8839, type: 2}
-    cost: 225
+    cost: 200
     upgradedPrefab: {fileID: 1687727007058188, guid: e553c1ff5e0fdb84b9105ae18fbfd7b8,
       type: 2}
-    upgradeCost: 350
-    resourceCost: 5
+    upgradeCost: 325
+    resourceCost: 8
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Freeze Turret
     displayDesc: No damage, but can freeze enemies in an AOE.
   - prefab: {fileID: 1433889198367424, guid: 6aefc678f931d7144980d89c9b30616d, type: 2}
-    cost: 160
+    cost: 90
     upgradedPrefab: {fileID: 1433889198367424, guid: b655bd6503960604c9a9eb84f855ec20,
       type: 2}
-    upgradeCost: 400
+    upgradeCost: 300
     resourceCost: 5
     resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Poison Turret
-    displayDesc: High damage over time.
+    displayDesc: High damage over time. Has an AOE effect when upgraded.
   - prefab: {fileID: 1687727007058188, guid: aa1904a32ea65b7419a845ba453f5e0c, type: 2}
-    cost: 300
+    cost: 225
     upgradedPrefab: {fileID: 1687727007058188, guid: a0a27ce4ad13a4a4d8f359e0639023cf,
       type: 2}
-    upgradeCost: 325
-    resourceCost: 15
+    upgradeCost: 250
+    resourceCost: 5
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
@@ -24892,40 +24905,40 @@ MonoBehaviour:
     cost: 250
     upgradedPrefab: {fileID: 1905667894733756, guid: 982a60d8e38ff0d4e880de5a9c908af1,
       type: 2}
-    upgradeCost: 250
+    upgradeCost: 275
     resourceCost: 15
     resourceType: 1
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Fear Turret
-    displayDesc: Forces an enemy to run away.
+    displayDesc: Forces an enemy to run away. Amplifies enemy damage taken when upgraded.
   - prefab: {fileID: 1958084846982880, guid: 52d89588298570d4fa0fa668c621a939, type: 2}
     cost: 1000
     upgradedPrefab: {fileID: 1958084846982880, guid: 685bc6454dcc80a469d296435037e9aa,
       type: 2}
     upgradeCost: 1500
-    resourceCost: 30
+    resourceCost: 45
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Pyramid Turret
     displayDesc: My grandfather's deck has no pathetic turrets.
   - prefab: {fileID: 1507746948647926, guid: 3e8b9b7c2df0b374f99d36a4735a1975, type: 2}
-    cost: 275
+    cost: 250
     upgradedPrefab: {fileID: 1507746948647926, guid: d579729c36f0f4d49ad3a3da1daaa7d4,
       type: 2}
-    upgradeCost: 450
+    upgradeCost: 325
     resourceCost: 8
     resourceType: 2
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Lightning Turret
-    displayDesc: Can chain to multiple enemies and shock them briefly.
+    displayDesc: Chains to multiple enemies and shocks them briefly.
   - prefab: {fileID: 1433889198367424, guid: 55a19b5a1a46caf4e82e909d9860f429, type: 2}
-    cost: 500
+    cost: 350
     upgradedPrefab: {fileID: 1433889198367424, guid: 2fe7ac3df678b6848b7a66b6bbcbb35a,
       type: 2}
-    upgradeCost: 450
+    upgradeCost: 380
     resourceCost: 10
     resourceType: 1
     turretRange: -1
@@ -24933,12 +24946,12 @@ MonoBehaviour:
     displayName: Damage Amplifier
     displayDesc: Enemies targetted by this tower will take increased damage.
   - prefab: {fileID: 1687727007058188, guid: 38cb14dc9c3a32c48a510d779cc9de47, type: 2}
-    cost: 300
+    cost: 225
     upgradedPrefab: {fileID: 1687727007058188, guid: a846b4d4c0182ac4b8ecba03142bff96,
       type: 2}
-    upgradeCost: 500
-    resourceCost: 0
-    resourceType: 1
+    upgradeCost: 350
+    resourceCost: 8
+    resourceType: 0
     turretRange: -1
     turretUpgradedRange: -1
     displayName: Shield Breaker
@@ -25374,7 +25387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $300
+  m_Text: $225
 --- !u!114 &1165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25635,7 +25648,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $225
+  m_Text: $200
 --- !u!114 &1174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28062,7 +28075,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $200
+  m_Text: $150
 --- !u!114 &1259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29058,7 +29071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $250
+  m_Text: $175
 --- !u!114 &1299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29332,7 +29345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $160
+  m_Text: $90
 --- !u!114 &1310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31624,9 +31637,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '8
-
-'
+  m_Text: 10
 --- !u!222 &80830291
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35078,7 +35089,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 8
 --- !u!222 &263612149
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39460,6 +39471,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532633455}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &538743054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 538743056}
+  - component: {fileID: 538743055}
+  m_Layer: 0
+  m_Name: Tactical Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &538743055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538743054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365a7055d4379be4681599479b67181d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tacticalCamP1: {fileID: 1381407909}
+  tacticalCamP2: {fileID: 1889927005}
+--- !u!4 &538743056
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538743054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1889927006}
+  - {fileID: 1381407910}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &544704087
 Prefab:
   m_ObjectHideFlags: 0
@@ -40626,7 +40681,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $275
+  m_Text: $250
 --- !u!222 &627201911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42630,6 +42685,98 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736016803}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &743278635
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 538743056}
+    m_Modifications:
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 104.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.40938222
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.5765468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.40938222
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.5765468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454822419952836, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+        type: 2}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+        type: 2}
+      propertyPath: orthographic size
+      value: 39.80719
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454822419952836, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+      propertyPath: m_Name
+      value: TacticalCameraP2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef9c0e4ff1a72224a9602ebf3a835e81, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &755235225
 GameObject:
   m_ObjectHideFlags: 0
@@ -44669,7 +44816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: -0.000002931851}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000020599402}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -44778,7 +44925,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 45
 --- !u!222 &813935828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53911,7 +54058,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 8
 --- !u!222 &1183877985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57212,7 +57359,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $300
+  m_Text: $225
 --- !u!222 &1324230940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57516,7 +57663,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2041626116}
   m_HandleRect: {fileID: 2041626114}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -58697,6 +58844,78 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1381407908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1454822419952836, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1381407910}
+  - component: {fileID: 1381407909}
+  m_Layer: 0
+  m_Name: TacticalCameraP1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!20 &1381407909
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381407908}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0.6
+    y: 0.6
+    width: 0.4
+    height: 0.4
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 40.55949
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!224 &1381407910
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381407908}
+  m_LocalRotation: {x: 0.57895404, y: -0, z: -0, w: 0.81536025}
+  m_LocalPosition: {x: 0, y: 0, z: 25.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 538743056}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 70.754005, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 62.8, y: 36.98}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1385707397
 GameObject:
@@ -61937,8 +62156,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1556550371}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 77.662, y: -0.5, z: 5}
-  m_LocalScale: {x: 9.50001, y: 0.5, z: 14}
+  m_LocalPosition: {x: 77.662, y: -0.5, z: 4.9893}
+  m_LocalScale: {x: 9.500029, y: 0.5, z: 14.172799}
   m_Children: []
   m_Father: {fileID: 341}
   m_RootOrder: 3
@@ -62026,8 +62245,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1560067706}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 117.5, y: -0.5, z: -27.5}
-  m_LocalScale: {x: 79, y: 0.5, z: 79}
+  m_LocalPosition: {x: 117.481, y: -0.5, z: -27.542}
+  m_LocalScale: {x: 79.233986, y: 0.5, z: 79.22792}
   m_Children: []
   m_Father: {fileID: 341}
   m_RootOrder: 2
@@ -62459,12 +62678,12 @@ GameObject:
   - component: {fileID: 1589347147}
   - component: {fileID: 1589347146}
   m_Layer: 0
-  m_Name: PlayerSpawner
+  m_Name: PlayerSpawner (not using this atm)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1589347146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65620,7 +65839,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778264871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.076256, y: 2.058731, z: -11.213714}
+  m_LocalPosition: {x: 66.076256, y: 1.658731, z: -11.213714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1087}
@@ -66985,6 +67204,74 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1889189047}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1889927004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1454822419952836, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+    type: 2}
+  m_PrefabInternal: {fileID: 743278635}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1889927006}
+  - component: {fileID: 1889927005}
+  m_Layer: 0
+  m_Name: TacticalCameraP2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!20 &1889927005
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 20445615397615882, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+    type: 2}
+  m_PrefabInternal: {fileID: 743278635}
+  m_GameObject: {fileID: 1889927004}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0.6
+    y: 0.6
+    width: 0.4
+    height: 0.4
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 39.80719
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1889927006
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4653697504431448, guid: ef9c0e4ff1a72224a9602ebf3a835e81,
+    type: 2}
+  m_PrefabInternal: {fileID: 743278635}
+  m_GameObject: {fileID: 1889927004}
+  m_LocalRotation: {x: 0.40938222, y: 0.5765468, z: -0.40938222, w: 0.5765468}
+  m_LocalPosition: {x: 104.3, y: 37, z: -4.5}
+  m_LocalScale: {x: 1, y: 1.0000004, z: 1.0000004}
+  m_Children: []
+  m_Father: {fileID: 538743056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 70.754005, y: 90, z: 0}
 --- !u!1 &1895828461
 GameObject:
   m_ObjectHideFlags: 0
@@ -67160,7 +67447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 15
+  m_Text: 5
 --- !u!222 &1906153377
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -67259,7 +67546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.88235295, b: 0.0060851434, a: 0.766}
+  m_Color: {r: 0.32352942, g: 0.32352942, b: 0.32352942, a: 0.7647059}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -70976,7 +71263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $500
+  m_Text: $350
 --- !u!222 &2126670107
 CanvasRenderer:
   m_ObjectHideFlags: 0

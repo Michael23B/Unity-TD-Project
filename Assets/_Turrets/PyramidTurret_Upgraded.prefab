@@ -974,7 +974,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958084846982880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.107738, y: 0.5, z: 60.35739}
+  m_LocalPosition: {x: 30.033125, y: 0.5, z: 60.33992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4346137959108486}
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161d817fbabd6094abd4ed4da1a79c33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
+  range: 10
   baseFireRate: 1
   baseDamage: 0
   damage: 0
@@ -1739,7 +1739,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 60
+  damageOverTime: 110
   debuffAmount: 0.35
   type: 1
   extraTargetNumber: 0
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 125
+  damageOverTime: 225
   debuffAmount: 0
   type: 0
   extraTargetNumber: 0
@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161d817fbabd6094abd4ed4da1a79c33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
+  range: 10
   baseFireRate: 1
   baseDamage: 0
   damage: 0
@@ -1827,7 +1827,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 60
+  damageOverTime: 110
   debuffAmount: 0.35
   type: 1
   extraTargetNumber: 0
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 125
+  damageOverTime: 225
   debuffAmount: 0
   type: 0
   extraTargetNumber: 0
@@ -1915,13 +1915,13 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 65
+  damageOverTime: 95
   debuffAmount: 1
   type: 2
   extraTargetNumber: 0
   extraTargetFindRange: 5
   buildUpTime: 1.75
-  debuffDuration: 1
+  debuffDuration: 1.25
   debuffEffect: {fileID: 1465175319799968, guid: 28818293a475a0f47b0ee2e41b5cbd21,
     type: 2}
   lineRenderer: {fileID: 120816565602424232}
@@ -9083,7 +9083,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1994961339
+  randomSeed: -1855077087
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -49043,7 +49043,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1310334737
+  randomSeed: 485623589
   InitialModule:
     serializedVersion: 3
     enabled: 1

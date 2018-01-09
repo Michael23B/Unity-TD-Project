@@ -47,7 +47,6 @@ public class Resource : MonoBehaviour {
         if (green != 0) PlayerStats.Instance.green += green;
         if (diamond != 0) PlayerStats.Instance.diamond += diamond;
 
-        Debug.Log(ID + " resource taken.");
         WaveSpawner.Instance.commands.CmdDestroyResource(ID);
     }
 

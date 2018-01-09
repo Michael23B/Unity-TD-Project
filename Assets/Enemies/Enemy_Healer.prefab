@@ -234,7 +234,7 @@ MonoBehaviour:
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
-  bounty: 5
+  bounty: 8
   coreDamage: 1
   speed: 10
   moveable: 1

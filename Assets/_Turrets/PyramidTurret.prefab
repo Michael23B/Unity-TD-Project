@@ -589,7 +589,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958084846982880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.61586, y: 0.5, z: 59.452263}
+  m_LocalPosition: {x: 25.08089, y: 0.5, z: 60.036102}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 4346137959108486}
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161d817fbabd6094abd4ed4da1a79c33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
+  range: 10
   baseFireRate: 1
   baseDamage: 0
   damage: 0
@@ -1159,7 +1159,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 30
+  damageOverTime: 80
   debuffAmount: 0.35
   type: 1
   extraTargetNumber: 0
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 100
+  damageOverTime: 150
   debuffAmount: 0
   type: 0
   extraTargetNumber: 0
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 1
-  damageOverTime: 45
+  damageOverTime: 60
   debuffAmount: 1
   type: 2
   extraTargetNumber: 0
@@ -24894,7 +24894,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 822211021
+  randomSeed: -296227074
   InitialModule:
     serializedVersion: 3
     enabled: 1

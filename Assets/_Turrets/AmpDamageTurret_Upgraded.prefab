@@ -2091,7 +2091,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1507132569338688, guid: c93da3edd37760645910fb18ede8de7f,
     type: 2}
   useLaser: 1
-  damageOverTime: 30
+  damageOverTime: 60
   debuffAmount: 0.4
   type: 8
   extraTargetNumber: 0

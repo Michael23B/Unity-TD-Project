@@ -140,7 +140,7 @@ MonoBehaviour:
   breakingEffect: {fileID: 1337034464167292, guid: 6cc8007e5d9b462468fee884624acabf,
     type: 2}
   money: 0
-  stone: 12
+  stone: 5
   green: 0
   diamond: 0
   hitsToDestroy: 4

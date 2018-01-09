@@ -56,7 +56,7 @@ MonoBehaviour:
     type: 2}
   debuffEffect: {fileID: 1230582379176732, guid: 116da546b82721f408fbbb7c5db463f9,
     type: 2}
-  damage: 25
+  damage: 35
   countdown: 1.7
   targetEnemy: 1
   debuffs:

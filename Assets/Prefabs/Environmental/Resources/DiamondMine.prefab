@@ -713,7 +713,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993431137452596}
-  m_LocalRotation: {x: -0.27898687, y: 0.84491974, z: -0.1557334, w: 0.4289801}
+  m_LocalRotation: {x: -0.2789869, y: 0.84491986, z: -0.15573342, w: 0.42898017}
   m_LocalPosition: {x: 0.45299911, y: 0.058, z: -0.06499863}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_Children: []
@@ -1798,6 +1798,6 @@ MonoBehaviour:
   money: 0
   stone: 0
   green: 0
-  diamond: 6
-  hitsToDestroy: 9
+  diamond: 5
+  hitsToDestroy: 6
   ID: 0

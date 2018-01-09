@@ -52,6 +52,7 @@ public class WaveSpawner : MonoBehaviour {
     public bool ghostOnly = false;
 
     public Camera sceneCamera;
+    public TacticalCamera tacticalCamera;
     [Space(10)]
     public Text enemyCountText;
     public Text waveMultiText;
@@ -72,14 +73,11 @@ public class WaveSpawner : MonoBehaviour {
 
         if (cleanUpScene) CleanUpEnemies();
         rand = LocalRandom.Instance;
-        //ghostWaves = waves; //take this out and make a seperate wave array for each player
+        ghostWaves = waves; //TODO: take this out once im keen to remove the old ghost stuff
         InvokeRepeating("UpdateGhostPositions", 0f, 5f);
-
-        if (FindObjectOfType<PlayerController>()) sceneCamera.gameObject.SetActive(false);
-        DontDestroyOnLoad(sceneCamera);
     }
 
-    private void Update()   //resources didnt respawn  onm restart level
+    private void Update()
     {
         enemyCountText.text = enemiesAlive.ToString();
 
@@ -111,6 +109,11 @@ public class WaveSpawner : MonoBehaviour {
 
     void buildTimeToggle()
     {
+        if (!buildTime && playerID == 0) //going from wave -> buildTime. If server, send new random values for the next wave
+        {
+            commands.CmdSetClientsRandomValues();
+        }
+
         buildTime = !buildTime;
         BuildManager.Instance.SelectTurretToBuild(null, -1);
         BuildManager.Instance.DeselectNode();

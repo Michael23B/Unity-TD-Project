@@ -1291,9 +1291,9 @@ MonoBehaviour:
   hitEffect: {fileID: 1431827620646096, guid: 63c7bd668404abb4bbcc48768516ee51, type: 2}
   breakingEffect: {fileID: 1337034464167292, guid: 6cc8007e5d9b462468fee884624acabf,
     type: 2}
-  money: 15
+  money: 30
   stone: 0
   green: 0
   diamond: 0
-  hitsToDestroy: 2
+  hitsToDestroy: 4
   ID: 0

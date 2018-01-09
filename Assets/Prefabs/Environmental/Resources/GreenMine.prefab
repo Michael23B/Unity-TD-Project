@@ -2044,9 +2044,9 @@ MonoBehaviour:
     type: 2}
   money: 0
   stone: 0
-  green: 8
+  green: 5
   diamond: 0
-  hitsToDestroy: 6
+  hitsToDestroy: 5
   ID: 0
 --- !u!198 &198431153006293638
 ParticleSystem:

@@ -125,8 +125,6 @@ public class Node : MonoBehaviour
         Destroy(effect, 5f);
 
         turret.GetComponent<Turret>().owner = owner;
-
-        Debug.Log("Turret Built!");
     }
 
     public void UpgradeTurret()
@@ -144,8 +142,6 @@ public class Node : MonoBehaviour
         //TODO: Bool -> int for upgrade levels, array of upgraded turrets
 
         turret.GetComponent<Turret>().owner = owner;
-
-        Debug.Log("Turret Upgraded!");
     }
 
     public void SellTurret()

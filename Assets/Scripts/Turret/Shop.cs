@@ -21,8 +21,6 @@ public class Shop : MonoBehaviour {
     public void SelectTurret(int index)
     {
         buildManager.SelectTurretToBuild(Blueprints[index], index);
-
-        Debug.Log(Blueprints[index].prefab.name + " selected.");
     }
 
     public void EnableButton(int index)
