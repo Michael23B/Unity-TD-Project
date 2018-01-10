@@ -12,6 +12,8 @@ public class ResourceSpawner : MonoBehaviour {
 
     private float ySpawnOffset = 1f;
 
+    public int indexOfID = 0;
+
     private void Awake()
     {
         if (Instance != null)
@@ -22,7 +24,7 @@ public class ResourceSpawner : MonoBehaviour {
         Instance = this;
     }
 
-    public void SpawnResources(int amount)
+    public void SpawnResources(int amount)  //using pre-generated random values synced across clients (LocalRandom)
     {
         int r;
         float rX,rZ;

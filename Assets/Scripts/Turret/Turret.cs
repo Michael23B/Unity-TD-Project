@@ -65,10 +65,15 @@ public class Turret : MonoBehaviour
     public Transform firePoint;
 
     public float turnSpeed = 10f;
-
+    [Space(10)]
     public bool childTurret = false;
     public Turret parentTurret;
-
+    public bool childGetsOwnTargets;
+    [HideInInspector]
+    public bool hasChildren = false;
+    [HideInInspector]
+    public List<Turret> childList = new List<Turret>();
+    [Space(10)]
     public List<Debuff> debuffList = new List<Debuff>();
 
     public GameObject emptyPlaceHolder; //TODO: this is so stupid honestly
@@ -82,8 +87,14 @@ public class Turret : MonoBehaviour
 
         targetEnemies = new Enemy[extraTargetNumber+1];
         targets = new Transform[extraTargetNumber+1];
-        //TODO: need to free up resources manually when editing renderer settings
-        //https://forum.unity.com/threads/is-it-necessary-to-destroy-the-instance-material-manaully-in-unity-3-5.146946/
+
+        if (childTurret)
+        {
+            owner = parentTurret.owner; //the parent turret is instantiated with this info, not the children
+            parentTurret.hasChildren = true;
+            parentTurret.childList.Add(this);
+        }
+
         if (owner != WaveSpawner.Instance.playerID)
         {
             owned = false;  //turret shoots at ghosts not your enemies
@@ -102,7 +113,7 @@ public class Turret : MonoBehaviour
 
     void UpdateTarget()
     {
-        if (childTurret)
+        if (childTurret && !childGetsOwnTargets)
         {
             target = parentTurret.target;
             return;

@@ -55,6 +55,8 @@ public class EnemyMovement : MonoBehaviour {
 
             Vector3 dir = targetXZ - transform.position;
 
+            enemy.graphics.transform.rotation = Quaternion.Lerp(enemy.graphics.transform.rotation, Quaternion.LookRotation(dir), enemy.speed * Time.deltaTime);
+
             transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
 
             if (Vector3.Distance(transform.position, targetXZ) <= 0.4f)

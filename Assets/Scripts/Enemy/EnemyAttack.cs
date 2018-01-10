@@ -2,7 +2,6 @@
 
 //Spawns prefabs or shoots targets in range, when shooting picks a random target every shot
 //TODO: scale with wavemulti
-//zombies respawn constantly at the end
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyAttack : MonoBehaviour {

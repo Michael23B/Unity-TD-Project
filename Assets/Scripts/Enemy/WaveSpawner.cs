@@ -48,7 +48,6 @@ public class WaveSpawner : MonoBehaviour {
     public int waitForPlayersCount = 1;
     private bool finishedWaveAndReady = false;
 
-    LocalRandom rand = LocalRandom.Instance;
     [Space(10)]
     public Material ghostMaterial;
     public bool ghostOnly = false;
@@ -74,7 +73,6 @@ public class WaveSpawner : MonoBehaviour {
         if (NetworkServer.connections.Count != 0) waitForPlayersCount = NetworkServer.connections.Count;
 
         if (cleanUpScene) CleanUpEnemies();
-        rand = LocalRandom.Instance;
         ghostWaves = waves; //TODO: take this out once im keen to remove the old ghost stuff
         InvokeRepeating("UpdateGhostPositions", 0f, 5f);
     }
@@ -186,8 +184,8 @@ public class WaveSpawner : MonoBehaviour {
     */
     void SpawnEnemy(GameObject enemy)
     {
-        float rX = rand.GetNextRandom(1f, false);//Random.Range(-1, 1);
-        float rZ = rand.GetNextRandom(4f, false);//Random.Range(-4, 4);
+        float rX = Random.Range(-1, 1); //rand.GetNextRandom(1f, false);
+        float rZ = Random.Range(-4, 4); //rand.GetNextRandom(4f, false);
 
         GameObject e = Instantiate(enemy, spawnPoint.position + new Vector3(rX, 0f, rZ), spawnPoint.rotation);
         enemyList.Add(e);
@@ -200,10 +198,13 @@ public class WaveSpawner : MonoBehaviour {
         enemyGhostList.Add(e);
 
         Enemy enemyComponent = e.GetComponent<Enemy>();
-        Renderer enemyRenderer = e.GetComponent<Renderer>();
+        Renderer[] enemyRenderer = e.GetComponentsInChildren<Renderer>();
 
-        enemyRenderer.material = ghostMaterial;
-        enemyRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        foreach (Renderer renderer in enemyRenderer)
+        {
+            renderer.material = ghostMaterial;
+            renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        }
         enemyComponent.ghost = true;
         enemyComponent.GID = _GID;
 
@@ -219,10 +220,13 @@ public class WaveSpawner : MonoBehaviour {
             enemyGhostList.Add(enemy);
 
             Enemy enemyComponent = enemy.GetComponent<Enemy>();
-            Renderer enemyRenderer = enemy.GetComponent<Renderer>();
+            Renderer[] enemyRenderer = enemyComponent.GetComponentsInChildren<Renderer>();
 
-            enemyRenderer.material = ghostMaterial;
-            enemyRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            foreach (Renderer renderer in enemyRenderer)
+            {
+                renderer.material = ghostMaterial;
+                renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            }
             enemyComponent.ghost = true;
         }
         else
@@ -238,8 +242,7 @@ public class WaveSpawner : MonoBehaviour {
         for (int i = 0; i < arr.Length; i++)
         {
             T tmp = arr[i];
-            int r = rand.GetNextRandom(arr.Length-1);//Random.Range(i, arr.Length);
-            //TODO: this shuffle will not be as random as if i increasing reduced the range accordingly (like the first algorithm)
+            int r = Random.Range(i, arr.Length);    //rand.GetNextRandom(arr.Length-1);
             arr[i] = arr[r];
             arr[r] = tmp;
         }

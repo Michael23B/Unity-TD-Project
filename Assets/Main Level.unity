@@ -489,6 +489,7 @@ MonoBehaviour:
   - {fileID: 1023124105668382, guid: 3db0810d9eb183147aa5b2a7146feba5, type: 2}
   - {fileID: 1023124105668382, guid: 1d2b93b873ebbb94fb72c0812d1d3984, type: 2}
   resources: []
+  indexOfID: 0
 --- !u!1 &30
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,13 +3648,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  startMoney: 600
+  startMoney: 1
   lives: 0
   startLives: 15
   rounds: 0
-  stone: 20
-  green: 20
-  diamond: 20
+  stone: 200
+  green: 200
+  diamond: 200
 --- !u!1 &222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,7 +4069,7 @@ MonoBehaviour:
     type: 2}
   sellEffect: {fileID: 1464319973732982, guid: aa329578c39b5cf4486482c370e29418, type: 2}
   nodeUI: {fileID: 876192428}
-  message: {fileID: 114808985864021130, guid: 571f80a3538d2174b8e52950d7a355f9, type: 2}
+  message: {fileID: 114961169612470506, guid: f78ad625c6c667f4e8286e4d4179a7cc, type: 2}
 --- !u!1 &247
 GameObject:
   m_ObjectHideFlags: 0
@@ -37264,39 +37265,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4055023978372444, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055023978372444, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055023978372444, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114906255068617878, guid: d7c32b9b84ab0d541883de11893a7b54,
-        type: 2}
-      propertyPath: money
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 114906255068617878, guid: d7c32b9b84ab0d541883de11893a7b54,
-        type: 2}
-      propertyPath: hitsToDestroy
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114906255068617878, guid: d7c32b9b84ab0d541883de11893a7b54,
-        type: 2}
-      propertyPath: enemyEncounter
-      value: 
-      objectReference: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e,
-        type: 2}
-    - target: {fileID: 114906255068617878, guid: d7c32b9b84ab0d541883de11893a7b54,
-        type: 2}
-      propertyPath: additionalEffects
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
   m_IsPrefabParent: 0
@@ -44994,7 +44962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000002805258}
+  m_AnchoredPosition: {x: 4.593333e-10, y: -0.0000017576627}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078

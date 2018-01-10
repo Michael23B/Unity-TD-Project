@@ -30,7 +30,7 @@ public static class BuffHelper {
     //
     public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null)
     {
-        if (_type == DebuffType.None) Debug.Log("Empty debuff called"); //oh oh
+        if (_type == DebuffType.None) Debug.Log("Empty debuff called"); //oh oh (should never happen)
         if (e.shield > 0 && _type != DebuffType.Heal && _type != DebuffType.ShieldBreak)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through (and shieldbreak)
         {
             if (_amount >= 0f) return;
@@ -140,6 +140,13 @@ public static class BuffHelper {
     //
     public static void AddDebuff(Turret t, DebuffType _type, float _time, float _amount, GameObject _effect = null)
     {
+        if (t.hasChildren)  //parent turrets have colliders but children don't, so the parent gives the buffs to its children
+        {
+            foreach (Turret child in t.childList)
+            {
+                AddDebuff(child, _type, _time, _amount);    //give this buff to all children, ignoring the effect
+            }
+        }
         //if debuff doesn't already exist or it can't be stacked, add it and if it has an effect instantiate that
         if (_effect != null)
         {

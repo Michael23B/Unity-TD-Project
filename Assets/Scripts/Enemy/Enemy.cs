@@ -63,8 +63,10 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public bool ghost = false;
 
+    [HideInInspector]
     public int managerID;   //ID to send to other players when the local player spawns an enemy
 
+    public GameObject graphics;
 
     void Start()
     {

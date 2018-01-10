@@ -36,9 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4409134522421890}
-  - component: {fileID: 33030244968894926}
   - component: {fileID: 135957356230298206}
-  - component: {fileID: 23128173147409626}
   - component: {fileID: 114572692136303100}
   - component: {fileID: 114090846819910932}
   - component: {fileID: 114468908536672316}
@@ -144,6 +142,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4909886737663606}
+  - component: {fileID: 33269288079448112}
+  - component: {fileID: 23927964155273196}
   m_Layer: 9
   m_Name: Cool looking stuff :))
   m_TagString: Untagged
@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150643718877460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.300581, y: 2.95, z: 67.031}
+  m_LocalPosition: {x: 0.06342083, y: 0.5, z: -0.22339821}
   m_LocalScale: {x: 3, y: 4.5, z: 3}
   m_Children:
   - {fileID: 224525241408456802}
@@ -193,40 +193,6 @@ Transform:
   m_Father: {fileID: 4409134522421890}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23128173147409626
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150643718877460}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 5ae586033cb1d0347b87a3df0aea4ca4, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23627240744577738
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -261,13 +227,40 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33030244968894926
-MeshFilter:
+--- !u!23 &23927964155273196
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150643718877460}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 1778528645759252}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5ae586033cb1d0347b87a3df0aea4ca4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!33 &33210537600189798
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -275,6 +268,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1347775270005564}
   m_Mesh: {fileID: 4300000, guid: 9ca2acb467b68f848951270d87d332ec, type: 3}
+--- !u!33 &33269288079448112
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1778528645759252}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114090846819910932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,6 +355,7 @@ MonoBehaviour:
   yOffset: 1
   ghost: 0
   managerID: 5
+  graphics: {fileID: 1778528645759252}
 --- !u!114 &114585292175636046
 MonoBehaviour:
   m_ObjectHideFlags: 1

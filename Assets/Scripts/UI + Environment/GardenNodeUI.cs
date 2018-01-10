@@ -112,6 +112,11 @@ public class GardenNodeUI : MonoBehaviour {
 
     public void Plant(int index)   //TODO: hover over upgrade shows upgraded range
     {
+        if (target.plantComponent != null)
+        {
+            BuildManager.Instance.message.PlayMessage("Already Planted Here!", transform, Color.red);
+            return;
+        }
         if (PlayerStats.Instance.money >= plantComponentList[index].cost)
         {
             PlayerStats.Instance.money -= plantComponentList[index].cost;
@@ -120,7 +125,7 @@ public class GardenNodeUI : MonoBehaviour {
         }
         else
         {
-            BuildManager.Instance.message.PlayMessage("Not Enough Money!", transform);
+            BuildManager.Instance.message.PlayMessage("Not Enough Money!", transform, Color.red);
         }
     }
 

@@ -589,7 +589,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958084846982880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.08089, y: 0.5, z: 60.036102}
+  m_LocalPosition: {x: 24.676514, y: 0.5, z: 44.86531}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 4346137959108486}
@@ -951,7 +951,7 @@ BoxCollider:
   m_GameObject: {fileID: 1142386074870480}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0, y: 0, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
@@ -963,7 +963,7 @@ BoxCollider:
   m_GameObject: {fileID: 1748425995116504}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0, y: 0, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1177,8 +1177,11 @@ MonoBehaviour:
   PartToRotate: {fileID: 4985991907286428}
   firePoint: {fileID: 4478050212572440}
   turnSpeed: 10
-  childTurret: 0
-  parentTurret: {fileID: 0}
+  childTurret: 1
+  parentTurret: {fileID: 114860645368077090}
+  childGetsOwnTargets: 1
+  hasChildren: 0
+  childList: []
   debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}
@@ -1221,8 +1224,11 @@ MonoBehaviour:
   PartToRotate: {fileID: 4457614125462130}
   firePoint: {fileID: 4519305215325424}
   turnSpeed: 10
-  childTurret: 0
-  parentTurret: {fileID: 0}
+  childTurret: 1
+  parentTurret: {fileID: 114860645368077090}
+  childGetsOwnTargets: 1
+  hasChildren: 0
+  childList: []
   debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}
@@ -1268,6 +1274,9 @@ MonoBehaviour:
   turnSpeed: 10
   childTurret: 0
   parentTurret: {fileID: 0}
+  childGetsOwnTargets: 0
+  hasChildren: 0
+  childList: []
   debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}

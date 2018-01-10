@@ -63,9 +63,14 @@ public class Node : MonoBehaviour
     {
         if(upgrading)
         {
+            if (isUpgraded)
+            {
+                BuildManager.Instance.message.PlayMessage("Already Upgraded!", transform, Color.red);
+                return;
+            }
             if (!buildManager.HasMoneyUpgrade)
             {
-                buildManager.message.PlayMessage("Not Enough Money!", transform);
+                BuildManager.Instance.message.PlayMessage("Not Enough Money!", transform, Color.red);
                 return;
             }
             playerStats.money -= turretBlueprint.upgradeCost;
@@ -74,12 +79,12 @@ public class Node : MonoBehaviour
         {
             if (!buildManager.HasMoney)
             {
-                buildManager.message.PlayMessage("Not Enough Money!", transform);
+                BuildManager.Instance.message.PlayMessage("Not Enough Money!", transform, Color.red);
                 return;
             }
             if (!buildManager.HasResources())
             {
-                buildManager.message.PlayMessage("Not Enough Resources!", transform);
+                BuildManager.Instance.message.PlayMessage("Not Enough Resources!", transform, Color.red);
                 return;
             }
 
@@ -108,6 +113,12 @@ public class Node : MonoBehaviour
     public void CallSellTurret()
     {
         if (player == null) player = FindObjectOfType<LocalPlayerCommands>();
+
+        if (turretBlueprint == null)
+        {
+            BuildManager.Instance.message.PlayMessage("No Turret To Sell!", transform, Color.red);
+            return;
+        }
 
         playerStats.money += turretBlueprint.GetSellAmount(isUpgraded);
         player.CmdSellTurret(nodeID);

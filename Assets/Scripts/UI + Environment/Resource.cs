@@ -14,7 +14,7 @@ public class Resource : MonoBehaviour {
     public int stone, green, diamond;
 
     [Header("Additional effects")]
-    public GameObject enemyEncounter = null;
+    public EnemyGroup enemyEncounter = null;
     public bool additionalEffects = false;
 
     public int hitsToDestroy = 7;
@@ -22,12 +22,13 @@ public class Resource : MonoBehaviour {
     [HideInInspector]
     public int ID;
 
-    static int indexOfID;
+    [Tooltip("For sending messages about additional effect events")]
+    public Transform textOrigin;
 
     private void Start()
     {
-        ID = indexOfID;
-        ++indexOfID;
+        ID = ResourceSpawner.Instance.indexOfID;
+        ResourceSpawner.Instance.indexOfID++;
 
         ResourceSpawner.Instance.resources.Add(this);
     }
@@ -63,13 +64,11 @@ public class Resource : MonoBehaviour {
             EnemyGroup[] newGroup = new EnemyGroup[wave.wave.Length + 1];   //make a new group
             wave.wave.CopyTo(newGroup, 1);
             newGroup[0] = new EnemyGroup();
-            newGroup[0].enemy = enemyEncounter;
-            newGroup[0].count = 1;
-            newGroup[0].spawnRate = 1;
-            newGroup[0].waitTime = 5;
-
-            wave.wave = newGroup;
+            newGroup[0] = enemyEncounter;                                   //assign new encounter at the beginning of wave
+            wave.wave = newGroup;                                           //assign new wave
         }
+
+        BuildManager.Instance.message.PlayMessage("Boss Invading Next Wave", textOrigin, Color.black, 0.2f, 3, true);
     }
 
     public void PlayHitEffect()

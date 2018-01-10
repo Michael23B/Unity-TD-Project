@@ -23,6 +23,7 @@ public class PlayerSetup : NetworkBehaviour {
                 componentsToDisable[i].enabled = false;
             }
             gameObject.tag = "Player2";
+            GetComponent<Collider>().enabled = false;
         }
         else
         {
