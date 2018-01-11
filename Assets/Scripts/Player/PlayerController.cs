@@ -289,6 +289,7 @@ public class PlayerController : MonoBehaviour {
         effectIns.transform.position = transform.position;
         Destroy(effectIns, 22f);
         soundTest = true;
+        gun.damage *= 3;
 
         Invoke("LeashThis", 22f);
     }
@@ -298,6 +299,7 @@ public class PlayerController : MonoBehaviour {
         soundTest = false;
         startSpeed = 10;
         verySpeed = 30;
+        gun.damage /= 3;
     }
     #endregion
 }

@@ -1215,10 +1215,11 @@ MonoBehaviour:
   baseModel: {fileID: 1729574826204314}
   ripeModel: {fileID: 1106841171948408}
   cost: 10
-  money: 50
+  money: 25
   stone: 5
   green: 0
   diamond: 0
+  lives: 0
   harvestTime: 90
   displayName: Carrot
   info: Average grow speed. +50 money & +5 stone.

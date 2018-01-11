@@ -18,6 +18,7 @@ public class Resource : MonoBehaviour {
     public bool additionalEffects = false;
 
     public int hitsToDestroy = 7;
+    public int hitEffectLife = 2;
 
     [HideInInspector]
     public int ID;
@@ -37,7 +38,7 @@ public class Resource : MonoBehaviour {
     {
         if (--hitsToDestroy == 0)
         {
-            Destroy(Instantiate(hitEffect, transform.position, Quaternion.identity), 2f);
+            Destroy(Instantiate(hitEffect, transform.position, Quaternion.identity), hitEffectLife);
             TakeResources();
             Destroy(gameObject);
             return;
@@ -47,10 +48,26 @@ public class Resource : MonoBehaviour {
 
     void TakeResources()
     {
-        if (money != 0) PlayerStats.Instance.money += money;
-        if (stone != 0) PlayerStats.Instance.stone += stone;
-        if (green != 0) PlayerStats.Instance.green += green;
-        if (diamond != 0) PlayerStats.Instance.diamond += diamond;
+        if (money != 0)
+        {
+            PlayerStats.Instance.money += money;
+            BuildManager.Instance.message.PlayMessage("+$" + money, transform, Color.yellow);
+        }
+        if (stone != 0)
+        {
+            PlayerStats.Instance.stone += stone;
+            BuildManager.Instance.message.PlayMessage("+" + stone, transform, Color.grey);
+        }
+        if (green != 0)
+        {
+            PlayerStats.Instance.green += green;
+            BuildManager.Instance.message.PlayMessage("+" + green, transform, Color.green);
+        }
+        if (diamond != 0)
+        {
+            PlayerStats.Instance.diamond += diamond;
+            BuildManager.Instance.message.PlayMessage("+" + diamond, transform, Color.blue);
+        }
 
         if (additionalEffects) CheckEffects();
 
@@ -68,7 +85,7 @@ public class Resource : MonoBehaviour {
             wave.wave = newGroup;                                           //assign new wave
         }
 
-        BuildManager.Instance.message.PlayMessage("Boss Invading Next Wave", textOrigin, Color.black, 0.2f, 3, true);
+        BuildManager.Instance.message.PlayMessage("Boss Invading Next Wave", textOrigin, Color.black, 0.5f, 3, true);
     }
 
     public void PlayHitEffect()

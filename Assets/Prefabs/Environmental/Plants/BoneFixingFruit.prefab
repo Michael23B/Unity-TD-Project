@@ -489,7 +489,7 @@ MonoBehaviour:
   green: 0
   diamond: 0
   lives: 3
-  harvestTime: 900
+  harvestTime: 500
   displayName: Bone Fixing Fruit
   info: VERY slow grow speed. +3 to core health.
   displayColor: {r: 1, g: 0, b: 0.76551723, a: 0.472}

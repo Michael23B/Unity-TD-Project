@@ -276,12 +276,10 @@ public class LocalPlayerCommands : NetworkBehaviour
         PlayerController player = p2.GetComponent<PlayerController>();
         if (player == null) return;
 
-        Gun gun = GetComponent<Gun>();
-
         if (id == 1)
         {
             player.gun.shootEffect.Play();
-            player.gun.shootEffect.transform.rotation = gun.graphics.transform.rotation;
+            player.gun.shootEffect.transform.rotation = player.gun.graphics.transform.rotation;
         }
         else if (id == 2) player.gun.AltShoot();
     }

@@ -2900,7 +2900,7 @@ MonoBehaviour:
   baseModel: {fileID: 1274642966017674}
   ripeModel: {fileID: 1720083070592932}
   cost: 30
-  money: 190
+  money: 70
   stone: 0
   green: 5
   diamond: 0
