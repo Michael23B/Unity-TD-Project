@@ -56,6 +56,15 @@ public class PlayerController : MonoBehaviour {
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.activeSceneChanged += DestroyOnMenuScreen;
+    }
+
+    void DestroyOnMenuScreen(Scene oldScene, Scene newScene)
+    {
+        if (newScene.buildIndex != oldScene.buildIndex) //0 == "Main Menu" (could compare scene name instead)
+        {
+            Destroy(this);
+        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -74,6 +83,7 @@ public class PlayerController : MonoBehaviour {
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.activeSceneChanged -= DestroyOnMenuScreen;
     }
 
     private void Update()
@@ -201,40 +211,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     #region Camera controllers
-    /*
-    void ToggleCamera(bool active)  //turns off fpcamera then activates either scene cam or player cam
-    {
-        if (sceneCamera == null) return;
-        if (playerCamera == null) return;
-        if (fpCamera == null) return;
-
-        if (active) fpCamMode = fpCamera.isActiveAndEnabled;  //if activating scene cam, remember what cam was active before, so we can switch back to it
-
-        if (fpCamMode)
-        {
-            playerCamera.gameObject.SetActive(false);
-            fpCamera.gameObject.SetActive(!active);
-            sceneCamera.gameObject.SetActive(active);
-        }
-        else
-        {
-            playerCamera.gameObject.SetActive(!active);
-            sceneCamera.gameObject.SetActive(active);
-
-            //lock mouse when using scene cam (fp cam handles this itself) ((this code is so messy i need to clean it))
-            if (active)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = (false);
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = (true);
-            }
-        }
-    }
-    */
 
     void ToggleTacticalUI()
     {

@@ -7,11 +7,15 @@ public class Message : MonoBehaviour {
     GameObject prefab;
     [SerializeField]
     GameObject bossPrefab;
+    [SerializeField]
+    GameObject wavePrefab;
+
     GameObject prefabToUse;
 
-    public void PlayMessage(string message, Transform pos, Color col, float speed = 1f, float scale = 1f, bool boss = false)
+    public void PlayMessage(string message, Transform pos, Color col, float speed = 1f, float scale = 1f, int type = 0)
     {
-        if (boss) prefabToUse = bossPrefab;
+        if (type == 1) prefabToUse = bossPrefab;
+        else if (type == 2) prefabToUse = wavePrefab;
         else prefabToUse = prefab;
 
         GameObject GO = Instantiate(prefabToUse);

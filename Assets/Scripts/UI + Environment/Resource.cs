@@ -85,7 +85,7 @@ public class Resource : MonoBehaviour {
             wave.wave = newGroup;                                           //assign new wave
         }
 
-        BuildManager.Instance.message.PlayMessage("Boss Invading Next Wave", textOrigin, Color.black, 0.5f, 3, true);
+        BuildManager.Instance.message.PlayMessage("Boss Invading Next Wave", textOrigin, Color.black, 0.5f, 3, 1);
     }
 
     public void PlayHitEffect()

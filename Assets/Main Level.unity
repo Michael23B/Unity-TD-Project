@@ -3648,13 +3648,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  startMoney: 6000
+  startMoney: 600
   lives: 0
   startLives: 15
   rounds: 0
-  stone: 200
-  green: 200
-  diamond: 200
+  stone: 20
+  green: 20
+  diamond: 20
 --- !u!1 &222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,7 +5010,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 21.2, y: 64.3, z: 0}
 --- !u!4 &326
 Transform:
@@ -5121,7 +5121,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
 --- !u!4 &337
 Transform:
@@ -5190,8 +5190,9 @@ Transform:
   - {fileID: 1332057232}
   - {fileID: 173156016}
   - {fileID: 1793859108}
+  - {fileID: 700165021}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &342
 Transform:
@@ -5920,7 +5921,7 @@ Transform:
   - {fileID: 1373160902}
   - {fileID: 2083206456}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &407
 Transform:
@@ -6655,7 +6656,7 @@ Transform:
   - {fileID: 6333303}
   - {fileID: 455850068}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &440
 Transform:
@@ -6738,7 +6739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &447
 Transform:
@@ -22750,8 +22751,9 @@ RectTransform:
   - {fileID: 1052}
   - {fileID: 1040}
   - {fileID: 1037}
+  - {fileID: 136855437}
   m_Father: {fileID: 1066}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -22771,7 +22773,7 @@ RectTransform:
   m_Children:
   - {fileID: 1078}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23077,13 +23079,13 @@ RectTransform:
   m_Children:
   - {fileID: 1043}
   - {fileID: 1068}
-  - {fileID: 1048}
   - {fileID: 1457566588}
   - {fileID: 1671998914}
   - {fileID: 1250084047}
   - {fileID: 475530243}
+  - {fileID: 1048}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23678,6 +23680,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1108
@@ -23708,6 +23712,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1109
@@ -23738,6 +23744,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1110
@@ -23768,6 +23776,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1111
@@ -23820,6 +23830,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1113
@@ -23850,6 +23862,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1114
@@ -23880,6 +23894,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1115
@@ -23910,6 +23926,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1116
@@ -24041,6 +24059,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1120
@@ -24071,6 +24091,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1121
@@ -24101,6 +24123,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1122
@@ -24131,6 +24155,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1123
@@ -24161,6 +24187,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1124
@@ -24225,15 +24253,15 @@ MonoBehaviour:
   waves:
   - wave:
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
-      count: 7
+      count: 1
       spawnRate: 0.9
       waitTime: 3
     - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
-      count: 10
+      count: 1
       spawnRate: 1.1
       waitTime: 4
     - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
-      count: 15
+      count: 1
       spawnRate: 2
       waitTime: 1
     randomOrder: 0
@@ -24465,6 +24493,7 @@ MonoBehaviour:
   enemyCountText: {fileID: 943631858}
   waveMultiText: {fileID: 1540474583}
   waveIndexText: {fileID: 370990471}
+  gameStarted: 0
 --- !u!114 &1131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24493,6 +24522,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1132
@@ -24602,6 +24633,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1135
@@ -24632,6 +24665,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1136
@@ -24662,6 +24697,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1137
@@ -24771,6 +24808,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1141
@@ -24845,6 +24884,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Turret
     displayDesc: Fires fast with average damage.
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1273892611175448, guid: 8a9704c47ae98344dad3c3facb190670, type: 2}
     cost: 175
     upgradedPrefab: {fileID: 1273892611175448, guid: 108821c09d7cf0f4b82265ce077e1755,
@@ -24856,6 +24897,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Missle Launcher
     displayDesc: High AOE damage.
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1507746948647926, guid: c3ffd00eb8eb0ff4da111bc99bfe510b, type: 2}
     cost: 150
     upgradedPrefab: {fileID: 1507746948647926, guid: 3319b3d74a71da848b5cfb235323304d,
@@ -24867,6 +24910,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Laser Turret
     displayDesc: Slows and damages over time.
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1687727007058188, guid: af7966a341c63ba46a18f32fbd4c8839, type: 2}
     cost: 200
     upgradedPrefab: {fileID: 1687727007058188, guid: e553c1ff5e0fdb84b9105ae18fbfd7b8,
@@ -24878,6 +24923,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Freeze Turret
     displayDesc: No damage, but can freeze enemies in an AOE.
+    overrideFieldDamage: 0
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1433889198367424, guid: 6aefc678f931d7144980d89c9b30616d, type: 2}
     cost: 90
     upgradedPrefab: {fileID: 1433889198367424, guid: b655bd6503960604c9a9eb84f855ec20,
@@ -24889,6 +24936,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Poison Turret
     displayDesc: High damage over time. Has an AOE effect when upgraded.
+    overrideFieldDamage: 150 over 3 seconds
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1687727007058188, guid: aa1904a32ea65b7419a845ba453f5e0c, type: 2}
     cost: 225
     upgradedPrefab: {fileID: 1687727007058188, guid: a0a27ce4ad13a4a4d8f359e0639023cf,
@@ -24900,6 +24949,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Speed Turret
     displayDesc: Buffs the attack speed of turrets around it.
+    overrideFieldDamage: N/A
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1433889198367424, guid: 5a4c7200f024ad44192958a47e867f40, type: 2}
     cost: 250
     upgradedPrefab: {fileID: 1905667894733756, guid: 982a60d8e38ff0d4e880de5a9c908af1,
@@ -24911,6 +24962,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Fear Turret
     displayDesc: Forces an enemy to run away. Amplifies enemy damage taken when upgraded.
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1958084846982880, guid: 52d89588298570d4fa0fa668c621a939, type: 2}
     cost: 1000
     upgradedPrefab: {fileID: 1958084846982880, guid: 685bc6454dcc80a469d296435037e9aa,
@@ -24922,6 +24975,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Pyramid Turret
     displayDesc: My grandfather's deck has no pathetic turrets.
+    overrideFieldDamage: 300
+    overrideFieldDebuffType: Stun / Slow
   - prefab: {fileID: 1507746948647926, guid: 3e8b9b7c2df0b374f99d36a4735a1975, type: 2}
     cost: 250
     upgradedPrefab: {fileID: 1507746948647926, guid: d579729c36f0f4d49ad3a3da1daaa7d4,
@@ -24933,6 +24988,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Lightning Turret
     displayDesc: Chains to multiple enemies and shocks them briefly.
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1433889198367424, guid: 55a19b5a1a46caf4e82e909d9860f429, type: 2}
     cost: 350
     upgradedPrefab: {fileID: 1433889198367424, guid: 2fe7ac3df678b6848b7a66b6bbcbb35a,
@@ -24944,6 +25001,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: Damage Amplifier
     displayDesc: Enemies targetted by this tower will take increased damage.
+    overrideFieldDamage: 60
+    overrideFieldDebuffType: 
   - prefab: {fileID: 1687727007058188, guid: 38cb14dc9c3a32c48a510d779cc9de47, type: 2}
     cost: 225
     upgradedPrefab: {fileID: 1687727007058188, guid: a846b4d4c0182ac4b8ecba03142bff96,
@@ -24956,6 +25015,8 @@ MonoBehaviour:
     displayName: Shield Breaker
     displayDesc: Deals very high damage to shielded enemies, low damage to non-shielded
       ones.
+    overrideFieldDamage: 25 (175 shield damage)
+    overrideFieldDebuffType: 
   buttons: []
 --- !u!114 &1144
 MonoBehaviour:
@@ -24985,6 +25046,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1145
@@ -25015,6 +25078,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1146
@@ -25045,6 +25110,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1147
@@ -25075,6 +25142,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1150
@@ -25138,6 +25207,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1155
@@ -25168,6 +25239,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1156
@@ -25231,6 +25304,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1158
@@ -25261,6 +25336,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1159
@@ -25291,6 +25368,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1160
@@ -25321,6 +25400,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1163
@@ -25351,6 +25432,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1164
@@ -25415,6 +25498,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1166
@@ -25445,6 +25530,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1167
@@ -25475,6 +25562,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1168
@@ -25552,6 +25641,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1171
@@ -25582,6 +25673,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1172
@@ -25612,6 +25705,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1173
@@ -25676,6 +25771,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1175
@@ -25813,6 +25910,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1179
@@ -25870,6 +25969,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1181
@@ -25900,6 +26001,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1182
@@ -26110,6 +26213,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1188
@@ -26140,6 +26245,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1190
@@ -26170,6 +26277,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1191
@@ -26200,6 +26309,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1192
@@ -26448,6 +26559,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1203
@@ -26506,6 +26619,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1205
@@ -26536,6 +26651,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1206
@@ -26566,6 +26683,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1207
@@ -26596,6 +26715,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1208
@@ -26626,6 +26747,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1209
@@ -26656,6 +26779,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1210
@@ -26686,6 +26811,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1211
@@ -26716,6 +26843,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1212
@@ -26746,6 +26875,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1213
@@ -26804,6 +26935,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1215
@@ -26862,6 +26995,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1217
@@ -26892,6 +27027,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1218
@@ -26922,6 +27059,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1219
@@ -26989,6 +27128,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1222
@@ -27019,6 +27160,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1223
@@ -27049,6 +27192,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1224
@@ -27079,6 +27224,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1225
@@ -27109,6 +27256,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1226
@@ -27139,6 +27288,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1227
@@ -27169,6 +27320,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1228
@@ -27199,6 +27352,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1229
@@ -27229,6 +27384,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1230
@@ -27259,6 +27416,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1231
@@ -27289,6 +27448,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1232
@@ -27319,6 +27480,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1234
@@ -27349,6 +27512,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1235
@@ -27379,6 +27544,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1236
@@ -27409,6 +27576,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1237
@@ -27439,6 +27608,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1238
@@ -27469,6 +27640,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1239
@@ -27499,6 +27672,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1240
@@ -27529,6 +27704,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1241
@@ -27559,6 +27736,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1242
@@ -27589,6 +27768,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1243
@@ -27633,6 +27814,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1245
@@ -27663,6 +27846,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1246
@@ -27693,6 +27878,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1247
@@ -27824,6 +28011,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1251
@@ -27854,6 +28043,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1252
@@ -27884,6 +28075,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1253
@@ -27914,6 +28107,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1254
@@ -27944,6 +28139,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1255
@@ -28009,6 +28206,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1257
@@ -28039,6 +28238,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1258
@@ -28103,6 +28304,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1260
@@ -28133,6 +28336,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1261
@@ -28163,6 +28368,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1263
@@ -28193,6 +28400,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1266
@@ -28324,6 +28533,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1271
@@ -28354,6 +28565,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1272
@@ -28384,6 +28597,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1273
@@ -28414,6 +28629,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1274
@@ -28455,6 +28672,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1276
@@ -28485,6 +28704,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1277
@@ -28515,6 +28736,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1278
@@ -28545,6 +28768,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1279
@@ -28603,6 +28828,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1282
@@ -28679,6 +28906,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1285
@@ -28709,6 +28938,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1286
@@ -28739,6 +28970,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1287
@@ -28769,6 +29002,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1289
@@ -28854,6 +29089,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1292
@@ -28884,6 +29121,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1293
@@ -28945,6 +29184,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1295
@@ -28975,6 +29216,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1296
@@ -29005,6 +29248,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1297
@@ -29035,6 +29280,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1298
@@ -29099,6 +29346,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1300
@@ -29129,6 +29378,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1301
@@ -29159,6 +29410,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1302
@@ -29189,6 +29442,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1303
@@ -29219,6 +29474,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1304
@@ -29249,6 +29506,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1305
@@ -29279,6 +29538,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1308
@@ -29309,6 +29570,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1309
@@ -29373,6 +29636,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1311
@@ -29403,6 +29668,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1312
@@ -29433,6 +29700,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1313
@@ -29490,6 +29759,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1316
@@ -29520,6 +29791,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1317
@@ -29584,6 +29857,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1319
@@ -29614,6 +29889,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1320
@@ -29672,6 +29949,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1322
@@ -29919,6 +30198,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1331
@@ -29949,6 +30230,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1332
@@ -29979,6 +30262,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1333
@@ -30027,6 +30312,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1335
@@ -30057,6 +30344,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1336
@@ -30087,6 +30376,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1337
@@ -30117,6 +30408,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1338
@@ -30175,6 +30468,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1340
@@ -30205,6 +30500,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1341
@@ -30235,6 +30532,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1343
@@ -30265,6 +30564,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1344
@@ -30295,6 +30596,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1346
@@ -30325,6 +30628,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1347
@@ -30355,6 +30660,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1348
@@ -30385,6 +30692,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1350
@@ -30415,6 +30724,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1351
@@ -30478,6 +30789,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1353
@@ -30508,6 +30821,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1354
@@ -30571,6 +30886,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1356
@@ -30668,6 +30985,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2466180
@@ -30788,6 +31107,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &6333305
@@ -30908,6 +31229,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &14770879
@@ -31028,6 +31351,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &15203795
@@ -31148,6 +31473,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &44908348
@@ -31268,6 +31595,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &53238137
@@ -31331,7 +31660,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 341}
     m_Modifications:
     - target: {fileID: 4055023978372444, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
       propertyPath: m_LocalPosition.x
@@ -31363,7 +31692,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4055023978372444, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023124105668382, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
+      propertyPath: m_Name
+      value: EvilGoldMine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
@@ -31430,6 +31763,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &63183693
@@ -31550,6 +31885,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &76050302
@@ -31748,6 +32085,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &82172087
@@ -31970,6 +32309,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &86841561
@@ -32090,6 +32431,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &89645417
@@ -32210,6 +32553,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &90546336
@@ -32440,6 +32785,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &97350580
@@ -32560,6 +32907,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &97577326
@@ -32680,6 +33029,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &106107383
@@ -32910,6 +33261,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &117378005
@@ -33030,6 +33383,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &123626618
@@ -33303,6 +33658,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &133889568
@@ -33361,6 +33718,128 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 133889565}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &136855436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 136855437}
+  - component: {fileID: 136855440}
+  - component: {fileID: 136855439}
+  - component: {fileID: 136855438}
+  m_Layer: 5
+  m_Name: NetworkHudToggle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &136855437
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136855436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1891028856}
+  m_Father: {fileID: 1048}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -94, y: 29}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &136855438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136855436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 136855439}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 84}
+        m_MethodName: ToggleNetworkHUD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &136855439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136855436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &136855440
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136855436}
 --- !u!1 &139138816
 GameObject:
   m_ObjectHideFlags: 0
@@ -33423,6 +33902,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &139138819
@@ -33575,6 +34056,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &160164063
@@ -33836,6 +34319,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &177123552
@@ -33956,6 +34441,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &186596300
@@ -34076,6 +34563,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &189228793
@@ -34285,6 +34774,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &212284486
@@ -34405,6 +34896,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &214695288
@@ -34674,6 +35167,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &224170873
@@ -35291,6 +35786,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &269707335
@@ -35411,6 +35908,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &275543464
@@ -35531,6 +36030,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &275845388
@@ -35681,6 +36182,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &302661858
@@ -35875,6 +36378,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &305164859
@@ -35995,6 +36500,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &306732652
@@ -36342,6 +36849,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &340909302
@@ -36462,6 +36971,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &349905222
@@ -36582,6 +37093,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &351698628
@@ -36776,6 +37289,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &359330422
@@ -36970,6 +37485,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &372104756
@@ -37090,6 +37607,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &372743127
@@ -37210,6 +37729,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &378485525
@@ -37330,6 +37851,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &398132961
@@ -37450,6 +37973,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &398403886
@@ -37570,6 +38095,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &412743281
@@ -38294,6 +38821,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &438984638
@@ -38414,6 +38943,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &439678297
@@ -38669,6 +39200,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &455850070
@@ -38789,6 +39322,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &456173456
@@ -38878,7 +39413,7 @@ RectTransform:
   - {fileID: 551522405}
   - {fileID: 588858486}
   m_Father: {fileID: 1066}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -38980,6 +39515,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &482503114
@@ -39169,6 +39706,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &496701497
@@ -39289,6 +39828,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &500345784
@@ -39409,6 +39950,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &503345006
@@ -39559,6 +40102,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &532633458
@@ -39659,7 +40204,7 @@ Transform:
   - {fileID: 1889927006}
   - {fileID: 1381407910}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &544704087
 Prefab:
@@ -39698,7 +40243,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4119264035657976, guid: 8cc407885eaf10743b265f797e39846e, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136997331676544322, guid: 8cc407885eaf10743b265f797e39846e,
         type: 2}
@@ -39830,6 +40375,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &545226243
@@ -40187,6 +40734,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &586070049
@@ -40472,7 +41021,7 @@ Transform:
   - {fileID: 1910888709}
   - {fileID: 643860725}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &612391529
 GameObject:
@@ -40566,6 +41115,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &622604216
@@ -40897,6 +41448,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &627246886
@@ -41017,6 +41570,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &633177730
@@ -41137,6 +41692,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &634584743
@@ -41297,6 +41854,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &646150173
@@ -41417,6 +41976,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &660618798
@@ -41537,6 +42098,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &662872650
@@ -41735,6 +42298,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &669259580
@@ -41855,6 +42420,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &676939080
@@ -42188,6 +42755,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &691062336
@@ -42308,6 +42877,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &697333833
@@ -42366,6 +42937,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 697333830}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &700165021 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4055023978372444, guid: d7c32b9b84ab0d541883de11893a7b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 62472015}
 --- !u!1 &717396810
 GameObject:
   m_ObjectHideFlags: 0
@@ -42533,6 +43109,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &725356500
@@ -42653,6 +43231,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &730728426
@@ -42773,6 +43353,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &736016806
@@ -42985,6 +43567,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &755235228
@@ -43257,6 +43841,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &763714090
@@ -43377,6 +43963,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &766832081
@@ -43527,6 +44115,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &769609049
@@ -43647,6 +44237,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &770989898
@@ -43872,6 +44464,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &780460415
@@ -43992,6 +44586,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &783296387
@@ -44180,6 +44776,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &788325781
@@ -44267,7 +44865,7 @@ Transform:
   - {fileID: 444}
   - {fileID: 449}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &794498851
 GameObject:
@@ -44331,6 +44929,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &794498854
@@ -44451,6 +45051,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &796105975
@@ -44719,6 +45321,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &809716259
@@ -44839,6 +45443,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &810188486
@@ -44962,7 +45568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000015180063}
+  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000014600312}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -45141,6 +45747,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &827825261
@@ -45261,6 +45869,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &829674731
@@ -45381,6 +45991,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &829754697
@@ -45562,6 +46174,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &833947489
@@ -45682,6 +46296,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &853083466
@@ -46001,7 +46617,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4837677112530894, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1505711723664954, guid: e715ab0eb85dbde42b1b07f7df3d4f7c, type: 2}
       propertyPath: m_IsActive
@@ -46138,6 +46754,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &907749156
@@ -46303,7 +46921,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925895800
 GameObject:
@@ -46367,6 +46985,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &925895803
@@ -46714,6 +47334,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &934240368
@@ -46928,6 +47550,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &946058793
@@ -47048,6 +47672,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &949565982
@@ -47168,6 +47794,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &958547021
@@ -47547,6 +48175,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &985884677
@@ -47667,6 +48297,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &995924688
@@ -51457,6 +52089,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1034857643
@@ -51577,6 +52211,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1041059233
@@ -51697,6 +52333,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1043273062
@@ -51927,6 +52565,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1048095772
@@ -52047,6 +52687,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1052803028
@@ -52241,6 +52883,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1074114378
@@ -52361,6 +53005,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1077842967
@@ -52481,6 +53127,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1086067652
@@ -52601,6 +53249,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1087288011
@@ -52721,6 +53371,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1088705944
@@ -52841,6 +53493,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1089408267
@@ -53111,6 +53765,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1118465464
@@ -53335,6 +53991,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1138388505
@@ -53455,6 +54113,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1140273449
@@ -53575,6 +54235,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1156406026
@@ -53725,6 +54387,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1160385678
@@ -53845,6 +54509,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1160731615
@@ -54035,6 +54701,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1168523219
@@ -54363,6 +55031,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1184466689
@@ -54605,6 +55275,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1187472057
@@ -54835,6 +55507,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1199885848
@@ -54955,6 +55629,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1201891622
@@ -55075,6 +55751,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1202156906
@@ -55195,6 +55873,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1203996763
@@ -55315,6 +55995,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1212289129
@@ -55435,6 +56117,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1212348531
@@ -55555,6 +56239,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1213583239
@@ -55675,6 +56361,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1221854956
@@ -55795,6 +56483,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1224299003
@@ -55915,6 +56605,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1232027423
@@ -56035,6 +56727,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1241080759
@@ -56155,6 +56849,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1242102951
@@ -56275,6 +56971,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1245824325
@@ -56365,7 +57063,7 @@ RectTransform:
   - {fileID: 625107377}
   - {fileID: 86217122}
   m_Father: {fileID: 1066}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -56466,6 +57164,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1260892931
@@ -56586,6 +57286,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1263716540
@@ -56706,6 +57408,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1269546905
@@ -56826,6 +57530,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1283579724
@@ -57056,6 +57762,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1290898492
@@ -57176,6 +57884,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1305504693
@@ -57296,6 +58006,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1308485531
@@ -57416,6 +58128,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1313877885
@@ -57664,6 +58378,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1326353997
@@ -57784,6 +58500,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1328108823
@@ -58051,6 +58769,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1333173635
@@ -58171,6 +58891,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1338452219
@@ -58291,6 +59013,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1342113139
@@ -58484,6 +59208,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1346772318
@@ -58596,7 +59322,7 @@ Transform:
   - {fileID: 605301281}
   - {fileID: 493167609}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1364632422
 GameObject:
@@ -58660,6 +59386,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1364632425
@@ -58780,6 +59508,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1371249764
@@ -59019,6 +59749,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1373632142
@@ -59245,6 +59977,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1385707400
@@ -59365,6 +60099,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1385918201
@@ -59712,6 +60448,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1399696642
@@ -59832,6 +60570,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1404034714
@@ -60027,6 +60767,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1405615732
@@ -60295,6 +61037,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1418753843
@@ -60415,6 +61159,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1420275260
@@ -60535,6 +61281,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1425902942
@@ -60655,6 +61403,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1436691074
@@ -60775,6 +61525,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1437684487
@@ -60895,7 +61647,7 @@ RectTransform:
   m_Children:
   - {fileID: 1186658336}
   m_Father: {fileID: 1066}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -61056,6 +61808,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1462957866
@@ -61396,6 +62150,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1479468726
@@ -61546,6 +62302,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1501061731
@@ -61666,6 +62424,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1502289005
@@ -61816,6 +62576,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1514841540
@@ -62009,6 +62771,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1529958238
@@ -62233,6 +62997,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1542662476
@@ -62457,6 +63223,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1549169363
@@ -62785,6 +63553,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1560096109
@@ -62905,6 +63675,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1566935463
@@ -63114,6 +63886,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1579677360
@@ -63172,81 +63946,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579677357}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1589347145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1589347148}
-  - component: {fileID: 1589347147}
-  - component: {fileID: 1589347146}
-  m_Layer: 0
-  m_Name: PlayerSpawner (not using this atm)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1589347146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1589347145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef667514400d2f84091dc55267d63c7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 1088453242561702, guid: a93aca66159a5554685cf231bd3f556a,
-    type: 2}
---- !u!114 &1589347147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1589347145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
-  m_ServerOnly: 1
-  m_LocalPlayerAuthority: 0
---- !u!4 &1589347148
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1589347145}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.266455, y: -3.482067, z: 69.4032}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592410223
 GameObject:
   m_ObjectHideFlags: 0
@@ -63309,6 +64008,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1592410226
@@ -63429,6 +64130,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1594541526
@@ -63549,6 +64252,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1598453401
@@ -63669,6 +64374,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1600871561
@@ -63789,6 +64496,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1608873404
@@ -64080,6 +64789,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1657075993
@@ -64200,6 +64911,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1658181129
@@ -64320,6 +65033,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1665267194
@@ -64409,7 +65124,7 @@ RectTransform:
   m_Children:
   - {fileID: 761646152}
   m_Father: {fileID: 1066}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -64557,6 +65272,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1673018117
@@ -64766,6 +65483,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1683879019
@@ -64961,6 +65680,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1695942504
@@ -65019,6 +65740,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695942501}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1696102904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1696102905}
+  - component: {fileID: 1696102906}
+  m_Layer: 0
+  m_Name: CleanUpScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1696102905
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696102904}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1696102906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696102904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208f4d41df7e5554c8f4232f8ea9065e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1699662225
 GameObject:
   m_ObjectHideFlags: 0
@@ -65081,6 +65842,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1699662228
@@ -65281,6 +66044,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1705600698
@@ -65401,6 +66166,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1714592446
@@ -65896,6 +66663,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1743528843
@@ -66016,6 +66785,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1745883815
@@ -66278,6 +67049,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1769225228
@@ -66365,7 +67138,7 @@ Transform:
   - {fileID: 1060}
   - {fileID: 545789278}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786903551
 GameObject:
@@ -66782,6 +67555,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1804605859
@@ -66991,6 +67766,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1836089712
@@ -67111,6 +67888,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1837879033
@@ -67305,6 +68084,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1855654518
@@ -67425,6 +68206,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1863231537
@@ -67545,6 +68328,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1865593351
@@ -67665,6 +68450,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1879779964
@@ -67785,6 +68572,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1889189050
@@ -67911,6 +68700,80 @@ Transform:
   m_Father: {fileID: 538743056}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 70.754005, y: 90, z: 0}
+--- !u!1 &1891028855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1891028856}
+  - component: {fileID: 1891028858}
+  - component: {fileID: 1891028857}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1891028856
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891028855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 136855437}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1891028857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891028855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 959ba699da9f3bd4da3555fdcd0514c5, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Toggle Network HUD
+--- !u!222 &1891028858
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891028855}
 --- !u!1 &1895828461
 GameObject:
   m_ObjectHideFlags: 0
@@ -68269,6 +69132,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1924764957
@@ -68389,6 +69254,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1927938419
@@ -68584,6 +69451,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1938792316
@@ -68704,6 +69573,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1940673131
@@ -68824,6 +69695,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1945433799
@@ -68944,6 +69817,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1948105713
@@ -69064,6 +69939,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1962900059
@@ -69184,6 +70061,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1971695508
@@ -69334,6 +70213,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1984335370
@@ -69454,6 +70335,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1989982732
@@ -69574,6 +70457,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1998672547
@@ -69694,6 +70579,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2027260274
@@ -69814,6 +70701,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2037439821
@@ -70002,6 +70891,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2042507999
@@ -70232,6 +71123,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2049134615
@@ -70352,6 +71245,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2057957726
@@ -70685,6 +71580,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2078032152
@@ -70805,6 +71702,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2079395824
@@ -71221,6 +72120,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2104171530
@@ -71341,6 +72242,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2107509779
@@ -71461,6 +72364,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2108573429
@@ -71654,6 +72559,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2116942131
@@ -71774,6 +72681,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2117260231
@@ -72061,6 +72970,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2132796560
@@ -72181,6 +73092,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2136250105
@@ -72375,6 +73288,8 @@ MonoBehaviour:
     turretUpgradedRange: -1
     displayName: 
     displayDesc: 
+    overrideFieldDamage: 
+    overrideFieldDebuffType: 
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2141276318

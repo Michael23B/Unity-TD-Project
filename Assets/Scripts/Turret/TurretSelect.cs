@@ -140,9 +140,10 @@ public class TurretSelect : MonoBehaviour {
         else if (turret.GetStat(FetchStat.AOE) != "0" && turret.GetStat(FetchStat.AOE) != "") turretInfoDesc.text += "\n<color=green>Can hit multiple enemies</color>";
         if (turret.GetStat(FetchStat.DebuffType) != "")
         {
-            if (turret.GetStat(FetchStat.DebuffType) != "AtkSpeed")
+            if (turret.GetStat(FetchStat.DebuffType) != "AtkSpeed" && turret.GetStat(FetchStat.DebuffType) != "ShieldBreak")
             {
-                turretInfoDesc.text += "\n<color=green>Debuff Type: " + turret.GetStat(FetchStat.DebuffType) + "</color>";
+                if (turret.overrideFieldDebuffType == "") turretInfoDesc.text += "\n<color=green>Debuff Type: " + turret.GetStat(FetchStat.DebuffType) + "</color>";
+                else turretInfoDesc.text += "\n<color=green>Debuff Type: " + turret.overrideFieldDebuffType + "</color>";
                 turretInfoDesc.text += "\n<color=red>Ineffective vs shield</color>\n";
             }
             else
@@ -150,9 +151,13 @@ public class TurretSelect : MonoBehaviour {
                 turretInfoDesc.text += "\n<color=green>Buff Type: " + turret.GetStat(FetchStat.DebuffType) + "</color>\n";
             }
         }
-        turretInfoDesc.text += "\nDamage: " + turret.GetStat(FetchStat.Damage);
+        if (turret.overrideFieldDamage == "") turretInfoDesc.text += "\nDamage: " + turret.GetStat(FetchStat.Damage);
+        else turretInfoDesc.text += "\nDamage: " + turret.overrideFieldDamage;
+
         turretInfoDesc.text += "\nFire Rate: " + turret.GetStat(FetchStat.FireRate);
+
         turretInfoDesc.text += "\nRange: " + turret.GetRange(false);
+
         turretInfoDesc.text += "\n\n<color=yellow>Cost: " + turret.GetStat(FetchStat.Cost) + "</color>";
         if (turret.GetStat(FetchStat.ResourceCost) != "0") turretInfoDesc.text += "\n<color=yellow>Resource Cost: " + turret.GetStat(FetchStat.ResourceCost) + " " + turret.GetStat(FetchStat.ResourceType) + "</color>";
     }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainCamera : MonoBehaviour {
 
@@ -13,5 +14,10 @@ public class MainCamera : MonoBehaviour {
         }
         Instance = this;
         DontDestroyOnLoad(this);
+    }
+
+    private void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0) Destroy(gameObject);
     }
 }

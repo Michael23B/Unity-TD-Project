@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 //this was made with single player in mind, need fix a lot for mp
 public class PauseMenu : MonoBehaviour {
 
     public GameObject ui;
     public string menuSceneName = "Main Menu";
     public SceneFader sceneFader;
+    NetworkManagerHUD networkHUD;
+
+    private void Start()
+    {
+        networkHUD = FindObjectOfType<NetworkManagerHUD>();
+    }
 
     private void Update()
     {
@@ -17,7 +24,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void Toggle()
     {
-        ui.SetActive(!ui.activeSelf);   //if disabled, enables, if enabled, disables
+        ui.SetActive(!ui.activeSelf);
         /*  Don't pause time in multiplayer (TODO: let it pause if 1 player)
         if(ui.activeSelf)
         {
@@ -44,5 +51,25 @@ public class PauseMenu : MonoBehaviour {
     public void CallRetry()
     {
         WaveSpawner.Instance.commands.CmdResetLevel();
+    }
+
+    public void ToggleNetworkHUD()
+    {
+        networkHUD.gameObject.SetActive(!networkHUD.isActiveAndEnabled);
+    }
+
+    public void ToggleNetworkHUD(bool b)
+    {
+        networkHUD.gameObject.SetActive(b);
+    }
+
+    private void OnPlayerConnected(NetworkPlayer player)
+    {
+        ToggleNetworkHUD(false);
+    }
+
+    private void OnPlayerDisconnected(NetworkPlayer player)
+    {
+        ToggleNetworkHUD(true);
     }
 }

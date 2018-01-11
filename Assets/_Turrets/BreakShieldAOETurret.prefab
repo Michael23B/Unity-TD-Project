@@ -2860,7 +2860,7 @@ MonoBehaviour:
   useLaser: 0
   damageOverTime: 30
   debuffAmount: 0.15
-  type: 0
+  type: 9
   extraTargetNumber: 0
   extraTargetFindRange: 5
   buildUpTime: 0
@@ -2874,12 +2874,14 @@ MonoBehaviour:
   spawnPrefab: {fileID: 1707413217487440, guid: 2ca2ab34c396492428cda22af0d806eb,
     type: 2}
   enemyTag: Enemy
-  hasAnimation: 0
   PartToRotate: {fileID: 4244328689429942}
   firePoint: {fileID: 4244328689429942}
   turnSpeed: 2
   childTurret: 0
   parentTurret: {fileID: 0}
+  childGetsOwnTargets: 0
+  hasChildren: 0
+  childList: []
   debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}

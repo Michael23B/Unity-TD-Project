@@ -59,6 +59,8 @@ public class WaveSpawner : MonoBehaviour {
     public Text waveMultiText;
     public Text waveIndexText;
 
+    public bool gameStarted = false;
+
     private void Awake()
     {
         if (Instance != null)
@@ -109,6 +111,10 @@ public class WaveSpawner : MonoBehaviour {
 
     void buildTimeToggle()
     {
+        if (!buildTime)
+        {
+            BuildManager.Instance.message.PlayMessage("WAVE " + (waveIndex + 1) + " APPROACHING", transform, Color.green, 1, 1, 2);
+        }
         if (!buildTime && playerID == 0) //going from wave -> buildTime. If server, send new random values for the next wave
         {
             commands.CmdSetClientsRandomValues();
@@ -122,6 +128,7 @@ public class WaveSpawner : MonoBehaviour {
 
     IEnumerator SpawnWave()
     {
+        gameStarted = true;
         nextWaveIndex = waveIndex + 1;
         waveIndexText.text = "WAVE " + (waveIndex + 1) + " ARRIVED";
         waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti) + "x";

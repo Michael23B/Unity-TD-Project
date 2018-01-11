@@ -65,6 +65,11 @@ public class GardenNodeUI : MonoBehaviour {
 
     public void SetTarget(GardenNode _target)
     {
+        if (!WaveSpawner.Instance.gameStarted)
+        {
+            BuildManager.Instance.message.PlayMessage("Cannot plant until game starts!", _target.transform, Color.white);
+            return;
+        }
         if (_target == target)
         {
             Hide();
