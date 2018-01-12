@@ -76,7 +76,7 @@ public class Turret : MonoBehaviour
     [Space(10)]
     public List<Debuff> debuffList = new List<Debuff>();
 
-    public GameObject emptyPlaceHolder; //TODO: this is so stupid honestly
+    public GameObject emptyPlaceHolder;
 
     // Use this for initialization
     void Start()

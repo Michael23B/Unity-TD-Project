@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject graphics;
 
-    //bool fpCamMode = false;
-
     private void Start()
     {
         sceneCamera = Camera.main;
@@ -56,15 +54,6 @@ public class PlayerController : MonoBehaviour {
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.activeSceneChanged += DestroyOnMenuScreen;
-    }
-
-    void DestroyOnMenuScreen(Scene oldScene, Scene newScene)
-    {
-        if (newScene.buildIndex != oldScene.buildIndex) //0 == "Main Menu" (could compare scene name instead)
-        {
-            Destroy(this);
-        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -83,7 +72,6 @@ public class PlayerController : MonoBehaviour {
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.activeSceneChanged -= DestroyOnMenuScreen;
     }
 
     private void Update()
@@ -144,7 +132,6 @@ public class PlayerController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            //ToggleCamera(!sceneCamera.isActiveAndEnabled);
             ToggleTacticalUI();
         }
 
@@ -238,7 +225,6 @@ public class PlayerController : MonoBehaviour {
         {
             Cursor.lockState = CursorLockMode.None;
             motor.transform.rotation = Quaternion.identity;
-            //graphics.transform.rotation = Quaternion.identity;
         }
     }
 
@@ -254,7 +240,6 @@ public class PlayerController : MonoBehaviour {
         Cursor.visible = (true);
         motor.transform.rotation = Quaternion.identity;
         graphics.transform.rotation = Quaternion.identity;
-        //fpCamMode = false;
     }
     #endregion
     #region Particle test (ss3)

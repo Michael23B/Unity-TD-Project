@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour {
     public GameObject travelEffect;
     private ParticleSystem travelEffectPS;
     private float damage = 50f;
+    public bool reducedByArmor = false;
 
     [Header("Debuffs")]
     public Debuff[] debuffs;
@@ -99,7 +100,7 @@ public class Bullet : MonoBehaviour {
             {
                 BuffHelper.AddDebuff(e, debuff);
             }
-            e.TakeDamage(damage);
+            e.TakeDamage(damage, reducedByArmor);
         }
     }
 

@@ -100,6 +100,7 @@ MonoBehaviour:
   impactEffect: {fileID: 1895260083416092, guid: d5af4bbd65cef2d409443320fd7eb0b4,
     type: 2}
   travelEffect: {fileID: 0}
+  reducedByArmor: 1
   debuffs: []
 --- !u!135 &135186040349639490
 SphereCollider:

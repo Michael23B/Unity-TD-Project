@@ -34,6 +34,8 @@ public class Enemy : MonoBehaviour
 
     public int bounty = 25;
 
+    public bool armored = false;
+
     public int coreDamage = 1;
 
     [HideInInspector]
@@ -63,7 +65,6 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public bool ghost = false;
 
-    [HideInInspector]
     public int managerID;   //ID to send to other players when the local player spawns an enemy
 
     public GameObject graphics;
@@ -99,12 +100,13 @@ public class Enemy : MonoBehaviour
         if (enemyMovement == null) enemyMovement = GetComponent<EnemyMovement>();
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(float amount, bool reducedByArmor = false)
     {
         if (ghost) return;
         if (health <= 0f) return; //already dead, don't call die() more than once
 
-        if(amount > 0) amount *= damageMulti;   //don't reduce healing
+        if (reducedByArmor && armored) amount /= 2; //armored enemies reduce non armor piercing damage by half
+        if (amount > 0) amount *= damageMulti;   //don't reduce healing
 
         if (useShield && shield != 0f && amount > 0f)   //don't heal the shield
         {

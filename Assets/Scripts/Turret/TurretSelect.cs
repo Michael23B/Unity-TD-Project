@@ -151,6 +151,7 @@ public class TurretSelect : MonoBehaviour {
                 turretInfoDesc.text += "\n<color=green>Buff Type: " + turret.GetStat(FetchStat.DebuffType) + "</color>\n";
             }
         }
+        if (turret.overrideFieldArmorWeak) turretInfoDesc.text += "\n<color=red>Ineffective vs armor</color>\n";
         if (turret.overrideFieldDamage == "") turretInfoDesc.text += "\nDamage: " + turret.GetStat(FetchStat.Damage);
         else turretInfoDesc.text += "\nDamage: " + turret.overrideFieldDamage;
 

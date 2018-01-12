@@ -26,6 +26,7 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
     [Space(10)]
     public string overrideFieldDamage = "";
     public string overrideFieldDebuffType = "";
+    public bool overrideFieldArmorWeak = false;
 
     private Spawn prefabSpawn = null;
     private Bullet prefabBullet = null;

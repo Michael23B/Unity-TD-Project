@@ -48,6 +48,13 @@ public class PauseMenu : MonoBehaviour {
         sceneFader.FadeTo(menuSceneName);
     }
 
+    public void Quit()
+    {
+        Debug.Log("Quitting...");
+        Network.Disconnect(200);
+        Application.Quit();
+    }
+
     public void CallRetry()
     {
         WaveSpawner.Instance.commands.CmdResetLevel();

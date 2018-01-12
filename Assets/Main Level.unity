@@ -413,6 +413,9 @@ MonoBehaviour:
   - {fileID: 1150643718877460, guid: d53999bb15aa00742bbff5cdacbee787, type: 2}
   - {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
   - {fileID: 1150643718877460, guid: 7491199b45538154ea45f3b6cff29afd, type: 2}
+  - {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+  - {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+  - {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
 --- !u!1 &25
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1077,7 @@ GameObject:
   - component: {fileID: 1098}
   - component: {fileID: 973}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23682,6 +23685,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1108
@@ -23714,6 +23718,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1109
@@ -23746,6 +23751,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1110
@@ -23778,6 +23784,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1111
@@ -23832,6 +23839,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1113
@@ -23864,6 +23872,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1114
@@ -23896,6 +23905,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1115
@@ -23928,6 +23938,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1116
@@ -24061,6 +24072,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1120
@@ -24093,6 +24105,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1121
@@ -24125,6 +24138,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1122
@@ -24157,6 +24171,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1123
@@ -24189,6 +24204,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1124
@@ -24252,15 +24268,15 @@ MonoBehaviour:
   enemiesAlive: 0
   waves:
   - wave:
-    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
       count: 1
       spawnRate: 0.9
       waitTime: 3
-    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
       count: 1
       spawnRate: 1.1
       waitTime: 4
-    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
       count: 1
       spawnRate: 2
       waitTime: 1
@@ -24524,6 +24540,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1132
@@ -24635,6 +24652,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1135
@@ -24667,6 +24685,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1136
@@ -24699,6 +24718,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1137
@@ -24810,6 +24830,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1141
@@ -24886,6 +24907,7 @@ MonoBehaviour:
     displayDesc: Fires fast with average damage.
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 1
   - prefab: {fileID: 1273892611175448, guid: 8a9704c47ae98344dad3c3facb190670, type: 2}
     cost: 175
     upgradedPrefab: {fileID: 1273892611175448, guid: 108821c09d7cf0f4b82265ce077e1755,
@@ -24899,6 +24921,7 @@ MonoBehaviour:
     displayDesc: High AOE damage.
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 1
   - prefab: {fileID: 1507746948647926, guid: c3ffd00eb8eb0ff4da111bc99bfe510b, type: 2}
     cost: 150
     upgradedPrefab: {fileID: 1507746948647926, guid: 3319b3d74a71da848b5cfb235323304d,
@@ -24912,6 +24935,7 @@ MonoBehaviour:
     displayDesc: Slows and damages over time.
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1687727007058188, guid: af7966a341c63ba46a18f32fbd4c8839, type: 2}
     cost: 200
     upgradedPrefab: {fileID: 1687727007058188, guid: e553c1ff5e0fdb84b9105ae18fbfd7b8,
@@ -24925,6 +24949,7 @@ MonoBehaviour:
     displayDesc: No damage, but can freeze enemies in an AOE.
     overrideFieldDamage: 0
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1433889198367424, guid: 6aefc678f931d7144980d89c9b30616d, type: 2}
     cost: 90
     upgradedPrefab: {fileID: 1433889198367424, guid: b655bd6503960604c9a9eb84f855ec20,
@@ -24938,6 +24963,7 @@ MonoBehaviour:
     displayDesc: High damage over time. Has an AOE effect when upgraded.
     overrideFieldDamage: 150 over 3 seconds
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1687727007058188, guid: aa1904a32ea65b7419a845ba453f5e0c, type: 2}
     cost: 225
     upgradedPrefab: {fileID: 1687727007058188, guid: a0a27ce4ad13a4a4d8f359e0639023cf,
@@ -24951,6 +24977,7 @@ MonoBehaviour:
     displayDesc: Buffs the attack speed of turrets around it.
     overrideFieldDamage: N/A
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1433889198367424, guid: 5a4c7200f024ad44192958a47e867f40, type: 2}
     cost: 250
     upgradedPrefab: {fileID: 1905667894733756, guid: 982a60d8e38ff0d4e880de5a9c908af1,
@@ -24964,6 +24991,7 @@ MonoBehaviour:
     displayDesc: Forces an enemy to run away. Amplifies enemy damage taken when upgraded.
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1958084846982880, guid: 52d89588298570d4fa0fa668c621a939, type: 2}
     cost: 1000
     upgradedPrefab: {fileID: 1958084846982880, guid: 685bc6454dcc80a469d296435037e9aa,
@@ -24977,6 +25005,7 @@ MonoBehaviour:
     displayDesc: My grandfather's deck has no pathetic turrets.
     overrideFieldDamage: 300
     overrideFieldDebuffType: Stun / Slow
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1507746948647926, guid: 3e8b9b7c2df0b374f99d36a4735a1975, type: 2}
     cost: 250
     upgradedPrefab: {fileID: 1507746948647926, guid: d579729c36f0f4d49ad3a3da1daaa7d4,
@@ -24990,6 +25019,7 @@ MonoBehaviour:
     displayDesc: Chains to multiple enemies and shocks them briefly.
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1433889198367424, guid: 55a19b5a1a46caf4e82e909d9860f429, type: 2}
     cost: 350
     upgradedPrefab: {fileID: 1433889198367424, guid: 2fe7ac3df678b6848b7a66b6bbcbb35a,
@@ -25003,6 +25033,7 @@ MonoBehaviour:
     displayDesc: Enemies targetted by this tower will take increased damage.
     overrideFieldDamage: 60
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   - prefab: {fileID: 1687727007058188, guid: 38cb14dc9c3a32c48a510d779cc9de47, type: 2}
     cost: 225
     upgradedPrefab: {fileID: 1687727007058188, guid: a846b4d4c0182ac4b8ecba03142bff96,
@@ -25017,6 +25048,7 @@ MonoBehaviour:
       ones.
     overrideFieldDamage: 25 (175 shield damage)
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   buttons: []
 --- !u!114 &1144
 MonoBehaviour:
@@ -25048,6 +25080,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1145
@@ -25080,6 +25113,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1146
@@ -25112,6 +25146,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1147
@@ -25144,6 +25179,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1150
@@ -25209,6 +25245,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1155
@@ -25241,6 +25278,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1156
@@ -25306,6 +25344,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1158
@@ -25338,6 +25377,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1159
@@ -25370,6 +25410,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1160
@@ -25402,6 +25443,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1163
@@ -25434,6 +25476,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1164
@@ -25500,6 +25543,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1166
@@ -25532,6 +25576,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1167
@@ -25564,6 +25609,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1168
@@ -25643,6 +25689,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1171
@@ -25675,6 +25722,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1172
@@ -25707,6 +25755,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1173
@@ -25773,6 +25822,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1175
@@ -25843,7 +25893,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 84}
-        m_MethodName: Menu
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25912,6 +25962,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1179
@@ -25971,6 +26022,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1181
@@ -26003,6 +26055,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1182
@@ -26215,6 +26268,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1188
@@ -26247,6 +26301,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1190
@@ -26279,6 +26334,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1191
@@ -26311,6 +26367,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1192
@@ -26561,6 +26618,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1203
@@ -26621,6 +26679,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1205
@@ -26653,6 +26712,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1206
@@ -26685,6 +26745,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1207
@@ -26717,6 +26778,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1208
@@ -26749,6 +26811,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1209
@@ -26781,6 +26844,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1210
@@ -26813,6 +26877,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1211
@@ -26845,6 +26910,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1212
@@ -26877,6 +26943,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1213
@@ -26937,6 +27004,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1215
@@ -26997,6 +27065,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1217
@@ -27029,6 +27098,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1218
@@ -27061,6 +27131,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1219
@@ -27130,6 +27201,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1222
@@ -27162,6 +27234,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1223
@@ -27194,6 +27267,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1224
@@ -27226,6 +27300,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1225
@@ -27258,6 +27333,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1226
@@ -27290,6 +27366,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1227
@@ -27322,6 +27399,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1228
@@ -27354,6 +27432,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1229
@@ -27386,6 +27465,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1230
@@ -27418,6 +27498,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1231
@@ -27450,6 +27531,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1232
@@ -27482,6 +27564,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1234
@@ -27514,6 +27597,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1235
@@ -27546,6 +27630,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1236
@@ -27578,6 +27663,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1237
@@ -27610,6 +27696,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1238
@@ -27642,6 +27729,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1239
@@ -27674,6 +27762,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1240
@@ -27706,6 +27795,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1241
@@ -27738,6 +27828,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1242
@@ -27770,6 +27861,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1243
@@ -27816,6 +27908,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1245
@@ -27848,6 +27941,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1246
@@ -27880,6 +27974,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1247
@@ -28013,6 +28108,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1251
@@ -28045,6 +28141,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1252
@@ -28077,6 +28174,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1253
@@ -28109,6 +28207,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1254
@@ -28141,6 +28240,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1255
@@ -28208,6 +28308,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1257
@@ -28240,6 +28341,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1258
@@ -28306,6 +28408,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1260
@@ -28338,6 +28441,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1261
@@ -28370,6 +28474,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1263
@@ -28402,6 +28507,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1266
@@ -28535,6 +28641,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1271
@@ -28567,6 +28674,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1272
@@ -28599,6 +28707,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1273
@@ -28631,6 +28740,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1274
@@ -28674,6 +28784,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1276
@@ -28706,6 +28817,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1277
@@ -28738,6 +28850,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1278
@@ -28770,6 +28883,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1279
@@ -28830,6 +28944,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1282
@@ -28908,6 +29023,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1285
@@ -28940,6 +29056,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1286
@@ -28972,6 +29089,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1287
@@ -29004,6 +29122,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1289
@@ -29091,6 +29210,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1292
@@ -29123,6 +29243,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1293
@@ -29186,6 +29307,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1295
@@ -29218,6 +29340,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1296
@@ -29250,6 +29373,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1297
@@ -29282,6 +29406,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1298
@@ -29348,6 +29473,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1300
@@ -29380,6 +29506,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1301
@@ -29412,6 +29539,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1302
@@ -29444,6 +29572,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1303
@@ -29476,6 +29605,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1304
@@ -29508,6 +29638,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1305
@@ -29540,6 +29671,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1308
@@ -29572,6 +29704,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1309
@@ -29638,6 +29771,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1311
@@ -29670,6 +29804,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1312
@@ -29702,6 +29837,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1313
@@ -29761,6 +29897,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1316
@@ -29793,6 +29930,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1317
@@ -29859,6 +29997,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1319
@@ -29891,6 +30030,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1320
@@ -29951,6 +30091,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1322
@@ -30200,6 +30341,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1331
@@ -30232,6 +30374,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1332
@@ -30264,6 +30407,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1333
@@ -30314,6 +30458,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1335
@@ -30346,6 +30491,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1336
@@ -30378,6 +30524,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1337
@@ -30410,6 +30557,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1338
@@ -30470,6 +30618,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1340
@@ -30502,6 +30651,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1341
@@ -30534,6 +30684,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1343
@@ -30566,6 +30717,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1344
@@ -30598,6 +30750,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1346
@@ -30630,6 +30783,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1347
@@ -30662,6 +30816,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1348
@@ -30694,6 +30849,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1350
@@ -30726,6 +30882,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1351
@@ -30760,7 +30917,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: Quit
 --- !u!114 &1352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30791,6 +30948,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1353
@@ -30823,6 +30981,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1354
@@ -30888,6 +31047,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!114 &1356
@@ -30987,6 +31147,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2466180
@@ -31109,6 +31270,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &6333305
@@ -31231,6 +31393,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &14770879
@@ -31353,6 +31516,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &15203795
@@ -31475,6 +31639,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &44908348
@@ -31597,6 +31762,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &53238137
@@ -31765,6 +31931,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &63183693
@@ -31887,6 +32054,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &76050302
@@ -32087,6 +32255,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &82172087
@@ -32311,6 +32480,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &86841561
@@ -32433,6 +32603,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &89645417
@@ -32555,6 +32726,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &90546336
@@ -32787,6 +32959,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &97350580
@@ -32909,6 +33082,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &97577326
@@ -33031,6 +33205,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &106107383
@@ -33263,6 +33438,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &117378005
@@ -33385,6 +33561,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &123626618
@@ -33660,6 +33837,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &133889568
@@ -33904,6 +34082,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &139138819
@@ -34058,6 +34237,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &160164063
@@ -34321,6 +34501,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &177123552
@@ -34443,6 +34624,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &186596300
@@ -34565,6 +34747,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &189228793
@@ -34776,6 +34959,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &212284486
@@ -34898,6 +35082,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &214695288
@@ -35169,6 +35354,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &224170873
@@ -35788,6 +35974,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &269707335
@@ -35910,6 +36097,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &275543464
@@ -36032,6 +36220,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &275845388
@@ -36184,6 +36373,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &302661858
@@ -36380,6 +36570,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &305164859
@@ -36502,6 +36693,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &306732652
@@ -36851,6 +37043,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &340909302
@@ -36973,6 +37166,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &349905222
@@ -37095,6 +37289,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &351698628
@@ -37291,6 +37486,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &359330422
@@ -37487,6 +37683,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &372104756
@@ -37609,6 +37806,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &372743127
@@ -37731,6 +37929,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &378485525
@@ -37853,6 +38052,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &398132961
@@ -37975,6 +38175,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &398403886
@@ -38097,6 +38298,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &412743281
@@ -38823,6 +39025,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &438984638
@@ -38945,6 +39148,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &439678297
@@ -39202,6 +39406,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &455850070
@@ -39324,6 +39529,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &456173456
@@ -39517,6 +39723,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &482503114
@@ -39708,6 +39915,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &496701497
@@ -39830,6 +40038,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &500345784
@@ -39952,6 +40161,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &503345006
@@ -40104,6 +40314,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &532633458
@@ -40377,6 +40588,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &545226243
@@ -40736,6 +40948,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &586070049
@@ -41117,6 +41330,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &622604216
@@ -41450,6 +41664,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &627246886
@@ -41572,6 +41787,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &633177730
@@ -41694,6 +41910,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &634584743
@@ -41856,6 +42073,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &646150173
@@ -41978,6 +42196,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &660618798
@@ -42100,6 +42319,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &662872650
@@ -42300,6 +42520,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &669259580
@@ -42422,6 +42643,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &676939080
@@ -42757,6 +42979,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &691062336
@@ -42879,6 +43102,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &697333833
@@ -43111,6 +43335,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &725356500
@@ -43233,6 +43458,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &730728426
@@ -43355,6 +43581,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &736016806
@@ -43569,6 +43796,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &755235228
@@ -43843,6 +44071,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &763714090
@@ -43965,6 +44194,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &766832081
@@ -44117,6 +44347,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &769609049
@@ -44239,6 +44470,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &770989898
@@ -44466,6 +44698,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &780460415
@@ -44588,6 +44821,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &783296387
@@ -44778,6 +45012,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &788325781
@@ -44931,6 +45166,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &794498854
@@ -45053,6 +45289,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &796105975
@@ -45323,6 +45560,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &809716259
@@ -45445,6 +45683,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &810188486
@@ -45568,7 +45807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: 0.000014600312}
+  m_AnchoredPosition: {x: 4.593333e-10, y: -0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -45749,6 +45988,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &827825261
@@ -45871,6 +46111,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &829674731
@@ -45993,6 +46234,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &829754697
@@ -46176,6 +46418,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &833947489
@@ -46298,6 +46541,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &853083466
@@ -46756,6 +47000,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &907749156
@@ -46987,6 +47232,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &925895803
@@ -47336,6 +47582,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &934240368
@@ -47552,6 +47799,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &946058793
@@ -47674,6 +47922,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &949565982
@@ -47796,6 +48045,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &958547021
@@ -48177,6 +48427,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &985884677
@@ -48299,6 +48550,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &995924688
@@ -52091,6 +52343,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1034857643
@@ -52213,6 +52466,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1041059233
@@ -52335,6 +52589,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1043273062
@@ -52567,6 +52822,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1048095772
@@ -52689,6 +52945,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1052803028
@@ -52885,6 +53142,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1074114378
@@ -53007,6 +53265,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1077842967
@@ -53129,6 +53388,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1086067652
@@ -53251,6 +53511,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1087288011
@@ -53373,6 +53634,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1088705944
@@ -53495,6 +53757,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1089408267
@@ -53767,6 +54030,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1118465464
@@ -53993,6 +54257,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1138388505
@@ -54115,6 +54380,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1140273449
@@ -54237,6 +54503,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1156406026
@@ -54389,6 +54656,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1160385678
@@ -54511,6 +54779,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1160731615
@@ -54703,6 +54972,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1168523219
@@ -55033,6 +55303,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1184466689
@@ -55277,6 +55548,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1187472057
@@ -55509,6 +55781,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1199885848
@@ -55631,6 +55904,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1201891622
@@ -55753,6 +56027,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1202156906
@@ -55875,6 +56150,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1203996763
@@ -55997,6 +56273,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1212289129
@@ -56119,6 +56396,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1212348531
@@ -56241,6 +56519,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1213583239
@@ -56363,6 +56642,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1221854956
@@ -56485,6 +56765,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1224299003
@@ -56607,6 +56888,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1232027423
@@ -56729,6 +57011,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1241080759
@@ -56851,6 +57134,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1242102951
@@ -56973,6 +57257,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1245824325
@@ -57166,6 +57451,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1260892931
@@ -57288,6 +57574,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1263716540
@@ -57410,6 +57697,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1269546905
@@ -57532,6 +57820,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1283579724
@@ -57764,6 +58053,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1290898492
@@ -57886,6 +58176,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1305504693
@@ -58008,6 +58299,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1308485531
@@ -58130,6 +58422,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1313877885
@@ -58380,6 +58673,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1326353997
@@ -58502,6 +58796,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1328108823
@@ -58617,7 +58912,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2041626114}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -58771,6 +59066,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1333173635
@@ -58893,6 +59189,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1338452219
@@ -59015,6 +59312,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1342113139
@@ -59210,6 +59508,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1346772318
@@ -59388,6 +59687,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1364632425
@@ -59510,6 +59810,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1371249764
@@ -59751,6 +60052,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1373632142
@@ -59979,6 +60281,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1385707400
@@ -60101,6 +60404,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1385918201
@@ -60450,6 +60754,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1399696642
@@ -60572,6 +60877,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1404034714
@@ -60769,6 +61075,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1405615732
@@ -61039,6 +61346,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1418753843
@@ -61161,6 +61469,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1420275260
@@ -61283,6 +61592,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1425902942
@@ -61405,6 +61715,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1436691074
@@ -61527,6 +61838,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1437684487
@@ -61810,6 +62122,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1462957866
@@ -62152,6 +62465,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1479468726
@@ -62304,6 +62618,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1501061731
@@ -62426,6 +62741,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1502289005
@@ -62578,6 +62894,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1514841540
@@ -62773,6 +63090,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1529958238
@@ -62999,6 +63317,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1542662476
@@ -63225,6 +63544,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1549169363
@@ -63555,6 +63875,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1560096109
@@ -63677,6 +63998,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1566935463
@@ -63888,6 +64210,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1579677360
@@ -64010,6 +64333,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1592410226
@@ -64132,6 +64456,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1594541526
@@ -64254,6 +64579,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1598453401
@@ -64376,6 +64702,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1600871561
@@ -64498,6 +64825,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1608873404
@@ -64791,6 +65119,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1657075993
@@ -64913,6 +65242,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1658181129
@@ -65035,6 +65365,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1665267194
@@ -65274,6 +65605,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1673018117
@@ -65485,6 +65817,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1683879019
@@ -65682,6 +66015,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1695942504
@@ -65740,46 +66074,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695942501}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1696102904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1696102905}
-  - component: {fileID: 1696102906}
-  m_Layer: 0
-  m_Name: CleanUpScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1696102905
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1696102904}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1696102906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1696102904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208f4d41df7e5554c8f4232f8ea9065e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1699662225
 GameObject:
   m_ObjectHideFlags: 0
@@ -65844,6 +66138,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1699662228
@@ -66046,6 +66341,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1705600698
@@ -66168,6 +66464,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1714592446
@@ -66665,6 +66962,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1743528843
@@ -66787,6 +67085,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1745883815
@@ -67051,6 +67350,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1769225228
@@ -67557,6 +67857,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1804605859
@@ -67768,6 +68069,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1836089712
@@ -67890,6 +68192,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1837879033
@@ -68086,6 +68389,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1855654518
@@ -68208,6 +68512,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1863231537
@@ -68330,6 +68635,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1865593351
@@ -68452,6 +68758,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1879779964
@@ -68574,6 +68881,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1889189050
@@ -69134,6 +69442,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1924764957
@@ -69256,6 +69565,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1927938419
@@ -69453,6 +69763,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1938792316
@@ -69575,6 +69886,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1940673131
@@ -69697,6 +70009,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1945433799
@@ -69819,6 +70132,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1948105713
@@ -69941,6 +70255,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1962900059
@@ -70063,6 +70378,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1971695508
@@ -70215,6 +70531,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1984335370
@@ -70337,6 +70654,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1989982732
@@ -70459,6 +70777,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &1998672547
@@ -70581,6 +70900,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2027260274
@@ -70703,6 +71023,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2037439821
@@ -70893,6 +71214,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2042507999
@@ -71125,6 +71447,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2049134615
@@ -71247,6 +71570,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2057957726
@@ -71582,6 +71906,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2078032152
@@ -71704,6 +72029,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2079395824
@@ -72122,6 +72448,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2104171530
@@ -72244,6 +72571,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2107509779
@@ -72366,6 +72694,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2108573429
@@ -72561,6 +72890,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2116942131
@@ -72683,6 +73013,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2117260231
@@ -72972,6 +73303,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2132796560
@@ -73094,6 +73426,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2136250105
@@ -73290,6 +73623,7 @@ MonoBehaviour:
     displayDesc: 
     overrideFieldDamage: 
     overrideFieldDebuffType: 
+    overrideFieldArmorWeak: 0
   isUpgraded: 0
   nodeID: 0
 --- !u!23 &2141276318

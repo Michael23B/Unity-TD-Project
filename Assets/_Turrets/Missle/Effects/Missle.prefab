@@ -128,10 +128,5 @@ MonoBehaviour:
   impactEffect: {fileID: 1225913238992818, guid: c5424e5c5174f2041868a322d1e1ea45,
     type: 2}
   travelEffect: {fileID: 0}
-  slow: 0
-  poison: 0
-  freeze: 0
-  heal: 0
-  amplifyDmg: 0
-  duration: 1
-  debuffEffect: {fileID: 0}
+  reducedByArmor: 1
+  debuffs: []
