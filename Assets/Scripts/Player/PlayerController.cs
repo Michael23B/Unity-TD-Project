@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-//TODO: there is a bug sometimes when switching between scene and fpcamera that makes the graphics rotation out of sync with the motor, happens only sometimes tho
+//TODO: there is a bug sometimes when switching between scene and fpcamera that makes the graphics rotation out of sync with the motor, happens only sometimes tho and i cant replicate it
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
 

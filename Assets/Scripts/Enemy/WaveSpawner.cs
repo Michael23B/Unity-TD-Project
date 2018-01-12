@@ -139,7 +139,7 @@ public class WaveSpawner : MonoBehaviour {
     {
         gameStarted = true;
         nextWaveIndex = waveIndex + 1;
-        waveIndexText.text = "WAVE " + (waveIndex + 1) + " ARRIVED";
+        waveIndexText.text = "WAVE " + (waveIndex + 1) + "/" + waveMax + " ARRIVED";
         waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
 
         playersReady = 0;
@@ -166,7 +166,7 @@ public class WaveSpawner : MonoBehaviour {
 
         waveMulti = CalcWaveMulti();
 
-        waveIndexText.text = "WAVE " + (waveIndex + 1) + " INCOMING";
+        waveIndexText.text = "WAVE " + (waveIndex + 1) + "/" + waveMax + "INCOMING";
         waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
     }
 
@@ -235,7 +235,7 @@ public class WaveSpawner : MonoBehaviour {
         for (int i = 0; i < arr.Length; i++)
         {
             T tmp = arr[i];
-            int r = Random.Range(i, arr.Length);    //rand.GetNextRandom(arr.Length-1);
+            int r = Random.Range(i, arr.Length);
             arr[i] = arr[r];
             arr[r] = tmp;
         }
@@ -296,6 +296,17 @@ public class WaveSpawner : MonoBehaviour {
         for (int i = 0; i < waveMax; ++i)
         {
             waves[i] = enemyWaveHelper.GenerateWave(i, (4 + i));
+        }
+    }
+
+    public void CallGenerateAllWaves(int numberOfWaves) //called from joining clients to sync max waves with host or creates a new array of waves based on the new number
+    {
+        if (gameStarted) return;
+        if (numberOfWaves > 99) numberOfWaves = 99;
+        if (waveMax != numberOfWaves)
+        {
+            waveMax = numberOfWaves;
+            GenerateAllWaves();
         }
     }
 }

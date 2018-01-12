@@ -12,6 +12,7 @@ public class LocalPlayerCommands : NetworkBehaviour
         shop = FindObjectOfType<Shop>();
         if (isLocalPlayer)
         {
+            CmdMaxWaveUpdate(WaveSpawner.Instance.waveMax);
             CmdUpdatePlayerCount();
             WaveSpawner.Instance.playerID = connectionToServer.connectionId;
         }
@@ -160,10 +161,17 @@ public class LocalPlayerCommands : NetworkBehaviour
     {
         RpcHarvest(nodeID);
     }
+
     [Command]
     public void CmdDestroyResource(int resourceID)
     {
         RpcDestroyResource(resourceID);
+    }
+
+    [Command]
+    public void CmdMaxWaveUpdate(int numberOfWaves)
+    {
+        RpcMaxWaveUpdate(numberOfWaves);
     }
 
     //RPCs
@@ -339,6 +347,12 @@ public class LocalPlayerCommands : NetworkBehaviour
                 return;
             }
         }
+    }
+
+    [ClientRpc]
+    void RpcMaxWaveUpdate(int numberOfWaves)
+    {
+        WaveSpawner.Instance.CallGenerateAllWaves(numberOfWaves);
     }
     #endregion
 }

@@ -36,6 +36,12 @@ public class Resource : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        if (!WaveSpawner.Instance.gameStarted)
+        {
+            BuildManager.Instance.message.PlayMessage("Wait until game has started to harvest!", transform, Color.white, 1.25f, 0.5f, 2);
+            Destroy(Instantiate(breakingEffect, transform.position, Quaternion.identity), 2f);
+            return;
+        }
         if (--hitsToDestroy == 0)
         {
             Destroy(Instantiate(hitEffect, transform.position, Quaternion.identity), hitEffectLife);

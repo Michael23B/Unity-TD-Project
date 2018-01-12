@@ -548,7 +548,7 @@ Rigidbody:
   m_GameObject: {fileID: 1088453242561702}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: Infinity
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0

@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
-//this was made with single player in mind, need fix a lot for mp
+using UnityEngine.UI;
+
 public class PauseMenu : MonoBehaviour {
 
     public GameObject ui;
     public string menuSceneName = "Main Menu";
     public SceneFader sceneFader;
     NetworkManagerHUD networkHUD;
+    public InputField wavesInput;
 
     private void Start()
     {
@@ -25,15 +27,6 @@ public class PauseMenu : MonoBehaviour {
     public void Toggle()
     {
         ui.SetActive(!ui.activeSelf);
-        /*  Don't pause time in multiplayer (TODO: let it pause if 1 player)
-        if(ui.activeSelf)
-        {
-            Time.timeScale = 0f;
-        } else
-        {
-            Time.timeScale = 1f;
-        }
-        */
     }
 
     public void Retry()
@@ -70,13 +63,14 @@ public class PauseMenu : MonoBehaviour {
         networkHUD.gameObject.SetActive(b);
     }
 
-    private void OnPlayerConnected(NetworkPlayer player)
+    public void CallMaxWaveUpdate()
     {
-        ToggleNetworkHUD(false);
-    }
+        if (WaveSpawner.Instance.gameStarted) return;
 
-    private void OnPlayerDisconnected(NetworkPlayer player)
-    {
-        ToggleNetworkHUD(true);
+        int numberOfWaves = 0;
+        numberOfWaves = int.Parse(wavesInput.textComponent.text);
+        if (numberOfWaves <= 0) return;
+
+        WaveSpawner.Instance.commands.CmdMaxWaveUpdate(numberOfWaves);
     }
 }
