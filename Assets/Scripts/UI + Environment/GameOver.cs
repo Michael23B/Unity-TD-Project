@@ -24,4 +24,11 @@ public class GameOver : MonoBehaviour {
     {
         sceneFader.FadeTo(menuSceneName);
     }
+
+    public void Quit()
+    {
+        Debug.Log("Quitting...");
+        Network.Disconnect(200);
+        Application.Quit();
+    }
 }

@@ -17,7 +17,6 @@ public class WaveSpawner : MonoBehaviour {
     public Transform spawnPoint;
     
     [HideInInspector]
-    public EnemyWave[] ghostWaves;
     public Transform ghostSpawnPoint;
 
     [HideInInspector]
@@ -50,7 +49,6 @@ public class WaveSpawner : MonoBehaviour {
 
     [Space(10)]
     public Material ghostMaterial;
-    public bool ghostOnly = false;
 
     public Camera sceneCamera;
     public TacticalCamera tacticalCamera;
@@ -60,6 +58,9 @@ public class WaveSpawner : MonoBehaviour {
     public Text waveIndexText;
 
     public bool gameStarted = false;
+
+    public int waveMax;
+    public EnemyWaveHelper enemyWaveHelper;
 
     private void Awake()
     {
@@ -75,14 +76,15 @@ public class WaveSpawner : MonoBehaviour {
         if (NetworkServer.connections.Count != 0) waitForPlayersCount = NetworkServer.connections.Count;
 
         if (cleanUpScene) CleanUpEnemies();
-        ghostWaves = waves; //TODO: take this out once im keen to remove the old ghost stuff
+        //ghostWaves = waves; //TODO: take this out once im keen to remove the old ghost stuff
         InvokeRepeating("UpdateGhostPositions", 0f, 5f);
+        GenerateAllWaves();
     }
 
     private void Update()
     {
         enemyCountText.text = enemiesAlive.ToString();
-
+        if (PlayerStats.Instance.lives <= 0) enabled = false;
         if (waveActive) return;
         if (enemiesAlive > 0) return;
 
@@ -93,11 +95,18 @@ public class WaveSpawner : MonoBehaviour {
             finishedWaveAndReady = false;
         }
         if (playersReady < waitForPlayersCount) return;
+
+        if (waveIndex >= waveMax)
+        {
+            BuildManager.Instance.message.PlayMessage("ALL WAVES COMPLETE!", transform, Color.green, 0.1f, 1, 2);
+            enabled = false;
+            return;
+        }
+
         if (countdown <= 0f)
         {
             buildTimeToggle();
-            if (!ghostOnly) StartCoroutine(SpawnWave());
-            //StartCoroutine(SpawnGhostWave());
+            StartCoroutine(SpawnWave());
 
             countdown = waveCountdownTimer;
             return;
@@ -131,10 +140,10 @@ public class WaveSpawner : MonoBehaviour {
         gameStarted = true;
         nextWaveIndex = waveIndex + 1;
         waveIndexText.text = "WAVE " + (waveIndex + 1) + " ARRIVED";
-        waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti) + "x";
+        waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
 
         playersReady = 0;
-        ResourceSpawner.Instance.SpawnResources(25);
+        if (ResourceSpawner.Instance.resources.Count < 100) ResourceSpawner.Instance.SpawnResources(25);
         PlayerStats.Instance.rounds++;
 
         EnemyWave currentWave = waves[waveIndex % waves.Length];
@@ -155,40 +164,17 @@ public class WaveSpawner : MonoBehaviour {
         waveActive = false;
         finishedWaveAndReady = true;
 
-        waveMulti = waveIndex * 0.1f;
+        waveMulti = CalcWaveMulti();
 
         waveIndexText.text = "WAVE " + (waveIndex + 1) + " INCOMING";
-        waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti) + "x";
+        waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
     }
-    /*
-    IEnumerator SpawnGhostWave()
+
+    float CalcWaveMulti()    //difficulty curve of the game
     {
-        EnemyWave currentWave = ghostWaves[waveIndex % waves.Length];   //ghostwaves will be populated by the other player 
-
-        if (currentWave.randomOrder) ShuffleArr(currentWave.wave);
-
-        for (int i = 0; i < currentWave.wave.Length; ++i)
-        {
-            for (int n = 0; n < currentWave.wave[i].count; ++n)
-            {
-                SpawnGhost(currentWave.wave[i].enemy);
-                yield return new WaitForSeconds(1f / currentWave.wave[i].spawnRate);
-            }
-            yield return new WaitForSeconds(currentWave.wave[i].waitTime);
-        }
-        waveIndex++;
-        waveActive = false;
-        finishedWaveAndReady = true;
-
-        waveMulti = waveIndex * 0.1f;
-
-        if (waveIndex == waves.Length * 5)
-        {
-            Debug.Log("Level Complete!");
-            enabled = false;
-        }
+        return (waveIndex * (Mathf.Sqrt(waveIndex))) * 0.1f;
     }
-    */
+
     void SpawnEnemy(GameObject enemy)
     {
         float rX = Random.Range(-1, 1); //rand.GetNextRandom(1f, false);
@@ -273,19 +259,15 @@ public class WaveSpawner : MonoBehaviour {
     public void AlternateSpawner()
     {
         Transform spawnTemp;
-        EnemyWave[] wavesTemp = new EnemyWave[waves.Length];
         Transform[] waypointsTemp = new Transform[Waypoints.points.Length];
-        //copy to temp
-        waves.CopyTo(wavesTemp, 0);
+
         spawnTemp = spawnPoint;
         Waypoints.points.CopyTo(waypointsTemp, 0);
-        //make alternate paths, spawnpoints and waves the main
+
         spawnPoint = ghostSpawnPoint;
-        ghostWaves.CopyTo(waves, 0);
         WaypointsAlternate.pointsAlternate.CopyTo(Waypoints.points, 0);
-        //copy main back to alternate
+
         ghostSpawnPoint = spawnTemp;
-        wavesTemp.CopyTo(ghostWaves, 0);
         waypointsTemp.CopyTo(WaypointsAlternate.pointsAlternate, 0);
     }
 
@@ -306,5 +288,14 @@ public class WaveSpawner : MonoBehaviour {
         }
 
         commands.CmdUpdateGhostPositions(playerID, state);
+    }
+
+    void GenerateAllWaves()
+    {
+        waves = new EnemyWave[waveMax];
+        for (int i = 0; i < waveMax; ++i)
+        {
+            waves[i] = enemyWaveHelper.GenerateWave(i, (4 + i));
+        }
     }
 }

@@ -293,7 +293,7 @@ MonoBehaviour:
   minSpeed: 1
   startHealth: 50
   health: 0
-  startShield: 3000
+  startShield: 1500
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 114090846819910932}
   yOffset: 0
   ghost: 0
-  managerID: 1
+  managerID: 14
   graphics: {fileID: 1422846950320832}
 --- !u!114 &114585292175636046
 MonoBehaviour:
@@ -7391,7 +7391,7 @@ RectTransform:
   m_GameObject: {fileID: 1291967313680600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.0000029802322}
-  m_LocalScale: {x: 1.3030251, y: 0.88842607, z: 1.48071}
+  m_LocalScale: {x: 1.0684806, y: 0.72850937, z: 1.2141823}
   m_Children:
   - {fileID: 224622914115543714}
   m_Father: {fileID: 224525241408456802}
@@ -7410,7 +7410,7 @@ RectTransform:
   m_GameObject: {fileID: 1402662244942424}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0.402}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.008036001, y: 0.008036001, z: 0.008036001}
   m_Children:
   - {fileID: 224452580302773284}
   - {fileID: 224385232180850812}

@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 29}
   - component: {fileID: 38}
   - component: {fileID: 24}
+  - component: {fileID: 26}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -436,6 +437,1780 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &26
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8169b26737960646add510470773b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyGroupList:
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 8
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 10
+      spawnRate: 0.9
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 8
+      spawnRate: 1.2
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 12
+      spawnRate: 0.85
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 12
+      spawnRate: 0.8
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 10
+      spawnRate: 1.5
+      waitTime: 1.25
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 12
+      spawnRate: 1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 10
+      spawnRate: 1.4
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 4
+      spawnRate: 0.8
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 4
+      spawnRate: 0.8
+      waitTime: 2
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 12
+      spawnRate: 0.9
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 8
+      spawnRate: 1.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 13
+      spawnRate: 0.8
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 11
+      spawnRate: 0.85
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 13
+      spawnRate: 1.4
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 11
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 14
+      spawnRate: 1.2
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 10
+      spawnRate: 1.6
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 5
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 6
+      spawnRate: 0.9
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 7
+      spawnRate: 0.75
+      waitTime: 1.5
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 10
+      spawnRate: 0.6
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 6
+      spawnRate: 0.7
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 3
+      spawnRate: 2
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 3
+      spawnRate: 0.35
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 4
+      waitTime: 0
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 12
+      spawnRate: 1.2
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 14
+      spawnRate: 1.1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 10
+      spawnRate: 1.3
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 15
+      spawnRate: 0.9
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 13
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 15
+      spawnRate: 1.6
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 12
+      spawnRate: 1.6
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 18
+      spawnRate: 1.4
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 9
+      spawnRate: 3
+      waitTime: 1.5
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 6
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 8
+      spawnRate: 1.1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 12
+      spawnRate: 0.8
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 9
+      spawnRate: 0.7
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 5
+      spawnRate: 2.25
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 0.35
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 1
+      spawnRate: 6
+      waitTime: 0
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 12
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 14
+      spawnRate: 1.1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 10
+      spawnRate: 1.5
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 11
+      spawnRate: 1.3
+      waitTime: 0.3
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 13
+      spawnRate: 1.1
+      waitTime: 1.1
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 20
+      spawnRate: 1.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 8
+      spawnRate: 1.3
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 5
+      spawnRate: 2.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 8
+      spawnRate: 2
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 3
+      spawnRate: 0.3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 0.65
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 10
+      spawnRate: 0.95
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 12
+      spawnRate: 0.75
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 6
+      spawnRate: 3.5
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.4
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 2
+      spawnRate: 0.6
+      waitTime: 4.5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.3
+      waitTime: 3.5
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 12
+      spawnRate: 1.4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 14
+      spawnRate: 1.1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 11
+      spawnRate: 1.5
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 13
+      spawnRate: 1.3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.1
+      waitTime: 0.8
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 20
+      spawnRate: 1.6
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 8
+      spawnRate: 1.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 6
+      spawnRate: 2.3
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 9
+      spawnRate: 2
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 3
+      spawnRate: 0.3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 1.25
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 11
+      spawnRate: 0.95
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 14
+      spawnRate: 0.75
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 8
+      spawnRate: 3.6
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.45
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 2
+      spawnRate: 0.7
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 0.25
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 2
+      spawnRate: 0.3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 0.25
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 15
+      spawnRate: 3
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 22
+      spawnRate: 2
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 18
+      spawnRate: 2
+      waitTime: 1
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.35
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 1.3
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 12
+      spawnRate: 1.7
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 15
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 18
+      spawnRate: 1.1
+      waitTime: 0.3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 20
+      spawnRate: 1.6
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 11
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 10
+      spawnRate: 1.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 6
+      spawnRate: 2.3
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 9
+      spawnRate: 2
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 3
+      spawnRate: 0.3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 2
+      spawnRate: 0.7
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 3
+      spawnRate: 1.3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 11
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 15
+      spawnRate: 0.75
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 8
+      spawnRate: 3.6
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.45
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.7
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 0.25
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 0.4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 0.25
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 15
+      spawnRate: 3
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 22
+      spawnRate: 2
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 18
+      spawnRate: 2
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 0
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.35
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 1.3
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.7
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 15
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 1.2
+      waitTime: 0.3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 30
+      spawnRate: 2
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 11
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 10
+      spawnRate: 1.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 7
+      spawnRate: 2.3
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 10
+      spawnRate: 4
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 4
+      spawnRate: 0.7
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 3
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 5
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 11
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 15
+      spawnRate: 0.75
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 10
+      spawnRate: 3.6
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 0.45
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 0.7
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 0.25
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 0.4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 0.25
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 18
+      spawnRate: 3
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 22
+      spawnRate: 2
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 25
+      spawnRate: 2.1
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.8
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 3
+      waitTime: 6.5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 6
+      spawnRate: 0.4
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 0.6
+      waitTime: 3.6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 2
+      spawnRate: 2
+      waitTime: 4
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.35
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 1.3
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.7
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 1.75
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 25
+      spawnRate: 1.5
+      waitTime: 0.3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 30
+      spawnRate: 2.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 11
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 10
+      spawnRate: 1.5
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 8
+      spawnRate: 2.3
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 11
+      spawnRate: 4
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 6
+      spawnRate: 1.1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 12
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 17
+      spawnRate: 0.75
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 11
+      spawnRate: 3.6
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 0.45
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 0.7
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 0.4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 0.25
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 18
+      spawnRate: 4
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 22
+      spawnRate: 3
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 25
+      spawnRate: 3
+      waitTime: 0.5
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.8
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 3
+      waitTime: 6.5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 6
+      spawnRate: 0.4
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 0.6
+      waitTime: 3.6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 2
+      spawnRate: 2
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 2
+      spawnRate: 0.15
+      waitTime: 8
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 8
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 6
+      spawnRate: 2.75
+      waitTime: 2
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.35
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 18
+      spawnRate: 1.3
+      waitTime: 1.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 16
+      spawnRate: 1.7
+      waitTime: 1.5
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 1.75
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 25
+      spawnRate: 1.5
+      waitTime: 0.3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 30
+      spawnRate: 2.5
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 11
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 10
+      spawnRate: 1.5
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 8
+      spawnRate: 2.3
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 11
+      spawnRate: 4
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 6
+      spawnRate: 1.1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 12
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 17
+      spawnRate: 0.8
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 11
+      spawnRate: 3.6
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 0.45
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 0.7
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 0.4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 0.25
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 18
+      spawnRate: 4
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 22
+      spawnRate: 3
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 25
+      spawnRate: 3
+      waitTime: 0.5
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 0.8
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 3
+      spawnRate: 3
+      waitTime: 6.5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 6
+      spawnRate: 0.4
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 0.6
+      waitTime: 3.6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 2
+      spawnRate: 2
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 2
+      spawnRate: 0.15
+      waitTime: 8
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 8
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 6
+      spawnRate: 2.75
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 6
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 5
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 8
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 10
+      spawnRate: 1.7
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 2
+      spawnRate: 0.2
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 40
+      spawnRate: 3
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 8
+      spawnRate: 1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 10
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 15
+      spawnRate: 1.25
+      waitTime: 6.25
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 25
+      spawnRate: 1.75
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 15
+      spawnRate: 4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 3.75
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 25
+      spawnRate: 3
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 40
+      spawnRate: 5
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 15
+      spawnRate: 2
+      waitTime: 1.5
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 20
+      spawnRate: 1.75
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 12
+      spawnRate: 4
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 13
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 5
+      spawnRate: 2.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 4
+      spawnRate: 4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 6
+      spawnRate: 1.1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 20
+      spawnRate: 1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 17
+      spawnRate: 0.9
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 15
+      spawnRate: 4
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 0.5
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 7
+      spawnRate: 0.6
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 0.35
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 0.7
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 20
+      spawnRate: 20
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 50
+      spawnRate: 7
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 35
+      spawnRate: 10
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 2.5
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2.5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 5
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 2.1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 16
+      spawnRate: 0.5
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 8
+      spawnRate: 1.35
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 7
+      spawnRate: 2
+      waitTime: 1
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 2
+      spawnRate: 0.5
+      waitTime: 8
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 3
+      spawnRate: 0.5
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 7
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 2
+      spawnRate: 0.25
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 6
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 8
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 6
+      spawnRate: 2.75
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 6
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 5
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 8
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 10
+      spawnRate: 1.7
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 10
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 2
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 2
+      spawnRate: 0.2
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 40
+      spawnRate: 4
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 4
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 8
+      spawnRate: 1
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 10
+      waitTime: 5
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 15
+      spawnRate: 1.25
+      waitTime: 6.25
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 2
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 10
+      spawnRate: 1.5
+      waitTime: 3
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 2
+      spawnRate: 0.25
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 12
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 5
+      spawnRate: 0.8
+      waitTime: 10
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 4
+      spawnRate: 1
+      waitTime: 10
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 8
+      spawnRate: 4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 5
+      spawnRate: 1
+      waitTime: 10
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 50
+      spawnRate: 20
+      waitTime: 6
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 3
+      spawnRate: 10
+      waitTime: 2
+    randomOrder: 0
+  - wave:
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 25
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 17
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 20
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 25
+      spawnRate: 4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 40
+      spawnRate: 8
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 15
+      spawnRate: 2.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 20
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 12
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ab6184508c039724a9ecf0772af792c7, type: 2}
+      count: 13
+      spawnRate: 4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 3
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 5
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 4
+      spawnRate: 6
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 6
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 20
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 17
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31, type: 2}
+      count: 15
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 7
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 5
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 25
+      spawnRate: 50
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 50
+      spawnRate: 10
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 35
+      spawnRate: 15
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 2.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 2.2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 16
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 8
+      spawnRate: 1.75
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 7
+      spawnRate: 2.2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 2
+      spawnRate: 0.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 3
+      spawnRate: 0.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 2
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 2
+      spawnRate: 0.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 6
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 4
+      spawnRate: 8
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 6
+      spawnRate: 3
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 6
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 4
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 5
+      spawnRate: 1.75
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 8
+      spawnRate: 1.6
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 10
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 1
+      spawnRate: 10
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 1
+      spawnRate: 2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 2
+      spawnRate: 0.4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 1
+      spawnRate: 1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 67b8746a86824ae4eb4e10ce55e05d5b, type: 2}
+      count: 40
+      spawnRate: 8
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 10
+      spawnRate: 1.89
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 8
+      spawnRate: 2.23
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 5
+      spawnRate: 10
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: c7d5df5d0ad5bcb43a6348dd572a281e, type: 2}
+      count: 15
+      spawnRate: 1.36
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 2
+      spawnRate: 6
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 5bffc5e261fac1f478d341ff26a5b9cb, type: 2}
+      count: 10
+      spawnRate: 1.84
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: a579f84af9cb3fe4faf4efbbb5bda97e, type: 2}
+      count: 2
+      spawnRate: 0.45
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: e0cff406306b338408eb6ec3b6a21e8a, type: 2}
+      count: 2
+      spawnRate: 1.1
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 5
+      spawnRate: 1.2
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: cb32b1f866764a049b3c33945ac4e940, type: 2}
+      count: 4
+      spawnRate: 1.11
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 6057c0a1f1e9df1459cca557f9fab9fd, type: 2}
+      count: 8
+      spawnRate: 4
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
+      count: 5
+      spawnRate: 1.5
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+      count: 50
+      spawnRate: 20
+      waitTime: 0
+    - enemy: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be, type: 2}
+      count: 3
+      spawnRate: 10
+      waitTime: 0
+    randomOrder: 0
 --- !u!1 &27
 GameObject:
   m_ObjectHideFlags: 0
@@ -3651,13 +5426,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  startMoney: 600
+  startMoney: 6000
   lives: 0
   startLives: 15
   rounds: 0
-  stone: 20
-  green: 20
-  diamond: 20
+  stone: 200
+  green: 200
+  diamond: 200
 --- !u!1 &222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,7 +5463,7 @@ GameObject:
   - component: {fileID: 1326}
   - component: {fileID: 1105}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24276,7 +26051,7 @@ MonoBehaviour:
       count: 1
       spawnRate: 1.1
       waitTime: 4
-    - enemy: {fileID: 1150643718877460, guid: 28aea9714a214be43b0530e65e0a7c99, type: 2}
+    - enemy: {fileID: 1150643718877460, guid: ec3558f7a7a2f9b4abf956a0cf870812, type: 2}
       count: 1
       spawnRate: 2
       waitTime: 1
@@ -24488,11 +26263,10 @@ MonoBehaviour:
       waitTime: 4
     randomOrder: 0
   spawnPoint: {fileID: 444}
-  ghostWaves: []
   ghostSpawnPoint: {fileID: 1792324706}
   enemyList: []
   enemyGhostList: []
-  waveCountdownTimer: 30
+  waveCountdownTimer: 5
   waveCountdownText: {fileID: 1289}
   nextWaveIndex: 0
   waveMulti: 0
@@ -24503,13 +26277,14 @@ MonoBehaviour:
   cleanUpScene: 1
   waitForPlayersCount: 1
   ghostMaterial: {fileID: 2100000, guid: 1ab627500b7e637499c8278250165341, type: 2}
-  ghostOnly: 0
   sceneCamera: {fileID: 460}
   tacticalCamera: {fileID: 538743055}
   enemyCountText: {fileID: 943631858}
   waveMultiText: {fileID: 1540474583}
   waveIndexText: {fileID: 370990471}
   gameStarted: 0
+  waveMax: 15
+  enemyWaveHelper: {fileID: 26}
 --- !u!114 &1131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28275,9 +30050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Menu
-
-'
+  m_Text: Quit
 --- !u!114 &1256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30235,7 +32008,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1243}
-        m_MethodName: Menu
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

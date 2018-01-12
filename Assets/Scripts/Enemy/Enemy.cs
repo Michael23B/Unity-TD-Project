@@ -93,6 +93,7 @@ public class Enemy : MonoBehaviour
         health = startHealth;
         if (useShield) shield = startShield;
         damageMulti = baseDamageMulti;
+        bounty = (int)Mathf.Round(bounty * (WaveSpawner.Instance.waveMulti + 1)); //scale money gained with the difficulty of enemies
 
         //position adjust
         gameObject.transform.position += new Vector3 (0f, yOffset, 0f);
@@ -105,7 +106,7 @@ public class Enemy : MonoBehaviour
         if (ghost) return;
         if (health <= 0f) return; //already dead, don't call die() more than once
 
-        if (reducedByArmor && armored) amount /= 2; //armored enemies reduce non armor piercing damage by half
+        if (reducedByArmor && armored) amount /= 3; //armored enemies reduce non armor piercing damage by by 66%
         if (amount > 0) amount *= damageMulti;   //don't reduce healing
 
         if (useShield && shield != 0f && amount > 0f)   //don't heal the shield

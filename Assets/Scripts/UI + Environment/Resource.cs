@@ -76,6 +76,7 @@ public class Resource : MonoBehaviour {
 
     void CheckEffects()
     {
+        if (WaveSpawner.Instance.nextWaveIndex >= WaveSpawner.Instance.waveMax) return;
         EnemyWave wave = WaveSpawner.Instance.waves[WaveSpawner.Instance.nextWaveIndex];
         if (enemyEncounter != null) {
             EnemyGroup[] newGroup = new EnemyGroup[wave.wave.Length + 1];   //make a new group
