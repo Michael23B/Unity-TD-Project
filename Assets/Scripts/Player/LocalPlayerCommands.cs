@@ -133,7 +133,8 @@ public class LocalPlayerCommands : NetworkBehaviour
         {
             if (target.connectionId != myID && target.connectionId != -1)
             {
-                TargetRpcPlayShootEffect(target, shotID);
+                //TargetRpcPlayShootEffect(target, shotID);
+                TargetRpcShoot(target, shotID);
             }
         }
     }
@@ -288,6 +289,21 @@ public class LocalPlayerCommands : NetworkBehaviour
         {
             player.gun.shootEffect.Play();
             player.gun.shootEffect.transform.rotation = player.gun.graphics.transform.rotation;
+        }
+        else if (id == 2) player.gun.AltShoot();
+    }
+
+    [TargetRpc]
+    void TargetRpcShoot(NetworkConnection target, int id) //TODO: change to a grey shoot effect so its obvious the player can't hurt the other players enemies
+    {
+        GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
+        PlayerController player = p2.GetComponent<PlayerController>();
+        if (player == null) return;
+
+        if (id == 1)
+        {
+            player.gun.Shoot();
+            //player.gun.shootEffect.transform.rotation = player.gun.graphics.transform.rotation;
         }
         else if (id == 2) player.gun.AltShoot();
     }

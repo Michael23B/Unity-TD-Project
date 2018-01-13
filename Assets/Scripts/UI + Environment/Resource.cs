@@ -16,6 +16,7 @@ public class Resource : MonoBehaviour {
     [Header("Additional effects")]
     public EnemyGroup enemyEncounter = null;
     public bool additionalEffects = false;
+    public bool playerTurretSelectEnable = false;
 
     public int hitsToDestroy = 7;
     public int hitEffectLife = 2;
@@ -25,6 +26,8 @@ public class Resource : MonoBehaviour {
 
     [Tooltip("For sending messages about additional effect events")]
     public Transform textOrigin;
+
+    int miningRange = 40;
 
     private void Start()
     {
@@ -36,6 +39,9 @@ public class Resource : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        float distanceToTarget = Vector3.Distance(transform.position, WaveSpawner.Instance.localPlayer.transform.position);
+        if (distanceToTarget > miningRange) return;
+
         if (!WaveSpawner.Instance.gameStarted)
         {
             BuildManager.Instance.message.PlayMessage("Wait until game has started to harvest!", transform, Color.white, 1.25f, 0.5f, 2);
@@ -82,17 +88,27 @@ public class Resource : MonoBehaviour {
 
     void CheckEffects()
     {
-        if (WaveSpawner.Instance.nextWaveIndex >= WaveSpawner.Instance.waveMax) return;
-        EnemyWave wave = WaveSpawner.Instance.waves[WaveSpawner.Instance.nextWaveIndex];
-        if (enemyEncounter != null) {
-            EnemyGroup[] newGroup = new EnemyGroup[wave.wave.Length + 1];   //make a new group
-            wave.wave.CopyTo(newGroup, 1);
-            newGroup[0] = new EnemyGroup();
-            newGroup[0] = enemyEncounter;                                   //assign new encounter at the beginning of wave
-            wave.wave = newGroup;                                           //assign new wave
+        if (playerTurretSelectEnable)
+        {   //enable the players turret select option again
+            WaveSpawner.Instance.turretSelect.buttonOpenWindow.gameObject.SetActive(true);
+            BuildManager.Instance.message.PlayMessage("TURRET SELECT NOW AVAILABLE!", transform, Color.white, 0.5f, 1f, 2);
         }
 
-        BuildManager.Instance.message.PlayMessage("Boss Invading Next Wave", textOrigin, Color.black, 0.5f, 3, 1);
+        if (enemyEncounter.enemy != null) //add enemy group to next wave as the first enemy group
+        {   
+            if (WaveSpawner.Instance.nextWaveIndex >= WaveSpawner.Instance.waveMax) return;
+            EnemyWave wave = WaveSpawner.Instance.waves[WaveSpawner.Instance.nextWaveIndex];
+            if (enemyEncounter != null)
+            {
+                EnemyGroup[] newGroup = new EnemyGroup[wave.wave.Length + 1];   //make a new group
+                wave.wave.CopyTo(newGroup, 1);
+                newGroup[0] = new EnemyGroup();
+                newGroup[0] = enemyEncounter;                                   //assign new encounter at the beginning of wave
+                wave.wave = newGroup;                                           //assign new wave
+            }
+
+            BuildManager.Instance.message.PlayMessage("BOSS INVADING NEXT WAVE", textOrigin, Color.black, 0.5f, 3, 1);
+        }
     }
 
     public void PlayHitEffect()

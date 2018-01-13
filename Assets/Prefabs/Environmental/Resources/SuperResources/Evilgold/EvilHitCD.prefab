@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4597749768307506}
   m_Layer: 0
-  m_Name: SuperHitCD
+  m_Name: EvilHitCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1337034464167292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -348.72266, y: -0.5, z: 332.87024}
+  m_LocalPosition: {x: 108.42125, y: -0.5, z: 163.32442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4189245454896636}

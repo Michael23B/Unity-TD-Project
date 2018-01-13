@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour {
         commands.CmdSetClientsRandomValues();
 
         WaveSpawner.Instance.commands = commands;
+        WaveSpawner.Instance.localPlayer = this;
     }
 
     private void OnEnable()
@@ -65,7 +66,8 @@ public class PlayerController : MonoBehaviour {
         commands.CmdSetClientsRandomValues();
 
         WaveSpawner.Instance.commands = commands;
-
+        WaveSpawner.Instance.localPlayer = this;
+        
         ResetCameras();
     }
 

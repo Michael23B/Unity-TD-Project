@@ -57,10 +57,14 @@ public class WaveSpawner : MonoBehaviour {
     public Text waveMultiText;
     public Text waveIndexText;
 
-    public bool gameStarted = false;
+    public bool gameStarted = false;    //has game started?
 
     public int waveMax;
-    public EnemyWaveHelper enemyWaveHelper;
+    public EnemyWaveHelper enemyWaveHelper; //for generating random waves
+
+    [HideInInspector]
+    public PlayerController localPlayer;    //for getting transform of local player
+    public TurretSelect turretSelect;   //for re-enabling turret select window from resources
 
     private void Awake()
     {
@@ -164,10 +168,18 @@ public class WaveSpawner : MonoBehaviour {
         waveActive = false;
         finishedWaveAndReady = true;
 
-        waveMulti = CalcWaveMulti();
+        if (nextWaveIndex > waveMax)    //if all waves have arrived, display winning text and final enemy strength
+        {
+            waveIndexText.text = "WAVE " + (waveIndex) + "/" + waveMax + "COMPLETE!";
+            waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
+        }
+        else
+        {   //update enemy strength multiplier and display wave info
+            waveMulti = CalcWaveMulti();
 
-        waveIndexText.text = "WAVE " + (waveIndex + 1) + "/" + waveMax + "INCOMING";
-        waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
+            waveIndexText.text = "WAVE " + (waveIndex + 1) + "/" + waveMax + "INCOMING";
+            waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
+        }
     }
 
     float CalcWaveMulti()    //difficulty curve of the game
