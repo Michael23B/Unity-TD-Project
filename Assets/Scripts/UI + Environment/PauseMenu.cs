@@ -66,9 +66,11 @@ public class PauseMenu : MonoBehaviour {
     public void CallMaxWaveUpdate()
     {
         if (WaveSpawner.Instance.gameStarted) return;
+        if (wavesInput.textComponent.text == "") return;
 
         int numberOfWaves = 0;
         numberOfWaves = int.Parse(wavesInput.textComponent.text);
+        wavesInput.text = "";
         if (numberOfWaves <= 0) return;
 
         WaveSpawner.Instance.commands.CmdMaxWaveUpdate(numberOfWaves);
