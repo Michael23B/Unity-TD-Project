@@ -13,6 +13,7 @@ public class ResourceSpawner : MonoBehaviour {
     private float ySpawnOffset = 1f;
 
     public int indexOfID = 0;
+    int resourceMax = 110;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class ResourceSpawner : MonoBehaviour {
 
     public void SpawnResources(int amount)  //using pre-generated random values synced across clients (LocalRandom)
     {
+        if (resources.Count >= resourceMax) return;
         int r;
         float rX,rZ;
         bool nodeFlag = false;

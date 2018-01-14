@@ -760,7 +760,7 @@ MonoBehaviour:
   panBorderThickness: 10
   scrollSpeed: 1
   minY: 15
-  maxY: 25
+  maxY: 35
 --- !u!114 &114279658294729366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -798,7 +798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c466d72cb468c144b4cae63e68293c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  startDamage: 10
+  damage: 10
   range: 25
   fpsCamera: {fileID: 20473088320893328}
   graphics: {fileID: 1052940424550844}

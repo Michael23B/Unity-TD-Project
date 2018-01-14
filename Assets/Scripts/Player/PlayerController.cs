@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour {
     public Gun gun;
     float nextTimeToFire = 0f;
     float nextTimeToFire2 = 0f;
+    float nextTimeToBankai = 0f;
 
     public GameObject graphics;
 
@@ -192,7 +193,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            if (!soundTest)
+            if (!soundTest && Time.time > nextTimeToBankai)
             {
                 commands.CmdUnleashThis(GetComponent<NetworkIdentity>());
             }
@@ -207,12 +208,11 @@ public class PlayerController : MonoBehaviour {
         go.SetActive(!go.activeInHierarchy);
     }
 
-    void FirstPersonCamera(bool active)    //disables scene cam and toggles fp or player camera (beta)
+    void FirstPersonCamera(bool active)
     {
         if (sceneCamera == null) return;
         if (playerCamera == null) return;
 
-        //sceneCamera.gameObject.SetActive(false);
         fpCamera.gameObject.SetActive(active);
         playerCamera.gameObject.SetActive(!active);
 
@@ -252,7 +252,8 @@ public class PlayerController : MonoBehaviour {
         effectIns.transform.position = transform.position;
         Destroy(effectIns, 22f);
         soundTest = true;
-        gun.damage *= 3;
+        gun.damage += 50;
+        nextTimeToBankai = Time.time + 300;
 
         Invoke("LeashThis", 22f);
     }
@@ -262,7 +263,7 @@ public class PlayerController : MonoBehaviour {
         soundTest = false;
         startSpeed = 10;
         verySpeed = 30;
-        gun.damage /= 3;
+        gun.damage -= 50;
     }
     #endregion
 }

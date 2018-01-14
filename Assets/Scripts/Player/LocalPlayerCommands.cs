@@ -175,6 +175,18 @@ public class LocalPlayerCommands : NetworkBehaviour
         RpcMaxWaveUpdate(numberOfWaves);
     }
 
+    [Command]
+    public void CmdStartNextWave()
+    {
+        RpcStartNextWave();
+    }
+
+    [Command]
+    public void CmdShootDamageUpdate(int amount)
+    {
+        RpcShootDamageUpdate(amount);
+    }
+
     //RPCs
     [ClientRpc]
     void RpcBuildTurret(int nodeID, int turretID, bool upgrading)
@@ -369,6 +381,24 @@ public class LocalPlayerCommands : NetworkBehaviour
     void RpcMaxWaveUpdate(int numberOfWaves)
     {
         WaveSpawner.Instance.CallGenerateAllWaves(numberOfWaves);
+    }
+
+    [ClientRpc]
+    void RpcStartNextWave()
+    {
+        WaveSpawner.Instance.StartNextWave();
+    }
+
+    [ClientRpc]
+    public void RpcShootDamageUpdate(int amount)
+    {
+        Gun[] allGuns = FindObjectsOfType<Gun>();
+
+        foreach (Gun gun in allGuns)
+        {
+            gun.damage += amount;
+            BuildManager.Instance.message.PlayMessage("Gun Upgraded! (" + gun.damage + " damage total)", gun.transform, Color.green, 0.5f, 1.5f);
+        }
     }
     #endregion
 }

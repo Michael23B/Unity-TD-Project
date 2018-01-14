@@ -483,7 +483,7 @@ Transform:
   m_GameObject: {fileID: 1023124105668382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4835031223378564}
   - {fileID: 4004303786068876}
@@ -713,7 +713,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993431137452596}
-  m_LocalRotation: {x: -0.2789869, y: 0.84491986, z: -0.15573342, w: 0.42898017}
+  m_LocalRotation: {x: -0.27898687, y: 0.84491974, z: -0.1557334, w: 0.4289801}
   m_LocalPosition: {x: 0.45299911, y: 0.058, z: -0.06499863}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_Children: []
@@ -1798,6 +1798,16 @@ MonoBehaviour:
   money: 0
   stone: 0
   green: 0
-  diamond: 5
+  diamond: 7
+  enemyEncounter:
+    enemy: {fileID: 0}
+    count: 0
+    spawnRate: 0
+    waitTime: 0
+  additionalEffects: 0
+  playerTurretSelectEnable: 0
+  boss: 0
   hitsToDestroy: 6
+  hitEffectLife: 2
   ID: 0
+  textOrigin: {fileID: 0}

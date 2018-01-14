@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gun : MonoBehaviour {
 
-    public float damage = 25f;
+    public float startDamage = 10f;
+    public float damage = 10f;
     public float range = 25f;
 
     public Camera fpsCamera;
@@ -10,6 +12,26 @@ public class Gun : MonoBehaviour {
     public ParticleSystem shootEffect;
     public ParticleSystem shootEffect2;
     public GameObject altShootBuffEffect;
+
+    private void Start()
+    {
+        damage = startDamage;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        damage = startDamage;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     public void Shoot()
     {
@@ -36,9 +58,8 @@ public class Gun : MonoBehaviour {
             if (collider.tag == "Turret")
             {
                 Turret target = collider.transform.GetComponent<Turret>();
-                if (target != null) BuffHelper.AddDebuff(target, DebuffType.AtkSpeed, 5f, 2f, altShootBuffEffect);
+                if (target != null) BuffHelper.AddDebuff(target, DebuffType.AtkSpeed, 5f, 1f, altShootBuffEffect);
             }
         }
-
     }
 }

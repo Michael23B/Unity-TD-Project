@@ -1521,14 +1521,14 @@ MonoBehaviour:
   baseModel: {fileID: 1411750206315986}
   ripeModel: {fileID: 1274642966017674}
   cost: 20
-  money: 60
+  money: 50
   stone: 0
   green: 0
   diamond: 5
   lives: 0
   harvestTime: 165
   displayName: Fish
-  info: Slow grow speed. +140 money & +5 diamond.
+  info: Slow grow speed. +50 money & +5 diamond.
   displayColor: {r: 0.94482756, g: 1, b: 0, a: 0.747}
   node: {fileID: 0}
 --- !u!198 &198834714173742280

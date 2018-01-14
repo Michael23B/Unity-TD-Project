@@ -2907,6 +2907,6 @@ MonoBehaviour:
   lives: 0
   harvestTime: 115
   displayName: Cactus
-  info: Average grow speed. +190 money & +5 green.
+  info: Average grow speed. +70 money & +5 green.
   displayColor: {r: 0.12508646, g: 0.42647058, b: 0.100346014, a: 0.747}
   node: {fileID: 0}

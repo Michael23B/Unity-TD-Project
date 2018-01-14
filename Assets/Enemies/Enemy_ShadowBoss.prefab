@@ -267,7 +267,7 @@ MonoBehaviour:
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
-  bounty: 200
+  bounty: 75
   armored: 1
   coreDamage: 5
   speed: 10

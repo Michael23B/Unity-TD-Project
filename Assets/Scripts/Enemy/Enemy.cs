@@ -106,7 +106,7 @@ public class Enemy : MonoBehaviour
         if (ghost) return;
         if (health <= 0f) return; //already dead, don't call die() more than once
 
-        if (reducedByArmor && armored) amount /= 3; //armored enemies reduce non armor piercing damage by by 66%
+        if (reducedByArmor && armored) amount /= 4; //armored enemies reduce non armor piercing damage by by 75%
         if (amount > 0) amount *= damageMulti;   //don't reduce healing
 
         if (useShield && shield != 0f && amount > 0f)   //don't heal the shield

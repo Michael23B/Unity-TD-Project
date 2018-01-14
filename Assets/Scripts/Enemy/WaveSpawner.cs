@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
 //TODO: update all client nodes with correct turrets when clientjoins()
-//TODO: remove the ghost wave stuff from before i sent spawn commands, leaving them in now because i havent tested the new system enough
 public class WaveSpawner : MonoBehaviour {
     
     public static WaveSpawner Instance;
@@ -66,6 +65,8 @@ public class WaveSpawner : MonoBehaviour {
     public PlayerController localPlayer;    //for getting transform of local player
     public TurretSelect turretSelect;   //for re-enabling turret select window from resources
 
+    public Button startNextWaveBtn;
+
     private void Awake()
     {
         if (Instance != null)
@@ -80,7 +81,6 @@ public class WaveSpawner : MonoBehaviour {
         if (NetworkServer.connections.Count != 0) waitForPlayersCount = NetworkServer.connections.Count;
 
         if (cleanUpScene) CleanUpEnemies();
-        //ghostWaves = waves; //TODO: take this out once im keen to remove the old ghost stuff
         InvokeRepeating("UpdateGhostPositions", 0f, 5f);
         GenerateAllWaves();
     }
@@ -127,7 +127,9 @@ public class WaveSpawner : MonoBehaviour {
         if (!buildTime)
         {
             BuildManager.Instance.message.PlayMessage("WAVE " + (waveIndex + 1) + " APPROACHING", transform, Color.green, 1, 1, 2);
+            startNextWaveBtn.gameObject.SetActive(true);
         }
+        else startNextWaveBtn.gameObject.SetActive(false);
         if (!buildTime && playerID == 0) //going from wave -> buildTime. If server, send new random values for the next wave
         {
             commands.CmdSetClientsRandomValues();
@@ -147,7 +149,7 @@ public class WaveSpawner : MonoBehaviour {
         waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
 
         playersReady = 0;
-        if (ResourceSpawner.Instance.resources.Count < 100) ResourceSpawner.Instance.SpawnResources(25);
+        ResourceSpawner.Instance.SpawnResources(25);
         PlayerStats.Instance.rounds++;
 
         EnemyWave currentWave = waves[waveIndex % waves.Length];
@@ -320,5 +322,28 @@ public class WaveSpawner : MonoBehaviour {
             waveMax = numberOfWaves;
             GenerateAllWaves();
         }
+    }
+
+    public void StartNextWave()
+    {
+        if (!buildTime) return;
+        if (countdown <= 0) return;
+
+        PlayerStats.Instance.money += (int)Mathf.Round(countdown);
+        countdown = 0;
+
+        waveCountdownText.text = string.Format("{0:00.0}", countdown);
+    }
+
+    public void CallStartNextWave()
+    {
+        if (!buildTime) return;
+        if (countdown <= 0) return;
+        commands.CmdStartNextWave();
+    }
+    //if you bankai then hit gun upgrade you will give super damage to other player forever fix this TODO:
+    public void CallGunUpgrade(int amount)
+    {
+        commands.CmdShootDamageUpdate(amount);
     }
 }

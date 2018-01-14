@@ -397,8 +397,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023124105668382}
   m_LocalRotation: {x: -0, y: 0.9370329, z: -0, w: 0.34924132}
-  m_LocalPosition: {x: -366.3, y: 5.99, z: 313.9}
-  m_LocalScale: {x: 12.500008, y: 12.5, z: 12.500008}
+  m_LocalPosition: {x: -367.8, y: 6.7, z: 314.6}
+  m_LocalScale: {x: 12.500015, y: 12.5, z: 12.500015}
   m_Children:
   - {fileID: 4004303786068876}
   - {fileID: 4128571668833284}
@@ -1380,10 +1380,10 @@ MonoBehaviour:
   hitEffect: {fileID: 1431827620646096, guid: 57ffb1a209ffdad419710a7c564535ba, type: 2}
   breakingEffect: {fileID: 1337034464167292, guid: f2d38e1097062844191a2b3745895ea4,
     type: 2}
-  money: 350
-  stone: 25
-  green: 25
-  diamond: 25
+  money: 150
+  stone: 15
+  green: 15
+  diamond: 15
   enemyEncounter:
     enemy: {fileID: 1150643718877460, guid: f65c7b4584cd9e047b81f925065e9fee, type: 2}
     count: 1
@@ -1392,10 +1392,11 @@ MonoBehaviour:
   additionalEffects: 1
   playerTurretSelectEnable: 0
   boss: 1
+  gunUpgrade: 1
+  gunUpgradeAmount: 3
   hitsToDestroy: 15
   hitEffectLife: 10
   ID: 0
-  textOrigin: {fileID: 4128571668833284}
 --- !u!198 &198277423862435108
 ParticleSystem:
   m_ObjectHideFlags: 1

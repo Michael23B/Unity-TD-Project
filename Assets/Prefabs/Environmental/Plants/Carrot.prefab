@@ -1222,6 +1222,6 @@ MonoBehaviour:
   lives: 0
   harvestTime: 90
   displayName: Carrot
-  info: Average grow speed. +50 money & +5 stone.
+  info: Average grow speed. +25 money & +5 stone.
   displayColor: {r: 1, g: 0.6235329, b: 0, a: 0.747}
   node: {fileID: 0}

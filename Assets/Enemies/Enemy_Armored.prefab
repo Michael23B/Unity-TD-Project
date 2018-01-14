@@ -229,13 +229,13 @@ MonoBehaviour:
   GID: 0
   startSpeed: 4.5
   minSpeed: 1
-  startHealth: 150
+  startHealth: 175
   health: 0
   startShield: 0
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
-  bounty: 2
+  bounty: 3
   armored: 1
   coreDamage: 1
   speed: 10

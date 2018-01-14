@@ -18,6 +18,8 @@ public class Resource : MonoBehaviour {
     public bool additionalEffects = false;
     public bool playerTurretSelectEnable = false;
     public bool boss = false;
+    public bool gunUpgrade = false;
+    public int gunUpgradeAmount = 5;
 
     public int hitsToDestroy = 7;
     public int hitEffectLife = 2;
@@ -25,10 +27,8 @@ public class Resource : MonoBehaviour {
     [HideInInspector]
     public int ID;
 
-    [Tooltip("For sending messages about additional effect events")]
-    public Transform textOrigin;
-
     int miningRange = 40;
+    bool inRange = false;
 
     private void Start()
     {
@@ -40,8 +40,18 @@ public class Resource : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        float distanceToTarget = Vector3.Distance(transform.position, WaveSpawner.Instance.localPlayer.transform.position);
-        if (distanceToTarget > miningRange) return;
+        Collider[] colliders = Physics.OverlapSphere(transform.position, miningRange);  //i had a bug getting local player positions so im just doing overlap check instead
+        foreach (Collider collider in colliders)
+        {
+            if (collider.tag == "Player" || collider.tag == "Player2")
+            {
+                inRange = true;
+                break;
+            }
+            inRange = false;
+        }
+        //float distanceToTarget = Vector3.Distance(transform.position, WaveSpawner.Instance.localPlayer.transform.position);
+        if (!inRange) return;
 
         if (!WaveSpawner.Instance.gameStarted)
         {
@@ -61,26 +71,10 @@ public class Resource : MonoBehaviour {
 
     void TakeResources()
     {
-        if (money != 0)
-        {
-            PlayerStats.Instance.money += money;
-            BuildManager.Instance.message.PlayMessage("+$" + money, transform, Color.yellow);
-        }
-        if (stone != 0)
-        {
-            PlayerStats.Instance.stone += stone;
-            BuildManager.Instance.message.PlayMessage("+" + stone, transform, Color.grey);
-        }
-        if (green != 0)
-        {
-            PlayerStats.Instance.green += green;
-            BuildManager.Instance.message.PlayMessage("+" + green, transform, Color.green);
-        }
-        if (diamond != 0)
-        {
-            PlayerStats.Instance.diamond += diamond;
-            BuildManager.Instance.message.PlayMessage("+" + diamond, transform, Color.blue);
-        }
+        if (money != 0) PlayerStats.Instance.money += money;
+        if (stone != 0) PlayerStats.Instance.stone += stone;
+        if (green != 0) PlayerStats.Instance.green += green;
+        if (diamond != 0) PlayerStats.Instance.diamond += diamond;
 
         if (additionalEffects) CheckEffects();
 
@@ -108,9 +102,11 @@ public class Resource : MonoBehaviour {
                 wave.wave = newGroup;                                           //assign new wave
             }
 
-            if (boss) BuildManager.Instance.message.PlayMessage("BOSS INVADING NEXT WAVE", textOrigin, Color.black, 0.5f, 3, 1);
-            else BuildManager.Instance.message.PlayMessage("ENEMIES INVADING NEXT WAVE", textOrigin, Color.red, 1f, 1f, 1);
+            if (boss) BuildManager.Instance.message.PlayMessage("BOSS INVADING NEXT WAVE", transform, Color.black, 0.5f, 3, 1);
+            else BuildManager.Instance.message.PlayMessage("ENEMIES INVADING NEXT WAVE", transform, Color.red, 1f, 1f, 1);
         }
+
+        if (gunUpgrade) WaveSpawner.Instance.CallGunUpgrade(gunUpgradeAmount);
     }
 
     public void PlayHitEffect()
