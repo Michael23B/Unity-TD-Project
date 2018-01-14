@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0.3
-  delay: 0
+  delay: -3
   useSpawner: 1
   spawnPrefab: {fileID: 1150643718877460, guid: 4ba11cec6eab1664180403d79e289e31,
     type: 2}
@@ -507,6 +507,7 @@ MonoBehaviour:
   baseDamageMulti: 1
   damageMulti: 0
   bounty: 100
+  armored: 0
   coreDamage: 1
   speed: 10
   moveable: 1

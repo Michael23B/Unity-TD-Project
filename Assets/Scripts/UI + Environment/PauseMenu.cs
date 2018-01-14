@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour {
     public SceneFader sceneFader;
     NetworkManagerHUD networkHUD;
     public InputField wavesInput;
+    public Button waveGenerateBtn;
+    bool initialSetUp = false;
 
     private void Start()
     {
@@ -18,6 +20,13 @@ public class PauseMenu : MonoBehaviour {
 
     private void Update()
     {
+        if (WaveSpawner.Instance.gameStarted && !initialSetUp)
+        {
+            networkHUD.gameObject.SetActive(false);
+            wavesInput.gameObject.SetActive(false);
+            waveGenerateBtn.gameObject.SetActive(false);
+            initialSetUp = true;
+        }
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             Toggle();
@@ -74,5 +83,10 @@ public class PauseMenu : MonoBehaviour {
         if (numberOfWaves <= 0) return;
 
         WaveSpawner.Instance.commands.CmdMaxWaveUpdate(numberOfWaves);
+    }
+
+    private void OnDisable()
+    {
+       if (networkHUD != null) networkHUD.gameObject.SetActive(true);
     }
 }

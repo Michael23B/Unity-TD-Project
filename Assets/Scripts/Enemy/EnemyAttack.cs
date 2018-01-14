@@ -21,7 +21,7 @@ public class EnemyAttack : MonoBehaviour {
     public bool isEnemy = false;
     [Tooltip("Destroy object after one spawn. NOT COMPATIBLE with onDeath.")]
     public bool destroyAfterSpawn = false;
-    [Tooltip("Spawn the prefab on death? No need to select 'useSpawner' with this, if you only want on death. NOT COMPATIBLE with destroyAfterSpawn.")]
+    [Tooltip("Spawn the prefab on death? No need to select 'useSpawner' with this if you only want on death. NOT COMPATIBLE with destroyAfterSpawn.")]
     public bool onDeath = false;
 
     [Header("Gun?")]

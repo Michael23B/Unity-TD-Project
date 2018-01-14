@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0.5
-  delay: 0
+  delay: -1
   useSpawner: 0
   spawnPrefab: {fileID: 0}
   spawnEffect: {fileID: 0}

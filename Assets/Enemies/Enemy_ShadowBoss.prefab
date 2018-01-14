@@ -261,9 +261,9 @@ MonoBehaviour:
   GID: 0
   startSpeed: 4.25
   minSpeed: 1
-  startHealth: 1250
+  startHealth: 1750
   health: 0
-  startShield: 2250
+  startShield: 2000
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   speed: 10
   moveable: 1
   debuffList: []
-  debuffEffectScale: {x: 2, y: 2, z: 2}
+  debuffEffectScale: {x: 3, y: 3, z: 3}
   deathEffect: {fileID: 1491607627031414, guid: e7aee4c6b2d2d0c4485b9e1ba309089c,
     type: 2}
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
@@ -286,7 +286,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 114090846819910932}
   yOffset: 0
   ghost: 0
-  managerID: 14
+  managerID: 15
   graphics: {fileID: 1812352792094990}
 --- !u!114 &114585292175636046
 MonoBehaviour:
@@ -374,10 +374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7163539d674723d4eb65c521366dfec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.4
-  delay: 0
+  fireRate: 0.2
+  delay: -3
   useSpawner: 0
-  spawnPrefab: {fileID: 1150643718877460, guid: 7b86301dd988de840b72413ba90737be,
+  spawnPrefab: {fileID: 1150643718877460, guid: 1eea66a14d1b40a479597a505e6e7882,
     type: 2}
   spawnEffect: {fileID: 0}
   setParent: 0

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114906255068617878}
   - component: {fileID: 65171264692194794}
   m_Layer: 0
-  m_Name: EvilGoldMine
+  m_Name: EvilGoldMineSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,9 +396,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023124105668382}
-  m_LocalRotation: {x: -0, y: 0.9370329, z: -0, w: 0.34924132}
-  m_LocalPosition: {x: -366.3, y: 5.99, z: 313.9}
-  m_LocalScale: {x: 12.500008, y: 12.5, z: 12.500008}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.38, z: -7.85}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4004303786068876}
   - {fileID: 4128571668833284}
@@ -406,7 +406,7 @@ Transform:
   - {fileID: 4385338933463978}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 139.11801, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4105135124885950
 Transform:
   m_ObjectHideFlags: 1
@@ -1377,23 +1377,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0664be5829cf1fb4981811085172c64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 1431827620646096, guid: 57ffb1a209ffdad419710a7c564535ba, type: 2}
-  breakingEffect: {fileID: 1337034464167292, guid: f2d38e1097062844191a2b3745895ea4,
+  hitEffect: {fileID: 1431827620646096, guid: 14fee9207e9a7054984e88951e69886a, type: 2}
+  breakingEffect: {fileID: 1337034464167292, guid: 07a2096b84a9a42439ffcb875ff1349f,
     type: 2}
-  money: 350
-  stone: 25
-  green: 25
-  diamond: 25
+  money: 200
+  stone: 10
+  green: 10
+  diamond: 10
   enemyEncounter:
-    enemy: {fileID: 1150643718877460, guid: f65c7b4584cd9e047b81f925065e9fee, type: 2}
-    count: 1
-    spawnRate: 1
+    enemy: {fileID: 1150643718877460, guid: 1eea66a14d1b40a479597a505e6e7882, type: 2}
+    count: 2
+    spawnRate: 2
     waitTime: 0
   additionalEffects: 1
   playerTurretSelectEnable: 0
-  boss: 1
-  hitsToDestroy: 15
-  hitEffectLife: 10
+  boss: 0
+  hitsToDestroy: 10
+  hitEffectLife: 5
   ID: 0
   textOrigin: {fileID: 4128571668833284}
 --- !u!198 &198277423862435108

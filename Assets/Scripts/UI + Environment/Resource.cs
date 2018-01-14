@@ -17,6 +17,7 @@ public class Resource : MonoBehaviour {
     public EnemyGroup enemyEncounter = null;
     public bool additionalEffects = false;
     public bool playerTurretSelectEnable = false;
+    public bool boss = false;
 
     public int hitsToDestroy = 7;
     public int hitEffectLife = 2;
@@ -107,7 +108,8 @@ public class Resource : MonoBehaviour {
                 wave.wave = newGroup;                                           //assign new wave
             }
 
-            BuildManager.Instance.message.PlayMessage("BOSS INVADING NEXT WAVE", textOrigin, Color.black, 0.5f, 3, 1);
+            if (boss) BuildManager.Instance.message.PlayMessage("BOSS INVADING NEXT WAVE", textOrigin, Color.black, 0.5f, 3, 1);
+            else BuildManager.Instance.message.PlayMessage("ENEMIES INVADING NEXT WAVE", textOrigin, Color.red, 1f, 1f, 1);
         }
     }
 
