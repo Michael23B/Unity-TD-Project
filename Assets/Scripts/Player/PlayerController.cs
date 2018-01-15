@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour {
         if (fpCamera.isActiveAndEnabled)
         {
             //Calculate roation as vector3
-            float yRot = Input.GetAxisRaw("Mouse X");
+            float yRot = Input.GetAxis("Mouse X");
 
             Vector3 rotation = new Vector3(0, yRot, 0) * turnSpeed;
 

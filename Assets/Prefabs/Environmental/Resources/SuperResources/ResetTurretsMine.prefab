@@ -1391,10 +1391,12 @@ MonoBehaviour:
     waitTime: 1
   additionalEffects: 1
   playerTurretSelectEnable: 1
-  hitsToDestroy: 1
+  boss: 0
+  gunUpgrade: 0
+  gunUpgradeAmount: 0
+  hitsToDestroy: 4
   hitEffectLife: 10
   ID: 0
-  textOrigin: {fileID: 4128571668833284}
 --- !u!198 &198277423862435108
 ParticleSystem:
   m_ObjectHideFlags: 1

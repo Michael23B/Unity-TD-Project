@@ -1393,7 +1393,7 @@ MonoBehaviour:
   playerTurretSelectEnable: 0
   boss: 1
   gunUpgrade: 1
-  gunUpgradeAmount: 3
+  gunUpgradeAmount: 5
   hitsToDestroy: 15
   hitEffectLife: 10
   ID: 0
