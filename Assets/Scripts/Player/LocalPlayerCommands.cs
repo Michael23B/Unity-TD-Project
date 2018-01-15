@@ -1,6 +1,7 @@
 ﻿using UnityEngine.Networking;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class LocalPlayerCommands : NetworkBehaviour
 {
@@ -185,6 +186,18 @@ public class LocalPlayerCommands : NetworkBehaviour
     public void CmdShootDamageUpdate(int amount)
     {
         RpcShootDamageUpdate(amount);
+    }
+
+    [Command]
+    public void CmdRequestSceneState()  //sends the get scene state rpc which fetches the state from player '0' (host)
+    {
+        RpcGetSceneState();
+    }
+
+    [Command]
+    public void CmdSendSceneState(NodeState[] nodeStates, float lightIntensity, bool fading, bool prevstate)
+    {
+        RpcSendSceneState(nodeStates, lightIntensity, fading, prevstate);
     }
 
     //RPCs
@@ -398,6 +411,73 @@ public class LocalPlayerCommands : NetworkBehaviour
         {
             gun.damage += amount;
             BuildManager.Instance.message.PlayMessage("Gun Upgraded! (" + gun.damage + " damage total)", gun.transform, Color.green, 0.5f, 1.5f);
+        }
+    }
+
+    [ClientRpc]
+    void RpcGetSceneState() //get the scene on the host, then send it to the client
+    {
+        if (WaveSpawner.Instance.playerID == 0) //only the host should get and send scene state
+        {
+            float lightIntensity = 1;
+            NodeState[] nodeStates = new NodeState[Nodes.nodes.Length];
+            Shop shop = FindObjectOfType<Shop>();
+            int j = 0;  //iterator for nodeStates[]
+
+            //get scene data (nodes data and light intensity)
+            foreach (Transform node in Nodes.nodes) //for each node on the map, check if it has a turret
+            {
+                Node nodeComponent = node.GetComponent<Node>();
+                if (nodeComponent.turretBlueprint == null) continue;    //if it has no turret, ignore and check next node
+
+                for (int i = 0; i < shop.Blueprints.Length; ++i)
+                {
+                    if (nodeComponent.turretBlueprint == shop.Blueprints[i])    //if it has a turret, compare it to the turrets in the shop to get its ID
+                    {
+                        nodeStates[j].nodeID = nodeComponent.nodeID;
+                        nodeStates[j].turretID = i; //blueprints index matches turret to build index
+                        nodeStates[j].isUpgraded = nodeComponent.isUpgraded;
+                        j++;
+                        break;
+                    }
+                }
+            }
+
+            Array.Resize(ref nodeStates, j);
+
+            LightControl lightCon = FindObjectOfType<LightControl>();
+            lightIntensity = lightCon.directionalLight.intensity;
+            bool fading = lightCon.fading;
+            bool prevstate = lightCon.prevState;
+
+            CmdSendSceneState(nodeStates, lightIntensity, fading, prevstate);
+        }
+    }
+
+
+    [ClientRpc]
+    void RpcSendSceneState(NodeState[] nodeStates, float lightIntensity, bool fading, bool prevstate)
+    {
+        if (WaveSpawner.Instance.playerID == 0 || WaveSpawner.Instance.playerID == -1) return;  //host and server shouldnt recieve state updates
+        Shop shop = FindObjectOfType<Shop>();
+        
+        foreach (Transform node in Nodes.nodes) //for each node on the map, check if it has a turret
+        {
+            Node nodeComponent = node.GetComponent<Node>();
+            foreach (NodeState state in nodeStates) //if there is a state for that nodeID, update the node
+            {
+                if (nodeComponent.nodeID == state.nodeID)
+                {
+                    nodeComponent.BuildTurret(shop.Blueprints[state.turretID]);
+                    if (state.isUpgraded) nodeComponent.UpgradeTurret();
+                    break;
+                }
+            }
+            //match lightcontroller to hosts
+            LightControl lightCon = FindObjectOfType<LightControl>();
+            lightCon.directionalLight.intensity = lightIntensity;
+            lightCon.fading = fading;
+            lightCon.prevState = prevstate;
         }
     }
     #endregion

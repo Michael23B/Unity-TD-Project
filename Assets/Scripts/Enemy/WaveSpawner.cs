@@ -87,6 +87,7 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
+        if (enemiesAlive < 0) enemiesAlive = 0; //sometimes the count bugs out and becomes -1, not sure exactly where the problem happens.
         enemyCountText.text = enemiesAlive.ToString();
         if (PlayerStats.Instance.lives <= 0) enabled = false;
         if (waveActive) return;
@@ -149,7 +150,7 @@ public class WaveSpawner : MonoBehaviour {
         waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
 
         playersReady = 0;
-        ResourceSpawner.Instance.SpawnResources(25);
+        ResourceSpawner.Instance.SpawnResources(10);
         PlayerStats.Instance.rounds++;
 
         EnemyWave currentWave = waves[waveIndex % waves.Length];

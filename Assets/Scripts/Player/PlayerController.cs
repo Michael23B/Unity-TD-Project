@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour {
 
         WaveSpawner.Instance.commands = commands;
         WaveSpawner.Instance.localPlayer = this;
+
+        commands.CmdRequestSceneState();
     }
 
     private void OnEnable()

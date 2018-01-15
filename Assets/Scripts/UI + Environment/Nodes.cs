@@ -14,3 +14,10 @@ public class Nodes : MonoBehaviour {
         }
     }
 }
+
+public struct NodeState
+{
+    public int nodeID;
+    public int turretID;
+    public bool isUpgraded;
+}

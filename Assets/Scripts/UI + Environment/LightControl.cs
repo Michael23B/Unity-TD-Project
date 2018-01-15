@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public class LightControl : MonoBehaviour {
 
     public Light directionalLight;
@@ -12,8 +11,14 @@ public class LightControl : MonoBehaviour {
     public float intensity;
 
     public float cycleSpeed = 8f;
-    bool fading = true;
-    bool prevState = true;
+    [HideInInspector]
+    public bool fading = true;
+    [HideInInspector]
+    public bool prevState = true;
+
+    public GameObject stars;
+    public GameObject starsObject;
+    bool starsOn;
 
     private void Start()
     {
@@ -33,7 +38,7 @@ public class LightControl : MonoBehaviour {
             else if (directionalLight.intensity >= startIntensity) fading = true;
             if (prevState != fading)    //if at max height (noon), wait for some time before going back down
             {
-                if (fading == true) yield return new WaitForSeconds(30f);
+                if (fading == true) yield return new WaitForSeconds(100f);
                 prevState = fading;
             }
             //makes light go down to zero, then back up
@@ -43,7 +48,18 @@ public class LightControl : MonoBehaviour {
             else reflectIntensity = directionalLight.intensity + 0.1f;
 
             RenderSettings.reflectionIntensity = reflectIntensity;
-            
+
+            if (directionalLight.intensity < 0.5 && !starsOn)   //turn stars on at 0.5 intensity
+            {
+                starsObject = Instantiate(stars);
+                starsOn = true;
+            }
+            if (directionalLight.intensity > 0.5 && starsOn)    //turn off
+            {
+                starsOn = false;
+                Destroy(starsObject);
+            }
+
             yield return new WaitForSeconds(1f / cycleSpeed);
         }
     }
