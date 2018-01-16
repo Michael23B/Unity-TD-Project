@@ -67,6 +67,10 @@ public class WaveSpawner : MonoBehaviour {
 
     public Button startNextWaveBtn;
 
+    public float UpdateGhostPositionInterval = 5f;
+
+    public GameObject immuneEffect;
+
     private void Awake()
     {
         if (Instance != null)
@@ -81,7 +85,7 @@ public class WaveSpawner : MonoBehaviour {
         if (NetworkServer.connections.Count != 0) waitForPlayersCount = NetworkServer.connections.Count;
 
         if (cleanUpScene) CleanUpEnemies();
-        InvokeRepeating("UpdateGhostPositions", 0f, 5f);
+        InvokeRepeating("UpdateGhostPositions", 0f, UpdateGhostPositionInterval);
         GenerateAllWaves();
     }
 
@@ -150,7 +154,7 @@ public class WaveSpawner : MonoBehaviour {
         waveMultiText.text = "ENEMY STRENGTH MULTIPLIER: " + (1 + waveMulti).ToString("F1") + "x";
 
         playersReady = 0;
-        ResourceSpawner.Instance.SpawnResources(10);
+        ResourceSpawner.Instance.SpawnResources(20);
         PlayerStats.Instance.rounds++;
 
         EnemyWave currentWave = waves[waveIndex % waves.Length];

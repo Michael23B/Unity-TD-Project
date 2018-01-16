@@ -11,6 +11,8 @@ TagManager:
   - Freeze(Alternate)
   - Crosshair
   - Player2
+  - CooldownImageRmb
+  - CooldownImageSS3
   layers:
   - Default
   - TransparentFX

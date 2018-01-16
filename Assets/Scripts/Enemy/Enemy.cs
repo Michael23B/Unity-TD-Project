@@ -69,6 +69,11 @@ public class Enemy : MonoBehaviour
 
     public GameObject graphics;
 
+    public float debuffLimitTimer = 0f;
+    public float debuffLimitThreshold = 60f;
+    [HideInInspector]
+    public bool debuffLimitActive = false;
+
     void Start()
     {
         //Assign enemy unique ID

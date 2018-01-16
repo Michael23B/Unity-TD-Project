@@ -13,7 +13,7 @@ public class ResourceSpawner : MonoBehaviour {
     private float ySpawnOffset = 1f;
 
     public int indexOfID = 0;
-    int resourceMax = 60;
+    int resourceMax = 100;
 
     private void Awake()
     {

@@ -141,6 +141,18 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [Command]
+    public void CmdDamageEnemy(int myID, int enemyID, float damage)
+    {
+        foreach (NetworkConnection target in NetworkServer.connections)
+        {
+            if (target.connectionId != myID && target.connectionId != -1)
+            {
+                TargetRpcDamageEnemy(target, enemyID, damage);
+            }
+        }
+    }
+
+    [Command]
     public void CmdPlayerColorsUpdate()
     {
         RpcPlayerColorsUpdate();
@@ -304,7 +316,7 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [TargetRpc]
-    void TargetRpcPlayShootEffect(NetworkConnection target, int id) //TODO: change to a grey shoot effect so its obvious the player can't hurt the other players enemies
+    void TargetRpcPlayShootEffect(NetworkConnection target, int id) 
     {
         GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
         PlayerController player = p2.GetComponent<PlayerController>();
@@ -319,7 +331,7 @@ public class LocalPlayerCommands : NetworkBehaviour
     }
 
     [TargetRpc]
-    void TargetRpcShoot(NetworkConnection target, int id) //TODO: change to a grey shoot effect so its obvious the player can't hurt the other players enemies
+    void TargetRpcShoot(NetworkConnection target, int id) //actually damages enemy with shot
     {
         GameObject p2 = GameObject.FindGameObjectWithTag("Player2");
         PlayerController player = p2.GetComponent<PlayerController>();
@@ -331,6 +343,20 @@ public class LocalPlayerCommands : NetworkBehaviour
             //player.gun.shootEffect.transform.rotation = player.gun.graphics.transform.rotation;
         }
         else if (id == 2) player.gun.AltShoot();
+    }
+
+    [TargetRpc]
+    void TargetRpcDamageEnemy(NetworkConnection target, int id, float damage)
+    {
+        foreach (GameObject enemy in WaveSpawner.Instance.enemyList)
+        {
+            Enemy enemyComponent = enemy.GetComponent<Enemy>();
+
+            if (enemyComponent.ID == id)
+            {
+                enemyComponent.TakeDamage(damage);
+            }
+        }
     }
 
     [ClientRpc]
@@ -453,7 +479,6 @@ public class LocalPlayerCommands : NetworkBehaviour
             CmdSendSceneState(nodeStates, lightIntensity, fading, prevstate);
         }
     }
-
 
     [ClientRpc]
     void RpcSendSceneState(NodeState[] nodeStates, float lightIntensity, bool fading, bool prevstate)

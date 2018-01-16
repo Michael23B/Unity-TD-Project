@@ -43,7 +43,11 @@ public class Gun : MonoBehaviour {
         {
             Enemy enemy = hit.transform.GetComponent<Enemy>();
 
-            if (enemy != null) enemy.TakeDamage(damage);
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);   //if (!enemy.ghost) //send the ghost damage to the other client. prefer to just fire on the client side and trust the sync is enough
+                //else WaveSpawner.Instance.commands.CmdDamageEnemy(WaveSpawner.Instance.playerID, enemy.GID, damage);
+            }
         }
     }
 

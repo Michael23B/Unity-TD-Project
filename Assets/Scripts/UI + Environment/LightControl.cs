@@ -17,7 +17,7 @@ public class LightControl : MonoBehaviour {
     public bool prevState = true;
 
     public GameObject stars;
-    public GameObject starsObject;
+    GameObject starsObject;
     bool starsOn;
 
     private void Start()

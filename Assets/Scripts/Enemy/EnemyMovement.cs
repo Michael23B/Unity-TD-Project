@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour {
     }
     public void SetAndUpdateWaypoint(int i)
     {
-        if (points == null) //very strict checking trying to find where error appears
+        if (points == null) //redundant checking but errors kept appearing
         {
             waypointIndex = i;
             return;
@@ -28,7 +28,8 @@ public class EnemyMovement : MonoBehaviour {
             waypointIndex = i;
             return;
         }
-        waypointIndex = i - 1;
+        if (!fear) waypointIndex = i - 1;
+        else waypointIndex = i + 1;
         GetNextWaypoint();
     }
     [HideInInspector]

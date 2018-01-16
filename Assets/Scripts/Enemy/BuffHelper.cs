@@ -2,7 +2,7 @@
 
 //Definitions for buffs and methods for adding and stacking etc.
 
-public enum DebuffType { None, LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg, ShieldBreak }    //nostun (if stunned for too long become immune), silence (disable enemyattack)
+public enum DebuffType { None, LaserSlow, Freeze, Fear, Poison, AtkSpeed, Heal, Slow, AmplifyDmg, ShieldBreak, DebuffLimitExceededMaximumOverdriveEngagedIsThatTheBestYouCanDoYourAttacksAreMeaningless }
 
 [System.Serializable]
 public class Debuff
@@ -30,7 +30,7 @@ public static class BuffHelper {
     //
     public static void AddDebuff(Enemy e, DebuffType _type, float _time, float _amount, GameObject _effect = null)
     {
-        if (_type == DebuffType.None) Debug.Log("Empty debuff called"); //oh oh (should never happen)
+        if (e.debuffLimitActive && (_type == DebuffType.Fear || _type == DebuffType.Freeze)) return;
         if (e.shield > 0 && _type != DebuffType.Heal && _type != DebuffType.ShieldBreak)   //Don't debuff shielded enemies, Negative value debuffs(buffs) and heals go through (and shieldbreak)
         {
             if (_amount >= 0f) return;
@@ -124,10 +124,19 @@ public static class BuffHelper {
                 case DebuffType.ShieldBreak:
                     BuffHelper.ShieldBreak(e, i);
                     break;
+                case DebuffType.DebuffLimitExceededMaximumOverdriveEngagedIsThatTheBestYouCanDoYourAttacksAreMeaningless:
+                    BuffHelper.DebuffLimit(e, i);
+                    break;
             }
         }
         if (e.speed < e.minSpeed && e.moveable) e.speed = e.minSpeed;
         if (e.damageMulti < 0) e.damageMulti = 0;   //don't heal from damage. TODO: unless some variable
+        if (!e.moveable || e.enemyMovement.fear) e.debuffLimitTimer += Time.deltaTime;
+        if (e.debuffLimitTimer >= e.debuffLimitThreshold)
+        {
+            AddDebuff(e, new Debuff(DebuffType.DebuffLimitExceededMaximumOverdriveEngagedIsThatTheBestYouCanDoYourAttacksAreMeaningless, 60f, 1f, WaveSpawner.Instance.immuneEffect));   //make enemy immune to stuns/fear
+            e.debuffLimitTimer = 0f;
+        }
     }
 
     public static void ResetDebuffs(Enemy e)
@@ -209,6 +218,7 @@ public static class BuffHelper {
 
     public static void Freeze(Enemy e, int i)
     {
+        if (e.debuffLimitActive) e.debuffList[i].time = 0;
         if (e.debuffList[i].time <= 0)
         {
             e.moveable = true;
@@ -225,6 +235,7 @@ public static class BuffHelper {
 
     public static void Fear(Enemy e, int i)
     {
+        if (e.debuffLimitActive) e.debuffList[i].time = 0;
         if (e.debuffList[i].time <= 0)
         {
             if (e.enemyMovement.fear) e.enemyMovement.SetFear(false);
@@ -310,6 +321,21 @@ public static class BuffHelper {
         {
             e.TakeShieldDamage(e.debuffList[i].amount * Time.deltaTime);
             e.debuffList[i].time -= Time.deltaTime;
+        }
+    }
+
+    public static void DebuffLimit(Enemy e, int i)
+    {
+        if (e.debuffList[i].time <= 0)
+        {
+            GameObject.Destroy(e.debuffList[i].effect);
+            e.debuffList.RemoveAt(i);
+            e.debuffLimitActive = false;
+        }
+        else
+        {
+            e.debuffList[i].time -= Time.deltaTime;
+            e.debuffLimitActive = true;
         }
     }
 

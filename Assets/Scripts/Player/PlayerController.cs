@@ -40,6 +40,11 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject graphics;
 
+    GameObject rmbCooldownImage;
+    Image rmbCooldownImageComponent;
+    GameObject ss3CooldownImage;
+    Image ss3CooldownImageComponent;
+
     private void Start()
     {
         sceneCamera = Camera.main;
@@ -53,6 +58,11 @@ public class PlayerController : MonoBehaviour {
         WaveSpawner.Instance.localPlayer = this;
 
         commands.CmdRequestSceneState();
+
+        rmbCooldownImage = GameObject.FindGameObjectWithTag("CooldownImageRmb");
+        rmbCooldownImageComponent = rmbCooldownImage.GetComponent<Image>();
+        ss3CooldownImage = GameObject.FindGameObjectWithTag("CooldownImageSS3");
+        ss3CooldownImageComponent = ss3CooldownImage.GetComponent<Image>();
     }
 
     private void OnEnable()
@@ -72,6 +82,13 @@ public class PlayerController : MonoBehaviour {
         WaveSpawner.Instance.localPlayer = this;
         
         ResetCameras();
+
+        transform.position = new Vector3(0f, 2f, 0f);
+
+        rmbCooldownImage = GameObject.FindGameObjectWithTag("CooldownImageRmb");
+        rmbCooldownImageComponent = rmbCooldownImage.GetComponent<Image>();
+        ss3CooldownImage = GameObject.FindGameObjectWithTag("CooldownImageSS3");
+        ss3CooldownImageComponent = ss3CooldownImage.GetComponent<Image>();
     }
 
     private void OnDisable()
@@ -90,6 +107,27 @@ public class PlayerController : MonoBehaviour {
         CameraCheck();
         CameraRotate();
         FireGun();
+        UpdateCooldownUI();
+    }
+    
+    void UpdateCooldownUI()
+    {
+        if (Time.time < nextTimeToFire2)
+        {
+            rmbCooldownImageComponent.fillAmount = (nextTimeToFire2 - Time.time) / 20f;
+        }
+        else
+        {
+            rmbCooldownImageComponent.fillAmount = 0;
+        }
+        if (Time.time < nextTimeToBankai)
+        {
+            ss3CooldownImageComponent.fillAmount = (nextTimeToBankai - Time.time) / 300f;
+        }
+        else
+        {
+            ss3CooldownImageComponent.fillAmount = 0;
+        }
     }
 
     void FireGun()

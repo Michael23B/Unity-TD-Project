@@ -229,7 +229,7 @@ MonoBehaviour:
   debuffs:
   - type: 8
     time: 4
-    amount: -0.9
+    amount: -0.8
     effect: {fileID: 1491607627031414, guid: 2052d46ed6d3c6c43a75ec17986709af, type: 2}
 --- !u!135 &135186040349639490
 SphereCollider:
