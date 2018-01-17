@@ -12,17 +12,20 @@ public class PauseMenu : MonoBehaviour {
     public InputField wavesInput;
     public Button waveGenerateBtn;
     bool initialSetUp = false;
+    GameObject networking;
 
     private void Start()
     {
         networkHUD = FindObjectOfType<NetworkManagerHUD>();
+        networking = GameObject.Find("NetworkCanvas");
     }
 
     private void Update()
     {
         if (WaveSpawner.Instance.gameStarted && !initialSetUp)
         {
-            networkHUD.gameObject.SetActive(false);
+            //if (networkHUD != null) networkHUD.gameObject.SetActive(false);
+            if (networking != null) networking.gameObject.SetActive(false);
             wavesInput.gameObject.SetActive(false);
             waveGenerateBtn.gameObject.SetActive(false);
             initialSetUp = true;
@@ -52,7 +55,6 @@ public class PauseMenu : MonoBehaviour {
 
     public void Quit()
     {
-        Debug.Log("Quitting...");
         Network.Disconnect(200);
         Application.Quit();
     }
@@ -64,12 +66,14 @@ public class PauseMenu : MonoBehaviour {
 
     public void ToggleNetworkHUD()
     {
-        networkHUD.gameObject.SetActive(!networkHUD.isActiveAndEnabled);
+        //if (networkHUD != null) networkHUD.gameObject.SetActive(!networkHUD.isActiveAndEnabled);
+        if (networking != null) networking.gameObject.SetActive(!networking.gameObject.activeInHierarchy);
     }
 
     public void ToggleNetworkHUD(bool b)
     {
-        networkHUD.gameObject.SetActive(b);
+        //if (networkHUD != null) networkHUD.gameObject.SetActive(b);
+        if (networking != null) networking.gameObject.SetActive(b);
     }
 
     public void CallMaxWaveUpdate()

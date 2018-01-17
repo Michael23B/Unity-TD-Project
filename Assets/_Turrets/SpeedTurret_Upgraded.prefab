@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4871118752588580}
   - component: {fileID: 33319050694642842}
   - component: {fileID: 23260219223282518}
+  - component: {fileID: 95681333050803400}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687727007058188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.906246, y: 0.5, z: 60.480827}
+  m_LocalPosition: {x: -0.07347298, y: 0.5, z: 0.55682373}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4871118752588580}
@@ -125,13 +126,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176009723091444}
-  m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalRotation: {x: 0.23836316, y: 0.16512056, z: -0.07802112, w: 0.95385057}
   m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4606838561888144}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 28.718, y: 18.468, z: -4.5860004}
 --- !u!23 &23260219223282518
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -185,6 +186,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0, y: 0, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95681333050803400
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1176009723091444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1bb84382c9c1ed4f8e8b425ae6cd25d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114245278325775702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,6 +219,8 @@ MonoBehaviour:
   baseDamage: 0
   damage: 0
   fireRate: 0.2
+  owner: 0
+  owned: 1
   targetNearest: 0
   bulletPrefab: {fileID: 0}
   useLaser: 0
@@ -220,10 +240,14 @@ MonoBehaviour:
   spawnPrefab: {fileID: 1707413217487440, guid: f5081cad7de93ad4589d0d14ae9b5b51,
     type: 2}
   enemyTag: Enemy
-  hasAnimation: 1
   PartToRotate: {fileID: 4871118752588580}
   firePoint: {fileID: 4244328689429942}
   turnSpeed: 2
+  childTurret: 0
+  parentTurret: {fileID: 0}
+  childGetsOwnTargets: 0
+  hasChildren: 0
+  childList: []
   debuffList: []
   emptyPlaceHolder: {fileID: 1271999510676272, guid: bd9a8887e8abac446a54f81c083f6c03,
     type: 2}

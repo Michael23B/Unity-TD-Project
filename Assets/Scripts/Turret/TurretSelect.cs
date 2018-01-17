@@ -90,7 +90,6 @@ public class TurretSelect : MonoBehaviour {
     {
         if (selectedTurrets.Count >= maxTurrets)
         {
-            Debug.Log("Turret Limit Reached!");
             return;
         }
         else
@@ -106,7 +105,7 @@ public class TurretSelect : MonoBehaviour {
     {
         if (selectedTurrets.Count <= 0)
         {
-            Debug.Log("oh oh");
+            Debug.Log("uh oh");
             return;
         }
         else

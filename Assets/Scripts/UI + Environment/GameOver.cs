@@ -27,7 +27,6 @@ public class GameOver : MonoBehaviour {
 
     public void Quit()
     {
-        Debug.Log("Quitting...");
         Network.Disconnect(200);
         Application.Quit();
     }

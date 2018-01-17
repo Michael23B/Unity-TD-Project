@@ -157,6 +157,9 @@ public class Enemy : MonoBehaviour
     {
         if (ghost) return;
         if (!useShield) return;
+
+        if (amount > 0) amount *= damageMulti;   //don't reduce healing
+
         if (shield != 0f)
         {
             shield -= amount;
