@@ -257,7 +257,7 @@ MonoBehaviour:
   GID: 0
   startSpeed: 4
   minSpeed: 1
-  startHealth: 800
+  startHealth: 1250
   health: 0
   startShield: 0
   shield: 0
@@ -284,6 +284,9 @@ MonoBehaviour:
   ghost: 0
   managerID: 8
   graphics: {fileID: 1578458309098084}
+  debuffLimitTimer: 0
+  debuffLimitThreshold: 60
+  debuffLimitActive: 0
 --- !u!114 &114585292175636046
 MonoBehaviour:
   m_ObjectHideFlags: 1

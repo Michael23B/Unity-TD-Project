@@ -261,9 +261,9 @@ MonoBehaviour:
   GID: 0
   startSpeed: 6.25
   minSpeed: 1
-  startHealth: 750
+  startHealth: 650
   health: 0
-  startShield: 750
+  startShield: 650
   shield: 0
   baseDamageMulti: 1
   damageMulti: 0

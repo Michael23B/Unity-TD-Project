@@ -58,6 +58,7 @@ public class WaveSpawner : MonoBehaviour {
     public Text waveIndexText;
 
     public bool gameStarted = false;    //has game started?
+    public float waitingForZombies = 0f;
 
     public int waveMax;
     public EnemyWaveHelper enemyWaveHelper; //for generating random waves
@@ -88,14 +89,6 @@ public class WaveSpawner : MonoBehaviour {
         if (cleanUpScene) CleanUpEnemies();
         InvokeRepeating("UpdateGhostPositions", 0f, UpdateGhostPositionInterval);
         GenerateAllWaves();
-
-        Debug.Log("Players connected: " + NetworkServer.connections.Count + ". Waiting for " + waitForPlayersCount + " players to ready up. " + playersReady + " players ready.");
-        InvokeRepeating("debugplayerswaiting", 5f, 5f);
-    }
-
-    void debugplayerswaiting()
-    {
-        Debug.Log("Players connected: " + NetworkServer.connections.Count + ". Waiting for " + waitForPlayersCount + " players to ready up." + playersReady + " players ready.");
     }
 
     private void Update()
@@ -108,9 +101,24 @@ public class WaveSpawner : MonoBehaviour {
 
         if (finishedWaveAndReady == true)
         {
+            if (waitingForZombies < 1f)
+            {
+                if (enemiesAlive <= 0)
+                {
+                    waitingForZombies += Time.deltaTime;
+                    return;
+                }
+                else
+                {
+                    waitingForZombies = 0f;
+                    return;
+                }
+            }
+
             if (commands == null) commands = FindObjectOfType<LocalPlayerCommands>();
             commands.CmdReady();
             finishedWaveAndReady = false;
+            waitingForZombies = 0f;
         }
         if (playersReady < waitForPlayersCount) return;
 
@@ -182,6 +190,7 @@ public class WaveSpawner : MonoBehaviour {
         }
         waveIndex++;
         waveActive = false;
+
         finishedWaveAndReady = true;
 
         if (nextWaveIndex > waveMax)    //if all waves have arrived, display winning text and final enemy strength

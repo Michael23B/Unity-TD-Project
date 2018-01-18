@@ -402,7 +402,7 @@ MonoBehaviour:
   GID: 0
   startSpeed: 3.66
   minSpeed: 1
-  startHealth: 3000
+  startHealth: 2750
   health: 0
   startShield: 0
   shield: 0
