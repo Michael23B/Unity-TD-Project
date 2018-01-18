@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-//TODO: stop from counting down in the initial build time but not after then
-//TODO: expensive plant that gives a life after a long growing time
+
 public enum PlantTypes { tomato, carrot, fish, cactus, atmosphere }
 
 public class Plant : MonoBehaviour {

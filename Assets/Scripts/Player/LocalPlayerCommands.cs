@@ -295,7 +295,7 @@ public class LocalPlayerCommands : NetworkBehaviour
     {
         for (int i = 0; i < WaveSpawner.Instance.enemyGhostList.Count; ++i)
         {
-            Enemy ghost = WaveSpawner.Instance.enemyGhostList[i].GetComponent<Enemy>(); //TODO: make enemy component list 
+            Enemy ghost = WaveSpawner.Instance.enemyGhostList[i].GetComponent<Enemy>();
 
             for (int j = 0; j < state.Length; ++j)  //check if this ghosts id is in the state array (redundant since the enemies should be in the same order in both arrays, but this is very safe)
             {

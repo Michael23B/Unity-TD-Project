@@ -62,7 +62,6 @@ public class TurretSelect : MonoBehaviour {
             entryPointerExit.eventID = EventTriggerType.PointerExit;                  //of type pointer enter
             entryPointerExit.callback.AddListener((eventData) => { HideTurretInfo(); }); //run this funciton when it happens
             trigger.triggers.Add(entryPointerExit);
-            //TODO: add when mouse leaves clear it
         }
     }
 

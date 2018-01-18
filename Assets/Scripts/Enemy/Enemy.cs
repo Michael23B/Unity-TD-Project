@@ -2,8 +2,7 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-//TODO: Pool enemy health bars, enemies, projects etc.
-//TODO: add snitch enemy thats very fast and tanky but drops lots of gold. does no core damage, so its just a bonus.
+//TODO: Pool enemy health bars, enemies, projectiles
 public class Enemy : MonoBehaviour
 {
     static int enemyID = 0;
@@ -52,11 +51,11 @@ public class Enemy : MonoBehaviour
     public GameObject emptyPlaceHolder; //can i just use null?
 
     public Image healthBar;
-    public Image healthBarBG; //TODO: One canvas with all health bars instead of serperate canvasii
+    public Image healthBarBG;
 
     public bool useShield = false;
     public Image shieldBar;
-    public Image shieldBarBG; //TODO: One canvas with all health bars instead of serperate canvasii
+    public Image shieldBarBG;
 
     public EnemyMovement enemyMovement;
     [Space(10)]
@@ -197,7 +196,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()//TODO: deal with desync when an enemy dies on client but not server
+    void Die()
     {
         if (ghost)
         {
@@ -241,5 +240,4 @@ public class Enemy : MonoBehaviour
             if (debuffList[i].effect != null) Destroy(debuffList[i].effect);    //clean up debuff effects that may be in world
         }
     }
-}    //public void SubtractLives() {}
-     //TODO: Perform life subtract here instead of in GameMaster for performance
+}    //public void SubtractLives() {}   //should have done this here obviously but doing it in update or wherever is easier :))

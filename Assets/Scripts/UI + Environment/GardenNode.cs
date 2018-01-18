@@ -57,11 +57,11 @@ public class GardenNode : MonoBehaviour {
         rend.material.color = startColor;
     }
 
-    public void Plant(GameObject plant) //TODO: add networking (commands.CallPlant())
+    public void Plant(GameObject plant)
     {
         plant = Instantiate(plant, transform.position + positionOffset, Quaternion.identity);
         plantComponent = plant.GetComponent<Plant>();
-        timeTillRipe = Time.time + plantComponent.harvestTime; //todo plants blueprint harvest time
+        timeTillRipe = Time.time + plantComponent.harvestTime;
         plantComponent.node = this;
     }
 

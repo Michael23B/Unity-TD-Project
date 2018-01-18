@@ -14,7 +14,7 @@ public class Ondeath : MonoBehaviour {
         isQuitting = true;
     }
 
-    private void OnDestroy()    //TODO:it spawns stuff when the level reloads and its not a big deal but unity doesn't like that
+    private void OnDestroy()
     {
         if (!isQuitting)
         {

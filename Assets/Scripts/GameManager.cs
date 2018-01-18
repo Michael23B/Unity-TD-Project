@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-//TODO: fix this, game end is always set to true
+
 public class GameManager : MonoBehaviour {
     
     public static bool gameIsOver = false;

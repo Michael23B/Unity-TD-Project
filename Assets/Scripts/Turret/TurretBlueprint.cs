@@ -82,7 +82,7 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
                     statString += GetRange(false);
                     break;
                 case FetchStat.DebuffType:
-                    if (prefabTurret.type == DebuffType.LaserSlow) statString += "Slow";    //TODO: differentiate these with some variable or a new debufftype
+                    if (prefabTurret.type == DebuffType.LaserSlow) statString += "Slow";
                     else if (prefabTurret.type == DebuffType.Freeze) statString += "Stun";
                     else statString += prefabTurret.type;
                     break;
@@ -149,9 +149,6 @@ public class TurretBlueprint {  //TODO: sell amount variable instead of only 50%
                 case FetchStat.AOE:
                     statString += prefabBullet.explosionRadius;
                     break;
-                    //case FetchStat.ExtraTargets:  //TODO: add extra targets for bullets
-                    //statString += prefabTurret.extraTargetNumber;
-                    //break;
             }
         }
         return statString;

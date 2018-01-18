@@ -21,9 +21,6 @@ public class Debuff
     public GameObject effect;
 }
 
-//TODO: debuff size scale could work but it's way off right now because enemy scales arent uniform
-//effectIns.transform.localScale = e.transform.localScale / 4;
-//TODO:change functions to template instead of defining two of each
 public static class BuffHelper {
     //
     //Enemy functions
@@ -130,11 +127,11 @@ public static class BuffHelper {
             }
         }
         if (e.speed < e.minSpeed && e.moveable) e.speed = e.minSpeed;
-        if (e.damageMulti < 0) e.damageMulti = 0;   //don't heal from damage. TODO: unless some variable
+        if (e.damageMulti < 0) e.damageMulti = 0;   //don't heal from damage.
         if (!e.moveable || e.enemyMovement.fear) e.debuffLimitTimer += Time.deltaTime;
         if (e.debuffLimitTimer >= e.debuffLimitThreshold)
         {
-            AddDebuff(e, new Debuff(DebuffType.DebuffLimitExceededMaximumOverdriveEngagedIsThatTheBestYouCanDoYourAttacksAreMeaningless, 60f, 1f, WaveSpawner.Instance.immuneEffect));   //make enemy immune to stuns/fear
+            AddDebuff(e, new Debuff(DebuffType.DebuffLimitExceededMaximumOverdriveEngagedIsThatTheBestYouCanDoYourAttacksAreMeaningless, 100f, 1f, WaveSpawner.Instance.immuneEffect));   //make enemy immune to stuns/fear
             e.debuffLimitTimer = 0f;
         }
     }

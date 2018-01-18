@@ -22,7 +22,7 @@ public class LocalRandom : MonoBehaviour {
         randomValues = new float[randomLength];
     }
 
-    public int GetNextRandom(int max = 1, bool positiveOnly = true) //TODO: im sure theres a better way to do this but it works for now
+    public int GetNextRandom(int max = 1, bool positiveOnly = true) //this is not ideal but it works
     {
         if (randomValues.Length == 0) return 0;
 

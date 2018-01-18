@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 //Spawns prefabs or shoots targets in range, when shooting picks a random target every shot
-//TODO: scale with wavemulti
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyAttack : MonoBehaviour {
@@ -63,7 +62,7 @@ public class EnemyAttack : MonoBehaviour {
         else countDown -= Time.deltaTime;
 	}
 
-    void Spawn()//TODO: need a new ID for enemies that are spawned from enemies, the order the spawn order may not match from client to server (dont spawn enemies from ghosts, only send command from the player)
+    void Spawn()
     {
         if (spawnPrefab == null) return;
         if (spawnEffect != null)
@@ -90,9 +89,7 @@ public class EnemyAttack : MonoBehaviour {
             enemy.Kill();   //the enemy Die() function won't be called again if its health is 0 or lower
         }
     }
-    //
-    //TODO: Add update target and shoot and stuff to a seperate class instead of re defining them here and in bullet and turret
-    //
+
     void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);

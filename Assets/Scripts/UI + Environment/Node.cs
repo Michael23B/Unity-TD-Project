@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-//TODO: fix when selling upgraded turret reset the node
 public class Node : MonoBehaviour
 {
     public Vector3 positionOffset;
@@ -147,7 +146,7 @@ public class Node : MonoBehaviour
 
         GameObject effect = Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
-        //TODO: Change build effect from buildManager to the blueprint (makes more sense)
+        //TODO: Change build effect from buildManager to the blueprint (for different effects for each turret)
 
         isUpgraded = true;
         //TODO: Bool -> int for upgrade levels, array of upgraded turrets

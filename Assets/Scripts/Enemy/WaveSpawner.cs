@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
-//TODO: update all client nodes with correct turrets when clientjoins()
+//This class become somewhat of a god class, holding a bunch of functions and variables it should never have had because it was convinient at the time to put them here.
+//I would have refactored this a long time ago but I never really had long term plans for this project so it ended up pretty rough around the edges.
 public class WaveSpawner : MonoBehaviour {
     
     public static WaveSpawner Instance;
@@ -248,7 +249,6 @@ public class WaveSpawner : MonoBehaviour {
         }
     }
 
-    //TODO: add general class for helper function like this and update target (bullets,turrets,enemies) and some other stuff
     public void ShuffleArr<T>(T[] arr)
     {
         for (int i = 0; i < arr.Length; i++)
@@ -299,7 +299,7 @@ public class WaveSpawner : MonoBehaviour {
         for (int i = 0; i < state.Length; ++i)
         {
             state[i] = new EnemyState();
-            Enemy e = enemyList[i].GetComponent<Enemy>();   //TODO: add enemy component list to wavespawner or make a manager class for enemies rather than getting component every time
+            Enemy e = enemyList[i].GetComponent<Enemy>();   //getting component constantly is no good. need a manager class for enemies
 
             state[i].ID = e.ID;
             state[i].movementTarget = e.enemyMovement.waypointIndex;
@@ -346,7 +346,7 @@ public class WaveSpawner : MonoBehaviour {
         if (countdown <= 0) return;
         commands.CmdStartNextWave();
     }
-    //if you bankai then hit gun upgrade you will give super damage to other player forever fix this TODO:
+
     public void CallGunUpgrade(int amount)
     {
         commands.CmdShootDamageUpdate(amount);

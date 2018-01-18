@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-//TODO: different gameobject for each debuff. for different effects
 public class Bullet : MonoBehaviour {
 
     private Transform target;

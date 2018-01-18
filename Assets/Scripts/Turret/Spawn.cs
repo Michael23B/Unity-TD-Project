@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-//TODO: clean up this and bullet debuff lists
-//      add different gameobject for each debuff. for effects
+
 public class Spawn : MonoBehaviour {
 
     public float explosionRadius = 10f;

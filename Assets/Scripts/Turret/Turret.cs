@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 //TODO: pool turret bullets
-//make child turrets get the buffs of the parent turret, have an option for the child turrets to have their own targets (pyramid needs both of these to function properly with speed turret)
+
 public class Turret : MonoBehaviour
 {
     private Enemy targetEnemy;
@@ -279,15 +279,10 @@ public class Turret : MonoBehaviour
             impactEffect.Play();
             impactLight.enabled = true;
         }
-        //TODO: animate the laser with perlin noise or some animation
-        //lineRenderer.startWidth = Random.Range(0, 2);
-        //lineRenderer.endWidth = Random.Range(0, 2);
-        //doesnt update the random?
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
         #region multi-target
-        if (extraTargetNumber != 0) //TODO:add check if any of the targets[] are out of range before resetting the array again
-                                    //TODO: visual effect on all enemies as well
+        if (extraTargetNumber != 0)
         {
             if (target == null) return;
             if (targets[0] == null)
@@ -359,7 +354,6 @@ public class Turret : MonoBehaviour
         Vector3 dir = firePoint.position - target.position;
         //TODO: add effect to all extra tagets
         impactEffect.transform.position = target.position + dir.normalized;
-        //TODO: only works because enemy radius is 1 (normalized = 1)
 
         impactEffect.transform.rotation = Quaternion.LookRotation(dir);
     }

@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-//TODO: there is a bug sometimes when switching between scene and fpcamera that makes the graphics rotation out of sync with the motor, happens only sometimes tho and i cant replicate it
+
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
 
@@ -199,7 +199,7 @@ public class PlayerController : MonoBehaviour {
         else
         {
             RotateToMouse();
-            motor.Rotate(new Vector3(0f, 0f, 0f));  //TODO: make a variable to check whether we want to lock rotation, lock / unlock when toggling fpCamera
+            motor.Rotate(new Vector3(0f, 0f, 0f));
         }
     }
 

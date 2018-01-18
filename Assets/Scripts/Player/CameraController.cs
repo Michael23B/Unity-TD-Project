@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour {
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
         transform.position = pos;
 
-        if (Input.GetKeyDown(KeyCode.Backspace)) doMovement = !doMovement; //for disabling/enabling movement
+        //if (Input.GetKeyDown(KeyCode.Backspace)) doMovement = !doMovement; //for disabling/enabling movement
 
         if (!doMovement) return;
 		
@@ -48,7 +48,5 @@ public class CameraController : MonoBehaviour {
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
-        //TODO: Make switch case
-        //Max x and y values for camera so you dont pan to the edge of the map
     }
 }
