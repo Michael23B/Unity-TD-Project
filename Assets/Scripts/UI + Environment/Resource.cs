@@ -24,17 +24,18 @@ public class Resource : MonoBehaviour {
     public int hitsToDestroy = 7;
     public int hitEffectLife = 2;
 
-    [HideInInspector]
-    public int ID;
+    public int ID = -1;
 
     int miningRange = 40;
     bool inRange = false;
 
     private void Start()
     {
-        ID = ResourceSpawner.Instance.indexOfID;
-        Debug.Log("Spawning resource: " + ID);
-        ResourceSpawner.Instance.indexOfID++;
+        if (ID == -1)   //if you dont have a pre-set ID
+        {
+            ID = ResourceSpawner.Instance.indexOfID;
+            ResourceSpawner.Instance.indexOfID++;
+        }
 
         ResourceSpawner.Instance.resources.Add(this);
     }
@@ -118,6 +119,5 @@ public class Resource : MonoBehaviour {
     private void OnDestroy()
     {
         ResourceSpawner.Instance.resources.Remove(this);
-        Debug.Log("Destroying resource: " + ID);
     }
 }

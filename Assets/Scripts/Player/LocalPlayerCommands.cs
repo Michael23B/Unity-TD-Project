@@ -405,7 +405,6 @@ public class LocalPlayerCommands : NetworkBehaviour
     [ClientRpc]
     void RpcDestroyResource(int resourceID)
     {
-        Debug.Log("RPC Destroy called for: " + resourceID);
         foreach (Resource resource in ResourceSpawner.Instance.resources)
         {
             if (resource.ID == resourceID)

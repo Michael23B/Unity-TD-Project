@@ -12,6 +12,7 @@ public class ResourceSpawner : MonoBehaviour {
 
     private float ySpawnOffset = 1f;
 
+    [Tooltip("Set this to the the number of set resources in the scene")]
     public int indexOfID = 0;
     int resourceMax = 100;
 

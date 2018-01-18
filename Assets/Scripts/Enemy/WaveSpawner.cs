@@ -88,6 +88,14 @@ public class WaveSpawner : MonoBehaviour {
         if (cleanUpScene) CleanUpEnemies();
         InvokeRepeating("UpdateGhostPositions", 0f, UpdateGhostPositionInterval);
         GenerateAllWaves();
+
+        Debug.Log("Players connected: " + NetworkServer.connections.Count + ". Waiting for " + waitForPlayersCount + " players to ready up. " + playersReady + " players ready.");
+        InvokeRepeating("debugplayerswaiting", 5f, 5f);
+    }
+
+    void debugplayerswaiting()
+    {
+        Debug.Log("Players connected: " + NetworkServer.connections.Count + ". Waiting for " + waitForPlayersCount + " players to ready up." + playersReady + " players ready.");
     }
 
     private void Update()
