@@ -33,6 +33,7 @@ public class Resource : MonoBehaviour {
     private void Start()
     {
         ID = ResourceSpawner.Instance.indexOfID;
+        Debug.Log("Spawning resource: " + ID);
         ResourceSpawner.Instance.indexOfID++;
 
         ResourceSpawner.Instance.resources.Add(this);
@@ -117,5 +118,6 @@ public class Resource : MonoBehaviour {
     private void OnDestroy()
     {
         ResourceSpawner.Instance.resources.Remove(this);
+        Debug.Log("Destroying resource: " + ID);
     }
 }

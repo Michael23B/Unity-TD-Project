@@ -334,7 +334,7 @@ public class WaveSpawner : MonoBehaviour {
         if (!buildTime) return;
         if (countdown <= 0) return;
 
-        PlayerStats.Instance.money += (int)Mathf.Round(countdown);
+        PlayerStats.Instance.money += (int)Mathf.Round(countdown * 2);
         countdown = 0;
 
         waveCountdownText.text = string.Format("{0:00.0}", countdown);
