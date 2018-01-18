@@ -37275,6 +37275,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: d7c32b9b84ab0d541883de11893a7b54,
+        type: 2}
+      propertyPath: ID
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
   m_IsPrefabParent: 0
@@ -42363,6 +42368,11 @@ Prefab:
       propertyPath: hitsToDestroy
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: d7c32b9b84ab0d541883de11893a7b54,
+        type: 2}
+      propertyPath: ID
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
   m_IsPrefabParent: 0
@@ -43098,6 +43108,11 @@ Prefab:
     - target: {fileID: 1023124105668382, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
       propertyPath: m_Name
       value: EvilGoldMineSmall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
@@ -46007,6 +46022,11 @@ Prefab:
     - target: {fileID: 1023124105668382, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
       propertyPath: m_Name
       value: EvilGoldMineSmall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
@@ -49952,6 +49972,11 @@ Prefab:
       propertyPath: m_Name
       value: EvilGoldMineSmall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
   m_IsPrefabParent: 0
@@ -50845,7 +50870,7 @@ Transform:
   - {fileID: 1889927006}
   - {fileID: 1381407910}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &544704087
 Prefab:
@@ -51721,7 +51746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &608627289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51828,10 +51853,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1910888709}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &612391529
 GameObject:
@@ -52371,6 +52395,11 @@ Prefab:
     - target: {fileID: 114906255068617878, guid: e2304ac2231d40447a2c283c14d627c5,
         type: 2}
       propertyPath: hitsToDestroy
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: e2304ac2231d40447a2c283c14d627c5,
+        type: 2}
+      propertyPath: ID
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -55995,6 +56024,11 @@ Prefab:
       propertyPath: m_Name
       value: EvilGoldMineSmall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
   m_IsPrefabParent: 0
@@ -56343,7 +56377,7 @@ Transform:
   - {fileID: 778542239}
   - {fileID: 1919432978}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &794498851
 GameObject:
@@ -65775,7 +65809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925895800
 GameObject:
@@ -70586,6 +70620,11 @@ Prefab:
       propertyPath: m_Name
       value: EvilGoldMineSmall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
   m_IsPrefabParent: 0
@@ -70819,6 +70858,11 @@ Prefab:
     - target: {fileID: 1023124105668382, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
       propertyPath: m_Name
       value: EvilGoldMineSmall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
@@ -75302,6 +75346,11 @@ Prefab:
     - target: {fileID: 1023124105668382, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
       propertyPath: m_Name
       value: EvilGoldMineSmall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
@@ -80190,6 +80239,11 @@ Prefab:
         type: 2}
       propertyPath: hitsToDestroy
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: e2304ac2231d40447a2c283c14d627c5,
+        type: 2}
+      propertyPath: ID
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2304ac2231d40447a2c283c14d627c5, type: 2}
@@ -85918,7 +85972,7 @@ Transform:
   - {fileID: 605301281}
   - {fileID: 493167609}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1364632422
 GameObject:
@@ -87130,7 +87184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1402983065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87154,20 +87208,20 @@ MonoBehaviour:
   m_PlayerPrefab: {fileID: 1088453242561702, guid: a93aca66159a5554685cf231bd3f556a,
     type: 2}
   m_AutoCreatePlayer: 1
-  m_PlayerSpawnMethod: 0
+  m_PlayerSpawnMethod: 1
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs: []
-  m_CustomConfig: 0
-  m_MaxConnections: 4
+  m_CustomConfig: 1
+  m_MaxConnections: 2
   m_ConnectionConfig:
     m_PacketSize: 1440
     m_FragmentSize: 500
     m_ResendTimeout: 1200
-    m_DisconnectTimeout: 2000
+    m_DisconnectTimeout: 5000
     m_ConnectTimeout: 2000
     m_MinUpdateTimeout: 10
-    m_PingTimeout: 500
+    m_PingTimeout: 2000
     m_ReducedPingTimeout: 100
     m_AllCostTimeout: 20
     m_NetworkDropThreshold: 5
@@ -87210,7 +87264,7 @@ MonoBehaviour:
   m_MatchHost: mm.unet.unity3d.com
   m_MatchPort: 443
   matchName: default
-  matchSize: 4
+  matchSize: 2
   isNetworkActive: 0
   matchMaker: {fileID: 0}
 --- !u!4 &1402983066
@@ -87225,6 +87279,7 @@ Transform:
   m_Children:
   - {fileID: 761451266}
   - {fileID: 643860725}
+  - {fileID: 1910888709}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97515,6 +97570,11 @@ Prefab:
       propertyPath: hitsToDestroy
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: e2304ac2231d40447a2c283c14d627c5,
+        type: 2}
+      propertyPath: ID
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2304ac2231d40447a2c283c14d627c5, type: 2}
   m_IsPrefabParent: 0
@@ -98987,6 +99047,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 12.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: d7c32b9b84ab0d541883de11893a7b54,
+        type: 2}
+      propertyPath: ID
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c32b9b84ab0d541883de11893a7b54, type: 2}
   m_IsPrefabParent: 0
@@ -99032,6 +99097,11 @@ Prefab:
     - target: {fileID: 1023124105668382, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
       propertyPath: m_Name
       value: EvilGoldMineSmall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
@@ -100621,6 +100691,11 @@ Prefab:
       propertyPath: hitsToDestroy
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: e2304ac2231d40447a2c283c14d627c5,
+        type: 2}
+      propertyPath: ID
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2304ac2231d40447a2c283c14d627c5, type: 2}
   m_IsPrefabParent: 0
@@ -101608,7 +101683,7 @@ Transform:
   - {fileID: 1060}
   - {fileID: 545789278}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786903551
 GameObject:
@@ -105861,6 +105936,11 @@ Prefab:
       propertyPath: m_Name
       value: EvilGoldMineSmall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
   m_IsPrefabParent: 0
@@ -107139,8 +107219,8 @@ Transform:
   m_LocalPosition: {x: 75.17, y: 2, z: -0.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 608627291}
-  m_RootOrder: 0
+  m_Father: {fileID: 1402983066}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1910888710
 MonoBehaviour:
@@ -111632,6 +111712,11 @@ Prefab:
     - target: {fileID: 1023124105668382, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
       propertyPath: m_Name
       value: EvilGoldMineSmall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906255068617878, guid: 6019f3d70d15fd649a24c1e0ed9ed511,
+        type: 2}
+      propertyPath: ID
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6019f3d70d15fd649a24c1e0ed9ed511, type: 2}
