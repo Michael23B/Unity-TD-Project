@@ -2298,7 +2298,7 @@ MonoBehaviour:
   - {fileID: 1023124105668382, guid: 3db0810d9eb183147aa5b2a7146feba5, type: 2}
   - {fileID: 1023124105668382, guid: 1d2b93b873ebbb94fb72c0812d1d3984, type: 2}
   resources: []
-  indexOfID: 0
+  indexOfID: 20
 --- !u!1 &30
 GameObject:
   m_ObjectHideFlags: 0
@@ -44404,7 +44404,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ef938a0e64ce9fa4f83d09eb68007ffa, type: 3}
-    m_FontSize: 18
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -57085,7 +57085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.593333e-10, y: -0.000015266602}
+  m_AnchoredPosition: {x: 4.593333e-10, y: -0.000028226184}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &813750078
@@ -85370,7 +85370,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2041626116}
   m_HandleRect: {fileID: 2041626114}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -111679,7 +111679,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8929a5476227bca479c8969fd156fd08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 051a4f7a59d84c14a8f2e6c63f7491ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -2054,10 +2054,11 @@ MonoBehaviour:
   additionalEffects: 0
   playerTurretSelectEnable: 0
   boss: 0
+  gunUpgrade: 0
+  gunUpgradeAmount: 5
   hitsToDestroy: 5
   hitEffectLife: 2
-  ID: 0
-  textOrigin: {fileID: 0}
+  ID: -1
 --- !u!198 &198431153006293638
 ParticleSystem:
   m_ObjectHideFlags: 1
