@@ -2,9 +2,9 @@
 
 Online tower defence game for two players. Heres a few images to show you what it looks like.
 
-![screen-shot#1](https://user-images.githubusercontent.com/33080132/42984316-4fb2155c-8c2f-11e8-8c3b-d5a31ab7ef37.png)
-![screen-shot#2](https://user-images.githubusercontent.com/33080132/42984318-4fe664e2-8c2f-11e8-94d0-2abb657245b4.png)
-![screen-shot#3](https://user-images.githubusercontent.com/33080132/42984319-501707b4-8c2f-11e8-8976-b4d418d163a7.png)
+![screenshot#1](https://user-images.githubusercontent.com/33080132/43042550-96e83c12-8dc4-11e8-858d-66e0a5a584b9.png)
+![screenshot#2](https://user-images.githubusercontent.com/33080132/43042551-9715526a-8dc4-11e8-96b5-fa9fa3aaf025.png)
+![screenshot#3](https://user-images.githubusercontent.com/33080132/43042552-974d537c-8dc4-11e8-8cb3-054572b19c15.png)
 
 ## Usage
 
